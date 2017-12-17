@@ -1,4 +1,4 @@
-stylus
+Stylus
 ======
 
 .. code-block:: sh

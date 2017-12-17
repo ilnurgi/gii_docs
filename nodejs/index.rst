@@ -1,5 +1,5 @@
-Конспекты по Node.js
-====================
+Node
+====
 
 https://nodejs.org/en/
 

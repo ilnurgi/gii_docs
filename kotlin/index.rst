@@ -1,5 +1,5 @@
-Конспекты по kotlin
-===================
+Kotlin
+======
 
 .. toctree::
     :maxdepth: 1

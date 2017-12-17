@@ -1,5 +1,5 @@
-Конспекты по DroidScript
-========================
+DroidScript
+===========
 
 Официальная страница `DroidScript <http://droidscript.org/>`_
 

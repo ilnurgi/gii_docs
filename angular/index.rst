@@ -1,5 +1,5 @@
-Мои конспекты по AngularJS
-==========================
+Angular
+=======
 
 .. toctree::
     :maxdepth: 1

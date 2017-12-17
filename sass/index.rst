@@ -1,4 +1,4 @@
-sass
+Sass
 ====
 
 .. code-block:: sh

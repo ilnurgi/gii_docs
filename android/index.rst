@@ -1,5 +1,5 @@
-Конспекты по android
-====================
+Android
+=======
 
 .. toctree::
     :maxdepth: 2
