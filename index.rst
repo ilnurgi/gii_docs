@@ -11,7 +11,9 @@
     css/index
     django/index
     droidscript/index
+    flask/index
     fuel/index
+    git/index
     html/index
     java/index
     jquery/index

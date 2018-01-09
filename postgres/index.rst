@@ -1,6 +1,13 @@
 Postgres
 ========
 
+.. toctree::
+    :maxdepth: 2
+
+    datatypes/index
+    operations
+    functions
+
 в постгрес форейгн кей не создает автоматом индекс
 
 .. code-block::
@@ -184,3 +191,41 @@ explain
 
     -- для дебага
     raise notice '%', var;
+
+
+.. code-block:: sql
+
+    select * from (values (true), (false))
+
+
+Создание пользователя базы данных
+
+.. code-block:: sql
+
+    CREATE ROLE role_name LOGIN PASSWORD '12'
+    CREATEDB CREATEROLE VALID UNTIL 'infinity';
+
+Создание базы
+
+.. code-block:: sql
+
+    CREATE DATABASE
+        db_name
+    WITH
+        ENCODING='utf-8'
+        OWNER=role_name
+        CONNECTION LIMIT =-1;
+
+Создание последовательности и таблицы
+
+.. code-block:: sql
+
+    CREATE SEQUENCE
+        public.person_id_seq;
+
+    CREATE TABLE public.table_name (
+        id integer NOT NULL DEFAULT nextval('person_id_seq'::regclass)
+    );
+
+    ALTER TABLE public.table_name OWNER TO role_name;
+
