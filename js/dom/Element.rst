@@ -255,15 +255,9 @@ Element
 
 
         
-    .. py:function:: addEventListener(event, handler, phase)
+    .. py:function:: addEventListener(event_type, handler, capture)
 
-        Задает обработчик некоторого события для элемента
-
-        * phase - булево, перехват события по дороге вниз
-
-        .. code-block:: js
-
-            button.addEventListener('click', function(evt){});
+        :py:meth:`Node.addEventListener`
 
 
     .. py:function:: Blur()
@@ -358,31 +352,12 @@ Element
 
     .. py:function:: querySelector(string selectors)
 
-        Метод поиска элементов.
-
-        Возвращает элемент DOM дерева :py:class:`Element`,
-        соответствующий CSS-селекторам selectors
-        (это может быть единственный CSS-селектор или
-        группа селекторов, разделенных запятыми).
-
-        .. code-block:: js
-
-            document.querySelector(".user-block")
+        :py:meth:`Node.querySelector`
 
 
     .. py:function:: querySelectorAll(string selectors)
 
-        Метод поиска элементов.
-
-        Возвращает объект :py:class:`NodeList`,
-        содержащий все элементы, вложенные в  данный элемент,
-        которые соответствуют селекторам selectors
-        (это может быть единственный CSS-селектор
-        или группа селекторов, разделенных запятыми).
-
-        .. code-block:: js
-
-            document.querySelectorAll("nav li")
+        :py:meth:`Node.querySelectorAll`
 
 
     .. py:function:: removeAttribute(attrName)

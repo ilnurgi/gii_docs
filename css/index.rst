@@ -3,7 +3,7 @@ CSS
 
 .. code-block:: html
 
-    <link rel='stylesheet' href='main.css'>
+    <link rel="stylesheet" href="main.css">
     <link rel="stylesheet" type="text/css" href="mysite.css">
     <link rel="stylesheet" type="text/css" href="http://www.mysite.ru/main.css">
 

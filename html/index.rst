@@ -35,14 +35,17 @@ HTML документ состоит из тегов.
 
     <html>
 
-       <head>
-           <meta charset="utf-8" />
-           <title>Title</title>
-       </head>
+        <head>
+            <meta charset="utf-8" />
+            <title>Title</title>
+        </head>
 
-       <body></body>
+        <body>
+            <!-- тело страницы -->
+        </body>
 
     </html>
+
 
 Элементы, описывающие документ
 ------------------------------
@@ -174,3 +177,30 @@ iframe
 .. code-block:: html
 
     <iframe src="ads.html" width="320" height="240"></iframe>
+
+svg
+---
+
+Способы подключения
+
+.. code-block:: html
+
+    <svg> <!--SVG content--> </svg>
+
+    <img  src="logo.svg" alt="Company Logo">
+
+    <object type="image/svg+xml" data="logo.svg">
+        <!--содержимое, если logo.svg недоступно-->
+    </object>
+
+    <iframe src="logo.svg">
+        <!--содержимое, если logo.svg недоступно-->
+    </iframe>
+
+
+
+.. code-block:: css
+
+    .element {
+        background: url(logo.svg);
+    }

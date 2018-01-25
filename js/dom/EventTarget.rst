@@ -4,18 +4,9 @@ EventTarget - объект, способный принимать события
 .. py:class:: EventTarget()
 
 
-    .. py:function:: addEventListener(string type, function listener [,boolean useCapture])
-        
-        Регистрирует функцию listener в качестве обработчика событий типа type.
+    .. py:function:: addEventListener(event_type, handler, capture)
 
-        Аргумент type – строка с именем без префикса «on».
-
-        Аргумент useCapture должен иметь значение true, если регистрируется перехватывающий
-        обработчик в  предке элемента, являющегося истинной целью события.
-
-        Обратите внимание, что некоторые броузеры все еще требуют передачи этой функции
-        третьего аргумента, поэтому при регистрации обычного,
-        неперехватывающего, обработчика в третьем аргументе следует передавать false.
+        :py:meth:`Node.addEventListener`
 
 
     .. py:function:: attachEvent(string type, function listener)
