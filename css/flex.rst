@@ -1,11 +1,28 @@
 flex
 ====
 
+.. code-block:: html
+
+    <div class="flex-container">
+        <div class="flex-item">1</div>
+        <div class="flex-item">2</div>
+        <div class="flex-item">3</div>
+    </div>
+
+
 .. code-block:: css
 
-    .some-class {
+    .flex-container {
+        /*
+            флекс контейнер, а его потомки - флекс-элементы
+        */
         display: flex;
-        flex: flex-grow flex-shrink flex-basis;
+    }
+
+    .flex-item {
+        // сокращенная запись
+        // flex: flex-grow flex-shrink flex-basis;
+        flex: 0 1 auto;
     }
 
 
@@ -44,7 +61,7 @@ align-items
 
 .. code-block:: css
 
-    .some-class {
+    .flex-container {
         align-items: stretch;
     }
 
@@ -68,7 +85,7 @@ align-self
 
 .. code-block:: css
 
-    .some-child-class {
+    .flex-item {
         align-self: auto;
     }
 
@@ -85,12 +102,11 @@ flex-basis
 Если дочерний элемент находится на основной оси один,
 то его ширина будет уменьшаться при уменьшении ширины родительского элемента.
 
-* auto
+* auto - по умолчанию
 
 .. code-block:: css
 
-    .some-child-class {
-        flex-basis: auto;
+    .flex-item {
         flex-basis: 300px;
     }
 
@@ -110,8 +126,7 @@ flex-direction
 
 .. code-block:: css
 
-    .some-class {
-        display: flex;
+    .flex-container {
         flex-direction: row;
     }
 
@@ -128,7 +143,7 @@ flex-grow
 
 .. code-block:: css
 
-    .some-child-class {
+    .flex-item {
         flex-grow: 0;
     }
 
@@ -143,7 +158,7 @@ flex-shrink
 
 .. code-block:: css
 
-    .some-class {
+    .flex-item {
         flex-shrink: 1;
     }
 
@@ -161,7 +176,7 @@ flex-wrap
 
 .. code-block:: css
 
-    .some-class {
+    .flex-container {
         flex-wrap: wrap;
     }
 
@@ -195,6 +210,6 @@ order
 
 .. code-block:: html
 
-    .some-child-class {
+    .flex-item {
         order: -1;
     }

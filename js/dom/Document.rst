@@ -397,13 +397,7 @@ Document(HTMLDocument) - корневой элемент дерева
 
     .. py:method:: querySelector(selector)
 
-        Выборка элементов из дом дерева по селектору
-
-        Возвращает :py:class:`HTMLElement` или :py:class:`Element`
-
-        .. code-block:: js
-
-            document.querySelector('.some_class')
+        :py:meth:`Node.querySelector`
 
 
     .. py:method:: write(text[, text1 [...]])

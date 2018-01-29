@@ -179,7 +179,7 @@ Node - узел дом дерева документа
         Нор­ма­ли­зу­ет все уз­лы, яв­ляю­щие­ся по­том­ка­ми дан­но­го, объ­еди­няя смеж­ные уз­лы и уда­ляя пус­тые. Обыч­но до­ку­мен­ты не име­ют пус­тых или смеж­ных тек­сто­вых уз­лов, но они мо­гут по­явить­ся в ре­зуль­та­те до­бав­ле­ния и уда­ле­ния уз­лов сце­на­ри­ем.
 
 
-    .. py:method:: querySelector(selector:string)
+    .. py:method:: querySelector(string selector)
 
         Возвращает первый элемент :py:class:`Element`,
         соответствующий CSS-селекторам selectors
@@ -188,8 +188,7 @@ Node - узел дом дерева документа
 
         .. code-block:: js
 
-            var logo = document.body.querySelector('.logo');
-            logo;
+            document.body.querySelector('.logo');
             // <img ...>
 
 
@@ -209,6 +208,10 @@ Node - узел дом дерева документа
             объект NodeList, возвращаемый этим методом,
             является статическим и содержит элементы,
             соответствующие селекторам, существовавшие на момент вызова метода.
+
+        .. code-block:: js
+
+            document.querySelectorAll("nav li")
 
 
     .. py:method:: removeChild(node)
@@ -659,17 +662,42 @@ Node - узел дом дерева документа
         `select`
 
 
-    .. py:method:: addEventListener(event, handler, capture)
+    .. py:method:: addEventListener(string event_type, function handler [, boolean capture])
 
-        Добавляем свой обработчик элементу.
+        Регистрирует функцию handler в качестве обработчика событий типа event_type.
 
-        * event - имя события, строка
+        * event_type - строка с именем без префикса «on».
 
-        * handler - функция обраотчик
+        * useCapture - должен иметь значение true,
+        если регистрируется перехватывающий обработчик в  предке элемента,
+        являющегося истинной целью события.
 
-        * capture - true-обработчик срабатывает на этапе перехвата, false-обработчик срабатывает на этапе всплывания
+        Обратите внимание, что некоторые броузеры все еще требуют передачи этой функции
+        третьего аргумента, поэтому при регистрации обычного,
+        неперехватывающего, обработчика в третьем аргументе следует передавать false.
 
         Доступно на DOM lvl.2
+
+        Какие события можно поймать
+
+        * mouse - click, dblclick, keydown, keypress, keyup, mouseover, mouseout
+
+        * focus - blur, focus, focusin, focusout, change
+
+        * form - reset, submit
+
+
+        .. code-block:: js
+
+            button.addEventListener("click", function(event){
+                // event.preventDefault();
+            });
+
+            window.addEventListener("keydown", function(event){
+                if (event.keyCode == 27) {
+                    ...
+                }
+            });
 
 
     .. py:method:: attachEvent(event, handler)

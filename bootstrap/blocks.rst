@@ -4,12 +4,49 @@
 Описание CSS-классов для разметки страницы
 
 
+col-SW-N
+--------
+
+Колонки
+
+* SW - xs, sm, md, lg
+* N - 1...12
+
+.. code-block:: html
+
+    <div class="col-xs-1"></div>
+
+
+col-SW--pull-*
+--------------
+
+Смещение влево
+
+* SW - xs, sm, md, lg
+
+.. code-block:: html
+
+    <div class="col-xs-pull-"></div>
+
+
+col-SW--push-*
+--------------
+
+Смещение вправо
+
+* SW - xs, sm, md, lg
+
+.. code-block:: html
+
+    <div class="col-xs-push-"></div>
+
+
 container
 ---------
 
 Фиксированный контйнер (940 px).
 
-::
+.. code-block:: html
 
     <div class="container"></div>
 
@@ -19,7 +56,7 @@ container-fluid
 
 Резиновый контейнер.
 
-::
+.. code-block:: html
 
     <div class="container-fluid"></div>
 
@@ -27,9 +64,9 @@ container-fluid
 row
 ---
 
-Фиксированный контейнер для колонок
+Строка
 
-::
+.. code-block:: html
 
     <div class="container">
         <div class="row"></div>

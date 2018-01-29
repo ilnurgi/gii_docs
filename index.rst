@@ -34,3 +34,4 @@
     smart_grid/index
     sql/index
     styles/index
+    svg/index

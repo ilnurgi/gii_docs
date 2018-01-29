@@ -6,19 +6,26 @@ JavaScript - язык программирования сценариев (scrip
 типов.
 
 Интерпретируемый язык.
+
 Для выполнения, программа не переводится в машинный код,
 а выполняется по мере прочтения интерпретатором.
 
 
 .. code-block:: html
 
-    <script type='text/javascript'>
-        alert('Hello World!');
+    <script type="text/javascript">
+        alert("Hello World!");
     </script>
 
 .. code-block:: html
 
-    <script type='text/javascript' src='app.js'></script>
+    <script type="text/javascript" src="app.js"></script>
+
+    <script src="app.js"></script>
+
+    <!-- асинхронное подключение -->
+    <script src="app.js" async></script>
+    <script src="app.js" defer></script>
 
 
 .. toctree::
@@ -26,5 +33,6 @@ JavaScript - язык программирования сценариев (scrip
 
     base/index
     dom/index
+    bom/index
     frameworks/index
    
