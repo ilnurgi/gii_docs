@@ -9,6 +9,29 @@ express
 
     const express = require('express');
     const app = express();
+    const server;
+
+    app.get('/', (req, resp) => {
+        resp.sendFile('index.html');
+    });
+    server = app.listen(8000);
+
+.. code-block:: js
+
+    // index.js
+
+    var express = require('express');
+    var router = express.Router();
+
+    router.get('/', function(req, res, next){
+        res.render('index', {'title': 'hello world'});
+    });
+
+    router.post('/', function(req, res, next){
+        const city = req.body.city;
+    });
+
+    module.exports = router;
 
 express
 -------
@@ -50,6 +73,12 @@ Server
                 res.sendFile('index.html');
             });
 
+            // app.get('/:page?', (req, res) => {
+            app.get('/:page', (req, res) => {
+                var page = req.params.page;
+                res.redirect('/');
+            });
+
         .. code-block:: js
 
             let context = {
@@ -59,6 +88,14 @@ Server
             app.get('/', (req, res) => {
                 res.render('index', context);
             });
+
+    .. js:function:: route()
+
+        .. code-block:: js
+
+            app.route('new')
+                .get((req, resp) => {})
+                .post((req, resp) => {} );
 
 
     .. js:function:: listen(port[, host[, callback]])
@@ -79,16 +116,31 @@ Server
 
             // задаем шаблонизатор для рендеринга
             app.set("view engine", "ejs");
+            app.set("view engine", "jade");
 
 
     .. js:function:: use()
+
+        Мидлваре
+
+        .. code-block:: js
+
+            app.use(function(req, res, next){
+                next();
+            });
 
         .. code-block:: js
 
             import apiRouter from './apiRouter';
 
-            app.use(express.static('static'));
+
+            app.use(logger(dev));
+            app.use(cookieParser());
+            app.use(bodyParser.urlencoded({extended: true}));
+            app.use(express.static(static_path));
+            app.use('/static', express.static(static_path));
             app.use('/api', apiRouter);
+
 
 
 Router

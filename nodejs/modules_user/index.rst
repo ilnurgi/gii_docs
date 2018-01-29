@@ -8,3 +8,9 @@
     express
     gulp/index
     pg
+    nunjuscks
+    socketio
+    mongoose
+    lodash
+    nodemon
+    body_parser

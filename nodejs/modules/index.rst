@@ -7,4 +7,9 @@
 
     fs
     http
+    net
     os
+    path
+    request
+    stream
+    events

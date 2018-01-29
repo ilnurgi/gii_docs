@@ -11,13 +11,16 @@ http
 createServer
 ------------
 
-.. js:function:: createServer()
+.. js:function:: createServer(callback)
 
     Возвращает объект сервера :js:class:`Server`
 
     .. code-block:: js
 
-        const server = http.createServer();
+        const server = http.createServer((request, response) => {
+            // request.url
+            //
+        });
 
 
 Server
@@ -65,6 +68,10 @@ Request
 
     Объект запроса
 
+    .. js:attribute:: headers
+
+    .. js:attribute:: url
+
 
 Response
 --------
@@ -81,6 +88,7 @@ Response
         .. code-block:: js
 
             res.end();
+            res.end('Hello world');
 
 
     .. js:function:: write(body)
@@ -91,3 +99,11 @@ Response
 
             res.write('Hello World!\n');
 
+
+    .. js:function:: writeHead()
+
+        Добавляет в ответ заголовки
+
+        .. code-block:: js
+
+            response.writeHead(status, {'Content-type': 'application-json'})

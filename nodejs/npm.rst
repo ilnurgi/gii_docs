@@ -235,6 +235,11 @@ root
 run
 ---
 
+Запуск команды
+
+.. code-block:: sh
+
+    npm run test
 
 run-script
 ----------
