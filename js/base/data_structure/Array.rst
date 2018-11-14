@@ -276,6 +276,26 @@ Array
             // '123'
 
 
+    .. js:method:: includes(value)
+
+        Возвращает булево, есть ли объект в массиве
+
+        .. code-block:: js
+
+            var array1 = [1, 2, 3];
+
+            array1.includes(2);
+            // true
+
+            var pets = ['cat', 'dog', 'bat'];
+
+            pets.includes('cat');
+            // true
+
+            pets.includes('at');
+            // false
+
+
     .. py:method:: indexOf(значение[, int pos=0])
 
         Возвращает число, позиция элемента в массиве
