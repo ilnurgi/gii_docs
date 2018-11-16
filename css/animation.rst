@@ -1,6 +1,52 @@
 Анимации, преобразования и переходы
 ===================================
 
+Стили, изменение которых приведет к изменению расположения других элементов:
+
+* border
+* border-width
+* bottom
+* display 
+* clear
+* float
+* font-family
+* font-size
+* font-weight
+* height
+* left
+* line-height
+* margin
+* min-height
+* overflow    
+* overflow-y
+* padding 
+* position
+* right
+* text-align
+* top
+* vertical-align
+* white-space
+* width
+
+Стили, изменение которых приведет к перерисовке других элементов:
+
+* background
+* background-image
+* background-position 
+* background-repeat
+* background-size
+* border-radius
+* border-style
+* box-shadow
+* color
+* outline
+* outline-color   
+* outline-style   
+* outline-width   
+* text-decoration 
+* visibility
+
+
 animation
 ---------
 
@@ -9,62 +55,21 @@ animation
 .. code-block:: css
 
     elem {
-        animation: animation-name animation-duration animation-timing-function animation-iteration-count animation-direction animation-delay animation-fill-mode
+        animation: 
+            animation-name 
+            animation-duration 
+            animation-timing-function 
+            animation-delay
+            animation-iteration-count 
+            animation-direction 
+            animation-fill-mode
+            animation-play-state;
     }
 
 .. code-block:: css
 
     div {
         animation: fadeOut 2s ease-in-out 2 alternate 5s forwards, glow 5s;
-    }
-
-animation-name
---------------
-
-Назначает анимацию, созданной с помощью :ref:`keyframes`
-
-.. code-block:: css
-
-    elem {
-        animation-name: myAnimation;
-    }
-
-
-animation-duration
-------------------
-
-Продолжительность анимации
-
-.. code-block:: css
-
-    elem1 {
-        animation-duration: 2s;
-    }
-
-    elem2 {
-        animation-duration: 1000ms;
-    }
-
-
-animation-timing-function
--------------------------
-
-Скорость анимации в течении выделенной ей периода.
-
-* linear
-* ease
-* easi-in
-* easi-out
-* easi-in-out
-
-.. code-block:: css
-
-    elem1 {
-        animation-timing-function: ease-in-out;
-    }
-
-    elem2 {
-        animation-timing-function: cubic-bezier(.20, .96, .74, .07);
     }
 
 
@@ -84,35 +89,36 @@ animation-delay
     }
 
 
-animation-iteration-count
--------------------------
-
-Количество запусков анимации
-
-.. code-block:: css
-
-    elem1 {
-        animation-iteration-count: 2;
-    }
-
-    elem2 {
-        animation-iteration-count: infinite;
-    }
-
-
 animation-direction
 -------------------
 
 Стартовая точка анимации, для последующей анимации
 
-* normal - по умолчанию
-
 * alternate
+* alternate-reverse
+* normal - по умолчанию
+* reverse
 
 .. code-block:: css
 
     elem {
         animation-direction: alternate;
+    }
+
+
+animation-duration
+------------------
+
+Продолжительность анимации
+
+.. code-block:: css
+
+    elem1 {
+        animation-duration: 2s;
+    }
+
+    elem2 {
+        animation-duration: 1000ms;
     }
 
 
@@ -134,6 +140,34 @@ animation-fill-mode
     }
 
 
+animation-iteration-count
+-------------------------
+
+Количество запусков анимации
+
+.. code-block:: css
+
+    elem1 {
+        animation-iteration-count: 2;
+    }
+
+    elem2 {
+        animation-iteration-count: infinite;
+    }
+
+
+animation-name
+--------------
+
+Назначает анимацию, созданной с помощью :ref:`keyframes`
+
+.. code-block:: css
+
+    elem {
+        animation-name: myAnimation;
+    }
+
+
 animation-play-state
 --------------------
 
@@ -150,12 +184,35 @@ animation-play-state
     }
 
 
-.. _keyframes:
+animation-timing-function
+-------------------------
+
+Скорость анимации в течении выделенной ей периода.
+
+* ease
+* easi-in
+* easi-out
+* easi-in-out
+* cubic-bezier(x1, y1, x2, y2)
+* linear
+* steps(number, direction <optional>)
+    * direction - start or end
+
+.. code-block:: css
+
+    elem1 {
+        animation-timing-function: ease-in-out;
+    }
+
+    elem2 {
+        animation-timing-function: cubic-bezier(.20, .96, .74, .07);
+    }
+
 
 keyframes
 ---------
 
-Созданет анимацию с укзанным имененм,
+Созданет анимацию с указанным имененм,
 которую потом можно будет применить к любому элементу страницы.
 
 .. code-block:: css
@@ -294,24 +351,24 @@ transition
     }
 
 
-transition-property
-+++++++++++++++++++
+transition-delay
+----------------
 
-Определяет конкретные css-свойства
+Время задержки перед началом анимации перехода
 
 .. code-block:: css
 
-    elem {
-        transition-property: width, left;
+    elem1 {
+        transition-delay: 2s;
     }
 
-    elem1 {
-        transition-property: all;
+    elem2 {
+        transition-delay: 1000ms;
     }
 
 
 transition-duration
-+++++++++++++++++++
+-------------------
 
 Продолжительность анимации перехода
 
@@ -326,8 +383,24 @@ transition-duration
     }
 
 
+transition-property
+-------------------
+
+Определяет конкретные css-свойства
+
+.. code-block:: css
+
+    elem {
+        transition-property: width, left;
+    }
+
+    elem1 {
+        transition-property: all;
+    }
+
+
 transition-timing-function
-++++++++++++++++++++++++++
+--------------------------
 
 Скорость анимации перехода
 
@@ -347,18 +420,3 @@ transition-timing-function
         transition-timing-function: cubic-bezier(.20, .96, .74, .07);
     }
 
-
-transition-delay
-++++++++++++++++
-
-Время задержки перед началом анимации перехода
-
-.. code-block:: css
-
-    elem1 {
-        transition-delay: 2s;
-    }
-
-    elem2 {
-        transition-delay: 1000ms;
-    }

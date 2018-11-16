@@ -4,9 +4,60 @@ EventTarget - объект, способный принимать события
 .. py:class:: EventTarget()
 
 
-    .. py:function:: addEventListener(event_type, handler, capture)
+    .. py:function:: addEventListener(string event_type, function handler [, boolean capture])
 
-        :py:meth:`Node.addEventListener`
+        Регистрирует функцию `handler` в качестве обработчика событий типа `event_type`.
+
+        * event_type - строка с именем без префикса «on».
+
+        * useCapture - должен иметь значение true,
+        если регистрируется перехватывающий обработчик в  предке элемента,
+        являющегося истинной целью события.
+
+        Обратите внимание, что некоторые броузеры все еще требуют передачи этой функции
+        третьего аргумента, поэтому при регистрации обычного,
+        неперехватывающего, обработчика в третьем аргументе следует передавать false.
+
+        Доступно на DOM lvl.2
+
+        Какие события можно поймать
+
+        * mouse
+            * click
+            * dblclick
+            * keydown
+            * keypress
+            * keyup
+            * mouseover
+            * mouseout
+
+        * focus
+            * blur
+            * focus
+            * focusin
+            * focusout
+            * change
+
+        * form 
+            * reset
+            * submit
+
+        * animation
+            * animationend
+            * animationiteration
+            * animationstart
+
+        .. code-block:: js
+
+            button.addEventListener("click", function(event){
+                // event.preventDefault();
+            });
+
+            window.addEventListener("keydown", function(event){
+                if (event.keyCode == 27) {
+                    ...
+                }
+            });
 
 
     .. py:function:: attachEvent(string type, function listener)

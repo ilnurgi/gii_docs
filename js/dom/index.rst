@@ -19,6 +19,7 @@ DOM - объектная модель документа, document object model.
     NodeList
 
     Element
+    HTMLElement
     HTMLCollection
 
     CharacterData
@@ -56,6 +57,7 @@ DOM - объектная модель документа, document object model.
     DOMImplementation
     DOMSettableTokenList
     DOMTokenList
+    DOMString
     DataTransfer
     DataView
     DocumentFragment
@@ -121,3 +123,14 @@ DOM - объектная модель документа, document object model.
     XMLHttpRequest
     XMLHttpRequestProgressEvent    
     XMLHttpRequestUpload
+
+Таблица
+-------
+
+.. toctree::
+    :maxdepth: 2
+    
+    HTMLTableElement
+    HTMLTableSectionElement
+    HTMLTableRowElement
+    HTMLTableCellElement

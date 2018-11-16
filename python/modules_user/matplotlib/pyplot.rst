@@ -635,6 +635,29 @@ show()
         show()
 
 
+subplot()
+---------
+
+.. py:function:: subplot(rows, columns, index)
+
+    Строит несколько графиков на окне
+
+    .. code-block:: py
+
+        import matplotlib.pyplot as plt
+        import numpy as np
+
+        data = np.arange(100, 201)
+        plt.subplot(2, 1, 1)
+        plt.plot(data)
+
+        data2 = np.arange(200, 301)
+        plt.subplot(212)
+        plt.plot(data2)
+
+        plt.show()
+
+
 suptitle()
 ----------
 

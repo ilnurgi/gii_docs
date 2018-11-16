@@ -1,0 +1,4 @@
+DOMString
+=========
+
+.. py:class:: DOMString()
