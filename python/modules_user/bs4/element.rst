@@ -1,50 +1,7 @@
-.. py:module:: beautifulsoup
+.. py:module:: beautifulsoup.element
 
-beautifulsoup
-=============
-
-.. code-block:: shell
-
-    pip install beautifulsoup4
-
-
->>> from bs4 import BeautifulSoup
-
-BeautifulSoup()
----------------
-
-.. py:class:: BeautifulSoup(html_string)
-
-    Парсер html
-
-    .. code-block:: py
-
-        bs_obj = BeautifulSoup(some_html_string)
-
-
-    .. py:method:: find(name=None, attributes={}, recursive=True, text=None, *kwargs)
-
-        Возвращает первый найденный элемент
-
-
-    .. py:method:: findAll(name=None, attributes={}, recursive=True, text=None, limit=None, *kwargs)
-
-        Возвращает список элементов :py:class:`Tag`, по указанному тегу и фильтру
-
-        .. code-block:: py
-
-            span_list = bs_obj.findAll('span', {'class': 'green'})
-            for span in span_list:
-                print(span.get_text())
-
-            hs = bs_obj.findAll({'h1', 'h2', 'h3', 'h4', 'h5', 'h6'})
-
-            id_text_elem = bs_obj.findAll(id='text')
-
-            imgs = bs_obj.findAll('img', {'src': re.compile('\.\.\/img\/*\.jpg')})
-
-            imgs = bs_obj.findAll(lambda tag: len(tag.attrs) == 2)
-
+element
+=======
 
 Tag()
 -----
@@ -76,6 +33,8 @@ Tag()
                 print(child.get_text())
 
 
+    .. py:attribute:: contents -> list
+
     .. py:attribute:: descendants
 
         Список всех вложенных элементов :py:class:`Tag`
@@ -84,6 +43,16 @@ Tag()
 
             for child in span_elem.descendants:
                 print(child)
+
+
+    .. py:attribute:: name
+
+    	Строка, название тега
+
+		.. code-block:: py
+
+			tag.name
+			# 'a'
 
 
     .. py:attribute:: next_sibling
@@ -115,9 +84,14 @@ Tag()
                 print(sibling)
 
 
-    .. py:method:: get_text()
+    .. py:attribute:: string -> :py:class:`beautifulsoup.element.NavigableString`
 
-        Удаляем все теги из элемента и возвращает только текст содержимого
+        Текстовое содержимое тега
+
+
+    .. py:method:: get_text() -> str
+
+        Возвращает только текст содержимого
 
         .. code-block:: py
 
@@ -133,9 +107,9 @@ NavigableString()
     Текст внутри тегов
 
 
-Comment()
----------
+ResultSet()
+-----------
 
-.. py:class:: Comment()
+.. py:class:: ResultSet()
 
-    Коментарии
+    Список найденных эелементов

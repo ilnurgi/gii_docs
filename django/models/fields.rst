@@ -327,6 +327,8 @@ IPAddressField
 
     Поле с IPv4 адресом
 
+    .. warning:: deprecated, use GenericIPAddressField
+
 
 PositiveIntegerField
 --------------------

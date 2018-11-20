@@ -6,7 +6,7 @@
 * border
 * border-width
 * bottom
-* display 
+* display
 * clear
 * float
 * font-family
@@ -17,9 +17,9 @@
 * line-height
 * margin
 * min-height
-* overflow    
+* overflow
 * overflow-y
-* padding 
+* padding
 * position
 * right
 * text-align
@@ -32,7 +32,7 @@
 
 * background
 * background-image
-* background-position 
+* background-position
 * background-repeat
 * background-size
 * border-radius
@@ -40,10 +40,10 @@
 * box-shadow
 * color
 * outline
-* outline-color   
-* outline-style   
-* outline-width   
-* text-decoration 
+* outline-color
+* outline-style
+* outline-width
+* text-decoration
 * visibility
 
 
@@ -55,13 +55,13 @@ animation
 .. code-block:: css
 
     elem {
-        animation: 
-            animation-name 
-            animation-duration 
-            animation-timing-function 
+        animation:
+            animation-name
+            animation-duration
+            animation-timing-function
             animation-delay
-            animation-iteration-count 
-            animation-direction 
+            animation-iteration-count
+            animation-direction
             animation-fill-mode
             animation-play-state;
     }
@@ -420,3 +420,29 @@ transition-timing-function
         transition-timing-function: cubic-bezier(.20, .96, .74, .07);
     }
 
+
+Слайдшоу на css
+---------------
+
+.. code-block:: css
+
+    #slider {
+        width: 100%;
+        height: 100vh;
+        background-position: center center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        backface-visibility: hidden;
+        animation: slide 8s linear infinity 0s;
+        animation-timing-function: easy-in-out;
+        background-image: url('../img/1.jpg');
+    }
+
+    @keyframes slide{
+        0% {
+            background-image: url('../img/1.jpg');
+        }
+        50% {
+            background-image: url('../img/2.jpg');
+        }
+    }

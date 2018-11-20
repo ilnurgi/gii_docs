@@ -7,14 +7,12 @@ AJAX - Asynchronous Javascript and XML - асинхронный JavaScript и XM
 
 .. code-block:: js
 
-    function ajaxTest(input) {
-        var request = new XMLHttpRequest();
-        request.open("GET", "ajax.php?input=" + input);
-        request.send();
-        request.onreadystatechange = function() {
-            if (request.readyState == 4 && request.status == 200)
-            processResult(request.responseText);
-        }
+    var request = new XMLHttpRequest();
+    request.open("GET", "ajax.php?input=" + input);
+    request.send();
+    request.onreadystatechange = function() {
+        if (request.readyState == 4 && request.status == 200)
+        processResult(request.responseText);
     }
 
 

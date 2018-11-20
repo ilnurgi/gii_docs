@@ -24,7 +24,10 @@ sqlalchemy
         'table_name',
         meta,
         sa.Column("id", sa.Integer, primary_key=True),
-        sa.Column("count", sa.Integer),
+        sa.Column("count", sa.Integer, nullable=False),
+        sa.Column("title", sa.String(16), nullable=False),
+        sa.Column("text", sa.Text, nullable=False),
+        sa.Column("is_published", sa.Boolean, default=False),
     )
 
     meta.create_all(conn)
@@ -47,6 +50,13 @@ sqlalchemy
         id = sa.Column('id', sa.Integer, primary_key=True)
         count = sa.Column('count', sa.Integer)
 
+        user_id = sa.Column(sa.Integer, ForeignKey('users.id'), nullable=False)
+
+        user = relationship('User', back_populates='posts') # , lazy='joined')
+        # posts = relationship('Post', back_populates='user')
+
+        tags = relationship('Tag', secondary=tags_posts_table, back_populates='posts')
+        
         def __init__(self, id, count):
             self.id = id
             self.count = count
@@ -61,3 +71,13 @@ sqlalchemy
     session.add(SomeTable(1, 1))
     session.add_all((SomeTable(1, 1), SomeTable(2, 2)))
     session.commit()
+
+.. code-block:: py
+
+    engine = sqlalchemy.create_engine('sqlite:///blog.db')
+    metadata = sqlalchemy.MetaData()
+    posts_table = sqlalchemy.Table('posts', metadata, autoload=True, autoload_with=engine)
+    print([c.name for c in posts_table.columns])
+    # ['id', 'user_id', 'title', 'text', 'is_publised']
+    post = session.query(Post).first() # select from posts
+    print(post.user.username) # select from users

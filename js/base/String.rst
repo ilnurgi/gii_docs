@@ -1,17 +1,19 @@
 String - строки
 ===============
 
-.. py:class:: String()
+.. js:class:: String()
     
     Строки
 
-    Наследник :py:class:`Object`
-
+    Наследник :js:class:`Object`
 
     .. code-block:: js
 
-        a = new String('test');
+        s = new String('test');
         string = 'ilnurgi';
+
+    .. code-block:: js
+
         s += 's';
 
         'ilnurgi' + 123;
@@ -33,7 +35,7 @@ String - строки
         // NaN
 
 
-    .. py:method:: length
+    .. js:function:: length
 
         .. code-block:: js
 
@@ -41,7 +43,7 @@ String - строки
             // 7        
 
 
-    .. py:method:: charAt(index)
+    .. js:function:: charAt(index)
 
         Возвращает символ по индексу
 
@@ -57,7 +59,7 @@ String - строки
             // ''
 
 
-    .. py:method:: charCodeAt(index)
+    .. js:function:: charCodeAt(index)
 
         Возвращает число, код символа из строки
 
@@ -67,7 +69,7 @@ String - строки
             // 33
 
 
-    .. py:method:: codePointAt(index)
+    .. js:function:: codePointAt(index)
 
         Возвращает неотрицательное целое число - кодовый пнкт символа.
 
@@ -85,7 +87,7 @@ String - строки
             // 1080
 
 
-    .. py:method:: concat(string..)
+    .. js:function:: concat(string..)
 
         Возвращает новую строку, соединенную с указанными
 
@@ -95,7 +97,7 @@ String - строки
             // "Cat"
 
 
-    .. py:method:: endsWith(string, index)
+    .. js:function:: endsWith(string, index)
 
         Проверяет, заканчивается ли строка на указанную
 
@@ -107,7 +109,7 @@ String - строки
             // false
 
 
-    .. py:method:: fromCharCode(char...)
+    .. js:function:: fromCharCode(char...)
 
         Статический метод, возвращает строку из последовательности чисел
 
@@ -120,7 +122,7 @@ String - строки
             // "hello"
 
 
-    .. py:method:: fromCodePoint(number1, ...)
+    .. js:function:: fromCodePoint(number1, ...)
 
         Возвращает строку по кодовым пунктам
 
@@ -132,7 +134,7 @@ String - строки
             // 'abc'
 
 
-    .. py:method:: includes(string, index=0)
+    .. js:function:: includes(string, index=0)
 
         Проверяет наличие подстроки в строке
 
@@ -144,7 +146,7 @@ String - строки
             // true
 
 
-    .. py:method:: indexOf(searchString, [start_pos])
+    .. js:function:: indexOf(searchString, [start_pos])
 
         Возвращает число, индекс вхождения подстроки в строку.
 
@@ -156,7 +158,7 @@ String - строки
             // 3
 
 
-    .. py:method:: lastIndexOf(searchString, [start_pos])
+    .. js:function:: lastIndexOf(searchString, [start_pos])
 
         Возвращает число, индекс вхождения подстроки в строку с конца
 
@@ -166,7 +168,7 @@ String - строки
             // 3
 
 
-    .. py:method:: localeCompare(str)
+    .. js:function:: localeCompare(str)
 
         Сравнивает строки с учетом порядка следования символов национальных алфавитов
 
@@ -174,7 +176,7 @@ String - строки
         Возвращает отрицательное число если аргумент меньше
 
 
-    .. py:method:: match(regexp)
+    .. js:function:: match(regexp)
 
         Возвращает массив найденных вхождений по регулярке
 
@@ -187,20 +189,42 @@ String - строки
             // ["5", "3"]
 
 
-    .. py:method:: normalize()
+    .. js:function:: normalize()
 
         Возвращает нормализованную строку, по умолчанию NFC.
 
         .. note:: Нормализованная версия не используется для отображение, только для различных операции: сравнение и т.п.
 
-        .. note:: EcmaScript6
+        .. versionadded:::: EcmaScript6
 
 
-    .. py:method:: repeat(count)
+    .. js:function:: padEnd(target_length [, pad_string=' '])
+
+        Возвращает строку, расширенную до указанной длины, если она короткая, заполенную указанным символам справа
+
+        .. code-block:: js
+
+            let s = 'ilnurgi'
+            s.padStart(10)
+            // 'ilnurgi   '
+
+
+    .. js:function:: padStart(target_length [, pad_string=' '])
+
+        Возвращает строку, расширенную до указанной длины, если она короткая, заполенную указанным символам слева
+
+        .. code-block:: js
+
+            let s = 'ilnurgi'
+            s.padStart(10)
+            // '   ilnurgi'
+
+
+    .. js:function:: repeat(count)
 
         Возвращает строку, содержащую указанное количество копии
 
-        .. note:: EcmaScript6
+        .. versionadded:::: EcmaScript6
 
         .. code-block:: js
 
@@ -208,7 +232,7 @@ String - строки
             // "aaaaa"
 
 
-    .. py:method:: replace(searchValue, replaceValue)
+    .. js:function:: replace(searchValue, replaceValue)
 
         Возвращает новую строку, заменяя в исходной указанные значения
 
@@ -223,7 +247,7 @@ String - строки
             // "111-888-2323"
 
 
-    .. py:method:: search(regexp)
+    .. js:function:: search(regexp)
 
         Возвращает число, позицию первого символа соответсвия
 
@@ -231,7 +255,7 @@ String - строки
         работает только с регулярными выражениями
 
 
-    .. py:method:: slice(start, [end])
+    .. js:function:: slice(start, [end])
 
         Возвращает срез строки
 
@@ -247,7 +271,7 @@ String - строки
             // 'ngify'
 
 
-    .. py:method:: split(separator, limit)
+    .. js:function:: split(separator, limit)
 
         Возаращает массив строк, полученная путем разбиения исходной
 
@@ -260,7 +284,7 @@ String - строки
             // ["last", "first", "middle"]
 
 
-    .. py:method:: startsWith(string, index=0)
+    .. js:function:: startsWith(string, index=0)
 
         Проверяет, начинается ли строка с указанной строки
 
@@ -272,7 +296,7 @@ String - строки
             // true
 
 
-    .. py:method:: substr(start[, length])
+    .. js:function:: substr(start[, length])
 
         Срез строки с позиции `start`, количество `length` символов
 
@@ -282,7 +306,7 @@ String - строки
             // 'ring'
 
 
-    .. py:method:: substring(start[, end])
+    .. js:function:: substring(start[, end])
 
         Возвращает срез строки
 
@@ -298,27 +322,27 @@ String - строки
             // 'ringify'
 
 
-    .. py:method:: toLocalLowerCase()
+    .. js:function:: toLocalLowerCase()
 
         Возвращает строку, приведенную к нижнему регистру в соответсвйи с локалью
 
 
-    .. py:method:: toLocalUpperCase()
+    .. js:function:: toLocalUpperCase()
 
         Возвращает строку, приведенную к верхнему регистру в соответсвйи с локалью
 
 
-    .. py:method:: toLowerCase()
+    .. js:function:: toLowerCase()
 
         Возвращает строку, приведенную к нижнему регистру
 
 
-    .. py:method:: toUpperCase()
+    .. js:function:: toUpperCase()
 
         Возвращает строку, приведенную к верхнему регистру
 
 
-    .. py:method:: trim()
+    .. js:function:: trim()
 
         Возвращает копию строки, с удаленными пробелами вначале и в конце
 

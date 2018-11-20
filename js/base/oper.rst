@@ -125,8 +125,14 @@
         console.log(i);
     }
 
-    for (attr in obj) {
+    // итерация по ключам объекта
+    for (attr in {}) {
         console.log(attr);
+    }
+
+    // итерация по значениям списка
+    for (let prop of [12, 13, 14]){
+        console.log(prop);
     }
 
 .. code-block:: js

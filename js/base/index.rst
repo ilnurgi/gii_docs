@@ -1,25 +1,45 @@
-Основные объекты
+JavaScript
 ================
+
+.. code-block:: js
+
+    // объеявление переменной    
+    var name = 'ilnurgi';
+
+    // объявление переменной внутри области видимости блока
+    {
+        let name = 'shamilgi';
+    }
+
+    // константы
+    const AGE = 30;
+
 
 .. toctree::
     :maxdepth: 1
 
+    String
+    Array
+    Object
+    Map
+    Set
+
+    Function
+    class
+
+    Promise
+
     Number
-    array
-    object
     Infinity
     NaN
     String
     Boolean
     null
     undefined
-    Function
     modules
     oper
-    class
     ArrayBuffer
     ArrayTyped
-    Set
     Map
     Date
     JSON
@@ -27,5 +47,4 @@
     RegExp
     Symbol
     Error
-    Promise
     Reflect

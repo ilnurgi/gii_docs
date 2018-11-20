@@ -7,6 +7,7 @@
 
     express
     gulp/index
+    gulp_sass
     pg
     nunjuscks
     socketio

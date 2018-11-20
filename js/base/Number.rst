@@ -276,3 +276,21 @@ Number
 
             n.toString(2);
             // '1110100001000'
+
+Стандартные функции
+-------------------
+
+.. py:function:: isFinite()
+
+    Возвращает true  только тогда, когда n  — обычное число, а не одно из NaN , Infinity  и ‐Infinit
+
+    .. code-block:: js
+
+        isFinite(1);
+        // true
+
+        isFinite(Infinity);
+        // false
+
+        isFinite(NaN);
+        // false

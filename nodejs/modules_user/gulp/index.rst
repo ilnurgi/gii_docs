@@ -18,6 +18,8 @@ https://gulpjs.com/
     # запустить конкретный таск
     gulp test
 
+    gulp --gulpfile gulpfile2.js
+
 
 .. code-block:: js
 
@@ -29,7 +31,7 @@ https://gulpjs.com/
         console.log('hello world');
     });
 
-    gulp.task('test', function(){
+    gulp.task('test', () => {
         console.log('hello world');
     });
 
@@ -81,7 +83,7 @@ https://gulpjs.com/
     });
 
 dest
----
+----
 
 .. js:function:: dest(path[, options])
 
@@ -106,6 +108,43 @@ dest
             .pipe(minify())
             .pipe(gulp.dest('./build/minified_templates'));
 
+
+lastRun
+-------
+
+.. js:function:: lastRun
+
+    Получение timestamp последней успещной задачи
+
+
+paralellel
+----------
+
+.. js:function:: paralellel
+    
+    запуск задач паралельно
+
+    .. code-block:: js
+
+        gulp.task(
+            'paralellel_task',
+            gulp.paralellel('task1', 'task2')
+        );
+
+
+series
+------
+
+.. js:function:: series
+
+    последовательный запуск задач
+
+    .. code-block:: js
+
+        gulp.task(
+            'series_task',
+            gulp.series('task1', 'task2')
+        );
 
 src
 ---
@@ -157,6 +196,14 @@ pipe
         .pipe(gulp.dest('./src/'));
 
 
+symlink
+-------
+
+.. js:function:: symlink
+
+    Создание символьных ссылок
+
+
 task
 ----
 
@@ -190,6 +237,12 @@ task
         gulp.task('build', ['task1', 'task2']);
 
 
+tree
+----
+
+    получение дерева задач
+
+
 watch
 -----
 
@@ -221,11 +274,88 @@ watch
         });
 
 
+snippets
+--------
+
+.. code-block:: js
+
+    // копирование файлов
+    gulp.task('copy', () => {
+        return gulp
+            .src('src/**/*.*')
+            .pipe(gulp.dest('dest'));
+    });
+
+.. code-block:: js
+
+    // копирование файлов, с процессингом
+    gulp.task('copy', () => {
+        retur gulp
+            .src('src/**/*.*')
+            .on('data', (file) => {
+                console.log(file);
+            })
+            .pipe(gulp.dest('dest'));
+    });
+
+.. code-block:: js
+
+    // копирование файлов, с процессингом, исключая папки
+    gulp.task('copy', () => {
+        retur gulp        
+            .src(['src/**/*.*', '!node_modules/**'])
+            // только указанные папки
+            //.src('{src,css,script}/**/*.*')
+            .pipe(gulp.dest((file) => {
+                switch (file.extname) {
+                    case '.js':
+                    case '.json':
+                        return 'script';
+                    case '.css':
+                        retrun 'css';
+                    default:
+                        return 'dest';
+                }
+            })));
+    });
+
+.. code-block:: js
+
+    // минификация и сборка в 1 файл js
+    const gulp = require('gulp');
+    const concat = require('gulp-concat');
+    const uglife = require(gulp-uglife);
+    const del = require('del');
+
+    paths = {
+        scripts: {
+            src: 'src/**/*.js',
+            dst: 'assets/scripts',
+        }
+    };
+
+    const clean = () => del(['assets']);
+
+    function scripts() {
+        return gulp
+            .src(paths.scripts.src, {sourcemaps: true})
+            .pipe(uglife())
+            .pipe(concat('main.min.js'))
+            .pipe(gulp.dest(paths.scripts.dest));
+    }
+
+    function watch() {
+        let watcher = gulp.watch(paths.scripts.src, gulp.series('default'));
+        watcher.on('change', (event) => {
+            console.log('${event} changed');
+        });
+    }
+
+    gulp.task('default', gulp.series(clean, scripts, watch));
+
 .. toctree::
     :maxdepth: 2
 
     autoprefixer
     browser_sync
     clean_css
-    less
-    less

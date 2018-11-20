@@ -5,6 +5,7 @@
     :maxdepth: 1
 
     autopep8
+    bs4/index
     bottle
     coverage
     docx
@@ -25,7 +26,7 @@
     pymongo/index
     pyqt/index
     redis
-    request
+    request/index
     serial
     sphinx
     sqlalchemy/index

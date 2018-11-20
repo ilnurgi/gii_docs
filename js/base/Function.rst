@@ -7,41 +7,21 @@
 
 .. code-block:: js
 
-    function name(){}
     // эта функция будет создана в самом начале при чтении скрипта
+    function name(){}
 
-    var name = function(){}
     // эта функция будет создана тогда, когда интерпретаор до него дойдет
-
-
-Стандартные функции
--------------------
-
-.. py:function:: isFinite()
-
-    Возвращает true  только тогда, когда n  — обычное число, а не одно из NaN , Infinity  и ‐Infinit
-
-    .. code-block:: js
-
-        isFinite(1);
-        // true
-
-        isFinite(Infinity);
-        // false
-
-        isFinite(NaN);
-        // false
+    var name = function(){}
 
 
 Function
 --------
 
-
-.. py:class:: Function(args, function_body)
+.. js:class:: Function(args, function_body)
 
     Функция/конструктор функции, которая возвращает функцию
 
-    Наследник :py:class:`Object`
+    Наследник :js:class:`Object`
 
     .. code-block:: js
 
@@ -50,32 +30,32 @@ Function
         // 30
 
 
-    .. py:attribute:: __proto__
+    .. js:attribute:: __proto__
 
         Ссылка экземпляра на прототип
 
 
-    .. py:attribute:: arguments
+    .. js:attribute:: arguments
 
         Массив аргументов, переданных функции
 
 
-    .. py:attribute:: caller
+    .. js:attribute:: caller
 
         Ссылка на функцию, вызвавшую данную функцию
 
 
-    .. py:attribute:: length
+    .. js:attribute:: length
 
         Число именованных аргументов, указанных при объявлении функции
 
 
-    .. py:attribute:: name
+    .. js:attribute:: name
 
         Название функции
 
 
-    .. py:attribute:: prototype
+    .. js:attribute:: prototype
     
         Ссылка функции на прототип
 
@@ -131,8 +111,35 @@ arguments
     })();
 
 
-Замыкани
---------
+Асинхронные функции
+-------------------
+
+.. code-block:: js
+
+    function func1(x){
+        return new Promise(
+            resolve => {
+                setTimeout(
+                    () => {
+                        resolve(x);
+                    }, 2000
+                )
+            }
+        );
+    }
+    async function add1(x) {
+        const a = await func1(20);
+        const b = await func1(30);
+        return x + a + b;
+    }
+    add1(10).then(
+        v=> {
+            console.log(v);
+        }
+    )
+
+Замыкание
+---------
 
 .. code-block:: js
 
@@ -147,6 +154,27 @@ arguments
 
     getAnswer();
     // 42
+
+
+Значения по умолчанию функции
+-----------------------------
+
+.. code-block:: js
+
+    function some(x, y, z){
+        x = x || 1;
+        y = y || 2;
+        z = z || 3;
+        ...
+    }
+
+.. note:: EcmaScript6
+
+    .. code-block:: js
+
+        function some(x=1, y=2, z=3){
+            ...
+        }
 
 
 Области видимости
@@ -167,29 +195,6 @@ arguments
     // undefined
 
 
-Значения по умолчанию функции
------------------------------
-
-.. code-block:: js
-
-    function some(x, y, z){
-        x = x || 1;
-        y = y || 2;
-        z = z || 3;
-        ...
-    }
-
-.. note:: 
-
-    EcmaScript6
-
-    .. code-block:: js
-
-        function some(x=1, y=2, z=3){
-            ...
-        }
-
-
 Распаковка аргументов
 ---------------------
 
@@ -202,9 +207,7 @@ arguments
     some.apply(null, [data]);
     // 5
 
-.. note:: 
-
-    EcmaScript6
+.. note:: EcmaScript6
 
     .. code-block:: js
 
@@ -221,8 +224,10 @@ arguments
 
 .. note:: EcmaScript6
 
-.. code-block:: js
+* this, внутри стрелочной функции, не является ссылкой на функцию
 
+.. code-block:: js
+    
     let circleArea = (pi, r) => {
         let area = pi * r * r;
         return area;
@@ -237,8 +242,8 @@ arguments
     // 28.26
 
 
-Функция генератор
------------------
+Генератор
+---------
 
 .. note:: EcmaScript6
 

@@ -4,7 +4,7 @@ Symbol - символ
 .. note:: ECMAScript6
 
 
-.. py:class:: Symbol()
+.. js:class:: Symbol()
 
     .. code-block:: js
 
@@ -21,27 +21,27 @@ Symbol - символ
         }
 
 
-    .. py:attribute:: hasInstance
+    .. js:attribute:: hasInstance
 
-    .. py:attribute:: isContcatSpreadable
+    .. js:attribute:: isContcatSpreadable
 
-    .. py:attribute:: iterator
+    .. js:attribute:: iterator
 
-    .. py:attribute:: match
+    .. js:attribute:: match
 
-    .. py:attribute:: replace
+    .. js:attribute:: replace
 
-    .. py:attribute:: search
+    .. js:attribute:: search
 
-    .. py:attribute:: species
+    .. js:attribute:: species
 
-    .. py:attribute:: split
+    .. js:attribute:: split
 
-    .. py:attribute:: toPrimitive
+    .. js:attribute:: toPrimitive
 
-    .. py:attribute:: toStringTag
+    .. js:attribute:: toStringTag
     
-    .. py:attribute:: unscopables
+    .. js:attribute:: unscopables
 
     .. py:function:: for(string)
 

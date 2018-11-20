@@ -88,6 +88,11 @@ class
             
         }
 
+    .. code-block:: js
+
+        class Phone{}
+        class IPhone extends Phone{}
+
 
 
 Наследование

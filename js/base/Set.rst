@@ -4,7 +4,7 @@ Set, WeakSet - коллекция уникальных типов любого �
 Set
 ---
 
-.. py:class:: Set()
+.. js:class:: Set()
 
     .. note:: EcmaScript6
 
@@ -14,7 +14,7 @@ Set
         let set2 = Set('Ilnurgi!!!');
 
 
-    .. py:attribute:: size
+    .. js:attribute:: size
 
         Размер множества
 
@@ -24,7 +24,7 @@ Set
             // 8
 
 
-    .. py:function:: add(elem)
+    .. js:function:: add(elem)
 
         Добавялет в множество элемент
 
@@ -33,7 +33,7 @@ Set
             set2.add(12);
 
 
-    .. py:function:: clear()
+    .. js:function:: clear()
 
         Очищает множество от всех элементов.
 
@@ -42,7 +42,7 @@ Set
             set2.clear()
 
 
-    .. py:function:: delete(elem)
+    .. js:function:: delete(elem)
 
         Удаляет элемент из множества
 
@@ -51,7 +51,18 @@ Set
             set2.delete(12);
 
 
-    .. py:function:: has(elem)
+    .. js:function:: forEach(func)
+
+        Перебор элементов в множестве
+
+        .. code-block:: js
+
+            set2.forEach((item) => {
+                console.log(item);
+            })
+
+
+    .. js:function:: has(elem)
 
         Имеет ли множество указанный объект
 
@@ -80,14 +91,14 @@ WeakSet
     * нельзя проитерироваться по нему
 
 
-.. py:class:: WeakSet()
+.. js:class:: WeakSet()
 
     .. code-block:: js
 
         let weakset = new WeakSet()
 
     
-    .. py:function:: add(elem)
+    .. js:function:: add(elem)
 
         Добавляет элемент в множество
 

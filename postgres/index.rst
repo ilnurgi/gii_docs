@@ -7,6 +7,7 @@ Postgres
     datatypes/index
     operations
     functions
+    psql
 
 в постгрес форейгн кей не создает автоматом индекс
 

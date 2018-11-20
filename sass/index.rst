@@ -3,18 +3,43 @@ Sass
 
 .. code-block:: sh
 
-    npm install gulp-sass
+    # установка
+    npm install sass
 
+    # версия
+    sass --version
+    # 1.6.2
+
+    # компиляция
+    sass main.sass style.css
+    sass main.scss style.css
+
+Блоки
+-----
+
+Выделяются отсупами
+
+.. code-block:: scss
+
+    body
+        color: #fff
+        a
+            color: #fff
+            &:hover
+                color: #fff
 
 .. code-block:: sass
-
-    // блоки выделяются отсутпами, а не фигурными скобками
 
     $color-green: #6cca4f;
     $padding: 20px;
     $width: 80%;
 
-    // миксин
+Миксины
+-------
+
+
+.. code-block:: sass
+
     =reset(){
         //
     }
@@ -30,20 +55,40 @@ Sass
                 background-color: red;
 
 
-
-
-
 scss
 ====
 
-.. code-block:: css
+Блоки
+-----
 
-    // переменные
-    $key: "some-key";
-    $val: 12px;
-    $color-green: #6cca4f;
-    $padding: 20px;
-    $width: 80%;
+.. code-block:: scss
+
+    body {
+        color: #fff;
+        a {
+            color: #fff;
+            &:hover {
+                color: #fff;
+            }
+        }
+    }
+
+
+Импорт
+------
+
+Импорт, это не отдельный http запрос, а просто вставка данных из файла
+
+.. code-block:: scss
+
+    // импортируем файл _module.scss
+    @import 'module';
+
+
+Миксины
+-------
+
+.. code-block:: scss
 
     // миксин
     @mixin reset(){
@@ -74,4 +119,28 @@ scss
         @include box-sizing;
 
         @include border-radius(10px);
+    }
+
+Переменные
+----------
+
+.. code-block:: scss
+
+    $key: "some-key";
+    $val: 12px;
+    $color-green: #6cca4f;
+    $padding: 20px;
+    $width: 80%;
+
+Расширения
+----------
+
+.. code-block:: scss
+
+    %myStyle {
+        color: #fff;
+    }
+
+    body {
+        @extend %myStyle;
     }
