@@ -21,6 +21,16 @@ all()
     Возвращает True если все элементы интерируемого объекта True.
 
 
+breakpoint()
+------------
+
+.. py:function:: breakpoint()
+    
+    .. versionadded:: 3.7
+
+    По умолчанию импортит :py:mod:`pdb` и вызывает :py:func:`pdb.set_trace()`
+
+
 compile()
 ---------
 

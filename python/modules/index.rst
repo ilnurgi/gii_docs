@@ -34,7 +34,9 @@
     imp
     inspect
     io
+    ipaddress
     itertools
+    json
     locale
     marshal
     math
@@ -42,6 +44,7 @@
     numbers
     os
     ospath
+    pathlib
     pdb
     pickle
     pprint

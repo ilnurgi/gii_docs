@@ -93,6 +93,16 @@ focus
     input:focus {}
 
 
+focus-within
+------------
+
+Дочерний элемент в фокусе
+
+.. code-block:: css
+
+    form:focus-within {}
+
+
 hover
 -----
 

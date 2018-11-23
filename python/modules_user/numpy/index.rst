@@ -28,55 +28,61 @@ http://docs.scipy.org
 
 .. code-block:: py
 
-    a = array([1, 2, 3])
-    # array([1,  2,  3])
-    b = array([4, 5, 6])
-    # array([4, 5, 6])
-
-    a*1.5
-    # array([1.5,  3.,  4.5])
-
-    a[1:]
-    # array([2,  3])
-
-    a[0]
-    # 1
-
-    a + b
+    array([1, 2, 3]) + array([4, 5, 6])
     # array([5, 7, 9])
 
-    c = array([
-        [1,2,3], 
-        [4,5,6]
-    ])
-
-    c[1,2]
-    # 6
+    array([1, 2, 3]) * 1.5
+    # array([1.5,  3.,  4.5])
 
     array([2]) * array([[1, 2], [3, 4]])
     # array([[2, 4], [6, 8]])
 
+    array([1.5, 2.5, 3.5]) / array([10., 5., 1.])
+    # array([0.15, 0.5 , 3.5 ])
+
+
 .. code-block:: py
 
-    x = array(
+    array([1, 2, 3])[1:]
+    # array([2,  3])
+
+    array([1, 2, 3])[0]
+    # 1
+
+    array([
+        [1,2,3], 
+        [4,5,6]
+    ])[1,2]
+    # 6
+
+    array(
         [
             [2, 4, 6, 8],
             [3, 3, 2, 1],
             [2, 6, 3, 4],
             [5, 2, 3, 5]
         ]
-    )
-
-    x.shape
-    # (4, 4)
-
-    x[0:1, :]
+    )[0:1, :]
     # array([[2, 4, 6, 8]])
 
-    x[:, 0:1]
+    array(
+        [
+            [2, 4, 6, 8],
+            [3, 3, 2, 1],
+            [2, 6, 3, 4],
+            [5, 2, 3, 5]
+        ]
+    )[:, 0:1]
     # array([[2], [3], [2], [5]])
 
-    x[0:2, 0:2]
+    array(
+        [
+            [2, 4, 6, 8],
+            [3, 3, 2, 1],
+            [2, 6, 3, 4],
+            [5, 2, 3, 5]
+        ]
+    )[0:2, 0:2]
     # array([[2,4], [3, 3]])
 
 
@@ -168,6 +174,27 @@ ndarray
             # 20
 
 
+    .. py:method:: mean()
+
+        Возвращает новый массив средних значений
+
+        .. code-block:: py
+
+            sample = normal(loc=[2., 20.], scale=[1., 3.5], size=(3, 2))
+            """
+            array(
+                [
+                    [ 1.816 , 23.703 ],
+                    [ 2.8395, 12.2607],
+                    [ 3.5901, 24.2115]
+                ]
+            )
+            """
+
+            sample.mean(axis=0)
+            # array([2.7486, 20.0584])
+
+
     .. py:method:: reshape(size: tuple)
 
         Изменяет размерность массива
@@ -185,6 +212,26 @@ ndarray
 
             array([1, 2, 3]).reshape((1, 3))
             # array([[1, 2, 3]])
+
+
+    .. py:method:: sum()
+
+        Возвращает новый сложенный массив
+
+        .. code-block:: py
+
+            arr = array(
+                [
+                    [1, 2, 3],
+                    [10, 20, 30]
+                ]
+            )
+            
+            arr.sum(axis=0)
+            // array([11, 22, 33])
+
+            arr.sum(axis=1)
+            // array([6, 60])
 
 
     .. py:method:: to_list()
@@ -479,6 +526,18 @@ linspace
         # array([0., 0.25, 0.5, 0.75, 1.])
 
 
+load
+----
+
+.. py:function:: load(file_name)
+
+    Загружает массив из файла, сохраненный через метод :py:func:`numpy.save()`
+
+    .. code-block:: py
+
+        array = numpy.load('numbers.npy')
+
+
 ones
 ----
 
@@ -514,6 +573,18 @@ reshape
 
         reshape(arange(9), (3, 2))
         # ValueError: cannot reshape array of size 9 into shape (3,2)
+
+
+save()
+------
+
+.. py:function:: save(name, array)
+
+    Сохраняет массив в файл, который потом можно загрузить через :py:func:`numpy.load()`
+
+    .. code-block:: py
+
+        numpy.save('numbers.npy', array([1, 2, 3]))
 
 
 split()
