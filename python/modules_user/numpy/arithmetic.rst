@@ -1,38 +1,104 @@
 Арифметические операции
 =======================
 
+.. code-block:: py
+
+    array([1, 2, 3]) + array([4, 5, 6])
+    # array([5, 7, 9])
+
+    array([1, 2, 3]) * 1.5
+    # array([1.5,  3.,  4.5])
+
+    array([2]) * array([[1, 2], [3, 4]])
+    # array([[2, 4], [6, 8]])
+
+    array([1.5, 2.5, 3.5]) / array([10., 5., 1.])
+    # array([0.15, 0.5 , 3.5 ])
+
+
+e
+-
+
+pi
+--
+
+abs()
+-----
+
 add()
 -----
 
 .. py:function:: add() 
 
-	Сложение, 1 + 1
+    Сложение, 1 + 1
 
-	.. code-block:: py
+    .. code-block:: py
 
-		arange(4) + 5
-		# array([5, 6, 7, 8])
-
-
-subtract()
-----------
-
-.. py:function:: subtract() 
-
-	Вычитание, 1 - 1
-
-	.. code-block:: py
-
-		arange(4) - 5
-		# array([-5, -4, -3, -2])
+        arange(4) + 5
+        # array([5, 6, 7, 8])
 
 
-negative()
-----------
+arccos()
+--------
 
-.. py:function:: negative() 
+arccosh()
+---------
 
-	Отрицательное значение, -1
+arcsin()
+--------
+
+arcsinh()
+---------
+
+arctan()
+--------
+
+arctanh()
+---------
+
+cos()
+-----
+
+cosh()
+------
+
+divide()
+--------
+
+.. py:function:: divide() 
+
+    Деление, 1 / 1
+
+
+exp()
+-----
+
+floor_divide()
+--------------
+
+.. py:function:: floor_divide() 
+
+    Целочисленное от деления, 1 // 1
+
+
+log()
+-----
+
+log10()
+-------
+
+max()
+-----
+
+min()
+-----
+
+mod()
+-----
+
+.. py:function:: mod() 
+
+    Остаток от деления, 1 % 1
 
 
 multiply()
@@ -40,23 +106,15 @@ multiply()
 
 .. py:function:: multiply() 
 
-	Умножение, 1 * 1
+    Умножение, 1 * 1
 
 
-divide()
---------
+negative(
+----------
 
-.. py:function:: divide() 
+.. py:function:: negative() 
 
-	Деление, 1 / 1
-
-
-floor_divide()
---------------
-
-.. py:function:: floor_divide() 
-
-	Целочисленное от деления, 1 // 1
+    Отрицательное значение, -1
 
 
 power()
@@ -64,13 +122,41 @@ power()
 
 .. py:function:: power() 
 
-	Возведенеи в степень, 1 ** 1
+    Возведенеи в степень, 1 ** 1
 
 
-mod()
+prod()
+------
+
+sign()
+------
+
+sin()
 -----
 
-.. py:function:: mod() 
+sinh()
+------
 
-	Остаток от деления, 1 % 1
+sqrt()
+------
 
+subtract()
+----------
+
+.. py:function:: subtract() 
+
+    Вычитание, 1 - 1
+
+    .. code-block:: py
+
+        arange(4) - 5
+        # array([-5, -4, -3, -2])
+
+sum()
+-----
+
+tan()
+-----
+
+tanh()
+------

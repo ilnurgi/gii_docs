@@ -31,3 +31,18 @@ tuple
     .. py:method::  index(obj [, start_pos [ , end_pos]])
 
         Возвращает :py:class:`int`, индекс указанного элемента
+
+
+.. code-block:: py
+
+    # пустой кортеж, синглтон
+    a = ()
+    b = ()
+    a is b
+    # True
+
+    # кортежи не копируются
+    a = (1, 2)
+    b = tuple(a)
+    a is b
+    # True

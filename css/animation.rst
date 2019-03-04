@@ -273,12 +273,12 @@ transform
 
 * perspective
 
-* rotate
+* rotate(<angle>)
 * rotateX
 * rotateY
 * rotate3d
 
-* scale
+* scale(<number>)
 * scaleX
 * scaleY
 * scaleZ
@@ -288,7 +288,7 @@ transform
 * skewX
 * skewY
 
-* translate
+* translate(<horizontal-position>, [<vertical-position>])
 * translateX
 * translateY
 * translateZ
@@ -298,13 +298,15 @@ transform
 
     elem1 {
         transform: rotate(45deg);
-    }
 
-    elem2 {
+        // переместить элемент на 50 пикселей влево
+        transform: translate(50px);
+
+        // переместить элемент на 2rem вправо и на 100% вниз
+        transform: translate(-2rem, 100%);
+
         transform: scale(1.5);
-    }
 
-    elem3 {
         transform: skew(45deg 0) rotate(200deg) translate(100px, 0) scale(.5);
     }
 
@@ -317,14 +319,12 @@ transform-origin
 .. code-block:: css
 
     elem1 {
+        // transform-origin: <horizontal-position> <vertical-position>;
+
         transform-origin: left top;
-    }
 
-    elem {
         transform-origin: 0% 100%;
-    }
 
-    elem {
         transform-origin: 10px -100px;
     }
 

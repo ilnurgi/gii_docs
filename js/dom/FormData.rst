@@ -1,10 +1,20 @@
-FormData - тело HTTP-запроса multipart/form-data
-================================================
-
+FormData
+========
 
 .. py:class:: FormData()
 
+    тело HTTP-запроса multipart/form-data
 
-.. py:function:: append(string name, any value)
-    
-    До­бав­ля­ет в  объ­ект FormData но­вую часть с  име­нем name и  зна­че­ни­ем value. Ар­гу­мент value мо­жет быть стро­кой или объ­ек­том Blob (на­пом­ню, что тип File яв­ля­ет­ся под­ти­пом Blob).
+    .. code-block:: js
+
+        let form_data = new FormData()
+
+    .. py:function:: append(string name, any value)
+        
+        До­бав­ля­ет в  объ­ект FormData но­вую часть с  име­нем name и зна­че­ни­ем value. 
+
+        Ар­гу­мент value мо­жет быть стро­кой или объ­ек­том Blob.
+
+        .. code-block:: js
+
+            form_data.append('file', file)

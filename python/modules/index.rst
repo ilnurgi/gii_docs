@@ -30,7 +30,7 @@
     glob
     hashlib
     heapq
-    http_client
+    http/index
     imp
     inspect
     io
@@ -54,6 +54,7 @@
     setuptools
     shelve
     shutil
+    simplehttpserver
     socket
     sqlite3
     string
@@ -72,8 +73,7 @@
     traceback
     types
     unittest/index
-    urllib_parse
-    urllib_request
+    urllib/index
     warnings
     weakref
     xml_sax_saxutils

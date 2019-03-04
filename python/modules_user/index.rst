@@ -25,6 +25,7 @@
     pygame/index
     pygal/index
     pymongo/index
+    pypdf2
     pyppeteer
     pyqt/index
     redis
