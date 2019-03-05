@@ -52,6 +52,7 @@
     shelve
     shutil
     socket
+    socketserver
     sqlite3
     string
     struct

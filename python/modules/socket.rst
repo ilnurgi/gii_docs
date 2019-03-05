@@ -3,10 +3,146 @@ socket
 
 Работа с сокетом
 
+.. py:attribute:: AF_INET
+
+    IPv4 протокол
+
+.. py:attribute:: AF_UNIX
+
+    Юниксовый сокет
+
+.. py:attribute:: AF_INET6
+
+    IPv6 протокол
+
+.. py:attribute:: SOCK_DGRAM
+
+    UDP протокол
+
+.. py:attribute:: SOCK_STREAM
+
+    TCP протокол
+
+.. py:attribute:: SOL_SOCKET
+.. py:attribute:: SO_DROADCAST
+.. py:attribute:: SO_REUSEADDR
+
+
+.. py:function:: socket()
+
+    Возвращает объект соединения :py:class:`socket`
+
+    .. code-block:: py
+
+        # ipv4 udp
+        sock = socket(AF_INET, SOCK_DGRAM)
+
+        # unix socket
+        sock = socket(AF_UNIX, SOCK_DGRAM)
+
+        with socket.socket(AF_INET, SOCK_DGRAM) as sock:
+
+            sock.bind(('127.0.0.1', 8888))
+
+            while True:
+                sock.bind()
+
+.. py:class:: socket()
+
+    Соединени
+
+    .. py:method:: accept()
+
+        Ожидает клиентов и возвращает кортеж данных по подключенным клиентам
+
+        .. code-block:: py
+
+            client, addr = sock.accept()
+            # client - socket
+            # addr - ('127.0.0.1', 63333)
+
+    .. py:method:: bind(bind_param)
+
+        Привязываемся к указанному хосту
+
+        .. code-block:: py
+
+            sock.bind(('127.0.0.1', 8888))
+            sock.bind('unix.sock')
+
+    .. py:method:: close()
+
+        Закрывает соединени
+
+        .. code-block:: py
+
+            sock.close()
+
+    .. py:method:: connect()
+
+        Аодсоединяется к серверу
+
+        .. code-block:: py
+
+            sock.connect(('127.0.0.1', 8888))
+            sock.connect('unix.sock')
+
+    .. py:method:: listen(count)
+
+        Устанавливает размер очереди обработки
+
+        .. code-block:: py
+
+            sock.listen(5)
+
+    .. py:method:: recv(size)
+
+        Блокирует интерпретатор, ожидая данные от клиента
+
+        .. code-block:: py
+
+            result = sock.recv(1024)
+            # b'message'
+
+    .. py:method:: sendTo(message, host)
+
+        Отправляет сообщение по хосту
+
+        .. code-block:: py
+
+            sock.sendTo(b'message', ('127.0.0.1', 8888))
+            sock.sendTo(b'message', 'unix.sock')
+
+    .. py:method:: setblocking(block=True)
+
+        Включает/выключает блокирующий режим
+
+        .. code-block:: py
+
+            sock.setblocking(True)
+
+    .. py:method:: setsockopt()
+
+        .. code-block:: py
+
+            sock.setsockopt(SOL_SOCKET, SO_DROADCAST, 1)
+            
+            sock.setsockopt(SOL_SOCKET, SO_REUSEADDR, 1)
+
+    .. py:method:: settimeout(timeout)
+
+        Устанавливает таймаут для подключений
+
+        .. code-block:: py
+
+            sock.settimeout(5)
 
 .. code-block:: py
 
-    # работа с блютуз
+    """
+    работа с блютуз
+    """
+
     import socket
 
     address, services = socket.bt_obex_discover()
@@ -20,7 +156,9 @@ socket
 
 .. code-block:: py
 
-    # отправка фотографии по БТ
+    """
+    отправка фотографии по БТ
+    """
 
     photo_path = 'photo.jpg'
 
@@ -32,7 +170,9 @@ socket
 
 .. code-block:: py
 
-    # простой http server
+    """
+    простой http server
+    """
 
     server_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
     server_socket.bind(('localhost', 9004))
@@ -48,10 +188,13 @@ socket
 
 .. code-block:: py
 
-    # wsgi реализация
+    """
+    wsgi реализация
+    """
 
     client_connection, client_address = server_socket.accept()
     request = client_connection.recv(1024)
     response = application(request)
     client_connection.sendall(response)
     client_connection.close()
+    

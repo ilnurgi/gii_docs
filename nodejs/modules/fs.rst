@@ -21,6 +21,12 @@ appendFile
             // ...
         });
 
+lstat
+-----
+
+.. js:function:: lstat(file, (err, stat) => {})
+
+    
 
 mkdir, mkdirSync
 ----------------
@@ -54,7 +60,7 @@ readdir, readdirSync
 readFile, readFileSync
 ----------------------
 
-.. js:function:: readFileSync(file_path)
+.. js:function:: readFileSync(file_path, params)
 
     Возвращает строку, содержимое файла
 
@@ -63,6 +69,17 @@ readFile, readFileSync
         let content = fs.readFileSync('./index.html');
         let content = fs.readFileSync(__dirname + '/index.html', {
             encoding: 'utf-8'
+        }); 
+
+    .. code-block:: js
+
+        let buffer = fs.readFileSync('./index.html', 'utf-8');
+        const src = buffer.toString();
+
+    .. code-block:: js
+
+        fs.readFile('./1.txt', 'utf-8', (err, buffer) => {
+            // ...
         });
 
 
@@ -78,8 +95,8 @@ renameSync
         fs.renameSync('src.txt', 'dst.txt');
 
 
-writeFile
----------
+writeFile, writeFileSync
+------------------------
 
 .. js:function:: writeFile()
 

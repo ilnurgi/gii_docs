@@ -22,6 +22,7 @@
     less/index
     linux/index
     nodejs/index
+    nginx/index
     openstack/index
     p4a/index
     postgres/index
