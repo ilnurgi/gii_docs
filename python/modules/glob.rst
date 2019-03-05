@@ -1,7 +1,21 @@
 .. py:module:: glob
 
-glob - поиск файлов по паттернам
-================================
+glob
+====
+
+Поиск файлов по паттернам
+
+.. code-block:: py
+
+    import glob
+    
+
+.. py:function:: glob()
+
+    .. code-block:: py
+
+        for file_name in glob.glob('*.txt'):
+            # ...
 
 glob.glob1(dirname, pattern)
 

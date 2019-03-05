@@ -6,6 +6,14 @@ FileReader
 
 .. py:class:: FileReader()
 
+    .. code-block:: js
+
+        let reader = new FileReader()
+        reader.readAsDataURL(url)
+        reader.onloadend = function() {}
+
+        img.src = reader.result;
+
 
     .. py:attribute:: error
     

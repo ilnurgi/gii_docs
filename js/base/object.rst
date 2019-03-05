@@ -294,6 +294,23 @@ Object - объект, ассоциативный массив
 
     .. versionadded:: ECMAScript5
 
+    .. code-block:: js
+
+        const immutableObject = Object.freeze({
+            foo: 123,
+            bar: 'buz'
+        });
+
+        immutableObject = {};
+        // error
+        
+        immutableObject.foo = 456;
+        // not alllowed
+        
+        immutableObject.bebebe = 'abc';
+        // not allowed
+
+
 
 .. js:function:: getOwnPropertyDescriptor(obj, name)
 

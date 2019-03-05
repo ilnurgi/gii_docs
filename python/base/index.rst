@@ -22,6 +22,7 @@
     bytearray
     bytes
     class
+    dataclass
     complex
     elipsis
     errors

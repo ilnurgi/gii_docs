@@ -26,7 +26,7 @@ lstat
 
 .. js:function:: lstat(file, (err, stat) => {})
 
-    
+
 
 mkdir, mkdirSync
 ----------------
@@ -57,9 +57,11 @@ readdir, readdirSync
         });
 
 
-readFile, readFileSync
-----------------------
+readFile(), readFileSync()
+--------------------------
 
+.. js:function:: readFile(file_path)
+.. js:function:: readFileSync(file_path)
 .. js:function:: readFileSync(file_path, params)
 
     Возвращает строку, содержимое файла
@@ -69,7 +71,7 @@ readFile, readFileSync
         let content = fs.readFileSync('./index.html');
         let content = fs.readFileSync(__dirname + '/index.html', {
             encoding: 'utf-8'
-        }); 
+        });
 
     .. code-block:: js
 
@@ -93,6 +95,57 @@ renameSync
     .. code-block:: js
 
         fs.renameSync('src.txt', 'dst.txt');
+
+
+statSync()
+----------
+
+.. js:function:: statSync()
+
+    .. code-block:: js
+
+        const stats = fs.statSync(filename);
+        console.log(stats.mtime.valueOf())
+
+
+watch()
+-------
+
+.. js:function:: watch(path)
+
+    Следит за файлом или за файлами в папке через системные уведомления
+
+    .. code-block:: js
+
+        fs.watch('./', (event, filename) => {
+            if (filename and event === 'change') {
+                // file changed
+            }
+        });
+
+
+
+watchFile()
+-----------
+
+.. js:function:: watchFile(path, options, callback)
+
+    Следит за файлом и вызывает колбек при изменении файла
+
+    * options
+        * interval - задает время опроса файла на изменение, по умолчанию 5 секунд
+
+    .. code-block:: js
+
+        fs.watchFile('./some.js', (curr, prev) => {
+            // ...
+            // prev.mtime - время предыдущей модификации файла
+        });
+
+        fs.watchFile('./some.js', {interval: 1000}, (curr, prev) => {
+            // ...
+            // prev.mtime - время предыдущей модификации файла
+        });
 
 
 writeFile, writeFileSync

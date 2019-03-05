@@ -30,11 +30,13 @@
     glob
     hashlib
     heapq
-    http_client
+    http/index
     imp
     inspect
     io
+    ipaddress
     itertools
+    json
     locale
     marshal
     math
@@ -42,6 +44,7 @@
     numbers
     os
     ospath
+    pathlib
     pdb
     pickle
     pprint
@@ -51,6 +54,7 @@
     setuptools
     shelve
     shutil
+    simplehttpserver
     socket
     socketserver
     sqlite3
@@ -70,8 +74,7 @@
     traceback
     types
     unittest/index
-    urllib_parse
-    urllib_request
+    urllib/index
     warnings
     weakref
     xml_sax_saxutils

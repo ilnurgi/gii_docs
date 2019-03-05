@@ -13,6 +13,19 @@ CSS
         }
     </style>
 
+.. code-block:: css
+    
+    :root {
+        // глобальная переменная
+        --color-red: red;
+    }
+
+    .wrapper {
+        // переменная элемента
+        --color-red: red;
+        color: var(--color-red, blue);
+    }
+
 
 .. toctree::
     :maxdepth: 2
@@ -29,6 +42,7 @@ CSS
     psevdoelements
     faq
     flex
+    grid
 
 
 Цвета

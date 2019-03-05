@@ -1,7 +1,7 @@
-.. py:module:: urllib.parse
+.. py:module:: parse
 
-urllib.parse
-============
+parse
+=====
 
 .. warning::
 
@@ -73,17 +73,23 @@ urllib.parse
     заменяет последовательность `%nn` на соответсвующие символы. символ `+` заменяет пробелом
 
 
-.. py:method:: urlencode(<объект> [, doseq=False][, safe=''][, encoding=None][, errors=None])
+urlencode()
+-----------
+
+.. py:method:: urlencode(query, doseq=False, safe='', encoding=None, errors=None)
 
     преобразовывает отдельные составляющие в строку запроса
 
     :param объект: словарь или список кортежей (кортеж из 2х элементов)
     :param bool doseq: если истина, то можно указать последовательность из нескольких значений во втором параметре кортежа
 
-    >>> urlencode({"str": "Строка 2", "var": 20}, encoding="cpl251")
-    'var=20&str='Шl%F2•;FO%EE%EA%E0+2'
-    >>> urlencode([("str", "Строка 2"), ("var", 20)], encodiпg="cp1251")
-    'str=%D1%F2%FO%EE%EA%E0+2&var=20' 
+    .. code-block:: py
+    
+        urlencode({'str': 'Строка 2', 'var': 20}, encoding='cpl251)
+        # 'var=20&str='Шl%F2•;FO%EE%EA%E0+2'
+        
+        urlencode([('str', 'Строка 2'), ('var', 20)], encodiпg='cp1251')
+        # 'str=%D1%F2%FO%EE%EA%E0+2&var=20' 
 
 
 .. py:method:: urljoin(<базовый урл>, <относитьльный или абсолютный урл>[, <разбор якоря>])

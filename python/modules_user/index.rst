@@ -15,6 +15,7 @@
     matplotlib/index
     memcache
     numpy/index
+    openpyxl
     pandas/index
     pep8
     pyaudio
@@ -24,6 +25,8 @@
     pygame/index
     pygal/index
     pymongo/index
+    pypdf2
+    pyppeteer
     pyqt/index
     redis
     request/index

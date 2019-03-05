@@ -8,6 +8,7 @@ http://docs.scipy.org
 .. toctree::
     :maxdepth: 1
 
+    ndarray
     arithmetic
     dtype
     examples
@@ -28,173 +29,47 @@ http://docs.scipy.org
 
 .. code-block:: py
 
-    a = array([1, 2, 3])
-    # array([1,  2,  3])
-    b = array([4, 5, 6])
-    # array([4, 5, 6])
-
-    a*1.5
-    # array([1.5,  3.,  4.5])
-
-    a[1:]
+    array([1, 2, 3])[1:]
     # array([2,  3])
 
-    a[0]
+    array([1, 2, 3])[0]
     # 1
 
-    a + b
-    # array([5, 7, 9])
-
-    c = array([
+    array([
         [1,2,3], 
         [4,5,6]
-    ])
-
-    c[1,2]
+    ])[1,2]
     # 6
 
-    array([2]) * array([[1, 2], [3, 4]])
-    # array([[2, 4], [6, 8]])
-
-.. code-block:: py
-
-    x = array(
+    array(
         [
             [2, 4, 6, 8],
             [3, 3, 2, 1],
             [2, 6, 3, 4],
             [5, 2, 3, 5]
         ]
-    )
-
-    x.shape
-    # (4, 4)
-
-    x[0:1, :]
+    )[0:1, :]
     # array([[2, 4, 6, 8]])
 
-    x[:, 0:1]
+    array(
+        [
+            [2, 4, 6, 8],
+            [3, 3, 2, 1],
+            [2, 6, 3, 4],
+            [5, 2, 3, 5]
+        ]
+    )[:, 0:1]
     # array([[2], [3], [2], [5]])
 
-    x[0:2, 0:2]
+    array(
+        [
+            [2, 4, 6, 8],
+            [3, 3, 2, 1],
+            [2, 6, 3, 4],
+            [5, 2, 3, 5]
+        ]
+    )[0:2, 0:2]
     # array([[2,4], [3, 3]])
-
-
-ndarray
--------
-
-.. py:class:: ndarray
-
-    Экземпляры данного класса возвращают методы модуля
-
-    .. code-block:: py
-
-        a = array([10])
-
-
-    .. py:attribute:: dtype
-
-        Тип значений массива
-
-        .. code-block:: py
-
-            array([10]).dtype
-            # int64
-
-
-    .. py:attribute:: itemsize
-
-        Возвращает число, размер одного элемента массива
-
-        .. code-block:: py
-
-            numpy.random.randint(10, size=(3, 4, 5)).itemsize
-            # 8
-
-
-    .. py:attribute:: nbytes
-
-        Возвращает число, размер всех значений массива
-
-        .. code-block:: py
-
-            numpy.random.randint(10, size=(3, 4, 5)).nbytes
-            # 480
-
-
-    .. py:attribute:: ndim
-
-        .. code-block:: py
-
-            array([
-                [4, 8], 
-                [10, 20]
-            ]).ndim
-            # 2
-
-
-    .. py:attribute:: shape
-
-        Размерность массива
-
-        .. code-block:: py
-
-            array(
-                [
-                    [2, 4, 6, 8],
-                    [3, 3, 2, 1],
-                    [2, 6, 3, 4],
-                    [5, 2, 3, 5]
-                ]
-            ).shape
-            # (4, 4)
-
-
-    .. py:attribute:: size
-
-        Количесвто элементов в массиве
-
-        .. code-block:: py
-
-            numpy.random.randint(10, size=(3, 4, 5)).size
-            # 60
-
-
-    .. py:method:: dot(array)
-
-        .. code-block:: py
-
-            array([2, 4]).dot(array([2, 4]))
-            # 20
-
-
-    .. py:method:: reshape(size: tuple)
-
-        Изменяет размерность массива
-
-        .. code-block:: py
-
-            arange(1, 10).reshape((3, 3))
-            """
-            array([
-                [1, 2, 3], 
-                [4, 5, 6], 
-                [7, 8, 9]
-            ])
-            """
-
-            array([1, 2, 3]).reshape((1, 3))
-            # array([[1, 2, 3]])
-
-
-    .. py:method:: to_list()
-
-        Возвращает содержимое в виде объекта :py:class:`list`
-
-        .. code-block:: py
-
-            a.to_list()
-            # [10]
 
 
 arange()
@@ -369,7 +244,7 @@ empty()
 eye()
 -----
 
-.. py:function:: eye(size: int)
+.. py:function:: eye(size: int[, k=0, dtype])
 
     Возвращает единичную матрицу указанной размерности
 
@@ -380,6 +255,15 @@ eye()
         array([
             [1., 0.], 
             [0., 1.]
+        ])
+
+        eye(4, k=1)
+        """
+        array([
+            [0., 1., 0., 0.], 
+            [0., 0., 1., 0.],
+            [0., 0., 0., 1.],
+            [0., 0., 0., 0.],
         ])
 
 
@@ -452,6 +336,28 @@ hstack()
         """
 
 
+identity()
+----------
+
+.. py:function:: identity(size, dtype)
+
+    Возвращает квадратную матрицу
+
+    .. code-block:: py
+
+        identity(4)
+        """
+        array(
+            [
+                [1., 0., 0., 0.],
+                [0., 1., 0., 0.],
+                [0., 0., 1., 0.],
+                [0., 0., 0., 1.],
+            ]
+        )
+        """
+
+
 inner()
 -------
 
@@ -479,8 +385,20 @@ linspace
         # array([0., 0.25, 0.5, 0.75, 1.])
 
 
-ones
+load
 ----
+
+.. py:function:: load(file_name)
+
+    Загружает массив из файла, сохраненный через метод :py:func:`numpy.save()`
+
+    .. code-block:: py
+
+        array = numpy.load('numbers.npy')
+
+
+ones()
+------
 
 .. py:method:: ones(size: tuple, dtype: int)
 
@@ -496,8 +414,21 @@ ones
         ])
 
 
-reshape
--------
+ones_like()
+-----------
+
+.. py:method:: ones_like(array)
+
+    Возвращает массив, заполненный единицами по указанному массиву
+
+    .. code-block:: py
+
+        ones_like(array([1, 2, 3]))
+        # array([1, 1, 1])
+
+
+reshape()
+---------
 
 .. py:method:: reshape(array, new_shape)
 
@@ -514,6 +445,18 @@ reshape
 
         reshape(arange(9), (3, 2))
         # ValueError: cannot reshape array of size 9 into shape (3,2)
+
+
+save()
+------
+
+.. py:function:: save(name, array)
+
+    Сохраняет массив в файл, который потом можно загрузить через :py:func:`numpy.load()`
+
+    .. code-block:: py
+
+        numpy.save('numbers.npy', array([1, 2, 3]))
 
 
 split()
@@ -533,6 +476,19 @@ split()
         x3 = [3, 2, 1]
         """
 
+
+uniq()
+------
+
+.. py:function:: uniq(array)
+
+    Возвращает массив уникальных значений
+
+    .. code-block:: py
+
+        unique(array([1, 1, 4, 5, 5, 5, 7]))
+        # array([ 1, 4, 5, 7])
+        
 
 vsplit()
 --------
@@ -591,3 +547,16 @@ zeros()
 
         zeros(10, dtype=int)
         # array[0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+
+
+zeros_like()
+------------
+
+.. py:method:: zeros_like(array)
+
+    Возвращает массив, заполненный нулями по указанному массиву
+
+    .. code-block:: py
+
+        zeros_like(array([1, 2, 3]))
+        # array([0, 0, 0])
