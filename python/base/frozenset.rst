@@ -3,12 +3,16 @@ frozenset
 
 .. py:class:: frozenset()
 
-    не изменяемые множества
+    Не изменяемые множества
 
     .. code-block:: py
 
         frozenset('str')
         # frozenset({'s', 't', 'r'})
+
+        frozenset('str') & {'s', 'i'}
+        # frozenset({'s'})
+        
 
     .. py:method:: copy()
 

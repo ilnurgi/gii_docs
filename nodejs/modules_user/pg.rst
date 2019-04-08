@@ -37,9 +37,19 @@ Client
 
     .. code-block:: js
 
-        const pg_client = pg.Client({
+        const pg_client = new pg.Client({
             database: "db"
         });
+
+        const pg_client = new pg.Client("pg://user:password@host:port/db_name");
+        
+        pg_client.connect()
+
+        result = pg_client.query('select * from some_table')
+        result.on('end', function(result){
+            console.log(result.rows)
+        })
+
 
     .. js:function:: connect(callback)
 
@@ -67,7 +77,7 @@ Client
 
     .. js:function:: query(sql, params, callback)
 
-        Выполняет зпрос к базе
+        Выполняет зпрос к базе и возвращает объект запроса
 
         .. code-block:: js
 
