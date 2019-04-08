@@ -21,6 +21,12 @@ appendFile
             // ...
         });
 
+lstat
+-----
+
+.. js:function:: lstat(file, (err, stat) => {})
+
+
 
 mkdir, mkdirSync
 ----------------
@@ -56,6 +62,7 @@ readFile(), readFileSync()
 
 .. js:function:: readFile(file_path)
 .. js:function:: readFileSync(file_path)
+.. js:function:: readFileSync(file_path, params)
 
     Возвращает строку, содержимое файла
 
@@ -64,6 +71,17 @@ readFile(), readFileSync()
         let content = fs.readFileSync('./index.html');
         let content = fs.readFileSync(__dirname + '/index.html', {
             encoding: 'utf-8'
+        });
+
+    .. code-block:: js
+
+        let buffer = fs.readFileSync('./index.html', 'utf-8');
+        const src = buffer.toString();
+
+    .. code-block:: js
+
+        fs.readFile('./1.txt', 'utf-8', (err, buffer) => {
+            // ...
         });
 
 
@@ -114,7 +132,7 @@ watchFile()
 
     Следит за файлом и вызывает колбек при изменении файла
 
-    * options 
+    * options
         * interval - задает время опроса файла на изменение, по умолчанию 5 секунд
 
     .. code-block:: js
@@ -130,8 +148,8 @@ watchFile()
         });
 
 
-writeFile
----------
+writeFile, writeFileSync
+------------------------
 
 .. js:function:: writeFile()
 
