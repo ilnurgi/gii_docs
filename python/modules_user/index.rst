@@ -12,6 +12,7 @@
     flask
     jinja2
     line_profiler
+    markdown
     matplotlib/index
     memcache
     numpy/index

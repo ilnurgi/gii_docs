@@ -5,13 +5,16 @@
 .. toctree::
     :maxdepth: 2
 
+    body_parser
     express
     gulp/index
     gulp_sass
-    pg
-    nunjuscks
-    socketio
-    mongoose
     lodash
+    minimist
+    mongoose
+    nodemailer
     nodemon
-    body_parser
+    nunjuscks
+    pg
+    pug
+    socketio

@@ -7,14 +7,22 @@ express
 
 .. code-block:: js
 
-    const express = require('express');
-    const app = express();
-    const server;
+    const express = require('express')
+    const cookieParse = require('cookie-parser')
 
-    app.get('/', (req, resp) => {
-        resp.sendFile('index.html');
-    });
-    server = app.listen(8000);
+    const server = express()
+
+    server.use(express.urlencoded({
+        extended: true
+    }))
+    server.use(cookieParse());
+
+    server.get('/', (req, resp) => {
+        resp.sendFile('index.html')
+        req.cookie
+        // { username: 'ilnurgi'}
+    })
+    server.listen(8000)
 
 .. code-block:: js
 
@@ -33,26 +41,31 @@ express
 
     module.exports = router;
 
-express
--------
+express()
+---------
 
 .. js:function:: express()
 
-    Возвращает оъект сервера :js:class:`Server`
+    Возвращает объект сервера :js:class:`Server`
 
     .. code-block:: js
 
         const app = express();
 
+    .. js:function:: urlencoded(params)
 
-static
-------
+        * params - объект, параметры метода
+
+            * extended - булево
+
+static()
+--------
 
 .. js:function:: static()
 
     .. code-block:: js
 
-        express.static('static');
+        server.use(express.static(__dirname))
 
 
 Server
@@ -65,7 +78,7 @@ Server
 
     .. js:function:: get(route, callback)
 
-        Задает обработчик для маршрута/урла
+        Задает обработчик для маршрута/урла. В обработчик приед :js:class:`Request` и :js:class:`Response`
 
         .. code-block:: js
 
@@ -89,14 +102,6 @@ Server
                 res.render('index', context);
             });
 
-    .. js:function:: route()
-
-        .. code-block:: js
-
-            app.route('new')
-                .get((req, resp) => {})
-                .post((req, resp) => {} );
-
 
     .. js:function:: listen(port[, host[, callback]])
 
@@ -106,6 +111,24 @@ Server
 
             app.listen(8000);
             app.listen(8000, () => console.log("Server started"));
+
+
+    .. js:function:: post(url, handler)
+
+        .. code-block:: js
+
+            server.post('/', (req, res) => {
+                //
+            })
+
+
+    .. js:function:: route()
+
+        .. code-block:: js
+
+            app.route('new')
+                .get((req, resp) => {})
+                .post((req, resp) => {} );
 
 
     .. js:function:: set(key, value)
@@ -132,7 +155,6 @@ Server
         .. code-block:: js
 
             import apiRouter from './apiRouter';
-
 
             app.use(logger(dev));
             app.use(cookieParser());
@@ -163,3 +185,84 @@ Router
             router.get('/books/:bookId', (req, res) =>{
                 // req.params.bookId
             });
+
+
+Request
+-------
+
+.. js:class:: Request()
+
+    Запрос на сервер
+
+    .. js::attribute:: headers
+
+        Заголовки запроса
+
+        .. code-block:: js
+
+            req.headers
+            {
+                host: '',
+                cookie: ''
+            }
+
+
+    .. js:attribute:: hostname
+
+        .. code-block:: js
+
+            req.hostname
+            // /
+
+            
+Response
+--------
+
+.. js:class:: Response()
+
+    Ответ сервера
+
+    .. js:function:: locals
+
+        Локальные переменные объекта
+
+        .. code-block:: js
+
+            res.locals.usernmae = req.cookies.username
+
+            
+    .. js:function:: cookie(key, value)
+
+        Устанавливает куки в отпвет
+        
+        ..code-block:: js
+
+            res.cookie('username', 'ilnurgi')
+
+    .. js:function:: redirect(url)
+
+        Редирект
+
+        .. code-block:: js
+
+            res.redirect('/')
+            // редирект на страницу откуда пришли
+            res.redirect('back')
+
+    .. js:function:: sendFile()
+
+        .. code-block:: js
+
+            res.sendFile('./index.html', {
+                root: __dirname
+            })
+
+    .. js:function:: setHeader(key, value)
+
+        Устанавливает заголовки ответа
+
+        .. code-block:: js
+
+            res.setHeader('Set-Cookie', ['username=ilnurgi'])
+
+

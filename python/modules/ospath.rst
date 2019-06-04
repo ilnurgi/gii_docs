@@ -15,7 +15,6 @@ os.path
         os.path.abspath("1.txt")
         # /home/ilnurgi/1.txt
 
-
 .. py:method:: basename(path) 
 
     :param str path: путь к файлу/папке
