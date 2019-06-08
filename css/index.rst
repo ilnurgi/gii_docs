@@ -327,3 +327,31 @@ widows
     elem {
         widows: 5;
     }
+
+filter
+------
+
+* blur()
+* brightness()
+* contrast()
+* drop-shadow()
+* grayscale()
+* hue-rotate()
+* invert()
+* opacity()
+* saturate()
+* sepia()
+
+.. code-block:: css
+
+    .colorize-pink {
+      filter: brightness(0.5) sepia(1) hue-rotate(-70deg) saturate(5);
+    }
+
+    .colorize-navy {
+      filter: brightness(0.2) sepia(1) hue-rotate(180deg) saturate(5);
+    }
+
+    .colorize-blue {
+      filter: brightness(0.5) sepia(1) hue-rotate(140deg) saturate(6);
+    }
