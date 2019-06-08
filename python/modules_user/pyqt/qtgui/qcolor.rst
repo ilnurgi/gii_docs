@@ -1,5 +1,3 @@
-.. py:module:: QtGui
-
 QColor - цвет
 =============
 

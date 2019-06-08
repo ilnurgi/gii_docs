@@ -1,4 +1,4 @@
-.. py:modules:: SimpleHTTPServer
+.. py:module:: SimpleHTTPServer
 
 SimpleHTTPServer
 ================

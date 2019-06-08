@@ -6,15 +6,18 @@
     :maxdepth: 2
 
     body_parser
+    ejs
     express
     gulp/index
     gulp_sass
+    jade
     lodash
+    md5
     minimist
     mongoose
     nodemailer
     nodemon
-    nunjuscks
+    nunjucks
     pg
     pug
     socketio

@@ -16,7 +16,7 @@ Contents:
    dd
    df
    dirs
-   dmesg
+   dmwsg
    find
    grep
    head

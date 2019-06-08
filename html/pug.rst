@@ -3,7 +3,7 @@ pug
 
 pugjs.org
 
-.. code-block:: js
+.. code-block:: pug
 
     // include config.pug подключить переменные из файла
     - var lang = 'en'
@@ -60,7 +60,7 @@ pugjs.org
                         li {}
                     }
 
-.. code-block:: js
+.. code-block:: pug
 
     // main.pug
     extends layout

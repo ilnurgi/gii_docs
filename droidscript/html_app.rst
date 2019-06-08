@@ -3,7 +3,7 @@ HTML - приложение
 
 Можно писать прям HTML приложение
 
-.. code-block:: js
+.. code-block:: html
     
     <html>
     <head>

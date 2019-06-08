@@ -159,7 +159,7 @@ animation-iteration-count
 animation-name
 --------------
 
-Назначает анимацию, созданной с помощью :ref:`keyframes`
+Назначает анимацию, созданной с помощью `keyframes`
 
 .. code-block:: css
 

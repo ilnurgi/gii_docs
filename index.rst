@@ -31,8 +31,8 @@
     python/index
     re/index
     react/index
-    saas/index
+    sass/index
     smart_grid/index
     sql/index
-    styles/index
+    stylus/index
     svg/index

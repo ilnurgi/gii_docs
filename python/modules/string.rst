@@ -120,7 +120,7 @@ atof()
 
 
 split()
-------
+-------
 
 .. py:function:: split(s[, sep=' ' [, maxsplit]]) 
 

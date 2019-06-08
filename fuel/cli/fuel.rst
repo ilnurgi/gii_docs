@@ -55,7 +55,7 @@ deployment - работа с деплоем
 
 
 environment, env - работа с окружениями
---------------------------
+---------------------------------------
 
 * --env, --env-id <env> - фильтрация конкретного окружения
 * --dir <dir>
@@ -196,7 +196,7 @@ health
 * --list, -l
 * --force, -f
 
-.. code-blcok:: sh
+.. code-block:: sh
 
     fuel health --env 1 --check smoke,sanity
     fuel health --env 1 --list
@@ -449,7 +449,7 @@ openstack-config - настройка опенстека
 * --list, -l - список конфигурации
 * --upload
 
-.. code-blosk:: sh
+.. code-block:: sh
 
     # деплой конфигурации
     fuel openstack-config --execute --env 1
@@ -604,7 +604,7 @@ release, rel
 
 
 reset - сброс окружения
------
+-----------------------
 
 * --env, --env-id <env> - идентификатор окружения
 

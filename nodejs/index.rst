@@ -31,4 +31,3 @@ Node.js - опенсорсная, событийно-ориентированн�
     npm
     modules/index
     modules_user/index
-    gulp/index

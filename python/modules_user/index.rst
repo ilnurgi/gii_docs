@@ -22,7 +22,6 @@
     pyaudio
     psutil
     pylint
-    pypiserver
     pygame/index
     pygal/index
     pymongo/index
@@ -30,10 +29,11 @@
     pyppeteer
     pyqt/index
     redis
-    request/index
+    requests/index
     serial
     sphinx
     sqlalchemy/index
     xlrd
     xlwt
     xlutils
+    memory_profiler

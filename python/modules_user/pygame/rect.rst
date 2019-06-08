@@ -1,8 +1,5 @@
-.. py:module:: pygame
-
-
 Rect
-----
+====
 
 .. py:class:: Rect(x, y, w, h)
 
