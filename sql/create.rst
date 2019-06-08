@@ -6,7 +6,7 @@ CREATE TABLE
 
 Оператор создает таблицу
 
-.. code-block:: c
+.. code-block:: sql
 
     CREATE 
         [TEMP | TEMPORARY] TABLE [IF NOT EXISTS] 
@@ -67,7 +67,7 @@ CREATE TABLE
 * `ROLLBACK` - при ошибке, транзакция завершается с откатом всех изменений, дальнейшее выполнение прерывается и выводится сообщение об ошибке. Если активной транзакций нет, то используется алгоритм `ABORT`
 
 
-.. code-block:: c
+.. code-block:: sql
     
     CREATE TABLE table (
         snum int, 
@@ -95,6 +95,6 @@ CREATE INDEX
 
 Оператор создает таблицу индексов
     
-.. code-block:: c
+.. code-block:: sql
 
     CREATE [UNIQUE] INDEX <таблицаИндексов> ON <таблица>(<столбец>)
