@@ -1,5 +1,7 @@
+.. py:module:: django.models
+
 Модель
-------
+======
 
 .. code-block:: py
 

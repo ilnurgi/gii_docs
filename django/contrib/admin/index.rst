@@ -1,7 +1,7 @@
-.. py:module:: django.contrib.admin
+.. py:module:: django.admin
 
-Админка
-=======
+django.admin
+============
 
 .. code-block:: py
 
@@ -109,17 +109,50 @@ ModelAdmin
             ordering = ['status', 'publish']
             actions = [export_to_csv]
 
+    .. py:attribute:: actions
+
+        Список действий в админке
+
+        .. code-block:: py
+
+
+            def some_action(modeladmin, request, queryset):
+                pass
+
+            some_action.short_description = 'Some action'
+            some_action.allow_tags = True
+
+            class SomeAdmin(admin.ModelAdmin):
+                actions = [some_action]
+
+
     .. py:attribute:: actions_on_bottom
 
         Булево, список действий снизу
+
+        .. code-block:: py
+
+            class SomeAdmin(admin.ModelAdmin):
+                
+                actions_on_bottom = True
 
     .. py:attribute:: actions_on_top
 
         Булево, список действий сверху
 
+        .. code-block:: py
+
+            class SomeAdmin(admin.ModelAdmin):
+                
+                actions_on_top = True
+
+    .. py:attribute:: actions_selection_counter
+
     .. py:attribute:: date_hierarchy
 
         Поле, по которому также можно фильтровать объекты в разрезе дат
+
+    .. py:attribute:: empty_value_display
 
     .. py:attribute:: exclude
 
@@ -131,14 +164,17 @@ ModelAdmin
 
         .. code-block:: py
 
-            fields = ("content", )
+            class SomeAdmin(admin.ModelAdmin):
+                fields = ("content", )
 
         .. code-block:: py
 
-            fields = (
-                # эти два поля будут расположены по горизонтали
-                ("name", "content"),
-            )
+            class SomeAdmin(admin.ModelAdmin):
+                fields = (
+                    # эти два поля будут расположены по горизонтали
+                    ("name", "content"),
+                )
+
 
     .. py:attribute:: fieldsets
 
@@ -146,15 +182,38 @@ ModelAdmin
 
         .. code-block:: py
 
-            fieldsets = (
-                (
-                    None,
-                    {
-                        "fields": (("name", "category"),),
-                        "classes": (("collapse", ), ),
-                    },
-                ),
-            )
+            class SomeAdmin(admin.ModelAdmin):
+                fieldsets = (
+                    (
+                        None,
+                        {
+                            "fields": (("name", "category"),),
+                            "classes": (("collapse", ), ),
+                        },
+                    ),
+                )
+
+
+    .. py:attribute:: filter_horizontal
+    .. py:attribute:: filter_vertical
+    .. py:attribute:: form
+    .. py:attribute:: formfield_overrides
+    
+    .. py:attribute:: inlines
+
+        Список встаиваемых моделей
+
+        .. code-block:: py
+
+            class PostFilesInline(TabularInline):
+                model = File
+
+            class PostAdmin(ModelAdmin):
+
+                inlines = [
+                    PostFilesInline,
+                ]
+                
 
     .. py:attribute:: list_display
 

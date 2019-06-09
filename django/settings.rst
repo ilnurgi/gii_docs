@@ -1,3 +1,5 @@
+.. py:module:: django.settings
+
 Конфигурирование проекта
 ========================
 
@@ -215,25 +217,28 @@ LOGOUT_URL
     # это не урл, а название урла привязки
     # LOGIN_URL = "login"
 
-
 MEDIA_ROOT
 ----------
 
-Папка для хранения всех медиа файлов, загруженных пользователями
+.. py:attribute:: MEDIA_ROOT
 
-.. code-block:: py
+    Строка, путь для хранения всех медиа файлов, загруженных пользователями
 
-    MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+    .. code-block:: py
+
+        MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 
 MEDIA_URL
 ---------
 
-Путь до папки с медии, для шаблонов
+.. py:attribute:: MEDIA_URL
 
-.. code-block:: py
+    Путь до папки с медии, для шаблонов
 
-    MEDIA_URL = '/media/'
+    .. code-block:: py
+
+        MEDIA_URL = '/media/'
 
 
 MIDDLEWARE_CLASSES
