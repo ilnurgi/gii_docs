@@ -87,21 +87,43 @@ MagicMock
 patch
 -----
 
-.. py:method:: patch(target, new=MagicMock)
+.. py:method:: patch(**kwargs)
+
+    * target
+    * new = DEFAULT
+    * spec = None
+    * create = False
+    * spec_set = None
+    * autospec = None
+    * new_callable = None
 
     Возвращает новый патченный объект
 
     .. code-block:: py
 
         with patch('__main__.A.get_x', new=Mock(return_value=500)):
-            a = A()
-            a.compute()
-            # 600
+            ...
+
 
         with patch('__main__.A.get_x') as mock_A_get_x:
             mock_A_get_x.return_value = 400
+            ...
 
-            a = A()
-            a.compute()
-            # 600
 
+        @patch('myapp.settings.SOME_VALUE', 99)
+        def test():
+            ...
+
+
+        @patch('myapp.settings.some_method')
+        def test(mock_some_method):
+            mock_some_method.return_value = '123'
+            ...
+            mock_some_method.assert_called()
+            mock_some_method.assert_called_once_with('foo')
+
+
+        @patch('myapp.settings.Class.property', new_callable=PropertyMock)
+        def test(mock_property):
+            mock_property.return_value = '123'
+            ...
