@@ -1,7 +1,9 @@
 .. py:module:: java.io
 
-StringBufferInputStream - считывает данные из других двух и более входных потоковss
-===============================================
+StringBufferInputStream
+=======================
+
+считывает данные из других двух и более входных потоковss
 
 При этом можно указать два потока или их список. Данные будут вычитываться
 последовательно - сначала все данные из первого потока в списке, потом из второго, и так далее. 
@@ -11,9 +13,9 @@ StringBufferInputStream - считывает данные из других дв
 
 .. py:class:: StringBufferInputStream()
 
-    Наследник :py:class::`java.io.InputStream`
+    Наследник :py:class:`java.io.InputStream`
 
-    ::
+    .. code-block:: java
 
         FileInputStream inFile1 = null;
         FileInputStream inFile2 = null;

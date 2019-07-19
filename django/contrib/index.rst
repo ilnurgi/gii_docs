@@ -14,7 +14,7 @@
 .. toctree::
     :maxdepth: 1
 
-    _admin
+    admin/index
     auth/index
     _contenttypes
     _messages

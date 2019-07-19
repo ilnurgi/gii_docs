@@ -35,3 +35,4 @@ QtGui - модуль классов, реализующих компоненты
    qtooltip
    qvboxlayout
    qwidget
+   qinputdialog

@@ -5,3 +5,4 @@
     :maxdepth: 2
 
     chart_js
+    vuejs/index

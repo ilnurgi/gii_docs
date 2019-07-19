@@ -1,12 +1,10 @@
-.. py:module:: QtGui
-
 QAction
 =========
 
 
 .. py:class:: QAction()
 
-    .. code-block: py
+    .. code-block:: py
 
         self.lineEdit2 = QtGui.QLineEdit()
         se1f.act = QtGui.QAction(se1f)

@@ -8,8 +8,8 @@ http
     const http = require('http');
 
 
-createServer
-------------
+createServer()
+--------------
 
 .. js:function:: createServer(callback)
 
@@ -22,6 +22,52 @@ createServer
             //
         });
 
+get()
+-----
+
+.. js:function:: get(url, callback)
+
+    Get запрос
+
+    .. code-block:: js
+
+        http.get('ilnurgi.ru', (res) => {
+            res.statusCode;
+        }).on('error', e => {
+            e.message;
+        });
+
+
+request()
+---------
+
+.. js:function:: request(options, callback)
+
+    POST запрос
+
+    .. code-block:: js
+
+        const options = {
+            hostname: 'ilnurgi.ru',
+            port: 80,
+            path: '/statistic',
+            method: 'POST'
+        };
+
+        const req = http.request(options, res => {
+            res.statusCode;
+            JSON.stringify(res.headers);
+            res.setEncoding('utf8');
+            res.on('data', chunk => {
+                //
+            });
+        })
+        req.on('error', e => {
+            e.message;
+        });
+        req.write('data\n');
+        req.end();
+
 
 Server
 ------
@@ -31,7 +77,7 @@ Server
     Сервер
 
 
-    .. js:function:: listen(port)
+    .. js:function:: listen(port, host, callback)
 
         Указывает порт прослушки
 
@@ -70,7 +116,29 @@ Request
 
     .. js:attribute:: headers
 
+        .. code-block:: js
+
+            request.headers
+            {
+                host: '127.0.0.1:3000',
+                'user-agent': '',
+                'accept-encoding': 'gzip',
+                connection: 'close'
+            }
+
+    .. js:attribute:: method
+
+        .. code-block:: js 
+
+            request.method
+            //  GET
+
     .. js:attribute:: url
+
+        ..code-block:: js
+
+            request.url
+            // /
 
 
 Response
@@ -106,4 +174,7 @@ Response
 
         .. code-block:: js
 
-            response.writeHead(status, {'Content-type': 'application-json'})
+            response.writeHead(200, {'Content-type': 'application-json'})
+
+
+            

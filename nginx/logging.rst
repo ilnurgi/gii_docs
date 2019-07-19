@@ -1,7 +1,7 @@
 logging
 =======
 
-.. code-block::js
+.. code-block:: nginx
 
     http {
         acces_log off;
@@ -10,7 +10,7 @@ logging
 access_log
 ----------
 
-.. code-block:: js
+.. code-block:: nginx
 
     access_log off;
 
@@ -20,7 +20,7 @@ error_log
 
 Используется в контекстах: main, :ref:`nginx_http`, :ref:`nginx_server`, :ref:`nginx_location`.
 
-.. code-block:: js
+.. code-block:: nginx
 
     error_log file|stderr [debug|info|notice|warn|error|alert|emerg];
 

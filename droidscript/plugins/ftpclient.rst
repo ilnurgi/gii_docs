@@ -1,7 +1,7 @@
 FtpClient
 =========
 
-.. js:function:: FtpClient
+.. js:class:: FtpClient
 
     .. code-block:: js
         

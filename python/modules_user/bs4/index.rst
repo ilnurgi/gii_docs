@@ -5,6 +5,11 @@ beautifulsoup
 
 https://www.crummy.com/software/BeautifulSoup/bs4/doc/
 
+.. toctree::
+    :maxdepth: 1
+
+    element
+
 .. code-block:: shell
 
     pip install beautifulsoup4

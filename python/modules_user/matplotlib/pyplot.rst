@@ -637,7 +637,7 @@ show()
 
 
 subplot()
-    ---------
+---------
 
 .. py:function:: subplot(rows, columns, index)
 

@@ -1,6 +1,27 @@
 Глобальные объекты
 ==================
 
+__dirname
+---------
+
+Путь к текущей папке, откуда запущен скрипт
+
+.. code-block:: js
+
+    console.log(__dirname);
+    // c:\projects\
+
+
+__filename
+----------
+
+Путь к текущему файлу
+
+.. code-block:: js
+
+    console.log(__filename);
+    // c:\projects\ilnurgi.js
+
 globals
 -------
 
@@ -11,6 +32,22 @@ process
 -------
 
 Объект текущего процесса
+
+argv
+++++
+
+Массив переданных параметров скрипту
+
+.. code-block:: js
+
+    process.argv
+    // ['node', 'script.js', 'param1']
+
+
+env
++++
+
+Переменные окружения
 
 stdin
 +++++

@@ -29,6 +29,7 @@ java.io - система ввода/вывода
    DataOutputStream
    ObjectInputStream
    ObjectOutputStream
+   LineNumberInputStream
 
 
 Интерфейсы:
@@ -50,4 +51,3 @@ java.io - система ввода/вывода
 
    FileNotFoundException
    IOException
-   NotSerializableException

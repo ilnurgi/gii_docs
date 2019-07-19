@@ -19,5 +19,7 @@ Bootstrap
     tabels
     forms
     button
-    dropdown
+    dropdowns
+    modal
+    start
     tooltip

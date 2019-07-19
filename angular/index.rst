@@ -10,6 +10,7 @@ Angular
     filters
     methods_module
     helpers
+    template
 
 .. toctree::
     :maxdepth: 2

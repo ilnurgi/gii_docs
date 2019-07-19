@@ -3,7 +3,7 @@ INSERT
 
 Оператор добавления записи в таблицу 
 
-.. code-block:: c
+.. code-block:: sql
 	
 	INSERT 
 		[OR <алгоритм>]
@@ -31,7 +31,7 @@ INSERT
 	* `ROLLBACK` - при ошибке, транзакция завершается с откатом всех изменений, дальнейшее выполнение прерывается и выводится сообщение об ошибке. Если активной транзакций нет, то используется алгоритм `ABORT`
 
 
-.. code-block:: c
+.. code-block:: sql
 		
 	INSERT INTO table VALUES (1, 'hi', 'hello')
 
@@ -48,7 +48,7 @@ INSERT
 REPLACE INTO
 ------------
 
-.. code-block:: c
+.. code-block:: sql
 
 	REPLACE INTO 
 		[<название БД>.]<название табюлицы>

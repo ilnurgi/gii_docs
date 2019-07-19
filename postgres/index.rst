@@ -13,32 +13,32 @@ Postgres
 
 .. code-block::
 
-	CREATE [UNIQUE] INDEX [CONCURRENTLY]
-		[[IF NOT EXISTS] имя] ON имя_таблицы [USING метод]
-		(
-			{имя_столбца | (выражение)}
-			[COLLATE правило_сортировки][класс_операторов]
-			[ASC|DESC][NULLS {FIRST|LAST}]
-			[, ...]
-		)
-		[WITH (параметр_хранения=значение [, ...])]
-		[TABLESPACE табл_пространство]
-		[WHERE предикат]
+    CREATE [UNIQUE] INDEX [CONCURRENTLY]
+        [[IF NOT EXISTS] имя] ON имя_таблицы [USING метод]
+        (
+            {имя_столбца | (выражение)}
+            [COLLATE правило_сортировки][класс_операторов]
+            [ASC|DESC][NULLS {FIRST|LAST}]
+            [, ...]
+        )
+        [WITH (параметр_хранения=значение [, ...])]
+        [TABLESPACE табл_пространство]
+        [WHERE предикат]
 
-	CREATE INDEX test_index ON test_table (col varchar_pattern_ops);
-		
-	-- класс_операторов
-	-- -text_pattern_ops
-	-- -varchar_pattern_ops
-	-- -bpchar_pattern_ops
+    CREATE INDEX test_index ON test_table (col varchar_pattern_ops);
+        
+    -- класс_операторов
+    -- -text_pattern_ops
+    -- -varchar_pattern_ops
+    -- -bpchar_pattern_ops
 
 .. code-block:: sql
 
-	-- индекс для текстового поля с поиском через лайк
-	CREATE INDEX idx_movie_title ON movie (lower(title) text_pattern_ops)
+    -- индекс для текстового поля с поиском через лайк
+    CREATE INDEX idx_movie_title ON movie (lower(title) text_pattern_ops)
 
-	-- like('abcd%') будет поиск в индексе
-	-- like('%abcd%') НЕ будет поиск в индексе
+    -- like('abcd%') будет поиск в индексе
+    -- like('%abcd%') НЕ будет поиск в индексе
 
 btree индекс
 
@@ -59,17 +59,17 @@ btree индекс
 
 .. code-block::
 
-	CREATE TABLE people (
-		last name TEXT NOT NULL
-		, first name TEXT NOT NULL
-		, date_of_birth TIMESTAMP NOT NULL
-		, gender INT NOT NULL
-	);
+    CREATE TABLE people (
+        last name TEXT NOT NULL
+        , first name TEXT NOT NULL
+        , date_of_birth TIMESTAMP NOT NULL
+        , gender INT NOT NULL
+    );
 
-	CREATE INDEX idx_people_name
-		ON 
-			people USING btree
-				(lst_name, first_name, date_of_birth;
+    CREATE INDEX idx_people_name
+        ON 
+            people USING btree
+                (lst_name, first_name, date_of_birth;
 
 hash - индекс 
 
@@ -84,15 +84,15 @@ hash - индекс
 
 .. code-block::
 
-	CREATE TEMPORARY TABLE testhash (
-		fname TEXT NOT NULL
-		, lname TEXT NOT NULL
-	);
+    CREATE TEMPORARY TABLE testhash (
+        fname TEXT NOT NULL
+        , lname TEXT NOT NULL
+    );
 
-	CREATE INDEX idx_testhash_fname
-		ON 
-			testhash USING hash
-				(fname);
+    CREATE INDEX idx_testhash_fname
+        ON 
+            testhash USING hash
+                (fname);
 
 
 
@@ -100,16 +100,16 @@ gist индекс
 
 .. code-block::
 
-	CREATE TABLE city (
-		id SERIAL PRIMARY KEY
-		, name TEXT NOT NULL
-		, area polygon
-	);
+    CREATE TABLE city (
+        id SERIAL PRIMARY KEY
+        , name TEXT NOT NULL
+        , area polygon
+    );
 
-	CREATE INDEX idx_city_area
-		ON
-			city USING gist
-				(area);
+    CREATE INDEX idx_city_area
+        ON
+            city USING gist
+                (area);
 
 
 gin индекс, инвертированный индекс
@@ -125,41 +125,41 @@ gin индекс, инвертированный индекс
 
 .. code-block::
 
-	CREATE INDEX idx_items_avatar_id
-		ON
-			items (avatar_id)
-		WHERE
-			avatar_id IS NOT NULL;
+    CREATE INDEX idx_items_avatar_id
+        ON
+            items (avatar_id)
+        WHERE
+            avatar_id IS NOT NULL;
 
 функциональный индекс
 
 .. code-block::
 
-	CREATE INDEX idx_movies_title
-		ON movies
-			(LOWER(title));
+    CREATE INDEX idx_movies_title
+        ON movies
+            (LOWER(title));
 
 
 кластерный индекс
 
 .. code-block::
-	
-	CREATE TABLE movies (
-		id SERIAL PRIMARY KEY
-		, title TEXT NOT NULL
-	);
+    
+    CREATE TABLE movies (
+        id SERIAL PRIMARY KEY
+        , title TEXT NOT NULL
+    );
 
-	-- кластеризация для таблицы
-	CLUSTER movies USING movies_pkey;
-	-- повтроное кластеризация для таблицы
-	CLUSTER movies;
-	-- повторное кластеризация всей бд
-	CLUSTER;
+    -- кластеризация для таблицы
+    CLUSTER movies USING movies_pkey;
+    -- повтроное кластеризация для таблицы
+    CLUSTER movies;
+    -- повторное кластеризация всей бд
+    CLUSTER;
 
 
 покрывающий индекс
 
-	содержит все данные для запроса
+    содержит все данные для запроса
 
 
 
@@ -174,16 +174,16 @@ explain
 без параметров, explain просто строит план запроса 
 .. code-block:: sql
 
-	explain [(param [, ...])] оператор
-	explain [analyze] [verbose] оператор
+    explain [(param [, ...])] оператор
+    explain [analyze] [verbose] оператор
 
-	-- param
-	analyze [boolean] - выполнить запрос
-	verbose [boolean] - больше инфы
-	costs [boolean] - стоимость операции
-	buffers [boolean] - буферы, кеши
-	timing [boolean] - стоимость операции
-	foramt {text | xml | json | yaml} - формат текста
+    -- param
+    analyze [boolean] - выполнить запрос
+    verbose [boolean] - больше инфы
+    costs [boolean] - стоимость операции
+    buffers [boolean] - буферы, кеши
+    timing [boolean] - стоимость операции
+    foramt {text | xml | json | yaml} - формат текста
 
 
 
@@ -229,4 +229,3 @@ explain
     );
 
     ALTER TABLE public.table_name OWNER TO role_name;
-

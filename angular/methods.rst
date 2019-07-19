@@ -174,7 +174,7 @@ module
 
     Объявляет модуль в приложений и возвращает его экземпляр
 
-    .. code-block:: jjs
+    .. code-block:: js
 
         var app = angular.module('myModule', [])
 

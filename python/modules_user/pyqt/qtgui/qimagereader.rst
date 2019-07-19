@@ -1,6 +1,4 @@
-.. py:module:: QtGui
-
-QImageReader 
+QImageReader
 ============
 
 .. py:class:: QImageReader()

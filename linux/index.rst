@@ -12,7 +12,11 @@ Contents:
    chmod
    chown
    cp
+   cat
+   dd
+   df
    dirs
+   dmwsg
    find
    grep
    head
@@ -20,6 +24,7 @@ Contents:
    mkdir
    pwd
    touch
+   ps
 
 
 Горячие клавиши
@@ -227,17 +232,6 @@ Contents:
 
         * year - год
 
-    * cat arg
-
-        * arg - устройство
-          /proc/cpuinfo – информация ЦПУ
-          /proc/interrupts - показать прерывания
-          /proc/meminfo – информация о памяти
-          /proc/mounts - отобразить смонтированные файловые системы
-          /proc/net/dev - показать сетевые интерфейсы и статистику по ним
-          /proc/swaps - показать файл(ы) подкачки
-          /proc/version - вывести версию ядра
-
     * clock -w
       Сохранить системное время в BIOS
 
@@ -417,3 +411,12 @@ Contents:
 
     * more
       Постраничный вывод
+
+
+/proc/cpuinfo – информация ЦПУ
+/proc/interrupts - показать прерывания
+/proc/meminfo – информация о памяти
+/proc/mounts - отобразить смонтированные файловые системы
+/proc/net/dev - показать сетевые интерфейсы и статистику по ним
+/proc/swaps - показать файл(ы) подкачки
+/proc/version - вывести версию ядра
