@@ -38,6 +38,7 @@
     json
     keyword
     locale
+    logging/index
     marshal
     math
     multiprocessing
