@@ -4,8 +4,8 @@ case
 ====
 
 
-TestCase
---------
+TestCase()
+----------
 
 .. py:class:: TestCase
 
@@ -49,9 +49,18 @@ TestCase
 
         сравнивает `x`, `y` c точностью до `places`
 
+
     .. py:method:: assertRaises(exc, calable, *args)
 
         проверяет что `calable` вызывает исключение `exc`, `args` передаются в `calable`
+
+        .. code-block:: py
+
+            with self.assertRaises(Warning) as cm:
+                ErrorMethod()
+
+            self.assertIn('error message' cm.exception.message)
+
 
     .. py:method:: failUnless(expr, [msg])
 
