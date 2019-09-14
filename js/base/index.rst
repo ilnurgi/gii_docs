@@ -20,7 +20,7 @@ JavaScript
 
     String
     Array
-    Object
+    object
     Map
     Set
 

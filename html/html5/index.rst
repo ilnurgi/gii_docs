@@ -17,6 +17,7 @@ HTML5
     hgroup
     input
     main
+    mark
     meter
     nav
     progress

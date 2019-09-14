@@ -8,10 +8,10 @@ fs
     const fs = require('fs');
 
 
-appendFile
-----------
+appendFile()
+------------
 
-.. js:function:: appendFile()
+.. js:function:: appendFile(file_path, data, options, calback)
 
     Дописывает данные в файл
 
@@ -20,6 +20,14 @@ appendFile
         fs.appendFile('hello.txt', 'appended content', function(err){
             // ...
         });
+
+exists
+------
+
+.. js:function:: exists(path, callback)
+
+    Проверка существования файла
+
 
 lstat
 -----
@@ -60,9 +68,9 @@ readdir, readdirSync
 readFile(), readFileSync()
 --------------------------
 
-.. js:function:: readFile(file_path)
-.. js:function:: readFileSync(file_path)
-.. js:function:: readFileSync(file_path, params)
+.. js:function:: readFile(file_path, options, calback)
+.. js:function:: readFileSync(file_path, options, calback)
+.. js:function:: readFileSync(file_path, options, calback)
 
     Возвращает строку, содержимое файла
 
@@ -81,14 +89,15 @@ readFile(), readFileSync()
     .. code-block:: js
 
         fs.readFile('./1.txt', 'utf-8', (err, buffer) => {
-            // ...
+            data.toString();
         });
 
 
-renameSync
-----------
+rename(), renameSync()
+----------------------
 
-.. js:function:: renameSync()
+.. js:function:: rename(src_path, dst_path, callback)
+.. js:function:: renameSync(src_path, dst_path, callback)
 
     Переименовать файл
 
@@ -148,10 +157,11 @@ watchFile()
         });
 
 
-writeFile, writeFileSync
-------------------------
+writeFile(), writeFileSync()
+----------------------------
 
-.. js:function:: writeFile()
+.. js:function:: writeFile(file_path, data, options, calback)
+.. js:function:: writeFileSync(file_path, data, options, calback)
 
     Записывает данные в файл
 

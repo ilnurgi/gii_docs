@@ -24,3 +24,6 @@ SQL - язык программирования для манипулирова�
    select
    where
    functions
+   types
+   transaction
+   mysql

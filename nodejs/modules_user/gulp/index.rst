@@ -42,6 +42,22 @@ https://gulpjs.com/
     const cleanCSS = require('gulp-clean-css');
     const browserSync = require('browser-sync').create();
     const sourcemaps = require('gulp-sourcemaps');
+    const webpack = require('webpack-stream')
+
+    const webpackConf = {
+        output: {
+            filename: 'bundle.js'
+        },
+        module: {
+            rules: [
+                {
+                    test: //\.js$,
+                    loader: 'babel-loader',
+                    exclude: 'node-modules'
+                }
+            ]
+        }
+    }
 
     const config = {
         src: './src',
@@ -81,6 +97,12 @@ https://gulpjs.com/
             }
         });
     });
+
+    gulp.task('js', function(){
+        return gulp.src('./src/index.js')
+            .pipe(webpack(webpackConf))
+            .pipe(gulp.dest(dest_path + 'js/'))
+    })
 
 dest
 ----

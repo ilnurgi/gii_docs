@@ -1,5 +1,9 @@
+.. py:module:: django.models
+
 Модель
-------
+======
+
+Миграции :ref:`django_migrations`.
 
 .. code-block:: py
 
@@ -54,4 +58,3 @@
     fields
     relations
     query
-    migrations

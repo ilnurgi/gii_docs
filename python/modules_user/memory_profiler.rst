@@ -7,4 +7,4 @@ memory_profiler
 
     pip install memory_profiler
     pip install psutil
-    python -m memory_profiler  script.py
+    python -m memory_profiler script.py

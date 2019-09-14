@@ -1,3 +1,5 @@
+.. js:module:: net
+
 net
 ===
 

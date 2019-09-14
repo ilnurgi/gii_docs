@@ -18,7 +18,6 @@
     contextlib
     copy
     cProfile
-    csv
     datetime
     dbm
     decimal
@@ -37,7 +36,9 @@
     ipaddress
     itertools
     json
+    keyword
     locale
+    logging/index
     marshal
     math
     multiprocessing
@@ -77,5 +78,6 @@
     urllib/index
     warnings
     weakref
+    webbrowser
     xml_sax_saxutils
     zipfile

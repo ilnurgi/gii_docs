@@ -3,7 +3,7 @@ SELECT
 
 Оператор выборки данных из БД
 
-.. code-block:: c
+.. code-block:: sql
     
     SELECT [ALL | DISTINCT]
         [<название таблицы>.]<поле>,
@@ -35,7 +35,7 @@ SELECT
     * `LIMIT <начальная позиция>, <количесвто записей>`
     * `LIMIT <количесвто записей> OFFSET <начальная позиция>`
 
-.. code-block:: c
+.. code-block:: sql
 
     SELECT 10=10, 5=10;
     # 1 | 0
@@ -43,7 +43,7 @@ SELECT
 ANY
 ---
 
-.. code-block:: c
+.. code-block:: sql
 
     SELECT 
         * 
@@ -58,7 +58,7 @@ CASE
 
 условное выражение
 
-.. code-block:: c
+.. code-block:: sql
 
     CASE выражение 
         WHEN выражение
@@ -66,7 +66,7 @@ CASE
         ELSE выражение
     END
 
-.. code-block:: c
+.. code-block:: sql
 
     SELECT 
         CASE sname WHEN 'Peel' THEN 'Peal' END
@@ -85,7 +85,7 @@ CAST
 
 оператор преобразования одного типа в другой
 
-.. code-block:: c
+.. code-block:: sql
 
     SELECT CAST(onum AS CHAR) FROM table
 
@@ -94,7 +94,7 @@ COALESCE
 
 принимает значения, выводится первое не NULL
 
-.. code-block:: c
+.. code-block:: sql
 
     COALESCE (выражение, ....)
 
@@ -106,7 +106,7 @@ DISTINCT
     
 Оператор указывает, выбрать только уникальные записи
 
-.. code-block:: c
+.. code-block:: sql
 
     SELECT DISTINCT 
         <столбцы> 
@@ -117,7 +117,7 @@ ESCAPE
 
 Оператор устанавливает символ, которые будет экранировать символы
 
-.. code-block:: c
+.. code-block:: sql
 
     SELECT 
         <столбцы> 
@@ -135,7 +135,7 @@ EXCEPT (MINUS)
 
 Объединяет запросы по разности
 
-.. code-block:: c
+.. code-block:: sql
 
     SELECT 
         * 
@@ -150,7 +150,7 @@ EXISTS
 
 принимает подзапрос в качетсве аргумента, и выдает TRUE при наличии в подзапросе выходных данных, иначе FALSE
 
-.. code-block:: c
+.. code-block:: sql
 
     SELECT 
         * 
@@ -166,7 +166,7 @@ FULL OUTER JOIN
 
 полное внешнее соединение, записи левой и правой таблицы, в которых не было найдено совпадений, столбцы из правой и левой таблицы заполняются NULL.
 
-.. code-block:: c
+.. code-block:: sql
 
     SELECT 
         * 
@@ -189,7 +189,7 @@ INNER JOIN
 
 внутреннее соединение, несовпадающие строки обеих таблиц исключаются
 
-.. code-block:: c
+.. code-block:: sql
 
     SELECT table2.title, table1.description 
         FROM table1
@@ -201,7 +201,7 @@ INTERSECT
 
 Объединяет запросы по общему значению, т.е. находит пересечение строк запросов
 
-.. code-block:: c
+.. code-block:: sql
 
     SELECT 
         * 
@@ -216,7 +216,7 @@ LEFT OUTER JOIN
 
 левое внешнее соединение, записи левой таблицы, в которых не было найдено совпадений, столбцы из правой таблицы заполняются NULL.
 
-.. code-block:: c
+.. code-block:: sql
 
     SELECT 
         * 
@@ -229,7 +229,7 @@ NULLIF
 
 принимает два аргумента, если совпдают будет NULL, иначе одно из двух значений
 
-.. code-block:: c
+.. code-block:: sql
 
     SELECT NULLIF(snum, 1001)
         FROM table
@@ -239,7 +239,7 @@ ORDER BY
 
 Оператор упорядочивания
 
-.. code-block:: c
+.. code-block:: sql
 
     SELECT 
         <столбцы> 
@@ -249,7 +249,7 @@ ORDER BY
 :ASC: сортировка по убыванию
 :DESC: сортировка по возрастанию
 
-.. code-block:: c
+.. code-block:: sql
 
     SELECT 
         * 
@@ -278,7 +278,7 @@ RIGHT OUTER JOIN
 
 правое внешнее соединение, записи правой таблицы, в которых не было найдено совпадений, столбцы из левой таблицы заполняются NULL.
 
-.. code-block:: c
+.. code-block:: sql
     
     SELECT 
         * 
@@ -291,7 +291,7 @@ UNION
 
 оператор объединения запросов, выводит данные запроса последовательно, исключая дублирующиеся записи
 
-.. code-block:: c
+.. code-block:: sql
 
     SELECT 
         * 
@@ -306,7 +306,7 @@ UNION JOIN
 
 Результатом соединение двух таблиц А и Б будут строки со всеми столбцами из таблицы А, дополненные столбцами из таблицы Б с NULL значениями. Затем будут выведены аналогично из таблицы Б.
 
-.. code-block:: c
+.. code-block:: sql
 
     SELECT 
         * 
@@ -323,7 +323,7 @@ WHERE
 
 =, >, <, >=, <=, <>, and, or, not, NULL
 
-.. code-block:: c
+.. code-block:: sql
 
     SELECT 
         <столбцы> 

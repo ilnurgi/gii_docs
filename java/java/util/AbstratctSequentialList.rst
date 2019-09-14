@@ -1,7 +1,7 @@
 .. py:module:: java.util
 
 AbstratctSequentialList
-====
+=======================
 
 Этот класс расширяет AbstractList и является основой для класса LinkedList. 
 
@@ -14,4 +14,4 @@ AbstratctSequentialList
 
 .. py:class:: AbstratctSequentialList()
 
-    Наследник :py:class::`java.util.AbstratctList`
+    Наследник :py:class:`java.util.AbstratctList`

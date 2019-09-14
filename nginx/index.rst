@@ -22,7 +22,7 @@ nginx
     server
     types
 
-.. code-block:: js
+.. code-block:: nginx
 
     worker_process 1;
     # worker_process auto;
@@ -52,7 +52,7 @@ nginx
 gzip
 ----
 
-.. code-block:: js
+.. code-block:: nginx
 
     http {
         gzip on;
@@ -70,7 +70,7 @@ gzip_comp_level
 
 Уровень сжатия, как вариант использовать от 2 до 4.
 
-.. code-block:: js
+.. code-block:: nginx
 
     gzip_comp_level 3;
 
@@ -80,7 +80,7 @@ gzip_disable
 
 Выключает сжатие для указанного юзер агента
 
-.. code-block:: js
+.. code-block:: nginx
 
     gzip_disable "msie6";
 
@@ -90,7 +90,7 @@ gzip_min_length
 
 Минимальный размер для сжатия, все что меньше, пропускаем
 
-.. code-block:: js
+.. code-block:: nginx
 
     http {
         gzip on;
@@ -104,7 +104,7 @@ gzip_types
 
 Типы файлов, которые необходимо сжимать
 
-.. code-block:: js
+.. code-block:: nginx
 
     gzip_types text/plain text/css;
     gzip_types text/javascript;
@@ -115,7 +115,7 @@ limit_con_zone
 
 Лимит относительно чего 
 
-.. code-block:: js
+.. code-block:: nginx
 
     http {
         # ограничение паралельных соединений в блоке сервера, 5 мегабайт
@@ -128,7 +128,7 @@ limit_con_zone
 limit_req_zone
 --------------
 
-.. code-block:: js
+.. code-block:: nginx
 
     http {
         limit_req_zone $binary_remote_addr zone=one_per_sec:5m rate=1r/s;

@@ -3,7 +3,7 @@
 ipaddress
 =========
 
-.. versionaddedd:: python 3.3
+.. versionadded:: python 3.3
 
 
 .. code-block:: py
@@ -231,7 +231,7 @@ IPv4Address()
     
     .. py:attribute:: reverse_pointer
 
-        .. versionaddedd:: python 3.5
+        .. versionadded:: python 3.5
 
         .. code-block:: py
 
@@ -278,7 +278,7 @@ IPv6Address()
 
     .. py:attribute:: is_link_local
 
-        .. versionaddedd:: python 3.4
+        .. versionadded:: python 3.4
 
     .. py:attribute:: is_loopback
 
@@ -304,7 +304,7 @@ IPv6Address()
     
     .. py:attribute:: reverse_pointer
 
-        .. versionaddedd:: python 3.5
+        .. versionadded:: python 3.5
         
         .. code-block:: py
 
@@ -499,13 +499,13 @@ IPv4Network()
     
     .. py:method:: subnet_of(other)
 
-        .. versionaddedd:: python 3.7
+        .. versionadded:: python 3.7
 
     .. py:method:: subnets(prefixlen_diff=1, new_prefix=None)
     
     .. py:method:: supernet_of(other)
 
-        .. versionaddedd:: python 3.7
+        .. versionadded:: python 3.7
 
     .. py:method:: supernet(prefixlen_diff=1, new_prefix=None)
 

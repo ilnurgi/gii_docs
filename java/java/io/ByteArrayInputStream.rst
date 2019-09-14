@@ -1,14 +1,16 @@
 .. py:module:: java.io
 
-ByteArrayInputStream - поток, считывающий данные из массива байт
-===============================================
+ByteArrayInputStream
+====================
+
+поток, считывающий данные из массива байт
 
 
 .. py:class:: ByteArrayInputStream()
 
-    Наследник :py:class::`java.io.InputStream`
+    Наследник :py:class:`java.io.InputStream`
 
-    ::
+    .. code-block:: java
 
         byte[] bytes = {1,-1,0};
         ByteArrayInputStream in = new ByteArrayInputStream(bytes);

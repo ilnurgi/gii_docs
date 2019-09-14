@@ -1,14 +1,16 @@
 .. py:module:: java.io
 
-FileOutputStream - поток, записывающий данные в файл
-===============================================
+FileOutputStream
+================
+
+поток, записывающий данные в файл
 
 
 .. py:class:: FileOutputStream()
 
-    Наследник :py:class::`java.io.OutputStream`
+    Наследник :py:class:`java.io.OutputStream`
 
-    ::
+    .. code-block:: java
 
         byte[] bytesToWrite = {1, 2, 3};
         byte[] bytesReaded = new byte[10];

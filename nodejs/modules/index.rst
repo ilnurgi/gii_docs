@@ -5,6 +5,7 @@
 .. toctree::
     :maxdepth: 2
 
+    events
     fs
     http
     net
@@ -12,4 +13,4 @@
     path
     request
     stream
-    events
+    url

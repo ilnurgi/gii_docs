@@ -19,6 +19,18 @@ grid
     }
 
 
+grid-autwo-rows
+---------------
+
+Автоматическое создание строк 
+
+.. code-block:: css
+
+    .wrapper{
+        grid-autwo-rows: 200px;
+    }
+
+    
 grid-colum
 ----------
 
@@ -53,6 +65,18 @@ grid-colum-start
 
     .item1 {
         grid-colum-start: 1;
+    }
+
+
+grid-gap
+--------
+
+Отступ между ячейками сетки
+
+.. code-block:: css
+
+    .wrapper {
+        grid-gap: 20px;
     }
 
 
@@ -109,6 +133,8 @@ grid-template-areas
 grid-template-columns
 ---------------------
 
+Настройка колонок
+
 .. code-block:: css
 	
 	.wrappper {
@@ -129,6 +155,8 @@ grid-template-columns
 
 grid-template-rows
 ------------------
+
+Настройка строк
 
 .. code-block:: css
 

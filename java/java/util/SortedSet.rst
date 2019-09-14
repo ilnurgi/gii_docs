@@ -1,7 +1,7 @@
 .. py:module:: java.util
 
 SortedSet
-====
+=========
 
 
 .. py:class:: SortedSet()

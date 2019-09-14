@@ -15,6 +15,7 @@
    Calendar
    Date
    Observer
+   Properties
    SimpleTimeZone
    TimeZone
 
@@ -24,12 +25,20 @@
 .. toctree::
    :maxdepth: 2
 
+   AbstratctMap
+   AbstratctSequentialList
+   ArrayList
+   Collections
    Collection
+   Comparator
+   HashTable
    Iterator
+   LinkedList
    List
    Map
    Observable
    Set
    SortedMap
    SortedSet
+   TreeMap
 

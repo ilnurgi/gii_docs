@@ -4,7 +4,7 @@
 Field
 -----
 
-.. py:class:: django.db.models.Field(**kwargs)
+.. py:class:: Field(**kwargs)
 
     Базовый класс для полей модели
 
@@ -63,7 +63,7 @@ Field
 AutoField
 ---------
 
-.. py:class:: django.db.models.AutoField()
+.. py:class:: AutoField()
 
     Счетчик
 
@@ -71,7 +71,7 @@ AutoField
 BigIntegerField
 ---------------
 
-.. py:class:: django.db.models.BigIntegerField()
+.. py:class:: BigIntegerField()
 
     64-разрядное, длинное число.
 
@@ -79,7 +79,7 @@ BigIntegerField
 BooleanField
 ------------
 
-.. py:class:: django.db.models.BooleanField()
+.. py:class:: BooleanField()
 
     Логическое поле
 
@@ -95,7 +95,7 @@ BooleanField
 CharField
 ---------
 
-.. py:class:: django.db.models.CharField()
+.. py:class:: CharField()
 
     Строковое поле
 
@@ -124,7 +124,7 @@ CharField
 DateField
 ---------
 
-.. py:class:: django.db.models.DateField(**kwargs)
+.. py:class:: DateField(**kwargs)
 
     Поле с датой
 
@@ -146,7 +146,7 @@ DateField
 DateTimeField
 -------------
 
-.. py:class:: django.db.models.DateTimeField()
+.. py:class:: DateTimeField()
 
     Поле с датой и временем
 
@@ -161,7 +161,7 @@ DateTimeField
 EmailField
 ----------
 
-.. py:class:: django.db.models.EmailField(**kwargs)
+.. py:class:: EmailField(**kwargs)
 
     Поле с электронной почтой
 
@@ -177,15 +177,26 @@ EmailField
 FileField
 ---------
 
-.. py:class:: django.db.models.FileField(**kwargs)
+.. py:class:: FileField(**kwargs)
 
     Поле для хранения файла любого типа
 
-    * upload_to - строка, путь к папке куда грузить файлы
+    * upload_to - строка или функция, путь к папке куда грузить файлы
+
+    .. code-block:: py
+
+        def upload_to(instance, filename):
+            """
+            возвращает путь до загружаемого файла
+            """
+            return os.path.join('blog', filename)
+
+        file_field = model.FileField(upload_to=upload_to)
+
 
     .. py:attribute:: name
 
-        Путь к файлу, относитльно MEDIA_ROOT
+        Путь к файлу, относитльно :py:attr:`django.settings.MEDIA_ROOT`
 
     .. py:attribute:: size
 
@@ -199,7 +210,7 @@ FileField
 FloatField
 ----------
 
-.. py:class:: django.db.models.FloatField()
+.. py:class:: FloatField()
 
     Число с плавающей точкой
 
@@ -207,7 +218,7 @@ FloatField
 GenericIPAddressField
 ---------------------
 
-.. py:class:: django.db.models.GenericIPAddressField()
+.. py:class:: GenericIPAddressField()
 
     Поле с IPv4 или IPv6 адресом
 
@@ -215,7 +226,7 @@ GenericIPAddressField
 ImageField
 ----------
 
-.. py:class:: django.db.models.ImageField(**kwargs)
+.. py:class:: ImageField(**kwargs)
 
     Поле для хранения изображений
 
@@ -293,7 +304,7 @@ ImageField
 IntegerField
 ------------
 
-.. py:class:: django.db.models.IntegerField()
+.. py:class:: IntegerField()
 
     32-разрядное, обычное число
 
@@ -323,7 +334,7 @@ IntegerField
 IPAddressField
 --------------
 
-.. py:class:: django.db.models.IPAddressField()
+.. py:class:: IPAddressField()
 
     Поле с IPv4 адресом
 
@@ -333,7 +344,7 @@ IPAddressField
 PositiveIntegerField
 --------------------
 
-.. py:class:: django.db.models.PositiveIntegerField()
+.. py:class:: PositiveIntegerField()
 
     32-разрядное, положительное число
 
@@ -341,7 +352,7 @@ PositiveIntegerField
 PositiveSmallIntegerField
 -------------------------
 
-.. py:class:: django.db.models.PositiveSmallIntegerField()
+.. py:class:: PositiveSmallIntegerField()
 
     16-разрядное положительное число
 
@@ -349,7 +360,7 @@ PositiveSmallIntegerField
 SlugField
 ---------
 
-.. py:class:: django.db.models.SlugField(**kwargs)
+.. py:class:: SlugField(**kwargs)
 
     Короткий заголовок или название, которое включает только символы латиницы,
     цифры, дефисы и символы подчеркивания.
@@ -376,7 +387,7 @@ SlugField
 SmallIntegerField
 -----------------
 
-.. py:class:: django.db.models.SmallIntegerField
+.. py:class:: SmallIntegerField
 
     16-разрядное положительное число
 
@@ -384,7 +395,7 @@ SmallIntegerField
 TextField
 ---------
 
-.. py:class:: django.db.models.TextField()
+.. py:class:: TextField()
 
     Текстовое поле
 
@@ -398,7 +409,7 @@ TextField
 TimeField
 ---------
 
-.. py:class:: django.db.models.TimeField()
+.. py:class:: TimeField()
 
     Поле со временем
 
@@ -406,7 +417,7 @@ TimeField
 URLField
 --------
 
-.. py:class:: django.db.models.URLField(**kwargs)
+.. py:class:: URLField(**kwargs)
 
     Поле с интернет адресом
 

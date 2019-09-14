@@ -5,6 +5,14 @@ Django
 
     * application - папка приложения
 
+        * :ref:`django_management` - консольные утилиты
+
+            * commands - папка со скриптами
+
+                * _private.py - приватная команда
+
+                * command_name.py - команда
+
         * __init__.py - приложение - пакет
 
             .. code-block:: py
@@ -12,6 +20,8 @@ Django
                 # __init__.py
 
                 default_app_config = 'app_name.apps.AppConfig'
+
+
 
         * admin.py - настройка админки
 
@@ -45,6 +55,8 @@ Django
         * urls.py - маршруты, роутинг урлов
 
         * views.py - представления
+
+
 
         * migrations - пакет с миграциями приложения
 

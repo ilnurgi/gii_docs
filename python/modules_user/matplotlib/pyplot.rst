@@ -225,7 +225,7 @@ grid()
 hist()
 ------
 
-.. py:function:: hist(values[, bin=10])
+.. py:function:: hist(values, bin=10, color, edgecolor, )
 
     Строит гистограмму для входящих данных.
 
@@ -234,6 +234,7 @@ hist()
     .. code-block:: py
 
         hist([1, 1, 1, 0])
+        hist([1, 1, 1, 0], color='blue', edgecolor='black', bins=30)
 
 
 hold()

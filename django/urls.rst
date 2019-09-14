@@ -58,6 +58,9 @@
     )
 
     if settings.DEBUG:
-        urlpatterns += static.static(
-            settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+        
+        # раздаем медиа файлы в режиме дебага
+        urlpatterns.extend(static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT))
 
+        # раздаем статику в режиме дебага
+        urlpatterns.extend(static(settings.STATIC_URL, document_root=settings.STATIC_ROOT))

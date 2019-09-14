@@ -1,3 +1,5 @@
+.. py:module:: django.contrib.admin
+
 Админка
 =======
 
@@ -21,6 +23,17 @@
     admin.site.register(SomeModel, SomeModelAdmin)
 
 
+.. code-block:: py
+
+    # urls.py
+
+    from django.conf.urls import patterns, include, url
+
+    from django.contrib import admin
+
+    urlpatterns += patterns(
+        url(r'^admin/', include(admin.site.urls))
+    )
 
 .. code-block:: py
 
@@ -39,19 +52,6 @@
     admin.site.register(User, UserAdmin)
 
     admin.site.site_header = "Admin panel Header"
-
-
-.. code-block:: py
-
-    # urls.py
-
-    from django.conf.urls import patterns, include, url
-
-    from django.contrib import admin
-
-    urlpatterns += patterns(
-        url(r'^admin/', include(admin.site.urls))
-    )
 
 
 AdminSite
@@ -77,7 +77,7 @@ AdminSite
 ModelAdmin
 ----------
 
-.. py:class:: django.contrib.admin.ModelAdmin()
+.. py:class:: ModelAdmin()
 
     Объект настраивающий внешний вид админки для модели
 
@@ -234,7 +234,7 @@ StackedInLine
 
 Вложенный набор форм, в которых элементы управления распологаются один за другим по вертикали
 
-.. py:class:: django.contrib.admin.StackedInLine()
+.. py:class:: StackedInLine()
 
     .. code-block:: py
 
@@ -284,7 +284,7 @@ TabularInline
 
 Используется для добавления возможности добавлять связанные объекты одной модели в другую.
 
-.. py:class:: django.contrib.admin.TabularInline()
+.. py:class:: TabularInline()
 
     .. code-block:: py
 

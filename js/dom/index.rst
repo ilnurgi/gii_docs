@@ -30,6 +30,7 @@ DOM - объектная модель документа, document object model.
     ArrayBufferView
     Attr
     Audio
+    AudioContext
     BeforeUnloadEvent
     Blob
     BlobBuilder

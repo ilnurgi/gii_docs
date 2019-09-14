@@ -33,10 +33,14 @@ length, char_length
 
 .. code-block:: sql
 
-    length('Привет, мир!')
-    , char_length('Привет, мир!')
-    ---
-    12, 12
+    select
+      length('Привет, мир!')
+      , char_length('Привет, мир!')
+
+    /*
+        12
+        12
+    */
 
 octet_length
 ++++++++++++
@@ -45,9 +49,12 @@ octet_length
 
 .. code-block:: sql
 
-    octet_length('Привет, мир!')
-    ---
-    21
+    select
+      octet_length('Привет, мир!')
+
+    /*
+        21
+    */
 
 position, strpos
 ++++++++++++++++
@@ -56,10 +63,13 @@ position, strpos
 
 .. code-block:: sql
 
-    position('мир' in 'Привет, мир!')
-    , strpos('Привет, мир!', 'мир')
-    ---
-    9
+    select
+      position('мир' in 'Привет, мир!')
+      , strpos('Привет, мир!', 'мир')
+
+    /*
+        9
+    */
 
 substring, substr
 +++++++++++++++++
@@ -68,15 +78,18 @@ substring, substr
 
 .. code-block:: sql
 
-    substring('Привет, мир!' from 9 for 3)
-    , substring('Привет, мир!' from 9)
-    , substr('Привет, мир!', 9, 3)
-    , substr('Привет, мир!', 9)
-    ---
-    мир
-    , мир
-    , мир!
-    , мир!
+    select
+      substring('Привет, мир!' from 9 for 3)
+      , substring('Привет, мир!' from 9)
+      , substr('Привет, мир!', 9, 3)
+      , substr('Привет, мир!', 9)
+
+    /*
+        мир
+        , мир
+        , мир!
+        , мир!
+    */
 
 left, right
 +++++++++++
@@ -85,12 +98,14 @@ left, right
 
 .. code-block:: sql
 
-    left('Привет, мир!', 6)
-    , right('Привет, мир!', 4)
-    ---
-    Привет
-    , мир!
+    select
+      left('Привет, мир!', 6)
+      , right('Привет, мир!', 4)
 
+    /*
+        Привет
+        , мир!
+    */
 
 Функции, изменений
 ------------------
@@ -102,9 +117,12 @@ overlay
 
 .. code-block:: sql
 
-    overlay('Привет, мир!' placing 'PostgreSQL' from 9 for 3)
-    ---
-    Привет, PostgreSQL!
+    select
+      overlay('Привет, мир!' placing 'PostgreSQL' from 9 for 3)
+
+    /*
+        Привет, PostgreSQL!
+    */
 
 replace
 +++++++
@@ -113,9 +131,12 @@ replace
 
 .. code-block:: sql
 
-    replace('Привет, мир!', 'р', 'ррр')
-    ---
-    Пррривет, миррр!
+    select
+      replace('Привет, мир!', 'р', 'ррр')
+
+    /*
+        Пррривет, миррр!
+    */
 
 translate
 +++++++++
@@ -124,9 +145,12 @@ translate
 
 .. code-block:: sql
 
-    translate('Привет, мир!', 'Првтмие', 'Prvtm')
-    ---
-    Prvt, mr!
+    select
+      translate('Привет, мир!', 'Првтмие', 'Prvtm')
+
+    /*
+        Prvt, mr!
+    */
 
 lower, upper, initcap
 +++++++++++++++++++++
@@ -135,13 +159,16 @@ lower, upper, initcap
 
 .. code-block:: sql
 
-    lower('Привет, мир!')
-    upper('Привет, мир!')
-    initcap('Привет, мир!')
-    ---
-    привет, мир!
-    ПРИВЕТ, МИР!
-    Привет, Мир!
+    select
+      lower('Привет, мир!')
+      , upper('Привет, мир!')
+      , initcap('Привет, мир!')
+
+    /*
+        привет, мир!
+        ПРИВЕТ, МИР!
+        Привет, Мир!
+    */
 
 trim, ltrim, rtrim, btrim
 +++++++++++++++++++++++++
@@ -150,19 +177,22 @@ trim, ltrim, rtrim, btrim
 
 .. code-block:: sql
 
-    trim( leading 'Пр!' from 'Привет, мир!')
-    , ltrim('Привет, мир!', 'Пр!')
-    , trim(trailing 'Пр!' from 'Привет, мир!')
-    , rtrim('Привет, мир!', 'Пр!')
-    , trim( both 'Пр!' from 'Привет, мир!')
-    , btrim('Привет, мир!', 'Пр!')
-    ---
-    ивет, мир!
-    , ивет, мир!
-    , Привет, ми
-    , Привет, ми
-    , ивет, ми
-    , ивет, ми
+    select
+      trim( leading 'Пр!' from 'Привет, мир!')
+      , ltrim('Привет, мир!', 'Пр!')
+      , trim(trailing 'Пр!' from 'Привет, мир!')
+      , rtrim('Привет, мир!', 'Пр!')
+      , trim( both 'Пр!' from 'Привет, мир!')
+      , btrim('Привет, мир!', 'Пр!')
+
+    /*
+        ивет, мир!
+        , ивет, мир!
+        , Привет, ми
+        , Привет, ми
+        , ивет, ми
+        , ивет, ми
+    */
 
 lpad, rpad
 ++++++++++
@@ -171,11 +201,14 @@ lpad, rpad
 
 .. code-block:: sql
 
-    lpad('Привет, мир!', 17, '. ')
-    , rpad('Привет, мир!', 17, '. ')
-    ---
-    . . .Привет, мир!
-    , Привет, мир!. . .
+    select
+      lpad('Привет, мир!', 17, '. ')
+      , rpad('Привет, мир!', 17, '. ')
+
+    /*
+        . . .Привет, мир!
+        , Привет, мир!. . .
+    */
 
 reverse
 +++++++
@@ -184,8 +217,12 @@ reverse
 
 .. code-block:: sql
 
-    reverse('Привет, мир!') → !рим ,тевирП
+    select
+      reverse('Привет, мир!')
 
+    /*
+        !рим ,тевирП
+    */
 
 Функции, конструрирования
 -------------------------
@@ -197,13 +234,16 @@ concat, concat_ws
 
 .. code-block:: sql
 
-    concat('Привет,', ' ', 'мир!')
-    , 'Привет,' || ' ' || 'мир!'
-    , concat_ws(', ', 'Привет', 'о', 'мир!')
-    ---
-    Привет, мир!
-    , Привет, мир!
-    , Привет, о, мир!
+    select
+      concat('Привет,', ' ', 'мир!')
+      , 'Привет,' || ' ' || 'мир!'
+      , concat_ws(', ', 'Привет', 'о', 'мир!')
+
+    /*
+        Привет, мир!
+        , Привет, мир!
+        , Привет, о, мир!
+    */
 
 string_agg
 +++
@@ -212,14 +252,17 @@ string_agg
 
 .. code-block:: sql
 
-    string_agg(s, ', ' order by id)
+    select
+      string_agg(s, ', ' order by id)
     from (
-        values
-            (2,'мир!'),
-            (1,'Привет')
+      values
+        (2,'мир!'),
+        (1,'Привет')
     ) v(id,s)
-    ---
-    Привет, мир!
+
+    /*
+        Привет, мир!
+    */
 
 repeat
 +++
@@ -228,9 +271,12 @@ repeat
 
 .. code-block:: sql
 
-    repeat('Привет', 2)
-    ---
-    ПриветПривет
+    select
+      repeat('Привет', 2)
+
+    /*
+        ПриветПривет
+    */
 
 chr
 +++
@@ -239,9 +285,12 @@ chr
 
 .. code-block:: sql
 
-    chr(34)
-    ---
-    "
+    select
+      chr(34)
+
+    /*
+        "
+    */
 
 Функции, экранирования
 ----------------------
@@ -253,8 +302,9 @@ quote_ident
 
 .. code-block:: sql
 
-    quote_ident('id')
-    quote_ident('foo bar')
+    select
+      quote_ident('id')
+      , quote_ident('foo bar')
 
 quote_literal, quote_nullable
 +++++++++++++++++++++++++++++
@@ -263,19 +313,22 @@ quote_literal, quote_nullable
 
 .. code-block:: sql
 
-    quote_literal('id')
-    , quote_nullable('id')
-    , quote_literal($$What's up?$$)
-    , quote_nullable($$What's up?$$)
-    , quote_literal(null)
-    , quote_nullable(null)
-    ---
-    'id'
-    , 'id'
-    , 'What''s up?'
-    , 'What''s up?'
-    , null
-    , null
+    select
+      quote_literal('id')
+      , quote_nullable('id')
+      , quote_literal($$What's up?$$)
+      , quote_nullable($$What's up?$$)
+      , quote_literal(null)
+      , quote_nullable(null)
+
+    /*
+        'id'
+        , 'id'
+        , 'What''s up?'
+        , 'What''s up?'
+        , null
+        , null
+    */
 
 format
 ++++++
@@ -284,14 +337,16 @@ format
 
 .. code-block:: sql
 
-    format('Привет, %s!', 'мир')
-    , format('UPDATE %I SET s = %L', 'tbl', $$What's up?$$)
-    , 'UPDATE '||quote_ident('tbl')||' SET s = '||quote_nullable($$What's up?$$)
-    ---
-    Привет, мир!
-    , UPDATE tbl SET s = 'What''s up?'
-    , UPDATE tbl SET s = 'What''s up?'
+    select
+      format('Привет, %s!', 'мир')
+      , format('UPDATE %I SET s = %L', 'tbl', $$What's up?$$)
+      , 'UPDATE '||quote_ident('tbl')||' SET s = '||quote_nullable($$What's up?$$)
 
+    /*
+        Привет, мир!
+        , UPDATE tbl SET s = 'What''s up?'
+        , UPDATE tbl SET s = 'What''s up?'
+    */
 
 Функции, привидения типов
 -------------------------
@@ -337,25 +392,31 @@ to_char
 
 .. code-block:: sql
 
-    to_char(3.1416, 'FM99D00')
-    , to_char(3.1416, 'FM99D000000')
-    , to_char(56789, '999G999G999')
-    , to_char(123456789, '999G999G999')
-    , to_char(123456789, '999G999G999')
-    ---
-    3,14
-    3,141600
-    56 789
-    123 456 789
-    123 456 789
+    select
+      to_char(3.1416, 'FM99D00')
+      , to_char(3.1416, 'FM99D000000')
+      , to_char(56789, '999G999G999')
+      , to_char(123456789, '999G999G999')
+      , to_char(123456789, '999G999G999')
+
+    /*
+        3,14
+        3,141600
+        56 789
+        123 456 789
+        123 456 789
+    */
 
 .. code-block:: sql
 
-    to_char(now(), 'DD.MM.YYYY HH24:MI:SSOF')
-    , to_char(now(), 'FMDD TMmonth YYYY, day')
-    ---
-    15.11.2016 11:52:08+03
-    , 15 ноября 2016, среда
+    select
+      to_char(now(), 'DD.MM.YYYY HH24:MI:SSOF')
+      , to_char(now(), 'FMDD TMmonth YYYY, day')
+
+    /*
+        15.11.2016 11:52:08+03
+        , 15 ноября 2016, среда
+    */
 
 Функции, сравнения
 ------------------
