@@ -1,5 +1,13 @@
 .. py:module:: datetime
 
+.. title:: python.datetime
+
+.. meta::
+    :description lang=ru: описание модуля datetime языка программирования python
+    :description lang=en: python datetime module description
+    :keywords lang=ru: python datetime
+    :keywords lang=en: python datetime
+
 datetime
 ========
 

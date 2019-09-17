@@ -1,19 +1,35 @@
 .. py:module:: matplotlib.pyplot
 
+.. title:: matplotlib.pyplot
+
+.. meta::
+    :description lang=ru: описание модуля matplotlib.pyplot языка программирования python
+    :description lang=en: python matplotlib.pyplot module description
+    :keywords lang=ru: python matplotlib pyplot 
+    :keywords lang=en: python matplotlib pyplot
+
 pyplot
 ======
 
 Оснвные методы для построения:
 
-    * :py:func:`plot` - графики
-    * :py:func:`semilogy` - график логарифметический
-    * :py:func:`hist` - гистограммы
-    * :py:func:`errorbar` - графики с ошибками
     * :py:func:`bar` - диаграмма вертикальная, + ошибки
+    * :py:func:`barbs`
     * :py:func:`barh` - диаграмма горизонтальная, + ошибки
+    * :py:func:`boxplot`
+    * :py:func:`broken_barh`
+    * :py:func:`contour`
+    * :py:func:`contourf`
+    * :py:func:`errorbar` - графики с ошибками
+    * :py:func:`hist` - гистограммы
+    * :py:func:`hist2d`
+    * :py:func:`hlines`
     * :py:func:`pie` - круги, куски пирога
-    * :py:func:`scatter` - распределние значений
+    * :py:func:`plot` - графики, ломаная линия
     * :py:func:`polar` - полярная система координат
+    * :py:func:`scatter` - нанесение маркера в точке
+    * :py:func:`semilogy` - график логарифметический
+    * :py:func:`text` - нанесение текста
 
 
 cm
@@ -31,7 +47,7 @@ annotate()
 
 .. py:function:: annotate(text, xy, xytext, arrowprops)
 
-    Добавляет аннотацию указанных точек и возвращает :py:class:`matplotlib.text.Text`
+    Добавляет аннотацию указанных точек и возвращает :py:class:`matplotlib.text.Text`, аналогичная :py:meth:`matplotlib.axes.Axes.annotate()`
 
     * arrowprops - словарь, описание указателя на точку
 
@@ -156,6 +172,14 @@ barh()
     Диаграмма горизонтальная, аналогичная :py:func:`matplotlib.pyplot.bar`
 
 
+delaxes()
+---------
+
+.. py:function:: delaxes(ax=None)
+
+    Удаляет область рисования из фигуры
+
+
 draw()
 ------
 
@@ -196,18 +220,20 @@ figtext()
 figure()
 --------
 
-.. py:function:: figure(dpi, figsize)
+.. py:function:: figure(num=None, figsize=None, dpi=None, facecolor=None, edgecolor=None, frameon=True, FigureClass=<class 'matplotlib.figure.Figure'>, clear=False, **kwargs)
 
-    Возвращает :py:class:`matplotlib.figure.Figure` и назначает размер области просмотра
+    Возвращает объект области рисования, :py:class:`matplotlib.figure.Figure` и назначает размер области рисования
 
     * figsize - кортеж с размерами окна диаграммы в дюймах, по умобчанию 80 пискелей на дюйм
 
 
     .. code-block:: py
 
-        fig = figure(figsize=(3, 3))
+        fig = plt.figure(figsize=(3, 3))
 
-        fig = figure(dpi=128, figsize=(3, 3))
+        fig = plt.figure(dpi=128, figsize=(3, 3))
+
+        fig = plt.figsize(figsize=(8, 6), facecolor='pink', frameon=True)
 
 
 grid()
@@ -326,7 +352,7 @@ isinteractive()
 legend()
 --------
 
-.. py:function:: legend([**kwargs])
+.. py:function:: legend(**kwargs)
 
     Возвразает или отображаем легенду :py:class:`matplotlib.legend.Legend`
 
@@ -565,7 +591,7 @@ rgrid()
 savefig()
 ---------
 
-.. py:function:: savefig(file_path, dpi, bbox_inches)
+.. py:function:: savefig(fname, dpi=None, facecolor='w', edgecolor='w', orientation='portrait', papertype=None, format=None, transparent=False, bbox_inches=None, pad_inches=0.1, frameon=None, metadata=None)
 
     Сохраняет график в файл или любой другой записываемый объект,
     с параметрами по умолчанию
@@ -582,18 +608,26 @@ savefig()
 scatter()
 ---------
 
-.. py:function:: scatter(x, y, s, c, marker, edgecolor, cmap)
+.. py:function:: scatter(x, y, s=None, c=None, marker=None, cmap=None, norm=None, vmin=None, vmax=None, alpha=None, linewidths=None, verts=None, edgecolors=None, plotnonfinite=False, data=None, **kwargs)
 
-    Распределение значений
+    Добавляет точки, маркеры на область рисования и возвращает коллекцию точек :py:class:`matplotlib.collections.PathCollection`
 
     * s - размер маркера, как для 1 значения так и для списка
 
-    * color - цвет маркера, как для 1 значения так и для списка
+    * c - цвет маркера, как для 1 значения так и для списка
+
+    * marker - :py:class:`matplotlib.markers.MarkerStyle`
+
+    * cmap - :py:class:`matplotlib.colors.Colormap`
+
+    * norm - :py:class:`matplotlib.colors.Normalize`
+
+    * kwargs - :py:class:`matplotlib.collections.Collection`
 
     .. code-block:: py
 
-        scatter(1, 1, edgecolor='none', c='red', s=40)
-        scatter(1, 1, edgecolor='none', c=(0, 0, 0.8), s=40)
+        scatter(1, 1, edgecolors='none', c='red', s=40)
+        scatter(1, 1, edgecolors='none', c=(0, 0, 0.8), s=40)
 
         scatter([1, 2, 3, 4, 5], [1, 4, 9, 16, 25], cmap=plt.cm.Blues)
 
@@ -639,24 +673,80 @@ show()
 subplot()
 ---------
 
-.. py:function:: subplot(rows, columns, index)
+.. py:function:: subplot(nrows, ncols, index, **kwargs)
+.. py:function:: subplot(pos, **kwargs)
+.. py:function:: subplot(ax)
 
-    Строит несколько графиков на окне
+    Добавляет subplot в текущую фигуру и возвращает :py:class:`matplotlib.axes.Axes`.
+
+    При добавлении удаляет все существующие фигуры из области рисования, если такое поведение мешает, можно воспользоваться методом :py:meth:`matplotlib.figure.Figure.add_sublot` или :py:meth:`matplotlib.pyplot.axes`
+
+    * label 
+
+    * polar - (True | False)
+
+    * projection - None, aitoff, hammer, lambert, mollweide, polar, rectilinear, :py:class:`matplotlib.projection`
+
+    * sharex, sharey - :py:class:`matplotlib.axes.Axes`
+
+    * kwargs - параметры из :py:class:`matplotlib.axes.Axes`
+
 
     .. code-block:: py
 
-        import matplotlib.pyplot as plt
-        import numpy as np
+        plt.subplot(211)
 
-        data = np.arange(100, 201)
-        plt.subplot(2, 1, 1)
-        plt.plot(data)
+        # без сетки
+        plt.subplot(211, frameon=False)
 
-        data2 = np.arange(200, 301)
-        plt.subplot(212)
-        plt.plot(data2)
+        # круговая проекция
+
+    .. code-block:: py
+
+        # добавляем область рисования с сеткой, 2 ряда и 2 колонки
+        # область рисования будет в первой ячейке
+        ax1 = plt.subplot(2, 2, 1)
+        # plt.subplot(221)
+        # аналогично
+
+        # добавляем область рисования во вторую ячейку, без границ
+        ax2 = plt.subplot(222, frameon=False)
+
+        # добавляем область в третью ячейку, с круговой проекцией
+        plt.subplot(223, projection='polar')
+
+        # добавляем обасть рисования, окрашеную в красный фоновый цвет
+        plt.subplot(224, sharex=ax1, facecolor='red')
+
+        # удаляем указанную область рисования
+        plt.delaxes(ax2)
+
+        # вновь добавляем указанную область рисования
+        plt.subplot(ax2)
 
         plt.show()
+
+    .. figure:: images/subplot_1.png
+
+
+subplots()
+----------
+
+.. py:function:: subplots(nrows=1, ncols=1, sharex=False, sharey=False, squeeze=True, subplot_tk=None, gridspec_kw=None, **kwargs)
+
+    Возвращает кортеж:
+
+        фигуру :py:class:`matplotlib.figure.Figure`, которая имеет несколько областей рисования
+
+        область рисования :py:class:`matplotlib.axes.Axes`
+
+    .. code-block:: py
+
+        fig, ax = plt.subplots()
+
+        fig, [[ax1, ax2], [ax3, ax4]] = plt.subplots(2, 2)
+
+        fig, [ax1, ax2, ax3, ax4] = plt.subplots(1, 4)
 
 
 suptitle()
@@ -664,7 +754,7 @@ suptitle()
 
 .. py:function:: suptitle()
 
-     Возвращает :py:class:`matplotlib.text.Text`
+    Возвращает :py:class:`matplotlib.text.Text`, аналогично :py:func:`matplotlib.axes.Axes.suptitle()`
 
 
 text()
@@ -782,7 +872,18 @@ text()
 
     .. code-block:: py
 
-        text(0.1, -0.04, "text")
+        plt.text(0.1, -0.04, 'text', fontsize=26, bbox={'color': 'w'}, rotation=90)
+
+        plt.text(
+            0.5, 
+            0.5, 
+            'Text with borders', 
+            fontsize=14,
+            # выравнивание по вертикали и по горизонтали по центру
+            horizontalalignment='center', 
+            verticalalignment='center',
+            bbox=dict(facecolor='pink', alpha=0.5)
+        )
 
 
 tick_params()
@@ -817,7 +918,7 @@ title()
 
 .. py:function:: title(label, fontsize)
 
-    Устанавливает подпись для графика и возвращает :py:class:`matplotlib.text.Text`
+    Устанавливает подпись для графика и возвращает :py:class:`matplotlib.text.Text`, аналогично :py:meth:`matplotlib.axes.Axes.set_title()`
 
     .. code-block:: py
 
@@ -844,11 +945,11 @@ xlabel()
 
 .. py:function:: xlabel(label, fontsize)
 
-    Устанавливает подпись для оси х и возвращает :py:class:`matplotlib.text.Text`
+    Устанавливает подпись для оси х и возвращает :py:class:`matplotlib.text.Text`, аналогично :py:meth:`matplotlib.axes.Axes.set_xlabel()`
 
     .. code-block:: py
 
-        xlabel("X axis", fontsize=24)
+        plt.xlabel('X axis', fontsize=24)
 
 
 xlim()
@@ -902,11 +1003,11 @@ ylabel()
 
 .. py:function:: ylabel(label, fontsize)
 
-    Устанавливает подпись для оси y и возвращает :py:class:`matplotlib.text.Text`
+    Устанавливает подпись для оси y и возвращает :py:class:`matplotlib.text.Text`, аналогично :py:meth:`matplotlib.axes.Axes.set_ylabel()`
 
     .. code-block:: py
 
-        ylabel("Y axis", fontsize=24)
+        plt.ylabel('Y axis', fontsize=24)
 
 
 ylim()

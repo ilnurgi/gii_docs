@@ -1,15 +1,35 @@
 .. py:module:: matplotlib
 
+.. title:: matplotlib
+
+.. meta::
+    :description lang=ru: описание модуля matplotlib языка программирования python
+    :description lang=en: python matplotlib module description
+    :keywords lang=ru: python matplotlib
+    :keywords lang=en: python matplotlib
+
 matplotlib
 ==========
+
+matplotlib_
+
+.. _matplotlib: https://matplotlib.org/
 
 .. toctree::
     :maxdepth: 1
 
+    artist
     axes
+    axis
     backends/index
+    collections
+    colors
     figure
+    font_manager
     legend
+    markers
+    path
+    projections
     pyplot
     text
     ticker
@@ -64,6 +84,19 @@ rcParams
     * savefig.facecolor -
 
     * savefig.dpi - количество точек на дюйм сохраняемых изображений, по умолчанию 100
+
+
+matplotlib_fname()
+------------------
+
+.. py:method:: matplotlib_fname()
+
+    Возвращает путь, откуда был считан файл настроек matplotlibrc
+
+    .. code-block:: py
+
+        matplotlib_fname()
+        # C:\projects\venv\lib\site-packages\matplotlib\mpl-data\matplotlibrc
 
 
 rc()
