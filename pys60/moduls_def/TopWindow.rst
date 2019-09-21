@@ -3,9 +3,14 @@
 TopWindow
 =================================
 
-.. py:class:: TopWindow
+TopWindow()
+-----------
 
-    >>> window = TopWindow.TopWindow()
+.. py:class:: TopWindow()
+
+    .. code-block:: py
+
+        window = TopWindow.TopWindow()
 
     .. py:attribute:: position 
 

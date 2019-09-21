@@ -1,18 +1,33 @@
+.. title:: kotlin
+
+.. meta::
+    :description lang=ru: описание языка программирования kotlin
+    :description lang=en: kotlin description
+    :keywords lang=ru: kotlin
+    :keywords lang=en: kotlin
+
 Kotlin
 ======
 
 .. toctree::
     :maxdepth: 1
 
+    variables/index
+    operators
+    exceptions
 
 
-fun main(args: Array<String>) {
+.. code-block:: py
 
-    var name: String = "Alex"
-    var a: Int = 1
-    var b: Int = 2
+	package package_name
 
-    println("Hello $name")
-    println("${a+b}")
+	fun main(args: Array<String>) {
 
-}
+	    var name: String = "Alex"
+	    var a: Int = 1
+	    var b: Int = 2
+
+	    println("Hello $name")
+	    println("${a+b}")
+
+	}

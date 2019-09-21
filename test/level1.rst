@@ -1,0 +1,57 @@
+level1
+======
+
+.. toctree::
+    :maxdepth: 1
+
+    level2
+    level2
+    level2
+    level2
+    level2
+    level2
+    level2
+    level2
+    level2
+    level2
+    level2
+    level2
+    level2
+    level2
+    level2
+    level2
+    level2
+    level2
+    level2
+    level2
+    level2
+    level2
+    level2
+    level2
+    level2
+    level2
+    level2
+    level2
+    level2
+    level2
+    level2
+    level2
+    level2
+    level2
+    level2
+    level2
+    level2
+    level2
+    level2
+    level2
+    level2
+    level2
+    level2
+    level2
+    level2
+    level2
+    level2
+    level2
+    level2
+    level2
+    level2

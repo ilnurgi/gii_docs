@@ -1,0 +1,37 @@
+<!doctype html>
+
+<html>
+    <head>
+        <title>{{ title|striptags|e }}{{ titlesuffix }}</title>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width,initial-scale=1">
+        {{- metatags }}
+        <link rel="stylesheet" href="{{ pathto('_static/' + style, 1) }}" type="text/css" />
+        <link rel="stylesheet" href="{{ pathto('_static/pygments.css', 1) }}" type="text/css" />
+        <link rel="stylesheet" href="{{ pathto('_static/gstyle.css', 1) }}" type="text/css" />
+    </head>
+    <body>
+        <div class="related gnav" role="navigation" aria-label="related navigation">
+            <ul>
+                <li class="nav-item nav-item-0"><a href="{{ pathto(master_doc) }}">{{ shorttitle|e }}</a> &#187;</li>
+                {%- for parent in parents %}
+                    <li class="nav-item"><a href="{{ parent.link|e }}">{{ parent.title }}</a> &#187;</li>
+                {%- endfor %}
+            </ul>
+        </div>
+        <div class="sphinxsidebar gsidebar">
+            {%- if display_toc %}
+                {{ toc }}
+            {%- endif %}
+        </div>
+        <div class="document gdocument">
+            <div class="body">
+                {{ body }}111111111111111111111111121111
+            </div>
+        </div>
+        <div class="footer gfooter">
+            {% trans copyright=copyright|e %}&#169; Copyright {{ copyright }}.{% endtrans %}
+            {% trans sphinx_version=sphinx_version|e %}Created using <a href="http://sphinx-doc.org/">Sphinx</a> {{ sphinx_version }}.{% endtrans %}
+        </div>
+    </body>
+</html>

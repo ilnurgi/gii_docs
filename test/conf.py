@@ -66,7 +66,7 @@ release = version
 
 # List of patterns, relative to source directory, that match files and
 # directories to ignore when looking for source files.
-exclude_patterns = ['_build', '.vscode', 'venv', '_static', '_templates', 'test']
+exclude_patterns = ['_build', '.vscode', 'venv', '_static', '_templates']
 
 # The reST default role (used for this markup: `text`) to use for all documents.
 #default_role = None

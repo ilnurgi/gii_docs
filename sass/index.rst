@@ -1,3 +1,11 @@
+.. title:: sass
+
+.. meta::
+    :description lang=ru: описание sass
+    :description lang=en: sass description
+    :keywords lang=ru: sass
+    :keywords lang=en: sass
+
 Sass
 ====
 
