@@ -1,5 +1,13 @@
-Конспекты
-=========
+.. title:: Конспекты по технологиям
+
+.. meta::
+    :description lang=ru: конспекты по различным информационным технологиям
+    :description lang=en: information technology notes
+    :keywords lang=ru: коспекты, информационные технологии, языки программирования
+    :keywords lang=en: notes, information technology, programming languages
+
+Технологии
+==========
 
 .. toctree::
     :maxdepth: 1
@@ -11,6 +19,7 @@
     css/index
     django/index
     droidscript/index
+    docker/index
     flask/index
     fuel/index
     git/index
