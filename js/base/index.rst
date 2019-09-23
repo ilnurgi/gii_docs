@@ -1,5 +1,5 @@
 JavaScript
-================
+==========
 
 .. code-block:: js
 
@@ -19,7 +19,7 @@ JavaScript
     :maxdepth: 1
 
     String
-    Array
+    array
     object
     Map
     Set

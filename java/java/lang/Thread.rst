@@ -13,7 +13,8 @@ a. первый метод
 
     3. Запустить выполнение в отдельном потоке, вызвав у объекта Thread метод start().
 
-        ::
+        .. code-block:: java 
+        
             public static void main(String[] args) {
                 class RunCode implements Runnable{
                     public void run(){

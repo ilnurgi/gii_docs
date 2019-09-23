@@ -28,7 +28,7 @@ CSS
 
 
 .. toctree::
-    :maxdepth: 2
+    :maxdepth: 1
 
     selectors
     background
@@ -43,6 +43,7 @@ CSS
     faq
     flex
     grid
+    modules/index
 
 
 Цвета

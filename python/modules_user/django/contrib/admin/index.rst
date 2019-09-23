@@ -3,6 +3,11 @@
 django.admin
 ============
 
+.. toctree::
+    :maxdepth: 1
+
+    site
+    
 .. code-block:: py
 
     # admin.py

@@ -16,6 +16,7 @@
 
     admin/index
     auth/index
+    _admin
     _contenttypes
     _messages
     _sessions

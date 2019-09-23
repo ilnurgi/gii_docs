@@ -1,4 +1,4 @@
-svg
+SVG
 ===
 
 * class -

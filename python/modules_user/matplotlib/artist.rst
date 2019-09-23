@@ -14,6 +14,7 @@ artist
 Artist()
 --------
 
-.. py:clas:: Artist()
+.. py:class:: Artist()
 
 	Элемент рисунка
+    

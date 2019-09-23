@@ -39,10 +39,13 @@ div.body {
     min-width: initial;
     padding: 0;
 }
-div.section h1 {
+div.body > h1, div.body > h2 {
+    margin: 0;
+}
+div.section > h1 {
     margin: -10px -10px 0 -10px;
 }
-div.section h2 {
+div.section > h2 {
     margin: 0 -20px 0 -20px;
 }
 div.section {

@@ -1,11 +1,17 @@
+.. title:: nodejs
+
+.. meta::
+    :description lang=ru: описание nodejs
+    :description lang=en: nodejs notes
+    :keywords lang=ru: nodejs
+    :keywords lang=en: nodejs
+
 Node
 ====
 
 https://nodejs.org/en/
 
-Node.js - опенсорсная, событийно-ориентированная технология.
-
-Интерпретатор java script
+Node.js - интерпретатор java-script
 
 .. code-block:: sh
 
@@ -13,7 +19,7 @@ Node.js - опенсорсная, событийно-ориентированн�
     $ node script.js
 
     # версия
-    node -v
+    $ node -v
 
 .. code-block:: sh
 

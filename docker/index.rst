@@ -6,7 +6,7 @@
     :keywords lang=ru: docker
     :keywords lang=en: docker
 
-docker
+Docker
 ======
 
 .. toctree::

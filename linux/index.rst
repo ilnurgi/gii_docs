@@ -57,8 +57,11 @@ Contents:
           -F - отобразить содержимое текущей директории с добавлением к именам символов, характеризующих тип
           -h - с правами
           -S - сортировка по возрастанию размеров
-    <pre>*# показать файлы и директории содержащие в имени цифры*
-    ls \*[0-9]\*</pre>
+
+      .. code-block:: sh
+        
+        # показать файлы и директории содержащие в имени цифры
+        ls \*[0-9]\*</pre>
 
 
     * more file
@@ -114,21 +117,23 @@ Contents:
 
         * args
           -n - без занесения информации в /etc/mtab. Полезно когда файл имеет атрибуты "только чтение" или недостаточно места на диске
-    <code>
-    *# монтировать флоппи-диск*
-    mount /dev/fd0 /mnt/floppy
-    *# монтировать CD или DVD*
-    mount /dev/cdrom /mnt/cdrom
-    *# монтировать CD-R/CD-RW или DVD-R/DVD-RW(+-)*
-    mount /dev/hdc /mnt/cdrecorder
-    *# смонтировать ISO-образ*
-    mount -o loop file.iso /mnt/cdrom
-    *# монтировать файловую систему Windows FAT32*
-    mount -t vfat /dev/hda5 /mnt/hda5
-    *# монтировать сетевую файловую систему Windows (SMB/CIFS)*
-    mount -t smbfs -o username=user,password=pass //winclient/share /mnt/share
-    *# "монтирует" директорию в директорию (binding). Доступна с версии ядра 2.4.0. Полезна, например, для предоставления содержимого пользовательской директории через ftp при работе ftp-сервера в "песочнице" (chroot), когда симлинки сделать невозможно. Выполнение данной команды сделает копию содержимого /home/user/prg в /var/ftp/user*
-    mount -o bind /home/user/prg /var/ftp/user</code>
+    
+      .. code-block:: sh
+
+        *# монтировать флоппи-диск*
+        mount /dev/fd0 /mnt/floppy
+        *# монтировать CD или DVD*
+        mount /dev/cdrom /mnt/cdrom
+        *# монтировать CD-R/CD-RW или DVD-R/DVD-RW(+-)*
+        mount /dev/hdc /mnt/cdrecorder
+        *# смонтировать ISO-образ*
+        mount -o loop file.iso /mnt/cdrom
+        *# монтировать файловую систему Windows FAT32*
+        mount -t vfat /dev/hda5 /mnt/hda5
+        *# монтировать сетевую файловую систему Windows (SMB/CIFS)*
+        mount -t smbfs -o username=user,password=pass //winclient/share /mnt/share
+        *# "монтирует" директорию в директорию (binding). Доступна с версии ядра 2.4.0. Полезна, например, для предоставления содержимого пользовательской директории через ftp при работе ftp-сервера в "песочнице" (chroot), когда симлинки сделать невозможно. Выполнение данной команды сделает копию содержимого /home/user/prg в /var/ftp/user*
+        mount -o bind /home/user/prg /var/ftp/user</code>
 
     Поиск
     ---
@@ -142,19 +147,21 @@ Contents:
           -atime - время последнего обращения
           -mtime - время создания
         * dir_name - путь, откуда начинаем поиск
-    <code>
-    *# найти файл и директорию принадлежащие пользователю user1. Поиск начать с корня (/)*
-    find / -user user1
-    *# Найти все файлы и директории, имена которых оканчиваются на '. bin'. Поиск начать с '/ home/user1'*
-    find /home/user1 -name "\*.bin"
-    *# найти все файлы в '/usr/bin', время последнего обращения к которым  более 100 дней*
-    find /usr/bin -type f -atime +100
-    *# найти все файлы в '/usr/bin', созданные или изменённые в течении последних 10 дней*
-    find /usr/bin -type f -mtime -10
-    *# найти все фалы и директории, имена которых оканчиваются на '.rpm', и изменить права доступа к ним*
-    find / -name \*.rpm -exec chmod 755 '{}' \;
-    *# найти все фалы и директории, имена которых оканчиваются на '.rpm', игнорируя съёмные носители, такие как cdrom, floppy и т.п.*
-    find / -xdev -name "*.rpm"</code>
+    
+      .. code-block:: sh
+
+        *# найти файл и директорию принадлежащие пользователю user1. Поиск начать с корня (/)*
+        find / -user user1
+        *# Найти все файлы и директории, имена которых оканчиваются на '. bin'. Поиск начать с '/ home/user1'*
+        find /home/user1 -name "\*.bin"
+        *# найти все файлы в '/usr/bin', время последнего обращения к которым  более 100 дней*
+        find /usr/bin -type f -atime +100
+        *# найти все файлы в '/usr/bin', созданные или изменённые в течении последних 10 дней*
+        find /usr/bin -type f -mtime -10
+        *# найти все фалы и директории, имена которых оканчиваются на '.rpm', и изменить права доступа к ним*
+        find / -name \*.rpm -exec chmod 755 '{}' \;
+        *# найти все фалы и директории, имена которых оканчиваются на '.rpm', игнорируя съёмные носители, такие как cdrom, floppy и т.п.*
+        find / -xdev -name "*.rpm"</code>
 
     * grep [args] pattern files
       Искать строку в файлах
@@ -163,9 +170,11 @@ Contents:
           -r - рекурсивно в папке
         * files - список файлов/папок
         * pattern - искомая строка
-    <code>
-    *#искать pattern в выводе command*
-    command | grep pattern</code>
+    
+      .. code-block:: sh
+    
+        # искать pattern в выводе command
+        $ command | grep pattern</code>
 
     * locate file
       Найти все файлы с именем file
@@ -279,15 +288,17 @@ Contents:
 
     * uname [args]
       Информация о ядре
-    <code>
-    $ uname
-    Linux
-    $ uname -a
-    Linux ilnurgiPC 3.8.0-27-generic #40-Ubuntu SMP Tue Jul 9 00:17:05 UTC 2013 x86_64 x86_64 x86_64 GNU/Linux
-    $ uname -m
-    x86_64
-    $ uname -r
-    3.8.0-27-generic</code>
+    
+      .. code-block:: sh
+
+        $ uname
+        Linux
+        $ uname -a
+        Linux ilnurgiPC 3.8.0-27-generic #40-Ubuntu SMP Tue Jul 9 00:17:05 UTC 2013 x86_64 x86_64 x86_64 GNU/Linux
+        $ uname -m
+        x86_64
+        $ uname -r
+        3.8.0-27-generic</code>
 
     * uptime
       Текущий аптайм
@@ -394,7 +405,10 @@ Contents:
         * dst - путь, куда копируем
         * kwargs
           -P port - порт подключения
-    <code>scp /home/user/  user@XXX.XXX.XXX.XXX:/home/user</code>
+    
+    .. code-block:: sh
+
+        scp /home/user/  user@XXX.XXX.XXX.XXX:/home/user</code>
 
     * ssh [kwargs] user@host
 

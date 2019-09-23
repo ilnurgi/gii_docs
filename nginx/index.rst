@@ -1,4 +1,4 @@
-nginx
+Nginx
 =====
 
 `wiki.nginx.org <http://wiki.nginx.org/>`_

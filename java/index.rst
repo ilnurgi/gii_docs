@@ -103,17 +103,19 @@ Java
 
 -XX:+PrintConcurentLocks - выводит информацию о том какой поток находится в блоке синхронайз
 
-/*
-получение названия файла и номера строчки текущегй работы
-дорогая операция
-*/
-public static String getLocation(){
-    StackTraceElement s = new Exception().getStackTrace()[2];
+.. code-block:: java
 
-    // Thread.current().getStackTrace(); аналог
+    /*
+    получение названия файла и номера строчки текущегй работы
+    дорогая операция
+    */
+    public static String getLocation(){
+        StackTraceElement s = new Exception().getStackTrace()[2];
 
-    return s.getFileName() + ':' + s.getLineNumber();
-}
+        // Thread.current().getStackTrace(); аналог
+
+        return s.getFileName() + ':' + s.getLineNumber();
+    }
 
 
 

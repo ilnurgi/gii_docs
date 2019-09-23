@@ -1,8 +1,6 @@
-BOM
-===
-
-BOM - объектная модель раузера, browser object model.
+BOM - Browser Object Model - объектная модель браузера
+======================================================
 
 .. toctree::
-    :maxdepth: 2
+    :maxdepth: 1
 

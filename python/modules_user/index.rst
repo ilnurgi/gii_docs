@@ -8,8 +8,10 @@
     bs4/index
     bottle
     coverage
+    django/index
     docx
-    flask
+    flask/index
+    fuel/index
     jinja2
     line_profiler
     markdown
@@ -17,7 +19,9 @@
     memcache
     numpy/index
     openpyxl
+    openstack/index
     pandas/index
+    p4a/index
     pep8
     pyaudio
     psutil
@@ -27,6 +31,7 @@
     pymongo/index
     pypdf2
     pyppeteer
+    pys60/index
     pyqt/index
     redis
     requests/index

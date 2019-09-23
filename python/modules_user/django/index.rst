@@ -87,4 +87,5 @@ Django
     signals
     contrib/index
     cli
+    management/index
     faq
