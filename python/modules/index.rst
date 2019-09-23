@@ -1,7 +1,13 @@
-Основные модули
-===============
+.. title:: python modules base
 
-Содержание:
+.. meta::
+    :description lang=ru: список базовых модулей python
+    :description lang=en: list of base python modules
+    :keywords lang=ru: python модули
+    :keywords lang=en: python modules
+
+Базовые модули
+==============
 
 .. toctree::
     :maxdepth: 1
@@ -76,6 +82,7 @@
     types
     unittest/index
     urllib/index
+    venv
     warnings
     weakref
     webbrowser

@@ -24,7 +24,8 @@
     p4a/index
     pep8
     pyaudio
-    psutil
+    psutil    
+    psycopg2/index
     pylint
     pygame/index
     pygal/index

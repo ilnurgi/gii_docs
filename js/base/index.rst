@@ -19,8 +19,8 @@ JavaScript
     :maxdepth: 1
 
     String
-    array
-    object
+    Array
+    Object
     Map
     Set
 
