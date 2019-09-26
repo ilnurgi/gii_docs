@@ -6,7 +6,7 @@ ALTER TABLE
 
 изменяет структуру таблицы
 
-.. code-block:: sql
+.. code-block:: text
 
 	ALTER TABLE 
 		[<название БД>.]<таблица> 

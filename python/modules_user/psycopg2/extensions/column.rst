@@ -7,7 +7,7 @@
         postgres psycopg2 extensions column, 
         psycopg2 extensions column
 
-.. py:module:: psycopg2.extensions
+.. py:currentmodule:: psycopg2.extensions
 
 Column
 ======

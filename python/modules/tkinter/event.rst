@@ -1,3 +1,11 @@
+.. title:: tkinter Event
+
+.. meta::
+    :description: tkinter Event
+    :keywords: tkinter Event
+
+.. py:currentmodule:: tkinter
+
 Event
 =====
 

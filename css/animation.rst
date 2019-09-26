@@ -299,10 +299,10 @@ transform
     elem1 {
         transform: rotate(45deg);
 
-        // переместить элемент на 50 пикселей влево
+        /* переместить элемент на 50 пикселей влево */
         transform: translate(50px);
 
-        // переместить элемент на 2rem вправо и на 100% вниз
+        /* переместить элемент на 2rem вправо и на 100% вниз */
         transform: translate(-2rem, 100%);
 
         transform: scale(1.5);
@@ -319,7 +319,7 @@ transform-origin
 .. code-block:: css
 
     elem1 {
-        // transform-origin: <horizontal-position> <vertical-position>;
+        /* transform-origin: <horizontal-position> <vertical-position>; */
 
         transform-origin: left top;
 

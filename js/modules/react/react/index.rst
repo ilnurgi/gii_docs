@@ -36,7 +36,7 @@ createElement
         const h2 = React.createElement("h2", {"class": "some-class"}, "Hello World")
 
 
-.. code-block:: js
+.. code-block:: text
 
     const App = () => {
         return (

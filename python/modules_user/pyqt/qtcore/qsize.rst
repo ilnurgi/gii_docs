@@ -1,7 +1,13 @@
-.. py:module:: QtCore
+.. title:: PyQt4.QtCore.QSize
 
-QSize - объект, задает размер
-=============================
+.. meta::
+    :description: PyQt4.QtCore.QSize
+    :keywords: PyQt4.QtCore.QSize
+
+.. py:currentmodule:: PyQt4.QtCore
+
+QSize
+=====
 
 .. py:class:: QSize(h=-1, w=-1)
 .. py:class:: QSize(qsize)

@@ -1,3 +1,5 @@
+.. py:currentmodule:: droidscript
+
 Layout - работа с контейнерами
 ==============================
 
@@ -31,17 +33,17 @@ Layout - работа с контейнерами
     * `VCenter` - дочерние элементы выраниваются по вертикальному центру
 
 
-.. js:function:: app.AddLayout(layout)
+.. py:function:: app.AddLayout(layout)
 
     Добавляет в приложение контейнер :js:class:`Layout`
 
 
-.. js:function:: app.RemoveLayout(layout)
+.. py:function:: app.RemoveLayout(layout)
 
     Удаляет указанный контейнер :js:class:`Layout`
 
 
-.. js:function:: app.CreateLayout(type, options)
+.. py:function:: app.CreateLayout(type, options)
 
     Создает и возвращает :js:class:`Layout`
 
@@ -74,7 +76,7 @@ Layout - работа с контейнерами
         lay = app.CreateLayout('Frame');
 
 
-.. js:function:: DestroyLayout(layout)
+.. py:function:: DestroyLayout(layout)
 
     Удаляет контейнер
     

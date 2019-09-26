@@ -9,7 +9,7 @@ Java
     base/index
     java/index
 
-.. code-block:: java
+.. code-block:: text
 
     /** коментарии */
     // коментарии

@@ -1,36 +1,38 @@
+.. py:currentmodule:: droidscript
+
 Работа с файлами, каталогами и данными
 ======================================
 
-.. js:function:: app.ClearData(file)
+.. py:function:: app.ClearData(file)
 
     Очищает пользовательскую память от данных, сохраненных с помощью :js:func:`SaveText` и т.п.
 
 
-.. js:function:: app.CopyFile(src, dst)
+.. py:function:: app.CopyFile(src, dst)
 
     Копирует укзанный файл в новое место
 
         :js:func:`CopyFolder`, :js:func:`DeleteFile`, :js:func:`deleteFolder`, :js:func:`FileExists`, :js:func:`FolderExists`
 
 
-.. js:function:: app.CopyFolder(src, dst, overwrite)
+.. py:function:: app.CopyFolder(src, dst, overwrite)
 
     Копирует указанный католог в новое место
 
 
-.. js:function:: app.CreateFile(file, mode)
+.. py:function:: app.CreateFile(file, mode)
 
     Возвращает :js:class:`File`, файловый объект
 
 
-.. js:function:: app.CreateZipUtil()
+.. py:function:: app.CreateZipUtil()
 
     Возвращает :js:class:`ZipUtil`
     
 
-.. js:function:: app.DeleteDatabase(name)
+.. py:function:: app.DeleteDatabase(name)
 
-.. js:function:: app.DeleteFile(fileName)
+.. py:function:: app.DeleteFile(fileName)
 
     Удаляет файл по указанному пути
 
@@ -39,7 +41,7 @@
         app.DeleteFile('/sdcard/file.txt');
 
 
-.. js:function:: app.DeleteFolder(folderName)
+.. py:function:: app.DeleteFolder(folderName)
 
     Удаляет папку по указанному пути
 
@@ -48,12 +50,12 @@
         app.DeleteFile('/sdcard/files');
 
 
-.. js:function:: app.ExtractAssets(src, dest, overwrite)    
+.. py:function:: app.ExtractAssets(src, dest, overwrite)    
 
     Copy content from one folder to another. If overwrite = true, then existing files in destination folder will be overwritten.
 
 
-.. js:function:: app.FileExists(fileName)
+.. py:function:: app.FileExists(fileName)
 
     Возвращает булево, существет ли файл по указанному пути
 
@@ -62,7 +64,7 @@
         app.FileExists('/sdcard/file.txt')
 
 
-.. js:function:: app.FolderExists(folderName)
+.. py:function:: app.FolderExists(folderName)
 
     Возвращает булево, существет ли папка по указанному пути
 
@@ -71,7 +73,7 @@
         app.FolderExists('/sdcard/files')
 
 
-.. js:function:: app.GetExternalFolder()    
+.. py:function:: app.GetExternalFolder()    
 
     Возвращает путь до флешки, microsd карточки
 
@@ -80,25 +82,25 @@
         external_path = app.GetExternalFolder()
 
 
-.. js:function:: app.GetFileDate( file ) 
+.. py:function:: app.GetFileDate( file ) 
 
     Returns the date of a file (file needs the full path).  
 
 
-.. js:function:: app.GetFileSize( file ) 
+.. py:function:: app.GetFileSize( file ) 
 
     Returns the size of a file in bytes (file needs the full path).
 
 
-.. js:function:: app.GetFreeSpace( option )
+.. py:function:: app.GetFreeSpace( option )
 
     Returns the free space in gigabytes. Parameter option can be: “internal” or “external”. 
 
 
-.. js:function:: app.GetInternalFolder()
+.. py:function:: app.GetInternalFolder()
 
 
-.. js:function:: app.GetPrivateFolder(fldrName)
+.. py:function:: app.GetPrivateFolder(fldrName)
 
     Создает и возвращает путь до приватной папки, доступной только для приложения
 
@@ -107,16 +109,16 @@
         fldr = app.GetPrivateFolder('myfolder');    
 
 
-.. js:function:: app.GetSharedFiles()
+.. py:function:: app.GetSharedFiles()
 
-.. js:function:: app.GetSharedText(p1)
+.. py:function:: app.GetSharedText(p1)
 
-.. js:function:: app.GetSpecialFolder( name )    
+.. py:function:: app.GetSpecialFolder( name )    
 
     'DCIM','Pictures','Movies','Downloads' etc  1.29
 
 
-.. js:function:: Lapp.istFolder(path, filter, limit, options)
+.. py:function:: Lapp.istFolder(path, filter, limit, options)
 
     Возвращает список файлов в указанной папке
 
@@ -128,7 +130,7 @@
         files = app.ListFolder('/sdcard/', '.mp4', 10, 'FillPath,alphasort');
 
 
-.. js:function:: app.LoadBoolean(valueName, default, id)
+.. py:function:: app.LoadBoolean(valueName, default, id)
 
     Загружает параматеры из пользовательской памяти, для сохранения используйте :js:func:`SaveBoolean`
 
@@ -143,7 +145,7 @@
         bol = app.LoadBoolean('MyName', true);
 
 
-.. js:function:: app.LoadNumber(valueName, default, id)
+.. py:function:: app.LoadNumber(valueName, default, id)
 
     Загружает параматеры из пользовательской памяти, для сохранения используйте :js:func:`SaveNumber`
 
@@ -158,7 +160,7 @@
         num = app.LoadNumber('MyName', 42);
 
 
-.. js:function:: app.LoadText(valueName, default, id)
+.. py:function:: app.LoadText(valueName, default, id)
 
     Загружает параматеры из пользовательской памяти, для сохранения используйте :js:func:`SaveText`
 
@@ -173,7 +175,7 @@
         name = app.LoadText('MyName', 'Bill');
 
 
-.. js:function:: app.MakeFolder(folder_path)
+.. py:function:: app.MakeFolder(folder_path)
 
     Создает папку по указанному пути
 
@@ -182,7 +184,7 @@
         app.MakeFolder('/sdcard/ilnurgi/')
 
 
-.. js:function:: app.OpenDatabase(dbName)
+.. py:function:: app.OpenDatabase(dbName)
 
     Возвращает :js:class:`Database`
 
@@ -191,7 +193,7 @@
         db = app.OpenDatabase('MyDB');
 
 
-.. js:function:: app.OpenFile(fileName, type, promt)
+.. py:function:: app.OpenFile(fileName, type, promt)
 
     Открыват файл в другой программе
 
@@ -200,7 +202,7 @@
         app.OpenFile('/sdcard/text/txt', 'text/plain', 'Choose Editor')
 
 
-.. js:function:: app.ReadFile(fileName, options)
+.. py:function:: app.ReadFile(fileName, options)
 
     Возвращает содержимое файла
 
@@ -219,7 +221,7 @@
         txt = app.ReadFile('/sdcard/text.txt');
 
 
-.. js:function:: app.RenameFile(fileName, newFileName)
+.. py:function:: app.RenameFile(fileName, newFileName)
 
     Переименовывает файл
 
@@ -228,7 +230,7 @@
         app.RenameFile('/sdcard/text.txt', '/sdcard/newtext.txt');
 
 
-.. js:function:: app.RenameFolder(folderName, newFolderName)
+.. py:function:: app.RenameFolder(folderName, newFolderName)
 
     Переименовывает папку
 
@@ -237,7 +239,7 @@
         app.RenameFolder('/sdcard/text', '/sdcard/newtext');
 
 
-.. js:function:: app.SaveBoolean(valueName, value, id)
+.. py:function:: app.SaveBoolean(valueName, value, id)
 
     Сохраняет параматеры в пользовательскую память, для получения используйте :js:func:`LoadBoolean`
 
@@ -252,7 +254,7 @@
         app.SaveBoolean('MyName', true);
 
 
-.. js:function:: app.SaveNumber(valueName, value, id)
+.. py:function:: app.SaveNumber(valueName, value, id)
 
     Сохраняет параматеры в пользовательскую память, для получения используйте :js:func:`LoadNumber`
 
@@ -267,7 +269,7 @@
         app.SaveNumber('MyName', 42);
 
 
-.. js:function:: app.SaveText(valueName, value, id)
+.. py:function:: app.SaveText(valueName, value, id)
 
     Сохраняет параматеры в пользовательскую память, для получения используйте :js:func:`LoadText`
 
@@ -282,7 +284,7 @@
         app.SaveText('MyName', '123');
 
 
-.. js:function:: app.SendFile(filenam, dstName, title)
+.. py:function:: app.SendFile(filenam, dstName, title)
 
     Send a file to another App (users choice).
 
@@ -291,7 +293,7 @@
         app.SendFile( file, "sftest.txt", "Send File" );
 
         
-.. js:function:: app.WriteFile(fileName, text, mode)
+.. py:function:: app.WriteFile(fileName, text, mode)
 
     Пишет данные в файл
 

@@ -4,7 +4,7 @@ Less
 Блоки, вложенность
 ------------------
 
-.. code-block:: less
+.. code-block:: text
 
     .myClass {
         color: #fff;
@@ -23,9 +23,9 @@ Less
 Миксины
 -------
 
-.. code-block:: less
+.. code-block:: text
 
-    // миксин
+    /* миксин */
     .mixin(){
         display: flex;
     }
@@ -38,7 +38,7 @@ Less
         }
     }
 
-    //  вложенность и вызов миксина
+    /* вложенность и вызов миксина */
     .row {
         @media {
             display: flex;

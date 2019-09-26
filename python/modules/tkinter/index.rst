@@ -67,7 +67,6 @@ Tkinter является событийно-ориентированной би�
     toplevel
     scrollbar
 
-    base
     vars
     canvas
 

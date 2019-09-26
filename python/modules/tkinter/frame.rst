@@ -1,3 +1,11 @@
+.. title:: tkinter Frame
+
+.. meta::
+    :description: tkinter Frame
+    :keywords: tkinter Frame
+
+.. py:currentmodule:: tkinter
+
 Frame
 =====
 

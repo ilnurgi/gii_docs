@@ -3,7 +3,7 @@ UPDTAE
 
 Оператор обновления записи
 
-.. code-block:: sql
+.. code-block:: text
 	
 	UPDATE 
         [OR <алгоритм>]

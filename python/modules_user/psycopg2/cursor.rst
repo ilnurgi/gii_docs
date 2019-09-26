@@ -7,7 +7,7 @@
         postgres psycopg2 cursor, 
         psycopg2 cursor
 
-.. py:module:: psycopg2
+.. py:currentmodule:: psycopg2
 
 cursor
 ======

@@ -7,7 +7,7 @@
         postgres psycopg2 extensions diagnostics, 
         psycopg2 extensions diagnostics
 
-.. py:module:: psycopg2.extensions
+.. py:currentmodule:: psycopg2.extensions
 
 Diagnostics
 ===========

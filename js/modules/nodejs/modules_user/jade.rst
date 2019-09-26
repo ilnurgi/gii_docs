@@ -5,7 +5,7 @@ jade
 
     npm install jade
 
-.. code-block:: jade
+.. code-block:: text
 
     // header.jade
     doctype

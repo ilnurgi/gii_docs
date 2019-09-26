@@ -1,12 +1,14 @@
+.. py:currentmodule:: droidscript
+
 Контакты, звонки, смс
 =====================
 
-.. js:function:: app.Call(number)
+.. py:function:: app.Call(number)
 
     Совершает вызов на указанный номер
 
 
-.. js:function:: app.CreateSMS()
+.. py:function:: app.CreateSMS()
 
     Возвращает :js:class:`SMS`
 

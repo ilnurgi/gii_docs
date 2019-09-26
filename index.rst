@@ -1,10 +1,8 @@
 .. title:: Конспекты по технологиям
 
 .. meta::
-    :description lang=ru: конспекты по различным информационным технологиям
-    :description lang=en: information technology notes
-    :keywords lang=ru: коспекты, информационные технологии, языки программирования
-    :keywords lang=en: notes, information technology, programming languages
+    :description: it notes
+    :keywords: it notes
 
 Технологии
 ==========

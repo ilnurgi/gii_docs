@@ -1,9 +1,9 @@
-.. py:module:: java.io
+.. py:currentmodule:: java.io
 
-PushBackInputStream - поток с буфером
+BufferedInputStream - поток с буфером
 ===============================================
 
 
-.. py:class:: PushBackInputStream()
+.. py:class:: BufferedInputStream()
 
     Наследник :py:class::`java.io.InputStream`

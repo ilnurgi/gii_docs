@@ -120,7 +120,7 @@ read_csv()
 	  	14 2000 sg114 sv214
 		"""
 
-		edu.ix[90:94 , [’TIME ’,’GEO’]]
+		edu.ix[90:94 , ['TIME ','GEO']]
 		"""
 		   TIME GEO   
 	  	90 2000 sg190 
@@ -130,7 +130,7 @@ read_csv()
 	  	94 2000 sg194 
 		"""
 
-		edu[edu[’Value ’] > 6.5].tail()
+		edu[edu['Value '] > 6.5].tail()
 		"""
 		    TIME GEO     Value
 		218 2002 Cyprus  6.60

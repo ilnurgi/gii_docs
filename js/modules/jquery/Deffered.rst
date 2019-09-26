@@ -1,7 +1,15 @@
+.. title:: jquery Deffered
+
+.. meta::
+    :description: jquery Deffered
+    :keywords: jquery Deffered
+
+.. py:currentmodule:: jquery
+
 Deffered
 ========
 
-.. js:class:: Deffered()
+.. py:class:: Deffered()
 
     Отсроченный объект
 

@@ -1,15 +1,13 @@
-.. title:: kotlin массивы
+.. title:: kotlin array
 
 .. meta::
-    :description lang=ru: описание массивов языка программирования kotlin
-    :description lang=en: kotlin arrays description
-    :keywords lang=ru: kotlin массивы array
-    :keywords lang=en: kotlin array
+    :description: kotlin array
+    :keywords: kotlin array
 
 Массивы
 =======
 
-.. code-block:: py
+.. code-block:: text
 
 	# массив, в котором может быть null
 	val array: Array<Int?> = arrayOf(1,2,3)

@@ -1,3 +1,11 @@
+.. title:: tkinter Image
+
+.. meta::
+    :description: tkinter Image
+    :keywords: tkinter Image
+
+.. py:currentmodule:: tkinter
+
 Image - базовый класс для работы с изображениями
 ================================================
 

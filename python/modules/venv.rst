@@ -1,17 +1,15 @@
 .. title:: python.venv
 
 .. meta::
-    :description lang=ru: venv, базовый модуль python для работы с виртуальными окружениями
-    :description lang=en: venv, base python module, for work with environments
-    :keywords lang=ru: python venv, python окружение
-    :keywords lang=en: python venv, python environment
+    :description: python.venv
+    :keywords: python.venv
 
 .. py:module:: venv
 
 venv
 ====
 
-.. code-blcok:: sh
+.. code-block:: sh
 
-    python -m venv /path/to/new/virtual/environment
+    $ python -m venv /path/to/new/virtual/environment
     

@@ -1,3 +1,5 @@
+.. py:currentmodule:: droidscript
+
 Создание графического интерфейса
 ================================
 
@@ -8,7 +10,7 @@
 В качестве доп опции задаются: :ref:`component_align`
 
 
-.. js:function:: app.CreateButton(text, width, height, options)
+.. py:function:: app.CreateButton(text, width, height, options)
 
     Возвращает :js:class:`Button`, кнопка
 
@@ -39,7 +41,7 @@
         button = app.CreateButton('<b>Text</b>', -1, -1, 'HTML')
 
 
-.. js:function:: app.CreateCameraView(width, height, options)
+.. py:function:: app.CreateCameraView(width, height, options)
 
     Возвращает :js:class:`CameraView`
 
@@ -68,7 +70,7 @@
         setTimeout( "cam.StartPreview()", 1000 );
 
 
-.. js:function:: app.CreateCheckBox(text, width, height, options)
+.. py:function:: app.CreateCheckBox(text, width, height, options)
 
     Возвращает :js:class:`CheckBox`
 
@@ -77,7 +79,7 @@
         check_box = app.CreateCheckBox('CheckBox');
 
 
-.. js:function:: app.CreateGLView(width, height, option)
+.. py:function:: app.CreateGLView(width, height, option)
 
     Возвращает :js:class:`GLView`
 
@@ -86,7 +88,7 @@
         glview = app.CreateGLView( 1, 1, "Fast2d" ); 
 
 
-.. js:function:: app.CreateList(list, width, height, options)
+.. py:function:: app.CreateList(list, width, height, options)
 
     Возвращает :js:class:`List`
 
@@ -109,7 +111,7 @@
         lst = app.CreateList( list, 0.8, 0.25, "FontAwesome" );
 
 
-.. js:function:: app.CreateListView(list, title, options)
+.. py:function:: app.CreateListView(list, title, options)
 
     Возвращает :js:class:`ListView`
 
@@ -118,7 +120,7 @@
         lvw = app.CreateListView( "Mon,Tues,Wed,Thurs,Fri,Sat,Sun", "Days" );
 
 
-.. js:function:: app.CreateScroller(width, height, options)
+.. py:function:: app.CreateScroller(width, height, options)
 
     Возвращает :js:class:`Scroller`
 
@@ -140,7 +142,7 @@
         }     
         
 
-.. js:function:: app.CreateSeekBars(width, height, options)
+.. py:function:: app.CreateSeekBars(width, height, options)
 
     Возвращает :js:class:`SeekBars`
 
@@ -149,7 +151,7 @@
         sb = app.CreateSeekBars(0.8)
 
 
-.. js:function:: app.CreateSpinner(list, width, height, options)
+.. py:function:: app.CreateSpinner(list, width, height, options)
 
     Возвращает :js:class:`Spinner`
 
@@ -158,7 +160,7 @@
         spin = app.CreateSpinner( "Bilbo,Frodo,Gandalf", 0.4 );
         
 
-.. js:function:: app.CreateTabs(tabs, width, height, options)
+.. py:function:: app.CreateTabs(tabs, width, height, options)
 
     Возвращает :js:class:`Tabs`, вкладки
 
@@ -167,7 +169,7 @@
         tabs = app.CreateTabs('FRED,BILL,MARK', 0.8, 0.8, 'VCenter');
 
 
-.. js:function:: app.CreateText(text, width, height, options)
+.. py:function:: app.CreateText(text, width, height, options)
 
     Возвращает :js:class:`Text`, текстовое поле для отображения.
 
@@ -186,7 +188,7 @@
         txt = app.CreateText("<font color=#008800>[fa-check-square-o]</font> Done", 0.8, 0.1, "FontAwesome,HTML");
 
 
-.. js:function:: app.CreateTextEdit(text, width, height, options)
+.. py:function:: app.CreateTextEdit(text, width, height, options)
 
     Возвращает :js:class:`TextEdit`
 
@@ -205,7 +207,7 @@
         txtedit = app.CreateTextEdit('edit')
 
 
-.. js:function:: app.CreateToggle(text, width, height, options)
+.. py:function:: app.CreateToggle(text, width, height, options)
 
     Возвращает :js:class:`ButtonToggle`
 
@@ -214,7 +216,7 @@
         btn = app.CreateToggle('toggle me')
 
 
-.. js:function:: app.CreateVideoView(widrh, heigth, options)
+.. py:function:: app.CreateVideoView(widrh, heigth, options)
 
     Возвращает :js:class:`VideoView`. Проигрыватель видео
 
@@ -223,7 +225,7 @@
         video = app.CreateVideoView()
 
 
-.. js:function:: app.CreateWebView(width, height, options, zoom)
+.. py:function:: app.CreateWebView(width, height, options, zoom)
 
     Возвращает :js:class:`WebView`
 
@@ -237,7 +239,7 @@
         web = app.CreateWebView()
 
 
-.. js:function:: app.GetLastButton()
+.. py:function:: app.GetLastButton()
 
     Возвращает :js:class:`Button`, последнюю нажатую кнопку
 
@@ -246,10 +248,10 @@
         btn = app.GetLastButton()
 
 
-.. js:function:: app.GetLastCheckBox()
+.. py:function:: app.GetLastCheckBox()
 
 
-.. js:function:: app.GetLastImage()
+.. py:function:: app.GetLastImage()
 
     Возвращает :js:class:`Image`, последнюю нажатую картинку
 
@@ -258,7 +260,7 @@
         image = app.GetLastImage()
 
 
-.. js:function:: app.GetLastToggle()
+.. py:function:: app.GetLastToggle()
 
     Возвращает :js:class:`ButtonToggle`, последнюю нажатую toggle кнопку
 
@@ -267,7 +269,7 @@
         tglbutton = app.GetLastToggle()
 
 
-.. js:function:: app.SetMenu(menuList, p2)
+.. py:function:: app.SetMenu(menuList, p2)
 
     Устанавливает элементы в меню, обработчиком выбора при этом будет :js:func:`OnMenu`, в который будет передаваться выбраннный элемент. 
 

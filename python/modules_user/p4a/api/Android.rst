@@ -1,3 +1,11 @@
+.. title:: python.venv
+
+.. meta::
+    :description: python.venv
+    :keywords: python.venv
+
+.. py:currentmodule:: android
+
 Android
 =======
 

@@ -6,7 +6,7 @@ QShortcut
 
     .. code-block:: py
 
-        self.lineEdit2 = QtGui.QLineEdit()
-        self.shc = QtGui.QShortcut(QtGui.QKeySequence.пmemonic("&e"), self)
-        se1f.shc.setContext(QtCore.Qt.WindowShortcut)
-        self.shc.activated.connect(self.lineEdit2.setFocus)
+        self.lineEdit = QtGui.QLineEdit()
+        self.shc = QtGui.QShortcut(QtGui.QKeySequence.mnemonic("&e"), self)
+        self.shc.setContext(QtCore.Qt.WindowShortcut)
+        self.shc.activated.connect(self.lineEdit.setFocus)

@@ -1,7 +1,13 @@
-.. py:module:: QtCore
+.. title:: PyQt4.QtCore.QThread
 
-QThread - поток
-===============
+.. meta::
+    :description: PyQt4.QtCore.QThread
+    :keywords: PyQt4.QtCore.QThread
+
+.. py:currentmodule:: PyQt4.QtCore
+
+QThread
+=======
 
 .. py:class:: QThread([parent=None])
 

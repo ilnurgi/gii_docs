@@ -36,7 +36,7 @@ Sass
             &:hover
                 color: #fff
 
-.. code-block:: sass
+.. code-block:: text
 
     $color-green: #6cca4f;
     $padding: 20px;
@@ -46,13 +46,13 @@ Sass
 -------
 
 
-.. code-block:: sass
+.. code-block:: text
 
     =reset(){
         //
     }
 
-    // вызов миксина
+    /* вызов миксина */
     +reset()
     .wrapper
         +wrapper()
@@ -96,9 +96,9 @@ scss
 Миксины
 -------
 
-.. code-block:: scss
+.. code-block:: text
 
-    // миксин
+    /* миксин */
     @mixin reset(){
         //
     }
@@ -109,7 +109,7 @@ scss
         border-radius: $radius;
     }
 
-    // вызов миксина
+    /* вызов миксина */
     @include wrapper;
     @include reset();
     @include debug(@key, @value);
@@ -132,7 +132,7 @@ scss
 Переменные
 ----------
 
-.. code-block:: scss
+.. code-block:: text
 
     $key: "some-key";
     $val: 12px;
@@ -143,7 +143,7 @@ scss
 Расширения
 ----------
 
-.. code-block:: scss
+.. code-block:: text
 
     %myStyle {
         color: #fff;

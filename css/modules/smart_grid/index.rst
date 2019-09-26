@@ -62,7 +62,7 @@ wrapper
 -------
 
 
-.. code-block:: css
+.. code-block:: text
 
     .wrapper {
         .wrapper();
@@ -82,7 +82,7 @@ wrapper
     }
 
 
-.. code-block:: css
+.. code-block:: text
 
     .wrapper{
         .wrapper();

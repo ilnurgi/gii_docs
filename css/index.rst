@@ -13,15 +13,15 @@ CSS
         }
     </style>
 
-.. code-block:: css
+.. code-block:: text
     
     :root {
-        // глобальная переменная
+        /* глобальная переменная */
         --color-red: red;
     }
 
     .wrapper {
-        // переменная элемента
+        /* переменная элемента */
         --color-red: red;
         color: var(--color-red, blue);
     }
@@ -177,7 +177,7 @@ linear-gradient
 .. code-block:: css
 
     elem {
-        linear-gradient(top, #fff, #efefef);
+        background: linear-gradient(top, #fff, #efefef);
     }
 
 
@@ -231,7 +231,7 @@ media
     
     @media screen and (max-width: 960px){
         body {
-            ...
+            color: red;
         }
     }   
 

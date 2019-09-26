@@ -3,7 +3,7 @@ DELETE
 
 Удаляет из таблицы записи
 
-.. code-block:: sql
+.. code-block:: text
 	
 	DELETE FROM 
         [<название БД>.]<таблица>

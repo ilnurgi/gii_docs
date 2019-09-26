@@ -1,3 +1,9 @@
+.. title:: python random
+
+.. meta::
+    :description: python random
+    :keywords: python random
+
 .. py:module:: random
 
 random

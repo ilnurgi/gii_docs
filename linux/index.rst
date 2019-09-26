@@ -197,8 +197,11 @@ Contents:
           -d - разжать Сжать/разжать file и переименовать в file.gz
 
     * tar [args] file.tar files
+
       Создать/распаковать tar-архив
+
         * args
+
           x - распаковать
           c - создать
           z - сжатие Gzip
@@ -251,10 +254,15 @@ Contents:
       Аппаратные системные компоненты - (SMBIOS / DMI)
 
     * du [args] dir
+
       Файлы/папки в текущем каталоге
+
         * args
+
           -s - подсчет и вывод размера
+
           -h - размер в Gb
+
         * dir - папка
 
     * free
@@ -276,11 +284,15 @@ Contents:
       Мануал для command
 
     * shutdown [args] [time]
+
       Остановить систему
+
         * args
+
           -h - выключить ПК
           -r - перезагрузка
           -c - отменить запланированное выключение
+
         * time - время выключения (now, hours:minutes)
 
     * reboot
@@ -351,59 +363,77 @@ Contents:
       Проверить корректность системных файлов учётных записей. Проверяются файлы /etc/passwd и /etc/shadow
 
     * useradd [args] user_name
+
       Создать пользователя
+
         * args
+
           -c comment- коментарии
           -d dir - путь к домашней директорий
           -g group_name - добавить в группу
           -s dir - путь к shell'y
 
     * userdel [args] user_name
+
       Удалить пользователя
+
         * args
+
           -r - удалить домашнюю директорию
 
     * usermod [kwargs] user_name
+
       Изменить атрибуты пользователя
+
         * args
+
           -c comment- коментарии
           -d dir - путь к домашней директорий
           -g group_name - добавить в группу
           -s dir - путь к shell'y
 
     * whoami
+    
       Имя, под которым вы залогинены
 
     Сеть
     ---
 
     * dig domain
+
       DNS информация domain
 
     * dig -x host
+
       Реверсивно искать host
 
     * ping host
+
       Пропинговать host и вывести результат
 
     * whois domain
+
       Информацию для domain
 
     * wget [args] file
+
       Скачать file
 
         * args
+
           -c - продолжить остановленную закачку
 
     SSH
     ---
 
     * scp [kwargs] src dst
+
       Копирует папки между машинами
 
         * src - путь, откуда копируем
         * dst - путь, куда копируем
         * kwargs
+
           -P port - порт подключения
     
     .. code-block:: sh

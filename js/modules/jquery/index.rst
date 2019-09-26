@@ -1,3 +1,11 @@
+.. title:: jquery
+
+.. meta::
+    :description: jquery
+    :keywords: jquery
+
+.. py:module:: jquery
+
 JQuery
 ======
 

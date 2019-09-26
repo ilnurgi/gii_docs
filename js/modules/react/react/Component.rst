@@ -5,7 +5,7 @@ Component
 
     React компонент
 
-    .. code-block:: js
+    .. code-block:: text
 
         import React, { Component } from 'react'
 

@@ -1,5 +1,4 @@
-.. py:module:: jQuery()
-
+.. py:currentmodule:: jquery
 
 Методы выбора
 =============

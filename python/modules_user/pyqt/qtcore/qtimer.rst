@@ -1,10 +1,15 @@
-.. py:module:: QtCore
+.. title:: PyQt4.QtCore.QTimer
 
-QTimer - объект, таймер
-=======================
+.. meta::
+    :description: PyQt4.QtCoreю.QTimer
+    :keywords: PyQt4.QtCore.QTimer
 
+.. py:currentmodule:: PyQt4.QtCore
 
-.. py:class:: QTimer((parent=None))
+QTimer()
+========
+
+.. py:class:: QTimer(parent=None)
 
     Таймер
 

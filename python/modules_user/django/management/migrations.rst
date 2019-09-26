@@ -30,10 +30,10 @@ migrate
 
 .. code-block:: py
 
-    // мигрируем конкретное приложение
+    # мигрируем конкретное приложение
     python manage.py migrate app_name
 
-    // запускаем фейковую миграцию для приложения
+    # запускаем фейковую миграцию для приложения
     python manage.py migrate app_name --fake
 
 

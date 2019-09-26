@@ -3,7 +3,7 @@ pug
 
 pugjs.org
 
-.. code-block:: pug
+.. code-block:: text
 
     // include config.pug подключить переменные из файла
     - var lang = 'en'

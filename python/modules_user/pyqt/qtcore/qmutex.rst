@@ -1,3 +1,11 @@
+.. title:: PyQt4.QtCore.QMutex
+
+.. meta::
+    :description: PyQt4.QtCore.QMutex
+    :keywords: PyQt4.QtCore.QMutex
+
+.. py:currentmodule:: PyQt4.QtCore
+
 QMutex
 ======
 

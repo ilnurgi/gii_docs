@@ -1,3 +1,5 @@
+.. py:module:: android
+
 Python4Android
 ==============
 

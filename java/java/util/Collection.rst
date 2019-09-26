@@ -1,4 +1,4 @@
-.. py:module:: java.util
+.. py:currentmodule:: java.util
 
 Collection - базовый интерфейс всех коллекции
 =============================================

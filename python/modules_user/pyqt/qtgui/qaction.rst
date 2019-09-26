@@ -6,8 +6,8 @@ QAction
 
     .. code-block:: py
 
-        self.lineEdit2 = QtGui.QLineEdit()
-        se1f.act = QtGui.QAction(se1f)
-        self.act.setShortcut(QtGui.QKeySequence.пmemonic("&e"))
-        se1f.act.triggered.connect(se1f.1ineEdit2.setFocus)
-        se1f.addAction(se1f.act)
+        self.lineEdit = QtGui.QLineEdit()
+        self.act = QtGui.QAction(self)
+        self.act.setShortcut(QtGui.QKeySequence.mnemonic("&e"))
+        self.act.triggered.connect(self.lineEdit.setFocus)
+        self.addAction(self.act)

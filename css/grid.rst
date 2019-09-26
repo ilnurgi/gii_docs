@@ -43,7 +43,7 @@ grid-colum
 
         grid-colum: 1/4;
 
-        // от начала до конца
+        /* от начала до конца */
         grid-colum: 1/-1;
     }
 
@@ -92,7 +92,7 @@ grid-row
 
         grid-row: 1/4;
 
-        // от начала до конца
+        /* от начала до конца */
         grid-row: 1/-1;
     }
 
@@ -258,7 +258,7 @@ grid-template-rows
     ul {
         display: grid;
         
-        grid-template-rows: auto auto auto auto;
-        // grid-template-rows: repeat(4, auto);
+        grid-template-rows: auto auto auto auto;        
+        grid-template-rows: repeat(4, auto);
         grid-auto-flow: column;
     }

@@ -1,7 +1,13 @@
-.. py:module:: QtCore
+.. title:: PyQt4.QtCore.QRect
 
-QRect - объект, область
-=======================
+.. meta::
+    :description: PyQt4.QtCore.QRect
+    :keywords: PyQt4.QtCore.QRect
+
+.. py:currentmodule:: PyQt4.QtCore
+
+QRect
+=====
 
 .. py:class:: QRect(x=0, y=0, w=0, h=0)
 .. py:class:: QRect(qpoint, qsize)

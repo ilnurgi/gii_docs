@@ -311,9 +311,9 @@ quote_literal, quote_nullable
 
 Ппредставление в виде строкового литерала
 
-.. code-block:: sql
+.. code-block:: psql
 
-    select
+    SELECT
       quote_literal('id')
       , quote_nullable('id')
       , quote_literal($$What's up?$$)
@@ -335,7 +335,7 @@ format
 
 Форматированный текст
 
-.. code-block:: sql
+.. code-block:: psql
 
     select
       format('Привет, %s!', 'мир')

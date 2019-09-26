@@ -66,7 +66,7 @@ python-social-auth
         include('social.apps.django_app.urls', namespace='social')),
 
 
-.. code-block:: html
+.. code-block:: htmldjango
 
     <div class="social">
         <ul>

@@ -7,7 +7,7 @@
         postgres psycopg2 exceptions, 
         psycopg2 exception
 
-.. py:module:: psycopg2
+.. py:currentmodule:: psycopg2
 
 exceptions
 ==========

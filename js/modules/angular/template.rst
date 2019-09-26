@@ -3,14 +3,14 @@
 
 В шаблонах могут использоваться и выражения
 
-.. code-block:: js
+.. code-block:: html
 
     <div>
         1 + 2 = {{ 1 + 2 }}
     </div>
 
 
-.. code-block:: js
+.. code-block:: html
 
     <pre>form = {{user}}</pre>
 

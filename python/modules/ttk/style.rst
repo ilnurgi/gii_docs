@@ -1,3 +1,11 @@
+.. title:: ttk Style
+
+.. meta::
+    :description: ttk Style
+    :keywords: ttk Style
+
+.. py:currentmodule:: ttk
+
 Style - стили виджетов
 ======================
 

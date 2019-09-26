@@ -1,5 +1,13 @@
-Text - виджет, поле ввода текста
-================================
+.. title:: tkinter Text
+
+.. meta::
+    :description: tkinter Text
+    :keywords: tkinter Text
+
+.. py:currentmodule:: tkinter
+
+Text
+====
 
 .. py:class:: Text(**kwargs)
 

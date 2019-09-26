@@ -6,7 +6,7 @@
     :keywords lang=ru: java.lang.StringBuilder
     :keywords lang=en: java.lang.StringBuilder
 
-.. py:module:: java.lang
+.. py:currentmodule:: java.lang
 
 StringBulder
 ============

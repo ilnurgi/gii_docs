@@ -13,15 +13,12 @@ flex
 .. code-block:: css
 
     .flex-container {
-        /*
-            флекс контейнер, а его потомки - флекс-элементы
-        */
+        /* флекс контейнер, а его потомки - флекс-элементы */
         display: flex;
     }
 
     .flex-item {
-        // сокращенная запись
-        // flex: flex-grow flex-shrink flex-basis;
+        /* flex: flex-grow flex-shrink flex-basis; */
         flex: 0 1 auto;
     }
 

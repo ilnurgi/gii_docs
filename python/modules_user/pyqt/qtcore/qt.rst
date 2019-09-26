@@ -1,10 +1,15 @@
-.. py:module:: QtCore
+.. title:: PyQt4.QtCore.Qt
 
-Qt - класс, содержащий константы
-================================
+.. meta::
+    :description: PyQt4.QtCore.Qt
+    :keywords: PyQt4.QtCore.Qt
 
-.. py:class:: Qt()
-    
+.. py:currentmodule:: PyQt4.QtCore
+
+Qt
+==
+
+.. py:class:: Qt()    
 
     .. py:attribute:: AlignCenter
 

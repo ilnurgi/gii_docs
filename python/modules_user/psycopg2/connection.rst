@@ -7,7 +7,7 @@
         postgres psycopg2 connection, 
         psycopg2 connection
 
-.. py:module:: psycopg2
+.. py:currentmodule:: psycopg2
 
 connection
 ==========

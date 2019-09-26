@@ -1,7 +1,13 @@
-.. py:module:: QtCore
+.. title:: PyQt4.QtCore.QSizeF
 
-QSizeF - объект, задает размер (для работы с вещественными числами)
-===================================================================
+.. meta::
+    :description: PyQt4.QtCore.QSizeF
+    :keywords: PyQt4.QtCore.QSizeF
+
+.. py:currentmodule:: PyQt4.QtCore
+
+QSizeF
+======
 
 .. py:class:: QSizeF(height, width)
 

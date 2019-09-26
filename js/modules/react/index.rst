@@ -87,7 +87,7 @@ JavaScript библиотека для создания веб страниц
 
 
 
-.. code-block:: js
+.. code-block:: text
 
     var Hello = React.createClass({
 
@@ -135,17 +135,17 @@ JavaScript библиотека для создания веб страниц
         <Hello name="ilnurgi/>,
         document.getElementById("container"));
 
+.. code-block:: js
 
-Application.react.js
+    // Application.react.js
 
-var React = require('react');
+    var React = require('react');
 
-var Application = React.createClass({});
+    var Application = React.createClass({});
 
-module.exports = Application;
+    module.exports = Application;
 
+    // app.js
 
-app.js
-
-var React = require('react');
-var Application = require('./components/Application.react.js');
+    var React = require('react');
+    var Application = require('./components/Application.react.js');

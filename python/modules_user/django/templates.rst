@@ -1,44 +1,44 @@
 Шаблоны
 =======
 
-.. code-block:: html
+.. code-block:: htmldjango
 
     <title>{{ title }}</title>
 
-.. code-block:: html
+.. code-block:: htmldjango
 
     <div>{{ cats.0.name }}</div>
 
-.. code-block:: html
+.. code-block:: htmldjango
 
     <!-- вывести текст без замены html символов, т.е. как есть -->
     {% autoescape on %}
         {{ some_html }}
     {% endautoescape %}
 
-.. code-block:: html
+.. code-block:: htmldjango
 
     <!-- выключить шаблонизацию для учатска -->
     {% verbatim %}
         {{ some_html }}
     {% endverbatim %}
 
-.. code-block:: html
+.. code-block:: htmldjango
 
     <!-- вывести первое непустое и не нулевое значение -->
     {% firstof val1 val2 val3 %}
 
-.. code-block:: html
+.. code-block:: htmldjango
 
     {% with cat=good.category %}
         {{ cat.id }}
     {% endwith %}
 
-.. code-block:: html
+.. code-block:: htmldjango
 
     {# коментарии #}
 
-.. code-block:: html
+.. code-block:: htmldjango
 
     <script>
         var csrftoken = $.cookie('csrftoken');
@@ -54,7 +54,7 @@
 Циклы
 -----
 
-.. code-block:: html
+.. code-block:: htmldjango
 
     <ul>
         {% for good in goods %}
@@ -72,7 +72,7 @@
         {% endfor %}
     </ul>
 
-.. code-block:: html
+.. code-block:: htmldjango
 
     <!-- генератор, который возвращает новое значение при каждом обращении -->
     {% cycle 'normal' 'alternate' %}
@@ -81,7 +81,7 @@
 Условия
 -------
 
-.. code-block:: html
+.. code-block:: htmldjango
 
     {% if good.id == 1 %}
         ...
@@ -91,14 +91,14 @@
         ...
     {% endif %}
 
-.. code-block:: html
+.. code-block:: htmldjango
 
     <!-- работает быстрее чем обычный if -->
     {% ifequal good.id 1 %}
         ...
     {% endifequal %}
 
-.. code-block:: html
+.. code-block:: htmldjango
 
     <!-- работает быстрее чем обычный if -->
     {% ifnotequal good.id 1%}
@@ -109,7 +109,7 @@
 Фильтры
 -------
 
-.. code-block:: html
+.. code-block:: htmldjango
 
     <!-- сложение -->
     {{ good.some_attr|add:2 }}
@@ -140,7 +140,7 @@
 
 Числа
 
-.. code-block:: html
+.. code-block:: htmldjango
 
     <!-- округление -->
     {{ good.some_attr|floatformat:"0" }}
@@ -152,7 +152,7 @@
 
 Дата и время
 
-.. code-block:: html
+.. code-block:: htmldjango
 
     <!-- форматирует дату по формату -->
     {{ good.some_attr|date:"j.d.y" }}
@@ -166,7 +166,7 @@
     {{ good.some_attr|time:"time_format" }}
     {{ good.some_attr|time:"G:i" }}
 
-.. code-block:: html
+.. code-block:: htmldjango
 
     <!-- последний элемент списка -->
     {{ good.some_attr|last }}
@@ -219,7 +219,7 @@
     <!-- если True - Yes, False - No, None - None -->
     {{ good.some_attr|yesno:"Yes,No,None" }}
 
-.. code-block:: html
+.. code-block:: htmldjango
 
     <!-- примение группы фильтров для элементов -->
     {% filter linebreaksbr|striptags %}
@@ -231,7 +231,7 @@
 Наследование и блоки шаблонов
 -----------------------------
 
-.. code-block:: html
+.. code-block:: htmldjango
 
     {% extends "base.html" %}
 
@@ -244,7 +244,7 @@
 Статика
 -------
 
-.. code-block:: html
+.. code-block:: htmldjango
 
     {% load staticfiles %}
 
@@ -273,7 +273,7 @@
     def markdown_format(text):
         return mark_safe(markdown.markdown(text))
 
-.. code-block:: html
+.. code-block:: htmldjango
 
     {% load blog_tags %}
 
@@ -285,7 +285,7 @@
 Локализация
 -----------
 
-.. code-block:: html
+.. code-block:: htmldjango
 
     {% load i18n %}
 
@@ -303,7 +303,7 @@
     {% endblocktrans %}
 
 
-.. code-block:: html
+.. code-block:: htmldjango
 
     {% get_current_language as LANGUAGE_CODE %}
     {% get_available_languages as LANGUAGES %}
@@ -329,7 +329,7 @@
 Кеширование
 -----------
 
-.. code-block:: html
+.. code-block:: htmldjango
 
     {% load_cache %}
 

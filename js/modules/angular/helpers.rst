@@ -2,13 +2,11 @@
 =======================
 
 
-.. code-block:: js
+.. code-block:: text
 
     <p ng-if='keys.length'></p>
 
     <p ng-init='names=[1,2,3,]'></p>
-
-
 
     <div ng-repeat='key in keys'></div>
 
@@ -55,13 +53,13 @@
     </form>
 
     <input ng-model="val" ng-pattern="/^\d+$/" name="anim" class="my-input" />
-    /*
-    при ошибках применятся следующие свойства
-    .my-input.ng-invalid {
-        color:white;
-        background: red;
-    }
-    */
+    <--
+        при ошибках применятся следующие свойства
+        .my-input.ng-invalid {
+            color:white;
+            background: red;
+        }
+    -->
 
     <div id="template1" ng-cloak>{{ 'hello' }}</div>
     <div id="template2" ng-cloak class="ng-cloak">{{ 'hello IE7' }}</div>
@@ -121,7 +119,7 @@
         <div class="animate-switch" ng-switch-default>default</div>
     </div>
 
-    angular.isDefined(stop)
+    <-- angular.isDefined(stop) -->
 
     <button ng-click="$log.log(message)">log</button>
     <button ng-click="$log.warn(message)">warn</button>

@@ -1,7 +1,9 @@
+.. py:currentmodule:: droidscript
+
 Диалоговые, информационные окна
 ===============================
 
-.. js:function:: app.Alert(text, title)
+.. py:function:: app.Alert(text, title)
 
     Отображает информационное окно
 
@@ -10,7 +12,7 @@
         app.Alert('Hello World!', 'Message');
 
 
-.. js:function:: app.CreateDialog(title, options)
+.. py:function:: app.CreateDialog(title, options)
 
     Возвращает :js:class:`Dialog`, компонент диалога.
 
@@ -26,7 +28,7 @@
         dlgL = app.CreateDialog('Chose item', 'NoCancel');
 
 
-.. js:function:: app.CreateListDialog(title, list, options)
+.. py:function:: app.CreateListDialog(title, list, options)
 
     Возвращает :js:class:`ListDialog`
 
@@ -36,7 +38,7 @@
         dlg = app.CreateListDialog('Choises', 'Add,Remove', 'Multi')
 
 
-.. js:function:: app.CreateNotification(options)
+.. py:function:: app.CreateNotification(options)
 
     Возвращает :js:class:`Notification`
 
@@ -55,7 +57,7 @@
         notify = app.CreateNotification('AutoCancel,FullScreen');
 
 
-.. js:function:: app.CreateShortcut(name, icon, script)
+.. py:function:: app.CreateShortcut(name, icon, script)
 
     Создает ярлык на рабочем экране устройства
     
@@ -64,7 +66,7 @@
         app.CreateShortcut("Hello World", "/mnt/sdcard/DroidScript/Hello World/Img/Hello World.png", "/mnt/sdcard/DroidScript/Hello World/Hello World.js");
 
 
-.. js:function:: app.CreateYesNoDialog(msg)
+.. py:function:: app.CreateYesNoDialog(msg)
 
     Возвращает :js:class:`YesNoDialog`, диалоговое окно с выбором Да/Нет
 
@@ -73,12 +75,12 @@
         yesNo = app.CreateYesNoDialog('Yes?')
 
 
-.. js:function:: app.GetNotifyId()   
+.. py:function:: app.GetNotifyId()   
 
     Возвращает идентификатор уведомления
 
 
-.. js:function:: app.HideProgress()
+.. py:function:: app.HideProgress()
 
     Скрывает показанные прогресс, :js:func:`ShowProgress`
 
@@ -87,7 +89,7 @@
         app.HideProgress();
 
 
-.. js:function:: app.HideProgressBar()
+.. py:function:: app.HideProgressBar()
 
     Скрывает показанные прогрессбар, :js:func:`ShowProgressBar`, :js:func:`UpdateProgressBar`
 
@@ -96,7 +98,7 @@
         app.HideProgressBar();
 
 
-.. js:function:: app.ShowPopup(text, options)
+.. py:function:: app.ShowPopup(text, options)
 
     Отображает всплывающее сообщение
 
@@ -110,7 +112,7 @@
         app.ShowPopup('Hello World', 'Bottom,Short');
 
 
-.. js:function:: app.ShowProgress(text)
+.. py:function:: app.ShowProgress(text)
 
     Отображает прогресс с текстом, :js:func:`HideProgress`
 
@@ -120,7 +122,7 @@
         setTimeout('app.HideProgress()', 3000);
 
 
-.. js:function:: app.ShowProgressBar(text)
+.. py:function:: app.ShowProgressBar(text)
 
     Отображает прогрессбар с текстом, :js:func:`HideProgressBar`, :js:func:`UpdateProgressBar`
 
@@ -130,7 +132,7 @@
         setTimeout('app.HideProgressBar()', 3000);
 
 
-.. js:function:: app.UpdateProgressBar(progress)
+.. py:function:: app.UpdateProgressBar(progress)
 
     Включает вибрацию по указанному паттерну, :js:func:`ShowProgressBar`, :js:func:`HideProgressBar`
 

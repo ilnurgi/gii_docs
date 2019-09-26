@@ -369,18 +369,18 @@ ng-controller
         {{ myValue }}
     </div>
 
-.. code-block:: js
+.. code-block:: html
 
     <script type="text/javascript">
         angular
-        .module('myapp, []')
-        .controller('myController', MyCtrl);
+            .module('myapp, []')
+            .controller('myController', MyCtrl);
 
         // для корректной минификации
         MyCtrl.$inject = ['$scope'];
 
         function MyCtrl($scope){
-            ...
+            
         });
     </script>
 

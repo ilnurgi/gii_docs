@@ -21,7 +21,7 @@ border
 .. code-block:: css
 
     div {
-        border 1px solid red;
+        border: 1px solid red;
     }
 
 

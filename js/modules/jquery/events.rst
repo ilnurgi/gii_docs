@@ -1,4 +1,4 @@
-.. py:module:: jQuery()
+.. py:currentmodule:: jquery
 
 Методы для работы с событиями
 =============================

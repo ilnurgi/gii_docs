@@ -1,10 +1,8 @@
-.. title:: kotlin.operators
+.. title:: kotlin operators
 
 .. meta::
-    :description lang=ru: описание операторов языка программирования kotlin
-    :description lang=en: kotlin operators description
-    :keywords lang=ru: kotlin операторы
-    :keywords lang=en: kotlin operators
+    :description: kotlin operators
+    :keywords: kotlin operators
 
 Операторы
 =========
@@ -12,7 +10,7 @@
 for
 ---
 
-.. code-block:: py
+.. code-block:: text
 
 	val array = arrayOf(1, 2, 3)
 	for (i in array){
@@ -39,7 +37,7 @@ for
 if
 --
 
-.. code-block:: py
+.. code-block:: text
 
 	if (a < 40) {
 		...
@@ -49,7 +47,7 @@ if
 		...
 	}
 
-.. code-block:: py
+.. code-block:: text
 
 	val count: Integer
 
@@ -65,7 +63,7 @@ if
 when
 ----
 
-.. code-block:: py
+.. code-block:: text
 
 	val nameOfMonth = "Март"
 	val season: String
@@ -81,7 +79,7 @@ when
 
 	# season = "Не определен""
 
-.. code-block:: py
+.. code-block:: text
 
 	val nameOfMonth = "Март"
 	val season = when(nameOfMonth) {
@@ -95,7 +93,7 @@ when
 
 	# season = "Не определен""
 
-.. code-block:: py
+.. code-block:: text
 
 	val nameOfMonth = 4
 	val season = when(nameOfMonth) {
@@ -112,7 +110,7 @@ when
 
 	# season = "Не определен""
 
-.. code-block:: py
+.. code-block:: text
 
 	val temp = 80
 	val state = when {
@@ -124,7 +122,7 @@ when
 fun
 ---
 
-.. code-block:: py
+.. code-block:: text
 
 	fun max(a: Int, b: Int): Int {
 		if (a > b) {
@@ -187,7 +185,7 @@ fun
 lambda
 ------
 
-.. code-block:: py
+.. code-block:: text
 
 	val sum = {a: Int, b: Int - > a + b}
 	val sum: (Int, Int) -> Int = { a, b -> a + b}
@@ -198,7 +196,7 @@ lambda
 let
 ---
 
-.. code-block:: py
+.. code-block:: text
 
 	var name: String? = null
 
@@ -214,7 +212,7 @@ let
 with
 ----
 
-.. code-block:: py
+.. code-block:: text
 
 	with(list) {
 		add(5)

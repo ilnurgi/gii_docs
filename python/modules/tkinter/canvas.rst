@@ -1,3 +1,11 @@
+.. title:: tkinter Canvas
+
+.. meta::
+    :description: tkinter Canvas
+    :keywords: tkinter Canvas
+
+.. py:currentmodule:: tkinter
+
 Canvas
 ======
 

@@ -1,3 +1,11 @@
+.. title:: pygame Screen
+
+.. meta::
+    :description: python Screen
+    :keywords: python Screen
+
+.. py:currentmodule:: pygame
+
 Screen
 ======
 

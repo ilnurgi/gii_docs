@@ -1,3 +1,5 @@
+.. py:currentmodule:: java.util
+
 Comparator
 ==========
 

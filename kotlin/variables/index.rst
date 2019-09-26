@@ -1,10 +1,8 @@
-.. title:: kotlin Переменные
+.. title:: kotlin variables
 
 .. meta::
-    :description lang=ru: описание переменных и типов данных, языка программирования kotlin
-    :description lang=en: kotlin variables and data types description
-    :keywords lang=ru: kotlin переменные, kotlin типы данных
-    :keywords lang=en: kotlin variables, kotlin data types
+    :description: kotlin variables
+    :keywords: kotlin variables
 
 Переменные и типы данных
 ========================
@@ -26,13 +24,13 @@
 null
 ----
 
-.. code-block:: py
+.. code-block:: text
 
 	# ошибка, нельзя присвоить null переменным
 	val name: String = null
 
 
-.. code-block:: py
+.. code-block:: text
 
 	# ошибки не будет, т.к. стоит вопросительный знак
 	# говорящий, что тут может быть null
@@ -49,7 +47,7 @@ null
 	println(name?.length)
 
 
-.. code-block:: py
+.. code-block:: text
 
 	val name: String? = null
 
@@ -65,7 +63,7 @@ null
 val
 ---
 
-.. code-block:: py
+.. code-block:: text
 
 	val name = "ilnurgi"
 
@@ -79,7 +77,7 @@ val
 var
 ---
 
-.. code-block:: py
+.. code-block:: text
 
 	var name: String = "ilnurgi"
 

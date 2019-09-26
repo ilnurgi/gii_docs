@@ -12,7 +12,7 @@ ReactDom
 
         Рендерит react элемент в дом дерево
 
-        .. code-block:: js
+        .. code-block:: text
 
             ReactDom.render(
                 React.createElement('h2', null, 'Hello World'),

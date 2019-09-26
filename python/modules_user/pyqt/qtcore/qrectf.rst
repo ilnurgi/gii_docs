@@ -1,7 +1,13 @@
-.. py:module:: QtCore
+.. title:: PyQt4.QtCore.QRectF
 
-QRectF - объект, область
-========================
+.. meta::
+    :description: PyQt4.QtCore.QRectF
+    :keywords: PyQt4.QtCore.QRectF
+
+.. py:currentmodule:: PyQt4.QtCore
+
+QRectF
+======
 
 .. py:class:: QRectF()
 

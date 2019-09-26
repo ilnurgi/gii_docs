@@ -1,3 +1,11 @@
+.. title:: tkinter Button
+
+.. meta::
+    :description: tkinter Button
+    :keywords: tkinter Button
+
+.. py:currentmodule:: tkinter
+
 Button
 ======
 
