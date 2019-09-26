@@ -1,3 +1,11 @@
+.. title:: pyqt
+
+.. meta::
+    :description: pyqt
+    :keywords: pyqt
+
+.. py:module:: pyqt
+
 pyqt
 ====
 
@@ -6,9 +14,9 @@ pyqt
 
 .. code-block:: py
 
-    # coding: utf-8
-    from PyQt4 import QtGui
     import sys
+    
+    from PyQt4 import QtGui
 
     app = QtGui.QApplication(sys.argv)
 

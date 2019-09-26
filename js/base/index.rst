@@ -48,3 +48,5 @@ JavaScript
     Symbol
     Error
     Reflect
+    fetch
+    Response

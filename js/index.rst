@@ -1,3 +1,9 @@
+.. title:: javascript
+
+.. meta::
+    :description: javascript
+    :keywords: javascript
+
 JavaScript
 ==========
 

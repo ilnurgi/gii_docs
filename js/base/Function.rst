@@ -69,7 +69,7 @@ Function
             functionName.apply(thisArg, param1, param2)
 
 
-    .. py:method:: bind(obj[, arguments])
+    .. py:method:: bind(context, ...arguments)
 
         Возвращает новую функцию,
         которая вызывает данную,
@@ -79,9 +79,21 @@ Function
 
         .. code-block:: js
 
-            function f(){...};
-            var g = f.bind(o, 1, 2);
-            // эквивалентно f.call(o, 1, 2, 3);
+            function f(){
+                alert(1);
+            };
+            var g = f.bind("Context", 1, 2);
+            // эквивалентно f.call("Context", 1, 2);
+
+        .. code-block:: js
+
+            // карирование, фиксирование аргументов
+            function mull(a, b){
+                return a * b;
+            }
+            var double = mul.bind(null, 2)
+            double(3);
+            // mul(2, 3) = 6
 
 
     .. py:method:: call(obj, argument1, ...)

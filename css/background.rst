@@ -1,3 +1,9 @@
+.. title:: css.background
+
+.. meta::
+    :description: css.background
+    :keywords: css.background
+
 Фон
 ===
 
@@ -81,6 +87,14 @@ URL изображения
         background-image: url(images/photo.jpg);
     }
 
+    /* image-set плохая поддержка браузеров */
+    div {
+        background-image: image-set(
+            url(images/ilnurgi.png) 1x,
+            url(images/ilnurgi-2x.png) 2x
+        );
+    }
+
 
 background-origin
 -----------------
@@ -153,5 +167,6 @@ background-size
 
     div {
         background-size: 200px 400px;
+        background-size: cover;
     }
     

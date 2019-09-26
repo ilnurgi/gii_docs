@@ -11,3 +11,4 @@
     nodejs/index
     react/index
     vuejs/index
+    webcomponent

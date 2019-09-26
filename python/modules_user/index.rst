@@ -33,6 +33,7 @@
     pypdf2
     pyppeteer
     pys60/index
+    pyside2/index
     pyqt/index
     redis
     requests/index
