@@ -12,6 +12,10 @@ base_dir = os.path.dirname(__file__)
 build_html_dir = os.path.join(base_dir, '_build_html')
 build_epub_dir = os.path.join(base_dir, '_build_epub')
 
+print('base_dir', base_dir)
+print('build_html_dir', build_html_dir)
+print('build_epub_dir', build_epub_dir)
+
 
 def prepare_build_path():
     for path in (build_html_dir, build_epub_dir):
@@ -27,6 +31,15 @@ def build_html(args):
     mode, build_dir, item = args
 
     print('start', mode, item)
+    params = [
+        '-c',
+        base_dir,
+        '-b',
+        mode,
+        os.path.join(base_dir, item),
+        os.path.join(build_dir, item),
+    ]
+    print(params)
 
     stdout = StringIO()
     stderr= StringIO()
@@ -37,24 +50,14 @@ def build_html(args):
     sys.stdout = stdout
     sys.stderr = stderr
 
-    build.main(
-        [
-            '-c',
-            base_dir,
-            '-b',
-            mode,
-            os.path.join(base_dir, item),
-            os.path.join(build_dir, item),
-        ]
-    )
-    result = [stdout.getvalue()]
-    result.append(stderr.getvalue())
+    build.main(params)
 
     sys.stdout = stdout_def
     sys.stderr = stderr_def
+
     print('done', mode, item)
 
-    return result
+    return [stdout.getvalue(), stderr.getvalue()]
 
 
 if __name__ == '__main__':
