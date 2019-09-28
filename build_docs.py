@@ -18,6 +18,9 @@ print('build_epub_dir', build_epub_dir)
 
 
 def prepare_build_path():
+    if '-f' in sys.argv:
+        return
+
     for path in (build_html_dir, build_epub_dir):
         if os.path.exists(path):
             print(path, 'exists, remove')
@@ -42,7 +45,7 @@ def build_html(args):
     print(params)
 
     stdout = StringIO()
-    stderr= StringIO()
+    stderr = StringIO()
 
     stdout_def = sys.stdout
     stderr_def = sys.stderr
@@ -98,3 +101,8 @@ if __name__ == '__main__':
 
     with open(os.path.join(base_dir, '{}.log'.format(int(time()))), 'w') as f:
         f.write('\n'.join(r))
+
+    shutil.copy(
+        os.path.join(base_dir, 'index.html'),
+        os.path.join(build_html_dir, 'index.html'),
+    )
