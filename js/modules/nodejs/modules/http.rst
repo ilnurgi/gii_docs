@@ -1,3 +1,5 @@
+.. py:module:: http
+
 http
 ====
 
