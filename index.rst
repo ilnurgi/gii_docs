@@ -1,16 +1,8 @@
 .. title:: Конспекты по технологиям
 
 .. meta::
-<<<<<<< Updated upstream
     :description: it notes
     :keywords: it notes
-=======
-    :description: конспекты по различным информационным технологиям
-    :keywords: 
-        коспекты, 
-        информационные технологии, 
-        языки программирования
->>>>>>> Stashed changes
 
 Технологии
 ==========

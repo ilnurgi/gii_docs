@@ -3,45 +3,57 @@
 locale 
 ======
 
->>> import locale
->>> # Для кодировки windows-1251
->>> loca1e.setlocale(locale.LC_ALL, "Russian Russia.l251")
-'Russian Russia .1251'
->>> # Устанавливаем локаль по умолчанию
->>> locale.setlocale(locale.LC_ALL, "")
-'Russian Russia .1251'
->>> # Получаем текущее значение
->>> lоса1е.getlocale()
-('Russian_Russia', '1251')
->>> # Получаем текущее значение категории locale.LC COLLATE
->>> locale.getlocale(locale.LC_COLLATE)
-('Russian _ Russia', '1251')
+getlocale()
+-----------
 
-Методы модуля
--------------
-
-.. py:method:: getlocale([category])
+.. py:method:: getlocale(category=None)
 
     возвращает текущее значение локали
 
+    .. code-block:: py
+
+        lосаlе.getlocale()
+        # ('Russian_Russia', '1251')
+
+        locale.getlocale(locale.LC_COLLATE)
+        # ('Russian _ Russia', '1251')
+
+
+localeconv()
+------------
 
 .. py:method:: localeconv()
 
     возвращает словарь с настройками локали
 
-    >>> locale.localeconv()
-    {
-        'mon_decirnal_point': ', ', 
-        'int_frac_digits': 2, 
-        'p_sep_by_space': О,
-        ...
-    }
+    .. code-block:: py
 
-.. py:method:: setlocale(category [, locale])
+        locale.localeconv()
+        """
+        {
+            'mon_decirnal_point': ', ', 
+            'int_frac_digits': 2, 
+            'p_sep_by_space': О,
+            ...
+        }
+        """
 
-    :param category: категория локали
+
+setlocale()
+-----------
+
+.. py:method:: setlocale(category, locale=None)
     
     настройка совокупности локали системы
+
+    .. code-block:: py
+
+        locale.setlocale(locale.LC_ALL, 'Russian_Russia.l251')
+        # 'Russian_Russia .1251'
+        
+        # Устанавливаем локаль по умолчанию
+        locale.setlocale(locale.LC_ALL, "")
+        # 'Russian_Russia .1251'
 
 
 Категории локали

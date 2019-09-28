@@ -97,7 +97,7 @@ srcset
 
     .. code-block:: html
 
-        <-- 1x, .... 4x плотность экрана -->
+        <!-- 1x, .... 4x плотность экрана -->
         <img 
             src="ilnurgi-200px.jpg" 
             alt="ilnurgi face" 

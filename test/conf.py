@@ -11,9 +11,7 @@
 # All configuration values have a default; values that are commented out
 # serve to show the default.
 
-import datetime
-import os
-import sys
+from datetime import date
 
 # If extensions (or modules to document with autodoc) are in another directory,
 # add these directories to sys.path here. If the directory is relative to the
@@ -50,7 +48,7 @@ copyright = 'ilnurgi'
 # built documents.
 #
 # The short X.Y version.
-version = datetime.date.today().strftime('%Y.%m.%d')
+version = date.today().strftime('%Y.%m.%d')
 # The full version, including alpha/beta/rc tags.
 release = version
 
@@ -66,7 +64,7 @@ release = version
 
 # List of patterns, relative to source directory, that match files and
 # directories to ignore when looking for source files.
-exclude_patterns = ['_build', '.vscode', 'venv', '_static', '_templates']
+exclude_patterns = ['_build', '.vscode', 'venv', '_static', '_templates', 'test']
 
 # The reST default role (used for this markup: `text`) to use for all documents.
 #default_role = None
@@ -108,7 +106,7 @@ html_theme_options = {
 
 # The name for this set of Sphinx documents.  If None, it defaults to
 # "<project> v<release> documentation".
-html_title = '{0} от {1}'.format(project, release)
+html_title = '{0} ({1})'.format(project, release)
 
 # A shorter title for the navigation bar.  Default is the same as html_title.
 #html_short_title = None
@@ -245,3 +243,29 @@ texinfo_documents = [
 
 # How to display URL addresses: 'footnote', 'no', or 'inline'.
 #texinfo_show_urls = 'footnote'
+
+
+def setup(app):
+    """
+    :type app: sphinx.application.Sphinx
+    """
+
+    from pprint import pprint
+    from typing import Dict, Any
+
+    from sphinx.builders.html import StandaloneHTMLBuilder
+
+    class GiiHtmlBuilder(StandaloneHTMLBuilder):
+        """"""
+
+        def update_page_context(
+                self, pagename: str, templatename: str, ctx: Dict, event_arg: Any
+        ):
+            super().update_page_context(pagename, templatename, ctx, event_arg)
+
+            # print(pagename)
+            # pprint(ctx)
+
+            ctx['page_url'] = self.get_target_uri(pagename)
+
+    app.add_builder(GiiHtmlBuilder, StandaloneHTMLBuilder.name)

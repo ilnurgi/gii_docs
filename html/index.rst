@@ -69,6 +69,7 @@ HTML документ состоит из тегов.
     blockquote
     div
     img
+    picture
     section
     ul
     ol

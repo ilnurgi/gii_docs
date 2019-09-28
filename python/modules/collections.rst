@@ -288,28 +288,28 @@ namedtuple
         Заменяет указанные свойства и возвращает новый объект
 
 
-Callable
---------
+Callable()
+----------
 
-.. py:class:: Callable
+.. py:class:: Callable()
     
     Базовый класс объектов, поддерживающих возможность вызова, как функции.
 
     Определяет абстрактный метод __call__().
 
 
-Container
----------
+Container()
+-----------
 
-.. py:class:: Container
+.. py:class:: Container()
 
     Базовый класс всех контейнеров.
 
     Определяет единственный абстрактный метод __contains__(), реализующий оператор in.
 
 
-Counter
--------
+Counter()
+---------
 
 Счетчик
 
@@ -345,10 +345,10 @@ Counter
             counter.most_common(1)
             # [('spam', 3)]
 
-Hashable
---------
+Hashable()
+----------
 
-.. py:class:: Hashable
+.. py:class:: Hashable()
 
     Базовый класс всех объектов,
     которые могут использоваться в качестве ключей хеш-таблиц.
@@ -356,30 +356,30 @@ Hashable
     Определяет единственный абстрактный метод __hash__().
 
 
-ItemsView
----------
+ItemsView()
+-----------
 
-.. py:class:: ItemsView
+.. py:class:: ItemsView()
 
     Базовый класс представления элементов отображения.
 
     Наследует классы MappingView и Set.
 
 
-Iterable
---------
+Iterable()
+----------
 
-.. py:class:: Iterable
+.. py:class:: Iterable()
 
     Базовый класс объектов, поддерживающих протокол итераций.
 
     Определяет единственный абстрактный метод __iter__().
 
 
-Iterator
---------
+Iterator()
+----------
 
-.. py:class:: Iterator
+.. py:class:: Iterator()
 
     Базовый класс итерируемых объектов.
 
@@ -389,20 +389,20 @@ Iterator
     который просто ничего не делает.
 
 
-KeysView
---------
+KeysView()
+----------
 
-.. py:class:: KeysView
+.. py:class:: KeysView()
     
     Базовый класс представления ключей отображения.
 
     Наследует классы MappingView и Set.
 
 
-Mapping
--------
+Mapping()
+---------
 
-.. py:class:: Mapping
+.. py:class:: Mapping()
 
     Базовый класс объектов, поддерживающих возможность отображения (словари).
 
@@ -413,10 +413,10 @@ Mapping
     items(), values(), get(), __eq__() и __ne__().
 
 
-MappingView
------------
+MappingView()
+-------------
 
-.. py:class:: MappingView
+.. py:class:: MappingView()
 
     Базовый класс представлений отображений.
 
@@ -427,10 +427,10 @@ MappingView
     который содержит ключи, имеющиеся в отображении.
 
 
-MutableMapping
---------------
+MutableMapping()
+----------------
 
-.. py:class:: MutableMapping
+.. py:class:: MutableMapping()
 
     Базовый класс изменяемых объектов отображений.
 
@@ -441,10 +441,10 @@ MutableMapping
     clear(), update() и setdefault().
 
 
-MutableSequence
----------------
+MutableSequence()
+-----------------
 
-.. py:class:: MutableSequence
+.. py:class:: MutableSequence()
 
     Базовый класс изменяемых последовательностей.
 
@@ -455,10 +455,10 @@ MutableSequence
     reverse(), extend(), pop(), remove() и __iadd__().
 
 
-MutableSet
-----------
+MutableSet()
+------------
 
-.. py:class:: MutableSet
+.. py:class:: MutableSet()
 
     Базовый класс изменяемых множеств.
 
@@ -468,8 +468,8 @@ MutableSet
     remove(), __ior__(), __iand__(), __ixor__ () и __isub__().
 
 
-OrderedDict
------------
+OrderedDict()
+-------------
 
 .. py:class:: OrderedDict()
 
@@ -483,10 +483,10 @@ OrderedDict
             ])
 
 
-Sequence
---------
+Sequence()
+----------
 
-.. py:class:: Sequence
+.. py:class:: Sequence()
 
     Базовый класс объектов, которые выглядят как последовательности.
 
@@ -498,10 +498,10 @@ Sequence
     которые реализованы исключительно посредством методов __getitem__() и __len__().
 
 
-Set
----
+Set()
+-----
 
-.. py:class:: Set
+.. py:class:: Set()
 
     Базовый класс объектов, которые действуют как множества.
 
@@ -514,21 +514,23 @@ Set
     __xor__(), __sub__() и isdisjoint().
 
 
-Sized
------
+Sized()
+-------
 
-.. py:class:: Sized
+.. py:class:: Sized()
 
     Базовый класс контейнеров, которые позволяют определить размер.
 
     Определяет абстрактный метод __len__().
 
 
-ValuesView
-----------
+ValuesView()
+------------
 
-.. py:class:: ValuesView
+.. py:class:: ValuesView()
     
     Базовый класс представления пар (key, item) отображения.
 
     Наследует классы MappingView и Set.
+
+    

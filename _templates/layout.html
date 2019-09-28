@@ -1,10 +1,13 @@
-<!doctype html>
-
+<!DOCTYPE html>
+{%- if html_tag %}
+{{ html_tag }}
+{%- else %}
 <html>
+{%- endif %}
     <head>
-        <title>{{ title|striptags|e }}{{ titlesuffix }}</title>
         <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width,initial-scale=1">
+        <title>{{ title|striptags|e }}{{ titlesuffix }}</title>
+        <meta name="viewport" content="width=device-width,initial-scale=1" />
         {{- metatags }}
         <link rel="stylesheet" href="{{ pathto('_static/' + style, 1) }}" type="text/css" />
         <link rel="stylesheet" href="{{ pathto('_static/pygments.css', 1) }}" type="text/css" />
@@ -20,6 +23,13 @@
                     </li>
                 {% endif %}
                 {%- endfor%}
+
+                {%- if builder != 'epub' %}
+                    <li class="nav-item"><a href="../epub/{{ pagename }}.xhtml">epub</a> &#187;</li>
+                {%- elif builder != 'html' %}
+                    <li class="nav-item"><a href="{{ pagename }}.html">html</a> &#187;</li>
+                {%- endif %}
+
                 <li class="nav-item"><a href="{{ pathto(master_doc) }}">{{ shorttitle|e }}</a> &#187;</li>
                 {%- for parent in parents %}
                     <li class="nav-item"><a href="{{ parent.link|e }}">{{ parent.title }}</a> &#187;</li>

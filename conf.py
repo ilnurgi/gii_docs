@@ -11,9 +11,7 @@
 # All configuration values have a default; values that are commented out
 # serve to show the default.
 
-import datetime
-import os
-import sys
+from datetime import date
 
 # If extensions (or modules to document with autodoc) are in another directory,
 # add these directories to sys.path here. If the directory is relative to the
@@ -50,7 +48,7 @@ copyright = 'ilnurgi'
 # built documents.
 #
 # The short X.Y version.
-version = datetime.date.today().strftime('%y.%m')
+version = date.today().strftime('%Y.%m.%d')
 # The full version, including alpha/beta/rc tags.
 release = version
 
@@ -245,3 +243,29 @@ texinfo_documents = [
 
 # How to display URL addresses: 'footnote', 'no', or 'inline'.
 #texinfo_show_urls = 'footnote'
+
+
+def setup(app):
+    """
+    :type app: sphinx.application.Sphinx
+    """
+
+    from pprint import pprint
+    from typing import Dict, Any
+
+    from sphinx.builders.html import StandaloneHTMLBuilder
+
+    class GiiHtmlBuilder(StandaloneHTMLBuilder):
+        """"""
+
+        def update_page_context(
+                self, pagename: str, templatename: str, ctx: Dict, event_arg: Any
+        ):
+            super().update_page_context(pagename, templatename, ctx, event_arg)
+
+            # print(pagename)
+            # pprint(ctx)
+
+            ctx['page_url'] = self.get_target_uri(pagename)
+
+    app.add_builder(GiiHtmlBuilder, StandaloneHTMLBuilder.name)

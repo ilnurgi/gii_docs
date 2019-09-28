@@ -19,26 +19,14 @@ Django
 
                 # __init__.py
 
+                # конфигуратор приложения
                 default_app_config = 'app_name.apps.AppConfig'
 
 
 
         * admin.py - настройка админки
 
-        * app.py - настройка приложения
-
-            .. code-block:: py
-
-                # app.py
-
-                from django.apps import AppConfig
-
-                class BlogConfig(AppConfig):
-                    name = 'blog'
-                    verbose_name = 'blog'
-
-                    def ready(self):
-                        import blog.signals
+        * apps.py - настройка приложения, :py:mod:`django.apps`
 
         * feeds.py - rss рассылка
 
@@ -55,8 +43,6 @@ Django
         * urls.py - маршруты, роутинг урлов
 
         * views.py - представления
-
-
 
         * migrations - пакет с миграциями приложения
 
@@ -78,6 +64,7 @@ Django
 .. toctree::
     :maxdepth: 1
 
+    apps
     settings
     models/index
     views/index

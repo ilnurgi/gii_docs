@@ -15,12 +15,27 @@
             permissions = (
                 ("can_some", "titile"),
             )
+            indexes = [
+                models.Index(fields=['-pub_date'])
+            ]
 
 
 db_table
 --------
 
 Строка, имя таблицы. По умолчанию - имяПриложения_имяТаблицы
+
+indexes
+-------
+
+Расширенная настройка индексов модели
+
+.. code-block:: py
+
+    # индекс для одного поля, с сортировкой desc
+    indexes = [
+        models.Index(fields=['-pub_date'], name='index_name')
+    ]
 
 
 ordering
@@ -54,4 +69,4 @@ verbose_name
 verbose_name_plural
 -------------------
 
-Строка, название модели во множественном числе
+Строка, название модели во множественном числе. 
