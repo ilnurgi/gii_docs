@@ -8,7 +8,7 @@ from time import time
 
 from sphinx.cmd import build
 
-base_dir = os.path.dirname(__file__)
+base_dir = os.path.dirname(__file__) or os.getcwd()
 build_html_dir = os.path.join(base_dir, '_build_html')
 build_epub_dir = os.path.join(base_dir, '_build_epub')
 
