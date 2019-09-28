@@ -114,10 +114,10 @@ if "%1" == "devhelp" (
 )
 
 if "%1" == "epub" (
-	%SPHINXBUILD% -b epub %ALLSPHINXOPTS% %BUILDDIR%/epub
+	%SPHINXBUILD% -b epub %ALLSPHINXOPTS% %BUILDDIR%/html
 	if errorlevel 1 exit /b 1
 	echo.
-	echo.Build finished. The epub file is in %BUILDDIR%/epub.
+	echo.Build finished. The epub file is in %BUILDDIR%/html.
 	goto end
 )
 

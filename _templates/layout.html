@@ -25,7 +25,7 @@
                 {%- endfor%}
 
                 {%- if builder != 'epub' %}
-                    <li class="nav-item"><a href="../epub/{{ pagename }}.xhtml">epub</a> &#187;</li>
+                    <li class="nav-item"><a href="{{ pagename }}.xhtml">epub</a> &#187;</li>
                 {%- elif builder != 'html' %}
                     <li class="nav-item"><a href="{{ pagename }}.html">html</a> &#187;</li>
                 {%- endif %}
