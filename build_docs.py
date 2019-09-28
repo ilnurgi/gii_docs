@@ -18,7 +18,7 @@ print('build_epub_dir', build_epub_dir)
 
 
 def prepare_build_path():
-    if '-f' in sys.argv:
+    if '-c' not in sys.argv:
         return
 
     for path in (build_html_dir, build_epub_dir):
@@ -67,21 +67,21 @@ if __name__ == '__main__':
     prepare_build_path()
     modules = [
         'android',
-        'arduino',
-        'css',
-        'docker',
-        'git',
-        'html',
-        'java',
-        'js',
-        'kotlin',
-        'linux',
-        'nginx',
-        'puppet',
-        'python',
-        're',
-        'sql',
-        'svg',
+        # 'arduino',
+        # 'css',
+        # 'docker',
+        # 'git',
+        # 'html',
+        # 'java',
+        # 'js',
+        # 'kotlin',
+        # 'linux',
+        # 'nginx',
+        # 'puppet',
+        # 'python',
+        # 're',
+        # 'sql',
+        # 'svg',
     ]
     jobs = [('html', build_html_dir, m) for m in modules]
     jobs.extend(('epub', build_epub_dir, m) for m in modules)

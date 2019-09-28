@@ -48,7 +48,7 @@ copyright = 'ilnurgi'
 # built documents.
 #
 # The short X.Y version.
-version = date.today().strftime('%Y.%m.%d')
+version = date.today().strftime('%Y.%m')
 # The full version, including alpha/beta/rc tags.
 release = version
 
@@ -250,10 +250,11 @@ def setup(app):
     :type app: sphinx.application.Sphinx
     """
 
-    from pprint import pprint
     from typing import Dict, Any
 
     from sphinx.builders.html import StandaloneHTMLBuilder
+    from sphinx.builders.epub3 import Epub3Builder
+
 
     class GiiHtmlBuilder(StandaloneHTMLBuilder):
         """"""
@@ -263,9 +264,18 @@ def setup(app):
         ):
             super().update_page_context(pagename, templatename, ctx, event_arg)
 
-            # print(pagename)
-            # pprint(ctx)
+            ctx['current_date'] = date.today().strftime('%d.%m.%Y')
 
-            ctx['page_url'] = self.get_target_uri(pagename)
+
+    class GiiEpub3Builder(Epub3Builder):
+        """"""
+
+        def update_page_context(
+                self, pagename: str, templatename: str, ctx: Dict, event_arg: Any
+        ):
+            super().update_page_context(pagename, templatename, ctx, event_arg)
+
+            ctx['current_date'] = date.today().strftime('%d.%m.%Y')
 
     app.add_builder(GiiHtmlBuilder, StandaloneHTMLBuilder.name)
+    app.add_builder(GiiEpub3Builder, Epub3Builder.name)
