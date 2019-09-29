@@ -13,6 +13,8 @@
 
 from datetime import date
 
+from htmlmin import minify
+
 # If extensions (or modules to document with autodoc) are in another directory,
 # add these directories to sys.path here. If the directory is relative to the
 # documentation root, use os.path.abspath to make it absolute, like shown here.
@@ -258,6 +260,19 @@ def setup(app):
 
     class GiiHtmlBuilder(StandaloneHTMLBuilder):
         """"""
+
+        copysource = False
+
+        def create_template_bridge(self):
+            from sphinx.jinja2glue import BuiltinTemplateLoader
+
+            class MinifyBuiltinTemplateLoader(BuiltinTemplateLoader):
+
+                def render(self, template, context):
+                    output = self.environment.get_template(template).render(context)
+                    return minify(output)
+
+            self.templates = MinifyBuiltinTemplateLoader()
 
         def update_page_context(
                 self, pagename: str, templatename: str, ctx: Dict, event_arg: Any

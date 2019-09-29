@@ -6,6 +6,8 @@ from io import StringIO
 from multiprocessing import Pool
 from time import time
 
+from htmlmin import minify
+
 from sphinx.cmd import build
 
 base_dir = os.path.dirname(__file__) or os.getcwd()
@@ -102,7 +104,8 @@ if __name__ == '__main__':
     with open(os.path.join(base_dir, '{}.log'.format(int(time()))), 'w') as f:
         f.write('\n'.join(r))
 
-    shutil.copy(
-        os.path.join(base_dir, 'index.html'),
-        os.path.join(build_html_dir, 'index.html'),
-    )
+    with open(os.path.join(build_html_dir, 'index.html'), 'w') as f:
+        f.write(
+            minify(
+                open(os.path.join(base_dir, 'index.html')).read()
+            ))

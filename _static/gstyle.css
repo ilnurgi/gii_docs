@@ -42,6 +42,12 @@ div.body {
 div.body > h1, div.body > h2 {
     margin: 0;
 }
+div.body-search p, div.body-search form{
+    padding: 0 10px;
+}
+div#search-results {
+    margin: 0 20px;
+}
 div.section > h1 {
     margin: -10px -10px 0 -10px;
 }

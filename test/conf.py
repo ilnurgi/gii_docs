@@ -12,6 +12,9 @@
 # serve to show the default.
 
 from datetime import date
+from pprint import pprint
+
+from htmlmin import minify
 
 # If extensions (or modules to document with autodoc) are in another directory,
 # add these directories to sys.path here. If the directory is relative to the
@@ -48,7 +51,7 @@ copyright = 'ilnurgi'
 # built documents.
 #
 # The short X.Y version.
-version = date.today().strftime('%Y.%m.%d')
+version = date.today().strftime('%Y.%m')
 # The full version, including alpha/beta/rc tags.
 release = version
 
@@ -250,12 +253,39 @@ def setup(app):
     :type app: sphinx.application.Sphinx
     """
 
-    from pprint import pprint
     from typing import Dict, Any
 
     from sphinx.builders.html import StandaloneHTMLBuilder
+    from sphinx.builders.epub3 import Epub3Builder
+
 
     class GiiHtmlBuilder(StandaloneHTMLBuilder):
+        """"""
+
+        copysource = False
+
+        def create_template_bridge(self):
+            from sphinx.jinja2glue import BuiltinTemplateLoader
+
+            class MinifyBuiltinTemplateLoader(BuiltinTemplateLoader):
+
+                def render(self, template, context):
+                    output = self.environment.get_template(template).render(context)
+                    return minify(output)
+
+            self.templates = MinifyBuiltinTemplateLoader()
+
+        def update_page_context(
+                self, pagename: str, templatename: str, ctx: Dict, event_arg: Any
+        ):
+            super().update_page_context(pagename, templatename, ctx, event_arg)
+
+            # pprint(ctx)
+
+            ctx['current_date'] = date.today().strftime('%d.%m.%Y')
+
+
+    class GiiEpub3Builder(Epub3Builder):
         """"""
 
         def update_page_context(
@@ -263,9 +293,7 @@ def setup(app):
         ):
             super().update_page_context(pagename, templatename, ctx, event_arg)
 
-            # print(pagename)
-            # pprint(ctx)
-
-            ctx['page_url'] = self.get_target_uri(pagename)
+            ctx['current_date'] = date.today().strftime('%d.%m.%Y')
 
     app.add_builder(GiiHtmlBuilder, StandaloneHTMLBuilder.name)
+    app.add_builder(GiiEpub3Builder, Epub3Builder.name)
