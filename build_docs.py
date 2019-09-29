@@ -67,24 +67,29 @@ def build_html(args):
 
 if __name__ == '__main__':
     prepare_build_path()
-    modules = [
-        'android',
-        'arduino',
-        'css',
-        'docker',
-        'git',
-        'html',
-        'java',
-        'js',
-        'kotlin',
-        'linux',
-        'nginx',
-        'puppet',
-        'python',
-        're',
-        'sql',
-        'svg',
-    ]
+    if '-a' in sys.argv:
+        modules = [
+            'android'
+        ]
+    else:
+        modules = [
+            'android',
+            'arduino',
+            'css',
+            'docker',
+            'git',
+            'html',
+            'java',
+            'js',
+            'kotlin',
+            'linux',
+            'nginx',
+            'puppet',
+            'python',
+            're',
+            'sql',
+            'svg',
+        ]
     jobs = [('html', build_html_dir, m) for m in modules]
     jobs.extend(('epub', build_epub_dir, m) for m in modules)
     result_jobs = Pool().map(build_html, jobs)

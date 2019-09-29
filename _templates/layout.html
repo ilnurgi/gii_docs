@@ -7,9 +7,11 @@
             <li class="nav-item">
                 <a href="/docs/">docs</a>  &#187;
             </li>
-            <li class="nav-item">
-                <a href="/docs/search.html">search</a>  &#187;
-            </li>
+            {%- if hasdoc('search') %}
+                <li class="nav-item">
+                    <a href="{{ pathto('search') }}">search</a>  &#187;
+                </li>
+            {%- endif %}
             {%- for rellink in rellinks %}
             {%- if loop.first %}
                 <li class="nav-item">
