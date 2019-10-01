@@ -1,3 +1,9 @@
+.. title:: postgres data types
+
+.. meta::
+    :description: postgres data types
+    :keywords: postgres data types
+
 Типы данных
 ===========
 
@@ -9,3 +15,4 @@
     int
     float
     string
+    json

@@ -1,23 +1,11 @@
-Списки
-======
+.. title:: html dl
 
-.. code-block:: html
-
-    <ul>
-        <li></li>
-    </ul>
-
-    <ol>
-        <li></li>
-    </ol>
-
-    <dl>
-        <dt></dt>
-        <dd></dd>
-    </dl>
+.. meta::
+    :description: html dl
+    :keywords: html dl
 
 dl
---
+==
 
 Список определений: имя - значение
 
@@ -33,8 +21,3 @@ dd
 --
 
 Описание термина
-
-
-
-
-

@@ -1,3 +1,9 @@
+.. title:: postgres
+
+.. meta::
+    :description: postgres
+    :keywords: postgres
+
 Postgres
 ========
 

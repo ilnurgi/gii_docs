@@ -1,7 +1,13 @@
+.. title:: html nav
+
+.. meta::
+    :description: html nav
+    :keywords: html nav
+
+.. _nav:
+
 nav
 ===
-
-.. note:: HTML5
 
 Область навигации страницы или секции
 

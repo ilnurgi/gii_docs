@@ -1,3 +1,9 @@
+.. title:: html time
+
+.. meta::
+    :description: html time
+    :keywords: html time
+
 time
 ====
 

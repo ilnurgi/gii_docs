@@ -1,3 +1,11 @@
+.. title:: html blockquote
+
+.. meta::
+    :description: html blockquote
+    :keywords: html blockquote
+
+.. _blockquote:
+
 blockquote
 ==========
 

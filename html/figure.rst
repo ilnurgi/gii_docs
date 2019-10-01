@@ -1,3 +1,11 @@
+.. title:: html figure
+
+.. meta::
+    :description: html figure
+    :keywords: html figure
+
+.. _figure:
+
 figure
 ======
 

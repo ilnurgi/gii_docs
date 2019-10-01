@@ -41,4 +41,5 @@ JavaScript - язык программирования сценариев (scrip
     dom/index
     bom/index
     modules/index
+    ts
    
