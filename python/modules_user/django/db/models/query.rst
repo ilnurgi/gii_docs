@@ -369,13 +369,11 @@ F
 Q
 -
 
->>> from django.db.models import Q
-
 Критерии фильтрации
 
-
-
 .. code-block:: py
+
+    from django.db.models import Q
 
     # записи, исключая по фильтру
     Good.objects.filter(~Q(created__lt=now))

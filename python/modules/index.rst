@@ -1,10 +1,11 @@
 .. title:: python modules base
 
 .. meta::
-    :description lang=ru: список базовых модулей python
-    :description lang=en: list of base python modules
-    :keywords lang=ru: python модули
-    :keywords lang=en: python modules
+    :description: 
+        Справочная информация по базовым модулям python.    
+    :keywords: 
+        python,
+        python packages
 
 Базовые модули
 ==============
@@ -24,6 +25,7 @@
     contextlib
     copy
     cProfile
+    csv
     datetime
     dbm
     decimal
@@ -61,6 +63,7 @@
     setuptools
     shelve
     shutil
+    signal
     simplehttpserver
     socket
     socketserver

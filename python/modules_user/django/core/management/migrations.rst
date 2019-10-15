@@ -1,3 +1,14 @@
+.. title:: python django core management migrations
+
+.. meta::
+    :description: 
+        Справочная информация по консольным утилитам для работы с миграциями библиотеке django, 
+        написанный на языке программирования python,
+        для разработки веб приложений.        
+    :keywords: python, django, python django, python django management migrations, python django migrations
+
+.. py:currentmodule:: django.core.management
+
 .. _django_migrations:
 
 migrations

@@ -1,3 +1,12 @@
+.. title:: python modules external
+
+.. meta::
+    :description: 
+        Справочная информация по внешним модулям python.    
+    :keywords: 
+        python,
+        python packages
+
 Сторонние модули
 ================
 

@@ -1,18 +1,30 @@
-EventTarget - объект, способный принимать события
-=================================================
+.. title:: js dom eventtarget
+
+.. meta::
+    :description: 
+        Описание объекта EventTarget web страницы
+    :keywords: 
+        eventtarget
+
+EventTarget
+===========
+
+Объект, способный принимать события
 
 .. py:class:: EventTarget()
 
 
-    .. py:function:: addEventListener(string event_type, function handler [, boolean capture])
+    .. py:function:: addEventListener(event_type, handler, options)
 
-        Регистрирует функцию `handler` в качестве обработчика событий типа `event_type`.
+        Регистрирует функцию handler в качестве обработчика событий типа event_type.
 
-        * event_type - строка с именем без префикса «on».
+        * event_type - строка с именем без префикса on.
 
         * useCapture - должен иметь значение true,
             если регистрируется перехватывающий обработчик в  предке элемента,
             являющегося истинной целью события.
+
+        * options - объект параметров
 
         Обратите внимание, что некоторые броузеры все еще требуют передачи этой функции
         третьего аргумента, поэтому при регистрации обычного,
@@ -64,15 +76,14 @@ EventTarget - объект, способный принимать события
             });
 
             window.addEventListener("keydown", function(event){
-                if (event.keyCode == 27) {
-                    ...
-                }
+                if (event.keyCode == 27) {}
             });
 
 
     .. py:function:: attachEvent(string type, function listener)
         
         Ре­ги­ст­ри­ру­ет функ­цию listener как об­ра­бот­чик со­бы­тий ти­па type. Об­ра­ти­те вни­ма­ние, что этот ме­тод тре­бу­ет, что­бы имя в ар­гу­мен­те type вклю­ча­ло пре­фикс «on». Для IE
+
 
     .. py:function:: detachEvent(string type, function listener)
     
@@ -86,7 +97,7 @@ EventTarget - объект, способный принимать события
         Раз­лич­ные ти­пы объ­ек­тов со­бы­тий оп­ре­де­ля­ют соб­ст­вен­ные ме­то­ды ини­циа­ли­за­ции. Эти ме­то­ды ред­ко ис­поль­зу­ют­ся на прак­ти­ке, име­ют длин­ные спи­ски ар­гу­мен­тов и не опи­сы­ва­ют­ся в этой кни­ге. Ес­ли вам по­тре­бу­ет­ся соз­дать, ини­циа­ли­зи­ро­вать и  по­слать ис­ку­ст­вен­ное со­бы­тие, бо­лее слож­ное, чем про­стой объ­ект Event, по­ищи­те опи­са­ние со­от­вет­ст­вую­ще­го ме­то­да ини­циа­ли­за­ции в элек­трон­ной до­ку­мен­та­ции.
 
 
-    .. py:function:: removeEventListener(string type, function listener, [boolean useCapture])
+    .. py:function:: removeEventListener(type, listener, options)
         
         Удаляет зарегистрированный обработчик listener события.
 

@@ -1,4 +1,21 @@
-Декораторы
+.. title:: python django contrib auth decorators
+
+.. meta::
+    :description: 
+        Справочная информация по настройкам прав пользователей библиотеки django, 
+        написанный на языке программирования python,
+        для разработки веб приложений.        
+    :keywords: 
+        python, 
+        django, 
+        python django contrib auth decorators, 
+        python django auth decorators,
+        django contrib auth decorators, 
+        django auth decorators
+
+.. py:module:: django.contrib.auth.decorators
+
+decorators
 ==========
 
 
@@ -21,10 +38,10 @@ login_required
             return render(request, 'index.html')
 
 
-permission_required
--------------------
+permission_required()
+---------------------
 
-.. py:method:: django.contrib.auth.decorators.permission_required
+.. py:method:: permission_required(permission)
 
     Декоратор проверки авторизации пользователя и наличия прав
 
@@ -32,6 +49,7 @@ permission_required
 
         from django.contrib.auth.decorators import permission_required
 
-        @permission_required("app_name.action_model")
+        @permission_required('app_name.action_model')
         def index(request):
             return render(request, 'index.html')
+            

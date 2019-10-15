@@ -1,5 +1,20 @@
-Представления в виде классов
-============================
+.. title:: python django views generic
+
+.. meta::
+    :description: 
+        Справочная информация по представлениям в виде классов библиотеки django, 
+        написанный на языке программирования python,
+        для разработки веб приложений.        
+    :keywords: 
+        python, 
+        django, 
+        python django views generic,
+        django views generic
+
+.. py:module:: django.views.generic
+
+generic
+=======
 
 .. code-block:: py
 
@@ -201,7 +216,8 @@ ListView
 
             def get_queryset(self):
                 qs = super().get_queryset()
-                return qs.filter(...)
+                return qs.filter(name='ilnurgi')
+
 
     .. py:attribute:: model
 
@@ -290,17 +306,21 @@ TemplateView
 
                 return context
 
+
     .. py:attribute:: args
 
         Неименованные параметры обработки запроса
+
 
     .. py:attribute:: kwargs
 
         Именованные параметры обработки запроса
 
+
     .. py:attribute:: request
 
         Запрос
+
 
     .. py:attribute:: template_name
 

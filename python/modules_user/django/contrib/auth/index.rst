@@ -1,15 +1,43 @@
-.. _django_contrib_auth:
+.. title:: python django contrib auth
 
-Пользователи, права, авторизация
-================================
+.. meta::
+    :description: 
+        Справочная информация по настройкам прав пользователей библиотеки django, 
+        написанный на языке программирования python,
+        для разработки веб приложений.        
+    :keywords: 
+        python, 
+        django, 
+        python django contrib auth, 
+        python django auth,
+        django contrib auth, 
+        django auth
 
-Права задаются в виде app_name.action_model и есть три права:
+.. py:module:: django.contrib.auth
+
+auth
+====
+
+.. toctree::
+    :maxdepth: 1
+
+    decorators
+    models
+    views
+
+Пользователи, права, авторизация.
+
+Права задаются в виде app_name.action_model.
+
+Есть несколько видов действий:
 
     * add - добавление
 
     * change - изменение
 
     * delete - удаление
+
+    * view - просмотр
 
 но можно создать и свои :ref:`models_meta_permissions`.
 
@@ -18,27 +46,17 @@
 
 * user - пользователь
 
-    .. code-block:: html
+    .. code-block:: htmldjango
 
-        {% if user.is_authenticated %}
-            ...
+        {% if user.is_authenticated %}            
         {% endif %}
 
 * perms - права, которыми обладает пользователь
 
-    .. code-block:: html
+    .. code-block:: htmldjango
 
-        {% if perms.good.add_good %}
-            ...
+        {% if perms.good.add_good %}            
         {% endif %}
-
-
-.. toctree::
-    :maxdepth: 1
-
-    decorators
-    models
-    views
 
 
 Конфигурирование
@@ -52,7 +70,7 @@
 authenticate
 ------------
 
-.. py:method:: django.contrib.auth.authenticate(username, password)
+.. py:method:: authenticate(username, password)
 
     Аутентификация пользователя, если пользователя нет вернет None.
 
@@ -67,7 +85,7 @@ authenticate
 login
 -----
 
-.. py:method:: django.contrib.auth.login(request, user)
+.. py:method:: login(request, user)
 
     Авторизация пользователя
 

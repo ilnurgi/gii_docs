@@ -1,7 +1,23 @@
-.. py:module:: django.admin
+.. title:: python django contrib admin
 
-django.admin
-============
+.. meta::
+    :description: 
+        Справочная информация по админке библиотеки django, 
+        написанный на языке программирования python,
+        для разработки веб приложений.        
+    :keywords: 
+        python, 
+        django, 
+        python django, 
+        python django contrib admin, 
+        python django admin,
+        django contrib admin, 
+        django admin
+
+.. py:module:: django.contrib.admin
+
+admin
+=====
 
 .. toctree::
     :maxdepth: 1
@@ -31,14 +47,29 @@ django.admin
 .. code-block:: py
 
     # urls.py
+    # подключение админки 
 
     from django.conf.urls import patterns, include, url
-
     from django.contrib import admin
 
     urlpatterns += patterns(
         url(r'^admin/', include(admin.site.urls))
     )
+
+
+.. code-block:: py
+
+    # urls.py
+    # подключение админки 
+
+    from django.contrib import admin
+    from django.urls import path, include
+
+    urlpatterns = [
+        path('admin/', admin.site.urls),
+        path('', include('cities.urls')),
+    )
+
 
 .. code-block:: py
 
@@ -141,6 +172,7 @@ ModelAdmin
                 
                 actions_on_bottom = True
 
+
     .. py:attribute:: actions_on_top
 
         Булево, список действий сверху
@@ -226,9 +258,8 @@ ModelAdmin
 
         .. code-block::py
 
-            list_display = [
-                some_model_field,
-            ]
+            list_display = ('name', 'state')
+
 
     .. py:attribute:: list_display_links
 

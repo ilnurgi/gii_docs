@@ -1,11 +1,20 @@
-Linux
+.. title:: linux
+
+.. meta::
+    :description: 
+        Справочная информация по встроенным консольным утилитам операционной системы, 
+        а также информация по внешним приложениям
+    :keywords: 
+        linux
+
+linux
 =====
 
 Contents:
 
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 1
 
    cd
    chgrp
@@ -25,6 +34,7 @@ Contents:
    pwd
    touch
    ps
+   redis
 
 
 Горячие клавиши

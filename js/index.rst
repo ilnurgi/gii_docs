@@ -1,8 +1,10 @@
 .. title:: javascript
 
 .. meta::
-    :description: javascript
-    :keywords: javascript
+    :description: 
+        Описание языка программирования javascript и его дополнительных модулей.
+    :keywords: 
+        javascript
 
 JavaScript
 ==========

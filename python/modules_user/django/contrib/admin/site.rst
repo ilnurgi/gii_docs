@@ -1,4 +1,20 @@
-.. py:module:: django.admin.site
+.. title:: python django contrib site
+
+.. meta::
+    :description: 
+        Справочная информация по админке библиотеки django, модуль site,
+        написанный на языке программирования python,
+        для разработки веб приложений.        
+    :keywords: 
+        python, 
+        django, 
+        python django, 
+        python django contrib admin site, 
+        python django contrib site, 
+        django contrib admin site, 
+        django contrib site
+
+.. py:module:: django.contrib.admin.site
 
 site
 ====

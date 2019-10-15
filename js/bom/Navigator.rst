@@ -1,7 +1,20 @@
+.. title:: javascript dom navigator
+
+.. meta::
+    :description: 
+        Описание объекта navigator, объектной модели браузера веб страницы.
+    :keywords: 
+        javascript bom
+
+.. py:module:: navigator
+
 Navigator
 =========
 
 Содержит информацию о браузере и операционной системе
+
+Navigator()
+-----------
 
 .. py:class:: Navigator()
 
@@ -46,6 +59,24 @@ Navigator
 
             navigator.platform;
             //
+
+
+    .. py:attribute:: serviceWorker
+
+        Возвращает :py:class:`serviceworker.ServiceWorkerContainer()`, объект для работы с srwiceworker
+
+        .. code-block:: js
+
+            if ("serviceWorker" in navigator) {
+                navigator.serviceworker.register("service-worker.js").then(registration => {
+                    log("service worker registered");
+                });
+                navigator.serviceworker.register("service-worker.js", {scope: "/books"}).then(registration => {
+                    log("service worker registered");
+                })
+            } else {
+                log("service worker not supported")
+            }
 
 
     .. py:attribute:: userAgent

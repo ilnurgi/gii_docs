@@ -1,19 +1,47 @@
-.. py:module:: django.models
+.. title:: python django models
 
-Модель
+.. meta::
+    :description: 
+        Справочная информация по моделям библиотеки django, 
+        написанный на языке программирования python,
+        для разработки веб приложений.        
+    :keywords: 
+        python, 
+        django, 
+        python django, 
+        python django models
+        django models
+
+.. py:module:: django.db.models
+
+models
 ======
 
-Миграции :ref:`django_migrations`.
+Миграции, :ref:`django_migrations`.
 
 .. code-block:: py
 
     from django.db import models
+
+Model
+-----
 
 .. py:class:: Model()
 
     Базовый класс модели
 
     По умолчанию имеет единственно поле - id.
+
+    .. code-block:: py
+
+        class City(models.Model):
+
+            name = models.CharField(max_length=255)
+            state = models.CharField(max_length=255)
+
+            class Meta:
+                verbose_name_plural = 'cities'
+
 
     .. py:method:: get_absolute_url()
 
@@ -23,10 +51,9 @@
 
             from django.core.urlresolvers import reverse
 
-            class Post(models.Model):
+            def get_absolute_url(self):
+                return reverse('city:detail', args=[])
 
-                def get_absolute_url(self):
-                    return reverse('blog:post_detail', args=[])
 
     .. py:method:: delete()
 

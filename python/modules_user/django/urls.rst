@@ -1,12 +1,29 @@
+.. title:: python django urls
+
+.. meta::
+    :description: 
+        Справочная информация по роутингу библиотеки django, 
+        написанный на языке программирования python,
+        для разработки веб приложений.        
+    :keywords: 
+        python, 
+        django, 
+        python django urls,
+        django urls
+
+.. py:module:: django.urls
+
+urls
+====
+
 Роутинг
-=======
 
 .. code-block:: py
 
     # urls.py
 
     from django.conf import settings
-    from django.conf.urls import patterns, include, url, static
+    from django.urls import patterns, include, url, static
     from django.contrib import admin
     from django.contrib.admin.decorators import (
         login_required, permission_required)
@@ -64,3 +81,21 @@
 
         # раздаем статику в режиме дебага
         urlpatterns.extend(static(settings.STATIC_URL, document_root=settings.STATIC_ROOT))
+
+
+.. code-block:: py
+
+    # urls.py
+
+    from django.conf import settings
+    from django.contrib import admin
+    from django.contrib.admin.decorators import (
+        login_required, permission_required)
+    from django.urls import path
+
+    from application import views
+
+    urlpatterns = [
+        path('search/', views.SearchView.as_view(), name='search_result'),
+        path('', views.HomeView.as_view(), name='home'),
+    ]

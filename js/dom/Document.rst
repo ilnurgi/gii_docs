@@ -1,5 +1,15 @@
-Document(HTMLDocument) - корневой элемент дерева
-================================================
+.. title:: js dom document
+
+.. meta::
+    :description: 
+        Описание объекта Document web страницы
+    :keywords: 
+        documetn
+
+Document(HTMLDocument)
+======================
+
+Корневой элемент дерева
 
 .. py:class:: Document()
 .. py:class:: HTMLDocument()

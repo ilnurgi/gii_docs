@@ -1,11 +1,34 @@
-Django
+.. title:: python django
+
+.. meta::
+    :description: 
+        Справочная информация по библиотеке django, 
+        написанный на языке программирования python,
+        для разработки веб приложений.        
+    :keywords: 
+        python, 
+        django, 
+        python django
+
+.. py:module:: django
+
+django
 ======
+
+.. code-block:: sh
+
+    # устанавливаем библиотеку
+    pip install django
+
+    # стартуем проект
+    django-admin startproject project_name
+
 
 Структура django приложения
 
     * application - папка приложения
 
-        * :ref:`django_management` - консольные утилиты
+        * management - папка консольных команд, :py:mod:`django.core.management`
 
             * commands - папка со скриптами
 
@@ -22,9 +45,7 @@ Django
                 # конфигуратор приложения
                 default_app_config = 'app_name.apps.AppConfig'
 
-
-
-        * admin.py - настройка админки
+        * admin.py - настройка админки, :py:mod:`django.contrib.admin`
 
         * apps.py - настройка приложения, :py:mod:`django.apps`
 
@@ -32,7 +53,7 @@ Django
 
         * forms.py - формы приложения
 
-        * models.py - модели приложения
+        * models.py - модели приложения, :py:mod:`django.db.models`
 
         * signals.py - сигналы
 
@@ -40,9 +61,9 @@ Django
 
         * tests.py - тесты приложения
 
-        * urls.py - маршруты, роутинг урлов
+        * urls.py - маршруты, роутинг урлов, ;py:mod:`django.urls`
 
-        * views.py - представления
+        * views.py - представления, :py:mod:`django.views`
 
         * migrations - пакет с миграциями приложения
 
@@ -58,7 +79,7 @@ Django
 
         * static - папка со статикой
 
-            * app.css - какая то статика
+            * app.css - какая то статик
 
 
 .. toctree::
@@ -66,13 +87,17 @@ Django
 
     apps
     settings
-    models/index
-    views/index
     forms/index
     templates
     urls
     signals
-    contrib/index
     cli
-    management/index
     faq
+
+.. toctree::
+    :maxdepth: 2
+
+    contrib/index
+    core/index
+    db/index
+    views/index

@@ -1,5 +1,15 @@
-DOM - Document Object Model - объетная модель документа
-=======================================================
+.. title:: javascript dom
+
+.. meta::
+    :description: 
+        Описание dom, объектной модели документа веб страницы.
+    :keywords: 
+        javascript dom
+
+DOM
+===
+
+Document Object Model - объетная модель документа
 
 Каждому тегу на странице, в соответсвие ставится свой объект.
 
@@ -8,7 +18,6 @@ DOM - Document Object Model - объетная модель документа
 .. toctree::
     :maxdepth: 1
 
-    Navigator
     Screen
     Location
 
