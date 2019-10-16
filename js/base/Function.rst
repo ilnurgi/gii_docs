@@ -1,9 +1,13 @@
-.. _function:
+.. title:: js array
 
-Функции
-=======
+.. meta::
+    :description: 
+        Описание массивов, array, в языке программирования java script
+    :keywords: 
+        js array
 
-Два метода создания функции
+Function
+========
 
 .. code-block:: js
 
@@ -12,6 +16,79 @@
 
     // эта функция будет создана тогда, когда интерпретаор до него дойдет
     var name = function(){}
+
+    // arguments - массив всех принятых аргументов
+    var average = function(x, y){
+        log(arguments);
+    }
+
+    // параметры по умолчанию
+    function some(x, y, z){
+        x = x || 1;
+        y = y || 2;
+        z = z || 3;
+    }
+
+    // параметры по умолчанию в новой спецификации
+    function some(x=1, y=2, z=3){};
+
+    // передача параметров с распаковкой
+    function some(a, b){}
+    some(...[1, 4]);
+
+    function some(a, b ...c){};
+
+    // анонимная функция
+    (function(){})();
+
+    // стрелочная функция    
+    // this, внутри стрелочной функции, не является ссылкой на функцию
+    let circleArea = (pi, r) => {};
+    let circleArea2 = (pi, r) => pi * r * r;
+    let square = x => x * x;
+    let log = () => console.log("Some text");
+    let getPerson = () => ({ name: "ilnurgi" });
+    (() => console.log("IIFE"))();
+
+.. code-block:: js
+
+    // асинхронная функция
+    function func1(x){
+        return new Promise(
+            resolve => {
+                setTimeout(
+                    () => {
+                        resolve(x);
+                    }, 2000
+                )
+            }
+        );
+    }
+    async function add1(x) {
+        const a = await func1(20);
+        const b = await func1(30);
+        return x + a + b;
+    }
+    add1(10).then(
+        v=> {
+            console.log(v);
+        }
+    )
+
+.. code-block:: js
+
+    // замыкание
+    var getAnswer = (function(){
+        var answer = 42;
+
+        return function inner(){
+            // эта переменная замыкается
+            return answer;
+        };
+    }());
+
+    getAnswer();
+    // 42
 
 
 Function
@@ -99,159 +176,6 @@ Function
     .. py:method:: call(obj, argument1, ...)
 
         Вызывает функцию как метод указанного объекта
-
-
-arguments
----------
-
-.. code-block:: js
-
-    var average = function(x, y){
-        // массив всех принятых аргументов
-        console.log(arguments);
-
-        return (x+y)/2;
-    }
-
-Анонимная функция
------------------
-
-.. code-block:: js
-    
-    (function(){
-        var property = 1;
-    })();
-
-
-Асинхронные функции
--------------------
-
-.. code-block:: js
-
-    function func1(x){
-        return new Promise(
-            resolve => {
-                setTimeout(
-                    () => {
-                        resolve(x);
-                    }, 2000
-                )
-            }
-        );
-    }
-    async function add1(x) {
-        const a = await func1(20);
-        const b = await func1(30);
-        return x + a + b;
-    }
-    add1(10).then(
-        v=> {
-            console.log(v);
-        }
-    )
-
-Замыкание
----------
-
-.. code-block:: js
-
-    var getAnswer = (function(){
-        var answer = 42;
-
-        return function inner(){
-            // эта переменная замыкается
-            return answer;
-        };
-    }());
-
-    getAnswer();
-    // 42
-
-
-Значения по умолчанию функции
------------------------------
-
-.. code-block:: js
-
-    function some(x, y, z){
-        x = x || 1;
-        y = y || 2;
-        z = z || 3;
-        ...
-    }
-
-.. note:: EcmaScript6
-
-    .. code-block:: js
-
-        function some(x=1, y=2, z=3){
-            ...
-        }
-
-
-Области видимости
------------------
-
-.. code-block:: js
-
-    var a = 10;
-    (function() {
-        console.log(a);
-    })()
-    // 10
-
-    (function() {
-        console.log(a);
-        var a = 1;
-    })()
-    // undefined
-
-
-Распаковка аргументов
----------------------
-
-.. code-block:: js
-
-    function some(a, b){
-        return a + b;
-    }
-    var data = [1, 4];
-    some.apply(null, [data]);
-    // 5
-
-.. note:: EcmaScript6
-
-    .. code-block:: js
-
-        function some(a, b){
-            return a + b;
-        }
-        var data = [1, 4];
-        some(...data);
-        // 5
-
-
-Стрелочные функции
-------------------
-
-.. note:: EcmaScript6
-
-* this, внутри стрелочной функции, не является ссылкой на функцию
-
-.. code-block:: js
-    
-    let circleArea = (pi, r) => {
-        let area = pi * r * r;
-        return area;
-    }   
-    let circleArea2 = (pi, r) => pi * r * r;
-    let square = x => x * x;
-    let log = () => console.log("Some text");
-    let getPerson = () => ({ name: "ilnurgi" });
-    (() => console.log("IIFE"))();
-    
-    circleArea(3.14, 3);
-    // 28.26
 
 
 Генератор

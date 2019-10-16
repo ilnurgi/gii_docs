@@ -1,8 +1,10 @@
-.. title:: js.array
+.. title:: js array
 
 .. meta::
-    :description: js.array
-    :keywords: js.array
+    :description: 
+        Описание массивов, array, в языке программирования java script
+    :keywords: 
+        js array
 
 Array
 =====
@@ -39,7 +41,7 @@ Array
         // 4
         
         cities;
-        //['moscow', 'kazan', '', 'abakan']
+        // ['moscow', 'kazan', '', 'abakan']
 
         cities.length = 2;
         cities;
@@ -55,30 +57,29 @@ Array
         a[5] = 5;
         for (var x in a){ 
             // выведет только 5
-            ...
         }
         for (var i=0; i<a.length; i++){
             // выведет все 5 элементов
-            ...
         }
 
-    .. note:: EcmsScript6
+    .. code-block:: js
 
-        .. code-block:: js
+        let [a, b, c] = [1, 2, 3];
 
-            let [a, b, c] = [1, 2, 3];
+        let [a, , b] = [1, 2, 3];
+        console.log(a, b);
+        // 1, 3
 
-            let [a, , b] = [1, 2, 3];
-            console.log(a, b);
-            // 1, 3
+        let [a, ...b] = [1, 2, 3, 4];
+        console.log(b);
+        // [2, 3, 4]
 
-            let [a, ...b] = [1, 2, 3, 4];
-            console.log(b);
-            // [2, 3, 4]
+        let [a, , , ...b] = [1, 2, 3, 4, 5, 6];
+        console.log(b);
+        // [4, 5, 6]
 
-            let [a, , , ...b] = [1, 2, 3, 4, 5, 6];
-            console.log(b);
-            // [4, 5, 6]
+        let newArray = [...oldArray, newValue];
+        let uniqFruits = [...new Set(fruitsList)];
 
 
     .. py:attribute:: length
@@ -283,7 +284,7 @@ Array
             // '123'
 
 
-    .. js:method:: includes(value)
+    .. py:method:: includes(value)
 
         Возвращает булево, есть ли объект в массиве
 

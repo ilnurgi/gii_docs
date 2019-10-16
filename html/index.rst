@@ -1,8 +1,10 @@
 .. title:: html
 
 .. meta::
-    :description: html
-    :keywords: html
+    :description: 
+        Описание языка разметки веб страниц html
+    :keywords: 
+        html
 
 HTML
 ====
@@ -102,7 +104,7 @@ HTML документ состоит из тегов.
 
 
 Элементы, описывающие текст
---------------------------
+---------------------------
 
 .. toctree::
     :maxdepth: 1
@@ -112,20 +114,25 @@ HTML документ состоит из тегов.
     p
 
 
+Элементы, описывающие формы
+---------------------------
+
 .. toctree::
     :maxdepth: 1
 
-    doc
-    mnemonic
-    table
-    text
     form
+    input
+    datalist
 
 
 .. toctree::
     :maxdepth: 2
 
     html5/index
+    doc
+    mnemonic
+    table
+    text
 
 
 Шаблонизаторы

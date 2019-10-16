@@ -13,11 +13,9 @@ HTML5
     globals_attr
     audio
     canvas
-    datalist
     details
     footer
     hgroup
-    input
     mark
     meter
     progress

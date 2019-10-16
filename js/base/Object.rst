@@ -1,5 +1,15 @@
-Object - объект, ассоциативный массив
-=====================================
+.. title:: js object
+
+.. meta::
+    :description: 
+        Описание объектов, object, в языке программирования java script
+    :keywords: 
+        js object
+
+Object
+======
+
+Объект, ассоциативный массив
 
 
 .. js:class:: Object()
@@ -27,41 +37,42 @@ Object - объект, ассоциативный массив
         // создание дочерних объектов
         var Megaperson = Object.create(person);
 
-    .. note:: EcmaScript6
+    .. code-block:: js
 
-        .. code-block:: js
+        let object = {
+            name: 'ilnurgi',
+            age: 23,
+            ["first"+"Name"]: 'gii'
+        }
+        let {name, age} = object;
+        let {name: x, age: y} = object;
+        let {["na" + "me": x, age: y} = object;
 
-            let object = {
-                name: 'ilnurgi',
-                age: 23,
-                ["first"+"Name"]: 'gii'
-            }
-            let {name, age} = object;
-            let {name: x, age: y} = object;
-            let {["na" + "me": x, age: y} = object;
+        let x = 1, y = 2;
+        let object = { x, y };
 
-            let x = 1, y = 2;
-            let object = { x, y };
+        let object = {
+            myFunction() {...};
+        };
+        object.myFunction();
 
-            let object = {
-                myFunction() {...};
-            };
-            object.myFunction();
+        let a = {a: 12, __proto__: {b: 13}}
 
-            let a = {a: 12, __proto__: {b: 13}}
+    .. code-block:: js
 
-        .. code-block:: js
+        let obj1 = {
+            f1: 'v1',
+            f2: 'v2',
+        }
 
-            let obj1 = {
-                f1: 'v1',
-                f2: 'v2',
-            }
+        let obj2 = {
+            ...obj1,
+            f1: 'v11',
+            fN: 'vN'
+        }
 
-            let obj2 = {
-                ...obj1,
-                f1: 'v11',
-                fN: 'vN'
-            }
+        let copyObj = { ...oldObj };
+        let mergedObj = { ...obj1, ...obj2}
 
 
     .. js:attribute:: constructor

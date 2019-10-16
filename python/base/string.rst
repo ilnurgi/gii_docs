@@ -1,5 +1,20 @@
-Строки
-======
+.. title:: python str
+
+.. meta::
+    :description: 
+        Справочная информация по строкам языка программирования python.
+    :keywords: 
+        python str
+
+str
+===
+
+.. code-block:: py
+
+    user = 'ilnurgi'
+    db = date(1987, 1, 28)
+    f'{user=} {db=}'
+    # user=ilnurgi db=datetime.date(1987, 1, 28)
 
 str
 ---

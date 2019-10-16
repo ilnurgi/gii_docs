@@ -1,9 +1,16 @@
-.. _datalist:
+.. title:: html datalist
+
+.. meta::
+    :description: 
+        Описание html элемента datalist
+    :keywords: 
+        html datalist,
+        datalist
 
 datalist
 ========
 
-Содержит определнные опции для элементов :ref:`input`
+Содержит определнные опции для элементов input_.
 
 .. code-block:: html
 

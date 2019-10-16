@@ -1,4 +1,10 @@
-.. _input:
+.. title:: html input
+
+.. meta::
+    :description: 
+        Описание html элемента input
+    :keywords: 
+        html input
 
 input
 =====
@@ -343,3 +349,19 @@ value
 -----
 
 Значение поля
+
+
+examples
+--------
+
+.. code-block:: html
+
+    <!-- использование с выпадающим списком -->
+    <input list="data-list-id" />
+    <datalist id="data-list-id">
+        <option value="1 элемент выпадающего списка" />
+        <option value="2 элемент выпадающего списка" />
+        <option value="3 элемент выпадающего списка" />
+    </datalist>
+
+
