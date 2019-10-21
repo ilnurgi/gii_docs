@@ -10,35 +10,30 @@
 linux
 =====
 
-Contents:
-
-
 .. toctree::
-   :maxdepth: 1
+    :maxdepth: 1
 
-   cd
-   chgrp
-   chmod
-   chown
-   cp
-   cat
-   dd
-   df
-   dirs
-   dmwsg
-   find
-   grep
-   head
-   ls
-   mkdir
-   pwd
-   touch
-   ps
-   redis
+    cd
+    chgrp
+    chmod
+    chown
+    cat
+    dd
+    df
+    dirs
+    dmwsg
+    find
+    grep
+    head
+    ls
+    mkdir
+    pwd
+    ps
+    redis
 
 
-Горячие клавиши
-----------------------------
+hotkeys
+-------
 
 * Ctrl+C - завершить текущую команду
 * Ctrl+Z - остановить текущую команду, продолжить с fg на переднем плане или bg в фоне
@@ -47,8 +42,26 @@ Contents:
 * Ctrl+U - удалить строку
 * !! - повторить последнюю команду
 
-Файловые команды
------------------------------
+ssh
+---
+
+.. toctree::
+    :maxdepth: 1
+
+    scp
+
+
+files
+-----
+
+.. toctree::
+    :maxdepth: 1
+
+    cp
+    less
+    lsof
+    touch
+
 
     * ln [args] file link
       Создать ссылку к файлу
@@ -173,19 +186,6 @@ Contents:
         *# найти все фалы и директории, имена которых оканчиваются на '.rpm', игнорируя съёмные носители, такие как cdrom, floppy и т.п.*
         find / -xdev -name "*.rpm"</code>
 
-    * grep [args] pattern files
-      Искать строку в файлах
-
-        * args
-          -r - рекурсивно в папке
-        * files - список файлов/папок
-        * pattern - искомая строка
-    
-      .. code-block:: sh
-    
-        # искать pattern в выводе command
-        $ command | grep pattern</code>
-
     * locate file
       Найти все файлы с именем file
 
@@ -232,9 +232,6 @@ Contents:
     * killall proc
       Убить все процессы с указанным именем
 
-    * ps
-      Текущие активные процессы
-
     * top
       Все запущенные процессы
 
@@ -256,9 +253,6 @@ Contents:
 
     * clock -w
       Сохранить системное время в BIOS
-
-    * df
-      Инф. о использовании дисков
 
     * dmidecode -q
       Аппаратные системные компоненты - (SMBIOS / DMI)
@@ -435,20 +429,6 @@ Contents:
 
     SSH
     ---
-
-    * scp [kwargs] src dst
-
-      Копирует папки между машинами
-
-        * src - путь, откуда копируем
-        * dst - путь, куда копируем
-        * kwargs
-
-          -P port - порт подключения
-    
-    .. code-block:: sh
-
-        scp /home/user/  user@XXX.XXX.XXX.XXX:/home/user</code>
 
     * ssh [kwargs] user@host
 

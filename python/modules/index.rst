@@ -14,13 +14,17 @@
     :maxdepth: 1
 
     abs
+    aiohttp
+    argparse
     array
+    asyncio
     atexit
     binascii
     bisect
     calendar
     cmath
     collections
+    concurrent/index
     configparser
     contextlib
     copy
@@ -39,6 +43,7 @@
     heapq
     http/index
     imp
+    importlib
     inspect
     io
     ipaddress

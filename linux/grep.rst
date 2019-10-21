@@ -1,6 +1,25 @@
+.. title:: linux grep
+
+.. meta::
+    :description: 
+        Справочная информация по встроенной в linux утилите grep.
+    :keywords: 
+        linux grep
+
 grep
 ====
 
+.. code-block:: text
+    
+    grep [args] pattern files
+
+Искать строку в файлах
+    
+* -i - поиск без учета регистра 
+* -L - вывести файлы, в которых не нашли ничего
+* -r - рекурсивно в папке
+
+    
 .. code-block::sh
 
 	# A-Z, a-z, 0-9

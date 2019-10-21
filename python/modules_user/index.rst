@@ -48,6 +48,7 @@
     requests/index
     serial
     sphinx
+    starlette/index
     sqlalchemy/index
     xlrd
     xlwt

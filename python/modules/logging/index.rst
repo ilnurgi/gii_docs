@@ -1,3 +1,11 @@
+.. title:: python logging
+
+.. meta::
+    :description: 
+        Справочная информация по python модулю logging.
+    :keywords: 
+        python logging
+
 .. py:module:: logging
 
 logging
@@ -26,7 +34,7 @@ basicConfig()
 
 * level 
     
-    Уровень логирования, DEBUG, ERROR, ...    
+    Уровень логирования, :py:attr:`logging.DEBUG`, :py:attr:`logging.ERROR`, ...    
 
 * filename
 * filemode

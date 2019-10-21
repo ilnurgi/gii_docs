@@ -305,8 +305,6 @@ type
     * required
     * size
 
-
-
     .. code-block:: html
 
         <input type="text" name="username" id="username" />

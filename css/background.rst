@@ -1,11 +1,13 @@
-.. title:: css.background
+.. title:: css background
 
 .. meta::
-    :description: css.background
-    :keywords: css.background
+    :description: 
+        Описание стиля фона объектов
+    :keywords: 
+        css background
 
-Фон
-===
+background
+==========
 
 background
 ----------
@@ -14,13 +16,17 @@ background
 
 .. code-block:: css
 
-    body {
-        background: #333 url(images/logo.gif) no-repeat fixed left top;
-    }
+    background: #333 url(images/logo.gif) no-repeat fixed left top;
+    background: url(images/logo.gif) no-repeat center cover;
 
-    body {
-        background: url(images/logo.gif) no-repeat center cover;
-    }
+.. code-block:: css
+
+    background: linear-gradient(to top right, #FDB171, #FD987D);
+
+.. raw:: html
+
+    <div style="width:100px;height:100px;background: linear-gradient(to top right, #FDB171, #FD987D);" />
+
     
 background-attachment
 ---------------------
