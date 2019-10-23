@@ -1,9 +1,9 @@
 .. title:: javascript packages
 
 .. meta::
-    :description: 
+    :description:
         Описание модулей/библиотек написанных для javascript.
-    :keywords: 
+    :keywords:
         javascript packages,
         js packages
 
@@ -13,13 +13,14 @@
 .. toctree::
     :maxdepth: 1
 
-    angular/index    
+    angular/index
     axioa/index
     chart_js
     cheerio/index
     droidscript/index
     jquery/index
     nodejs/index
+    parcel
     react/index
     vuejs/index
     webcomponent

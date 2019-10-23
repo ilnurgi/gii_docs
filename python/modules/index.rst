@@ -1,9 +1,9 @@
 .. title:: python modules base
 
 .. meta::
-    :description: 
-        Справочная информация по базовым модулям python.    
-    :keywords: 
+    :description:
+        Справочная информация по базовым модулям python.
+    :keywords:
         python,
         python packages
 
@@ -70,6 +70,7 @@
     shutil
     signal
     simplehttpserver
+    smtplib
     socket
     socketserver
     sqlite3

@@ -1,9 +1,9 @@
 .. title:: python typing
 
 .. meta::
-    :description: 
+    :description:
         Справочная информация по python модулю typing.
-    :keywords: 
+    :keywords:
         python typing
 
 .. py:module:: typing
@@ -19,7 +19,7 @@ TYPE_CHECKING
 .. py:attribute:: TYPE_CHECKING
 
     Булево, в runtime'е будет False
-    
+
 
 cast()
 ------
@@ -101,12 +101,12 @@ overload()
 
         @overload
         def process(response: int) -> Tuple[int, str]: ...
-        
+
         @overload
         def process(response: bytes) -> str: ...
-        
+
         def process(response):
-            # implementation    
+            # implementation
 
 
 runtime_checkable()
@@ -120,7 +120,7 @@ runtime_checkable()
 
             @runtime_checkable
             class Closable(Protocol):
-                
+
                 def close(self):
                     pass
 
@@ -133,9 +133,9 @@ type_check_only()
 .. py:function:: type_check_only()
 
     .. code-block:: py
-    
+
         @type_check_only
-        class Response: 
+        class Response:
             pass
 
         def fetch() -> Response:
@@ -170,7 +170,7 @@ AnyStr()
     .. code-block:: py
 
         AnyStr == TypeVar('AnyStr', str, bytes)
-    
+
 
 AsyncContextManager()
 ---------------------
@@ -249,7 +249,7 @@ Callable()
         def func(get_next_item: Callable[[], str]):
             pass
 
-    
+
 ChainMap()
 ----------
 
@@ -264,7 +264,7 @@ ClassVar()
 .. py:class:: ClassVar()
 
     .. code-block:: py
-    
+
         class Starship:
             stats: ClassVar[Dict[str, int]] = {}
 
@@ -273,7 +273,7 @@ ClassVar()
         ship.stats = {}
         # Error, setting class variable on instance
 
-        Starship.stats = {}     
+        Starship.stats = {}
         # ok
 
 
@@ -356,7 +356,7 @@ Dict()
 
         def func(item: Dict[str, str]):
             pass
-    
+
 
 Final()
 -------
@@ -409,7 +409,7 @@ Generator()
     .. code-block:: py
 
         # Generator[YieldType, SendType, ReturnType]
-    
+
         def func() -> Generator[int, float, str]:
             sent = yield 0
             while send > 0:
@@ -428,7 +428,7 @@ Generic()
 
         def func(item: Generic[T]):
             pass
-    
+
 
 Hashable()
 ------------
@@ -488,13 +488,13 @@ Literal()
         def give_me_four(x: Literal[4]):
             pass
 
-        give_me_four(4)  
+        give_me_four(4)
         # ok
-        
-        give_me_four(4.0) 
+
+        give_me_four(4.0)
         # error: Argument 1 to "give_me_four" has incompatible type "float"; expected "Literal[4]"
-        
-        give_me_four(42)  
+
+        give_me_four(42)
         # error: Argument 1 to "give_me_four" has incompatible type "Literal[42]"; expected "Literal[4]"
 
 
@@ -502,7 +502,7 @@ List()
 ------
 
 .. py:class:: List(list, MutableSequence[T])
-    
+
     .. code-block:: py
 
         def func(items: List[str]):
@@ -511,7 +511,7 @@ List()
         Vector = List[float]
         def func(items: Vector):
             pass
-    
+
 
 Mapping()
 ---------
@@ -596,7 +596,7 @@ NoReturn()
 .. py:class:: NoReturn()
 
     .. code-block:: py
-    
+
         def func() -> NoReturn:
             raise RuntimeError('no way')
 
@@ -654,8 +654,8 @@ Protocol()
                 t.roar()
 
         roar_all([Lion(), Tiger()])  # ok
-        
-        roar_all([Cat()])  
+
+        roar_all([Cat()])
         # error: List item 0 has incompatible type "Cat"; expected "SupportsRoar"
 
 
@@ -679,7 +679,7 @@ Sequence()
         Address = Tuple[str, int]
         ConnectionOptions = Dict[str, str]
         Server = Tuple[Address, ConnectionOptions]
-        
+
         def func(servers: Sequence[Server]):
             pass
 
@@ -794,7 +794,7 @@ TypeVar()
 .. py:class:: TypeVar()
 
     # любой тип
-    T = TypeVar('T')  
+    T = TypeVar('T')
 
     # стркоа или байты
     A = TypeVar('A', str, bytes)
@@ -817,7 +817,7 @@ TypedDict()
             author: str
 
         Book = TypedDict(
-            'Book', 
+            'Book',
             {
                 'title': str,
                 'author': str,
@@ -837,7 +837,7 @@ TypedDict()
 
         book: Book = {
             'title': 'Fareneheit 481'
-        }  
+        }
         # error: Key 'author' missing for TypedDict "Book"
 
     .. code-block:: py
@@ -849,7 +849,7 @@ TypedDict()
 
         book: Book = {
             'title': 'Fareneheit 481'
-        }  
+        }
         # ok
 
 
@@ -877,7 +877,7 @@ Union()
 
 
 ValuesView()
------------
+------------
 
 .. py:class:: ValuesView(MappingView[VT_co])
 

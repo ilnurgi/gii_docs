@@ -1,10 +1,17 @@
-.. py:module:: collections
+.. title:: python collections
 
+.. meta::
+    :description:
+        Справочная информация по python модулю collections.
+    :keywords:
+        python collections
+
+.. py:module:: collections
 
 collections
 ===========
 
-Модуль `collections` содержит оптимизированные реализации
+Модуль collections содержит оптимизированные реализации
 нескольких контейнерных типов,
 абстрактные базовые классы для различных типов контейнеров и
 вспомогательные функции для создания именованных кортежей.
@@ -48,10 +55,10 @@ collections
         x.add(item)
 
 
-defaultdict
------------
+defaultdict()
+-------------
 
-.. py:class:: defaultdict([default_factory], ...)
+.. py:class:: defaultdict([default_factory])
 
     Тип данных, который практически в точности повторяет функциональные возможности словарей,
     за исключением способа обработки обращений к несуществующим ключам.
@@ -107,8 +114,8 @@ defaultdict
         # 7
 
 
-deque
------
+deque()
+-------
 
 .. py:class:: deque([iterable [, maxlenght]])
 
@@ -151,7 +158,6 @@ deque
             Двусторонние очереди поддерживают также возможность сериализации
             средствами модуля pickle.
 
-
     .. code-block:: py
 
         from timeit import timeit
@@ -184,6 +190,10 @@ deque
     .. py:method:: clear()
 
         Удаляет все элементы из очереди
+
+    .. py:method:: count(x)
+
+        Возвращает количество указанных элементов в очереди.
 
     .. py:method:: extend(iterable)
 
@@ -229,8 +239,8 @@ deque
         прокручивание выполняется влево.
 
 
-namedtuple
-----------
+namedtuple()
+------------
 
 .. py:method:: namedtuple(typename, fieldnames [, verbose])
 
@@ -298,6 +308,30 @@ Callable()
     Определяет абстрактный метод __call__().
 
 
+ChainMap()
+----------
+
+.. py:class:: ChainMap()
+
+    .. code-block:: py
+    
+        chain_map = ChainMap({'a': 1, 'b': 2}, {'c': 3, 'd': 4})
+        
+        chain_map.maps
+        # [{'b': 2, 'a': 1}, {'c': 3, 'b': 4}]
+
+        chain_map['a']
+        # 1
+
+        chain_map.keys()
+        # ['a', 'b', 'c']
+
+        chain_map.values()
+        # [2, 1, 3, 4]
+
+        chain_map.new_child({'e': 5, 'f': 6})
+
+
 Container()
 -----------
 
@@ -335,6 +369,17 @@ Counter()
         counter | counter2
         # Counter({'bacon': 1, 'eggs': 2, 'spam': 3})
 
+
+    .. py:method:: elements()
+
+        Вовзвращает список елементов
+
+        .. code-block:: py
+
+            Counter({1:3, 2:2}).elements()
+            # [1, 1, 1, 2, 2]
+
+
     .. py:method:: most_common([count])
 
         Возвращает список всех элементов в убывающем порядке или
@@ -344,6 +389,14 @@ Counter()
 
             counter.most_common(1)
             # [('spam', 3)]
+
+    .. py:method:: subtract()
+
+        .. code-block:: py
+
+            Counter({1: 3, 2: 4}).subtract({1: 1, 2: 2})
+            # Counter({1: 2, 2: 2})
+
 
 Hashable()
 ----------
@@ -393,7 +446,7 @@ KeysView()
 ----------
 
 .. py:class:: KeysView()
-    
+
     Базовый класс представления ключей отображения.
 
     Наследует классы MappingView и Set.
@@ -475,12 +528,12 @@ OrderedDict()
 
     Сортированный словарь
 
-        .. code-block:: py
+    .. code-block:: py
 
-            quotes = OrderedDict([
-                ('key1', 'value1'),
-                ('key2', 'value2'),
-            ])
+        quotes = OrderedDict([
+            ('key1', 'value1'),
+            ('key2', 'value2'),
+        ])
 
 
 Sequence()
@@ -532,5 +585,3 @@ ValuesView()
     Базовый класс представления пар (key, item) отображения.
 
     Наследует классы MappingView и Set.
-
-    
