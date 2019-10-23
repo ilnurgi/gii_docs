@@ -35,6 +35,7 @@ Contents:
    touch
    ps
    redis
+   tar
 
 
 Горячие клавиши
@@ -205,17 +206,6 @@ Contents:
 
         * args
           -d - разжать Сжать/разжать file и переименовать в file.gz
-
-    * tar [args] file.tar files
-
-      Создать/распаковать tar-архив
-
-        * args
-
-          x - распаковать
-          c - создать
-          z - сжатие Gzip
-          j - сжатие Bzip
 
     Управление процессами
     ---

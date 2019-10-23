@@ -1,8 +1,10 @@
 .. title:: pyqt
 
 .. meta::
-    :description: pyqt
-    :keywords: pyqt
+    :description: 
+      Справочная информация по модулю PyQt написанный для python.
+    :keywords: 
+      pyqt
 
 .. py:module:: pyqt
 
@@ -11,6 +13,7 @@ pyqt
 
 Кросплатформенный фреймворк
 
+https://doc.qt.io
 
 .. code-block:: py
 
@@ -32,7 +35,6 @@ pyqt
   
    phonon/index
    qaxcontainer/index
-   qt/index   
    qtcore/index
    qtdeclarative/index
    qtdesigner/index
@@ -47,6 +49,7 @@ pyqt
    qtsql/index
    qtsvg/index
    qtwebkit/index
+   qtwidgets/index
    qtxml/index
    qtxmlpatterns/index
    uic/index

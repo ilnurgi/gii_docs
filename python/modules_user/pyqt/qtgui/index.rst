@@ -1,15 +1,21 @@
-.. py:module:: QtGui
+.. title:: pyqt qtgui
 
-QtGui - модуль классов, реализующих компоненты графического интерфейса
-======================================================================
+.. meta::
+    :description: 
+      Справочная информация по модулю PyQt.QtGui.
+    :keywords: 
+      pyqt qtgui
+
+.. py:module:: PyQt.QtGui
+
+QtGui
+=====
+
+модуль классов, реализующих компоненты графического интерфейса
 
 .. py:attribute:: qApp
 
     ссылка на созданное приложение, экземпляр :py:class:`QtGui.QApplication`
-
-
-Список классов модуля
----------------------
 
 .. toctree::
    :maxdepth: 1
@@ -21,6 +27,7 @@ QtGui - модуль классов, реализующих компоненты
    qdesktopwidget
    qdialog
    qframe
+   qfont
    qgridlayout
    qimagereader
    qlabel
@@ -28,6 +35,7 @@ QtGui - модуль классов, реализующих компоненты
    qmessagebox
    qpaintdevice
    qpalette
+   qpen
    qpixmap
    qpushbutton
    qshortcut

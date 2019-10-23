@@ -1,3 +1,11 @@
+.. title:: python os
+
+.. meta::
+    :description: 
+        Справочная информация по python модулю os.    
+    :keywords: 
+        python os
+
 .. py:module:: os
 
 os
@@ -11,8 +19,8 @@ os
 методы decode и encode.
 
 
-Атрибуты модуля
----------------
+name
+----
 
 .. py:attribute:: name
 
@@ -23,6 +31,9 @@ os
         os.name    
         # 'nt' - windows xp
 
+
+environ
+-------
 
 .. py:attribute:: environ
 
@@ -38,9 +49,8 @@ os
         """
 
 
-Методы модуля
--------------
-
+access()
+--------
 
 .. py:method:: access(<путь>, <режим>)
 
@@ -54,12 +64,18 @@ os
     * os.X_OK - проверка на возможность выполнения
 
 
+chdir()
+-------
+
 .. py:method:: chdir(path) 
 
     :param str path: путь к каталогу
 
     Изменяет текущий рабочий каталог приложения на указанный 
 
+
+chmod()
+-------
 
 .. py:method:: chmod(path, mode)
     
@@ -73,6 +89,9 @@ os
         os.chmod('file.txt', stat.s_IRUSR)
 
 
+chown()
+-------
+
 .. py:method:: chown(path, uid, gid)
 
     Изменят владельца файла
@@ -84,6 +103,9 @@ os
         os.chown('file.txt', 5, 22)
 
 
+getcwd()
+--------
+
 .. py:method:: getcwd() 
     
     Возвращает рабочий путь приложения
@@ -93,6 +115,9 @@ os
         os.getcwd()
         # 'c:\\'
 
+
+getenv()
+--------
 
 .. py:method:: getenv(env_param_name)
     
@@ -104,6 +129,9 @@ os
         # 'c:\\'
 
 
+link()
+--------
+
 .. py:method:: link(src, dst)
 
     Создает жесткую ссылку (linux)
@@ -113,26 +141,40 @@ os
         os.link("path1/1.txt", "path2/1.txt")
 
 
+listdir()
+--------
+
 .. py:method:: listdir(path)
 
     Возвращает список имен файлов и папок в указанной папке
 
-    >>> os.listdir('/home/ilnurgi/')
-    ['.bashrc']
+    .. code-block:: py
 
+        os.listdir('/home/ilnurgi/')
+        # ['.bashrc']
+
+
+mkdir()
+--------
 
 .. py:method:: mkdir(path[, access=0o777])
 
-    :param str path: путь к каталогу
-    :param access: права доступа 
+    * path - путь к каталогу
+    * access - права доступа 
     
     Создает папку по указанному пути
 
+
+makedirs()
+----------
 
 .. py:method:: makedirs(path) 
 
     Аналогичен функции .. py:method::'mkdir', но автоматический создает промежуточные папки 
 
+
+remove()
+--------
 
 .. py:method:: remove(path) 
     
@@ -145,6 +187,9 @@ os
         os.remove("1.txt")
 
 
+rmdir()
+-------
+
 .. py:method:: rmdir(path) 
     
     :param str path: путь к каталогу
@@ -152,10 +197,16 @@ os
     Удаляет папку по указанному пути
 
 
+removedirs()
+------------
+
 .. py:method:: removedirs(path) 
     
     Аналогичен функции rmdir, но автоматический удаляет все родительские пустые папки 
 
+
+rename()
+--------
 
 .. py:method:: rename(src, dst)
 
@@ -172,6 +223,9 @@ os
         os.rename("path1/1.txt", "path2/1.txt")
 
 
+symlink()
+---------
+
 .. py:method:: symlink(src, dst)
 
     Создает символическую ссылку (linux)
@@ -181,17 +235,24 @@ os
         os.symlink("path1/1.txt", "path2/1.txt")
 
 
+stat()
+------
+
 .. py:method:: stat(path) 
-    
-    :param str path: путь к файлу
 
     Возвращает состояние о файле, объект stat_result, который в зависимости от типа операционной системы содержит разные атрибуты.
 
+
+tempname()
+----------
 
 .. py:method:: tempname([path, [prefix]]) 
     
     Возвращает уникальный путь для создания временных файлов.
 
+
+unlink()
+--------
 
 .. py:method:: unlink(path)
 
@@ -200,6 +261,9 @@ os
 
     удаляет файл
 
+
+utime()
+-------
 
 .. py:method:: utime(path[, (atime=now, mtime=now)])
 
@@ -211,6 +275,9 @@ os
     обновляет время последнего достпуа и время изменения
 
 
+walk()
+------
+
 .. py:method:: walk(path[, topdown=True][, onerror=None][, followlinks=False]) 
     
     :param str path: путь к начальному каталогу
@@ -219,25 +286,33 @@ os
     Возвращает итератор, на каждой итерации возвращает кортеж (текущий каталог, список каталогов и список файлов) 
 
 
-
-Методы для работы с файлами, файловыми дексрипторами
-----------------------------------------------------
+close()
+-------
 
 .. py:method:: close(<дескриптор>)
 
     закрывает файл
 
 
+dup()
+-----
+
 .. py:method:: dup(<дескриптор>)
 
     возвращает дубликат дескриптора
 
+
+fdopen()
+--------
 
 .. py:method:: fdopen(<дескриптор>[, <режим>[, <размер буфера>]])
 
     возвращает файловый объект по указанному дескриптору
 
     
+lseek()
+-------
+
 .. py:method:: lseek(<дескриптор>, <смещение>, <позиция>)
 
     устанавливает указатель в позицию, имеюущий указанное смещение относительной указанной позиции
@@ -248,6 +323,9 @@ os
     * os.SEEK_CUR или 1 - текущая позиция укзаталея
     * os.SEEK_END или 2 - конец файла
 
+
+open()
+------
 
 .. py:method:: open(<путь к файлу>, <режим>[, mode=0o777])
 
@@ -266,11 +344,18 @@ os
     * os.O_TEXT - файл будет открыт в текстовом режиме
 
 
+read()
+------
+
 .. py:method:: read(<дескриптор>, <количество байтов>)
 
     читает из файла указанное количество байтов
 
 
+write()
+-------
+
 .. py:method:: write(<дескриптор>, <последовательность байтов>)
 
     записывает последовательность байтов в файл
+    

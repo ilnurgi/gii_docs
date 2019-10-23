@@ -1,10 +1,10 @@
-.. title:: PyQt4.QtCore.QRectF
+.. title:: PyQt.QtCore.QRectF
 
 .. meta::
-    :description: PyQt4.QtCore.QRectF
-    :keywords: PyQt4.QtCore.QRectF
+    :description: PyQt.QtCore.QRectF
+    :keywords: PyQt.QtCore.QRectF
 
-.. py:currentmodule:: PyQt4.QtCore
+.. py:currentmodule:: PyQt.QtCore
 
 QRectF
 ======
