@@ -2,9 +2,8 @@
 
 .. meta::
     :description: 
-        Справочная информация по библиотеке requests, написанной на python.    
+        Справочная информация по python библиотеке requests.
     :keywords: 
-        python,
         python requests
 
 .. py:module:: requests
@@ -13,8 +12,9 @@ requests
 ========
 
 .. toctree::
-    :maxdepth: 2
+    :maxdepth: 1
 
+    adapters
     models
 
 .. code-block:: sh
@@ -66,3 +66,22 @@ post()
             'ilnurgi.ru', 
             data={'id': 1}
         )
+
+
+Session()
+---------
+
+.. py:class:: Session()
+
+    Объект сессия, которая позволять переиспользовать соединения для нескольких запросов
+
+    .. code-block:: py
+
+        session = Session()
+        session.get('http://ilnurgi.ru')
+
+        adapter = HTTPAdapter(
+            pool_connections=100,
+            pool_maxsoze=100,
+        )
+        session.mount('htt://', adapter)

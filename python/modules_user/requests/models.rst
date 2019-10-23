@@ -1,10 +1,9 @@
-.. title:: python module requests models
+.. title:: python requests models
 
 .. meta::
     :description: 
-        Справочная информация по библиотеке requests, написанной на python.    
+        Справочная информация по python библиотеке requests.models.
     :keywords: 
-        python,
         python requests,
         python requests models
 

@@ -1,9 +1,9 @@
 .. title:: python modules external
 
 .. meta::
-    :description: 
-        Справочная информация по внешним модулям python.    
-    :keywords: 
+    :description:
+        Справочная информация по внешним модулям python.
+    :keywords:
         python,
         python packages
 
@@ -34,7 +34,7 @@
     p4a/index
     pep8
     pyaudio
-    psutil    
+    psutil
     psycopg2/index
     pylint
     pygame/index
@@ -44,11 +44,13 @@
     pyppeteer
     pys60/index
     pyside2/index
+    pytest
     pyqt/index
     redis
     requests/index
     serial
     sphinx
+    starlette/index
     sqlalchemy/index
     xlrd
     xlwt

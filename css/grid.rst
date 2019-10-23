@@ -1,22 +1,55 @@
+.. title:: css grid
+
+.. meta::
+    :description: 
+        Описание grid стилей css.
+    :keywords: 
+        css grid
+
 grid
 ====
 
 grid
 ----
 
-.. code-block:: css
+.. code-block:: text
 
-    .wrapper {
-        display: grid;
-        grid: 
-            <grid-template> | 
-            <grid-template-rows> / 
-            [auto-flow && dense?] 
-            <grid-auto-columns>?| 
-            [auto-flow && dense?] 
-            <grid-autwo-rows>? / 
-            <grid-template-columns>;
-    }
+    display: grid;
+    grid: 
+        <grid-template> | 
+        <grid-template-rows> / 
+        [auto-flow && dense?] 
+        <grid-auto-columns>?| 
+        [auto-flow && dense?] 
+        <grid-autwo-rows>? / 
+        <grid-template-columns>;
+
+.. code-block:: html
+
+    <style>
+        .grid-container {
+            height: 100px;
+            width: 300px;
+            background: gray;
+            display: grid;
+        }
+        .grid-item {
+            border: 1px solid black;
+        }
+    </style>
+    <div class="grid-container">
+        <div class="grid-item"></div>
+        <div class="grid-item"></div>
+    </div>
+
+.. raw:: html
+
+    <div style="height:100px;width:300px;background:gray;display:grid;">
+        <div style="border:1px solid black;">
+        </div>
+        <div style="border:1px solid black;">
+        </div>
+    </div> 
 
 
 grid-autwo-rows
@@ -120,14 +153,87 @@ grid-row-start
 grid-template-areas
 -------------------
 
+Настройка грида через области
+
 .. code-block:: css
 
-    .grid {
-        grid-template-areas: "header header"
-                             "title sidebar"
-                             "main sidebar"
-                             "footer footer";
-    }
+    grid-template-areas: 
+        "header header"
+        "sidebar content"
+        ". footer";
+    /* точка указывает на пустую ячейку */
+    
+.. code-block:: html
+
+    <style>
+        .grid-container {
+            height: 200px;
+            width: 300px;
+            display: grid;
+            grid-template-areas: 
+                "header header"
+                "sidebar content"
+                ". footer";
+        }
+        .header {
+            background-color: red;
+            grid-area: header;
+        }
+        .sidebar {
+            background-color: yellow;
+            grid-area: sidebar;
+        }
+        .content {
+            background-color: blue;
+            grid-area: content;
+        }
+        .footer {
+            background-color: green;
+            grid-area: footer;
+        }
+    </style>
+    <div class="grid-container">
+        <div class="header"></div>
+        <div class="sidebar"></div>
+        <div class="content"></div>
+        <div class="footer"></div>
+    </div>
+
+.. raw:: html
+
+    <style>
+        .grid-container {
+            height: 200px;
+            width: 300px;
+            display: grid;
+            grid-template-areas: 
+                "header header"
+                "sidebar content"
+                ". footer";
+        }
+        .header {
+            background-color: red;
+            grid-area: header;
+        }
+        .gr-sidebar {
+            background-color: yellow;
+            grid-area: sidebar;
+        }
+        .content {
+            background-color: blue;
+            grid-area: content;
+        }
+        .footer {
+            background-color: green;
+            grid-area: footer;
+        }
+    </style>
+    <div class="grid-container">
+        <div class="header"></div>
+        <div class="gr-sidebar"></div>
+        <div class="content"></div>
+        <div class="footer"></div>
+    </div>
 
 
 grid-template-columns
@@ -136,21 +242,62 @@ grid-template-columns
 Настройка колонок
 
 .. code-block:: css
-	
-	.wrappper {
+    
+    .wrappper {
         display: grid;
 
+        /* фиксированная ширина колонок */
         grid-template-columns: 100px 100px 100px;
 
-		grid-template-columns: repeat(4, 1fr);
-		grid-template-columns: repeat(4, min-content);
-		grid-template-columns: repeat(4, max-content);
+        /* 4 колонки с одинаковой шириной */
+        grid-template-columns: repeat(4, 1fr);
+
+        /* 4 колонки с широной по минимальному контенту */
+        grid-template-columns: repeat(4, min-content);
+
+        /* 4 колонки с широной по максимальному контенту */
+        grid-template-columns: repeat(4, max-content);
+
+        /* 2 колонки с указанием минимальной и максимальной ширины */
         grid-template-columns: minmax(200px, 1fr) minmax(350px, 1fr);
+
+        /* 3 колонки крайние авто ширина, центральная  */
         grid-template-columns: auto fit-content(800px) auto;
+
+        /* 2 колонки левая по минимальному контенту правая по максимальной */
         grid-template-columns: min-content max-content;
+
         grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-		grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-	}
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    }
+
+.. code-block:: html
+
+    <style>
+        .grid-container {
+            height: 100px;
+            width: 300px;
+            background: gray;
+            display: grid;
+            grid-template-columns: 100px 100px;
+        }
+        .grid-item {
+            border: 1px solid black;
+        }
+    </style>
+    <div class="grid-container">
+        <div class="grid-item"></div>
+        <div class="grid-item"></div>
+    </div>
+
+.. raw:: html
+
+    <div style="height:100px;width:300px;background:gray;display:grid;grid-template-columns: 100px 100px;">
+        <div style="border:1px solid black;">
+        </div>
+        <div style="border:1px solid black;">
+        </div>
+    </div>
 
 
 grid-template-rows

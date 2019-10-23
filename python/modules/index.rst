@@ -1,9 +1,9 @@
 .. title:: python modules base
 
 .. meta::
-    :description: 
-        Справочная информация по базовым модулям python.    
-    :keywords: 
+    :description:
+        Справочная информация по базовым модулям python.
+    :keywords:
         python,
         python packages
 
@@ -14,13 +14,17 @@
     :maxdepth: 1
 
     abs
+    aiohttp
+    argparse
     array
+    asyncio
     atexit
     binascii
     bisect
     calendar
     cmath
     collections
+    concurrent/index
     configparser
     contextlib
     copy
@@ -39,6 +43,7 @@
     heapq
     http/index
     imp
+    importlib
     inspect
     io
     ipaddress
@@ -64,6 +69,7 @@
     shutil
     signal
     simplehttpserver
+    smtplib
     socket
     socketserver
     sqlite3
