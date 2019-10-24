@@ -1,21 +1,27 @@
 .. title:: pyqt
 
 .. meta::
-    :description: pyqt
-    :keywords: pyqt
+    :description:
+        Справочная информация по python модулю pyqt, кросплатформенный фреймворк для построения графического интерфейса программ.
+    :keywords:
+        python pyqt
 
 .. py:module:: pyqt
 
 pyqt
 ====
 
-Кросплатформенный фреймворк
+Кросплатформенный фреймворк для построения графического интерфейса программ.
 
+Существует две версии моудля pyqt4 b pyqt5.
+
+pyqt4 работает как с qt 4 версии, так и с qt 5 версии.
+pyqt5 работает работает только 5 версией qt.
 
 .. code-block:: py
 
     import sys
-    
+
     from PyQt4 import QtGui
 
     app = QtGui.QApplication(sys.argv)
@@ -28,25 +34,25 @@ pyqt
 Содержит следующие модули:
 
 .. toctree::
-   :maxdepth: 1
-  
-   phonon/index
-   qaxcontainer/index
-   qt/index   
-   qtcore/index
-   qtdeclarative/index
-   qtdesigner/index
-   qtest/index
-   qtgui/index
-   qthelp/index
-   qtmultimedia/index
-   qtnetwork/index
-   qtopengl/index
-   qtscript/index
-   qtscripttools/index
-   qtsql/index
-   qtsvg/index
-   qtwebkit/index
-   qtxml/index
-   qtxmlpatterns/index
-   uic/index
+    :maxdepth: 1
+
+    phonon/index
+    qaxcontainer/index
+    qt/index
+    qtcore/index
+    qtdeclarative/index
+    qtdesigner/index
+    qtest/index
+    qtgui/index
+    qthelp/index
+    qtmultimedia/index
+    qtnetwork/index
+    qtopengl/index
+    qtscript/index
+    qtscripttools/index
+    qtsql/index
+    qtsvg/index
+    qtwebkit/index
+    qtxml/index
+    qtxmlpatterns/index
+    uic/index

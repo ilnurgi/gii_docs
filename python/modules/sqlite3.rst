@@ -1,3 +1,11 @@
+.. title:: python sqlite3
+
+.. meta::
+    :description:
+        Справочная информация по python модулю sqlite3.
+    :keywords:
+        python sqlite3
+
 .. py:module:: sqlite3
 
 sqlite3
@@ -416,3 +424,9 @@ Cursor()
             * ProgrammingError - ошибка программирования
 
             * NotSupportedError - ошибка при использовании методов, не поддерживаемых БД
+
+
+.. code-block:: py
+
+    # список всех таблиц базы
+    cursor.execute('select name from sqlite_master where type="table"')
