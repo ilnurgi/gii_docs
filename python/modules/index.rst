@@ -56,8 +56,7 @@
     math
     multiprocessing
     numbers
-    os
-    ospath
+    os/index
     pathlib
     pdb
     pickle

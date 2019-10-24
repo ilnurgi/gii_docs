@@ -1,15 +1,19 @@
 .. title:: pyqt
 
 .. meta::
+
     :description:
         Справочная информация по python модулю pyqt, кросплатформенный фреймворк для построения графического интерфейса программ.
     :keywords:
         python pyqt
 
+
 .. py:module:: pyqt
 
 pyqt
 ====
+
+https://doc.qt.io
 
 Кросплатформенный фреймворк для построения графического интерфейса программ.
 
@@ -34,25 +38,25 @@ pyqt5 работает работает только 5 версией qt.
 Содержит следующие модули:
 
 .. toctree::
-    :maxdepth: 1
+   :maxdepth: 1
 
-    phonon/index
-    qaxcontainer/index
-    qt/index
-    qtcore/index
-    qtdeclarative/index
-    qtdesigner/index
-    qtest/index
-    qtgui/index
-    qthelp/index
-    qtmultimedia/index
-    qtnetwork/index
-    qtopengl/index
-    qtscript/index
-    qtscripttools/index
-    qtsql/index
-    qtsvg/index
-    qtwebkit/index
-    qtxml/index
-    qtxmlpatterns/index
-    uic/index
+   phonon/index
+   qaxcontainer/index
+   qtcore/index
+   qtdeclarative/index
+   qtdesigner/index
+   qtest/index
+   qtgui/index
+   qthelp/index
+   qtmultimedia/index
+   qtnetwork/index
+   qtopengl/index
+   qtscript/index
+   qtscripttools/index
+   qtsql/index
+   qtsvg/index
+   qtwebkit/index
+   qtwidgets/index
+   qtxml/index
+   qtxmlpatterns/index
+   uic/index

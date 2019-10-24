@@ -1,44 +1,47 @@
-.. title:: PyQt4.QtCore.QRect
+.. title:: PyQt.QtCore.QRect
 
 .. meta::
-    :description: PyQt4.QtCore.QRect
-    :keywords: PyQt4.QtCore.QRect
+    :description: PyQt.QtCore.QRect
+    :keywords: PyQt.QtCore.QRect
 
-.. py:currentmodule:: PyQt4.QtCore
+.. py:currentmodule:: PyQt.QtCore
 
 QRect
 =====
 
-.. py:class:: QRect(x=0, y=0, w=0, h=0)
-.. py:class:: QRect(qpoint, qsize)
-.. py:class:: QRect(qpoint, qpoint2)
-.. py:class:: QRect(qrect)
-
-    :param int x: координата по оси х, левый верхний угол
-    :param int y: координата по оис у, левый верхний угол
-    :param int w: ширина области    
-    :param int h: высота области
-    :param QtCore.QPoint qpoint: точка левого верхнего угла
-    :param QtCore.QPoint qpoint2: точка правого нижнего угла
-    :param QtCore.QSize qsize: размер области
-    :param QtCore.QRect qrect: объект, область
+.. py:class:: QRect()
 
     Описывает координаты и размеры какой-то прямоуголной области
 
-        >>> r1 = QtCore.QRect(O, О, 20, 20)
-        >>> r2 = QtCore.QRect(10, 10, 20, 20)
-        >>> r1 & r2
-        PyQt4.QtCore.QRect(10, 10, 10, 10)
-        >>> r1 | r2 
-        PyQt4.QtCore.QRect(O, О, 30, 30)
-        >>> r1 in r2
-        False
-        >>> r1 in QtCore.QRect(O, О, 30, 30)
-        True
-        >>> r1 == r2
-        False
-        >>> r1 != r2
-        True
+    .. code-block:: py
+
+        QRect(x=0, y=0, w=0, h=0)
+        QRect(qpoint, qsize)
+        QRect(qpoint, qpoint2)
+        QRect(qrect)
+
+    .. code-block:: py
+
+        r1 = QtCore.QRect(O, О, 20, 20)
+        r2 = QtCore.QRect(10, 10, 20, 20)
+        
+        r1 & r2
+        # PyQt4.QtCore.QRect(10, 10, 10, 10)
+        
+        r1 | r2 
+        # PyQt4.QtCore.QRect(O, О, 30, 30)
+        
+        r1 in r2
+        # False
+        
+        r1 in QtCore.QRect(O, О, 30, 30)
+        # True
+        
+        r1 == r2
+        # False
+        
+        r1 != r2
+        # True
 
     .. py:method:: adjust(x1, y1, x2, y2)
 

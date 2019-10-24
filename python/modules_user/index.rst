@@ -16,6 +16,7 @@
     autopep8
     bs4/index
     bottle
+    celery
     coverage
     django/index
     docx

@@ -17,6 +17,7 @@ linux
     chgrp
     chmod
     chown
+    cp
     cat
     dd
     df
@@ -28,8 +29,10 @@ linux
     ls
     mkdir
     pwd
+    touch
     ps
     redis
+    tar
 
 
 hotkeys
@@ -205,17 +208,6 @@ files
 
         * args
           -d - разжать Сжать/разжать file и переименовать в file.gz
-
-    * tar [args] file.tar files
-
-      Создать/распаковать tar-архив
-
-        * args
-
-          x - распаковать
-          c - создать
-          z - сжатие Gzip
-          j - сжатие Bzip
 
     Управление процессами
     ---
