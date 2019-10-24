@@ -1,9 +1,9 @@
 .. title:: javascript dom
 
 .. meta::
-    :description: 
+    :description:
         Описание dom, объектной модели документа веб страницы.
-    :keywords: 
+    :keywords:
         javascript dom
 
 DOM
@@ -129,15 +129,16 @@ Document Object Model - объетная модель документа
     WorkerLocation
     WorkerNavigator
     XMLHttpRequest
-    XMLHttpRequestProgressEvent    
+    XMLHttpRequestProgressEvent
     XMLHttpRequestUpload
+    webcomponent
 
 Таблица
 -------
 
 .. toctree::
     :maxdepth: 2
-    
+
     HTMLTableElement
     HTMLTableSectionElement
     HTMLTableRowElement

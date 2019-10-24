@@ -20,7 +20,11 @@
     droidscript/index
     jquery/index
     nodejs/index
+    nodecron
+    nodemailer
     parcel
+    puppeteer
     react/index
+    svelte
     vuejs/index
-    webcomponent
+    ws

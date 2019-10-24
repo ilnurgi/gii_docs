@@ -1,17 +1,17 @@
-.. title:: pyqt
+.. title:: pyqt4
 
 .. meta::
 
     :description:
-        Справочная информация по python модулю pyqt, кросплатформенный фреймворк для построения графического интерфейса программ.
+        Справочная информация по python модулю pyqt4, кросплатформенный фреймворк для построения графического интерфейса программ.
     :keywords:
-        python pyqt
+        python pyqt4
 
 
-.. py:module:: pyqt
+.. py:module:: PyQt4
 
-pyqt
-====
+pyqt4
+=====
 
 https://doc.qt.io
 
@@ -56,7 +56,6 @@ pyqt5 работает работает только 5 версией qt.
    qtsql/index
    qtsvg/index
    qtwebkit/index
-   qtwidgets/index
    qtxml/index
    qtxmlpatterns/index
    uic/index

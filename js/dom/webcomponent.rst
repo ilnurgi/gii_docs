@@ -10,9 +10,9 @@ webcomponents
 .. code-block:: html
 
     <body>
-        <my-webcomp 
-            id="myWebComp" 
-            onclick="rgis.showMessage(event)" 
+        <my-webcomp
+            id="myWebComp"
+            onclick="rgis.showMessage(event)"
             name="ilnurgi"
         ></my-webcomp>
 

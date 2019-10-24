@@ -1,18 +1,18 @@
-.. title:: pyqt qtwidgets qdial
+.. title:: pyqt5 qtwidgets qdial
 
 .. meta::
-    :description: 
-      Справочная информация по модулю PyQt.QtWidgets.QDial.
-    :keywords: 
-      pyqt qtwidgets qdial
+    :description:
+      Справочная информация по объекту PyQt5.QtWidgets.QDial.
+    :keywords:
+      pyqt5 qtwidgets qdial
 
-.. py:currentmodule:: PyQt.QtWidgets
+.. py:currentmodule:: PyQt5.QtWidgets
 
 QDial
 =====
 
 .. py:class:: QDial()
-  
+
     .. figure:: images/qdial.png
 
     .. code-block:: py
@@ -29,7 +29,7 @@ QDial
 
             dial.valueChanged.connect(callback)
 
-            
+
     .. py:method:: minimum()
 
         .. code-block:: py
