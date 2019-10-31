@@ -56,6 +56,7 @@ CSS
     grid
     modules/index
     media
+    writingmode
 
 
 Цвета
