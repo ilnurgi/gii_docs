@@ -86,7 +86,13 @@ ArgumentParser()
 
     * parents - список :py:class:`argparse.ArgumentParser()` ключи которой будут включены в текущий объект
 
-    * formatter_class - объект, форматирующий вывод сообщения помощи. :py:class:`argparse.HelpFormatter()`, :py:class:`argparse.RawDescriptionHelpFormatter()`, :py:class:`argparse.RawTextHelpFormatter()`, :py:class:`argparse.ArgumentDefaultsHelpFormatter()`, :py:class:`argparse.MetavarTypeHelpFormatter()`, 
+    * formatter_class - объект, форматирующий вывод сообщения помощи. 
+
+        * :py:class:`argparse.HelpFormatter()`
+        * :py:class:`argparse.RawDescriptionHelpFormatter()`
+        * :py:class:`argparse.RawTextHelpFormatter()`
+        * :py:class:`argparse.ArgumentDefaultsHelpFormatter()`
+        * :py:class:`argparse.MetavarTypeHelpFormatter()`
 
     * prefix_chars - префикс для параметрв
 
@@ -156,12 +162,22 @@ ArgumentParser()
 
         .. code-block:: py
 
-            # позиционный аргумент Path
+            # позиционный аргумент Path, обязательный
             arg_parser.add_argument(
                 'Path',
                 metavar='path',
                 type=str,
                 help='the path',
+            )
+
+            # позиционный необязательный аргумент
+            arg_parser.add_argument(
+                'Path',
+                metavar='path',
+                type=str,
+                help='the path',
+                # за счет этого параметр не обязательный
+                nargs='?'
             )
 
             # опциональный аргумент -v, --verbose
