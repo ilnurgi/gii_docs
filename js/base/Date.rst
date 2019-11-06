@@ -1,5 +1,13 @@
-Date - объект дата
-==================
+.. title:: js date
+
+.. meta::
+    :description:
+        Описание javascript объекта date.
+    :keywords:
+        js date
+
+Date
+====
 
 .. py:class:: Date()
 
@@ -126,16 +134,16 @@ Date - объект дата
     .. py:function:: setYear(year)
 
         Устанавливаем новую год
-        
+
 
     .. py:function:: toDateString()
 
         Возвращает строковое представление даты
-        
+
 
     .. py:function:: toISOString()
 
-        Возвращает строковое представление даты, в формате ISO8601 (yyyy-mm-ddThh:mm:ss.sssZ)  
+        Возвращает строковое представление даты, в формате ISO8601 (yyyy-mm-ddThh:mm:ss.sssZ)
 
 
     .. py:function:: toFSON()

@@ -1,9 +1,9 @@
 .. title:: javascript
 
 .. meta::
-    :description: 
+    :description:
         Описание языка программирования javascript и его дополнительных модулей.
-    :keywords: 
+    :keywords:
         javascript
 
 JavaScript

@@ -14,6 +14,7 @@ Browser Object Model - объектная модель браузера
 .. toctree::
     :maxdepth: 1
 
+    fetch
     Navigator
     ServiceWorkerContainer
 

@@ -1,5 +1,13 @@
-Map, WeakMap - коллекция пар ключ-значение
-==========================================
+.. title:: js map weakmap
+
+.. meta::
+    :description:
+        Описание javascript объекта Map, WeakMap
+    :keywords:
+        js map weakmap
+
+Map, WeakMap
+============
 
 Map
 ---

@@ -1,5 +1,13 @@
-Set, WeakSet - коллекция уникальных типов любого типа
-=====================================================
+.. title:: js set weakset
+
+.. meta::
+    :description:
+        Описание javascript объекта Set, WeakSet
+    :keywords:
+        js set weakset
+
+Set, WeakSet
+============
 
 Set
 ---
@@ -97,7 +105,7 @@ WeakSet
 
         let weakset = new WeakSet()
 
-    
+
     .. js:function:: add(elem)
 
         Добавляет элемент в множество

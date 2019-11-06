@@ -1,8 +1,17 @@
-Классы
-======
+.. title:: js class
+
+.. meta::
+    :description:
+        Описание javascript объекта class.
+    :keywords:
+        js class
+
+Class
+=====
 
 В javascript нету классов в чистом виде,
-"классы" создают используя функции с оператором :ref:`new`, однако, в EcmaScript6 добавили классы :ref:`class`.
+ "классы" создают используя функции с оператором :ref:`new`,
+ однако, в EcmaScript6 добавили классы :ref:`class`.
 
 .. _new:
 
@@ -84,9 +93,7 @@ class
 
     .. code-block:: js
 
-        let Task = class {
-            
-        }
+        let Task = class {}
 
     .. code-block:: js
 
@@ -125,16 +132,13 @@ class
     .. code-block:: js
 
         class Task {
-            constructor(){
-                ...
-            }
-        }        
+            constructor(){}
+        }
 
         class SubTask extends Task {
             constructor(){
                 // вызов родительского метода обязателен
                 super();
-                ...
             }
         }
 
@@ -173,5 +177,3 @@ class
     }
     extend(Track.prototype, namedMixin, controlMixin);
     extend(Playlist.prototype, namedMixin, controlMixin);
-
-

@@ -1,15 +1,23 @@
-RegExp - Регулярные выражения
-=============================
+.. title:: js regexp
+
+.. meta::
+    :description:
+        Описание javascript объекта RegExp
+    :keywords:
+        js regexp
+
+RegExp
+======
 
 .. code-block:: js
 
-     /x[eaoy]n/
-     //xen, xan, xon, xyn
+    /x[eaoy]n/
+    //xen, xan, xon, xyn
 
-     /[^b]log/
-     //dlog, flog
+    /[^b]log/
+    //dlog, flog
 
-     /[A-Z]/
+    /[A-Z]/
 
 ====== =====================
 символ обозначение
@@ -40,9 +48,9 @@ $      конец данных
 
 
 .. py:class:: RegExp(template, flags)
-    
+
     Конструктор регулярных выражений
-    
+
     Наследник :py:class:`Object`
 
 
@@ -50,8 +58,8 @@ $      конец данных
 
         var a = new RegExp('\\w+c', 'igm');
         var re = /\w+c/igm
-      
-    
+
+
     .. py:attribute:: global
 
         Глобальный поиск
@@ -78,13 +86,13 @@ $      конец данных
 
 
     .. py:method:: exec([string])
-        
+
         Возвращает массив найденных элементов в строке
 
         .. code-block:: js
 
             var a = /\d/g;
-            
+
             a.exec('kj5k3');
             // ['5']
 
@@ -93,15 +101,15 @@ $      конец данных
 
 
     .. py:method:: test(string)
-        
+
         Возвращает булево, есть ли совпадение
 
         .. code-block:: js
 
             var a = /\d/;
-            
+
             a.test('qw');
             // false
-            
+
             a.test('123');
             // true

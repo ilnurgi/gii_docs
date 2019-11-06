@@ -22,17 +22,22 @@ matplotlib_
     axes
     axis
     backends/index
+    cm
     collections
     colors
+    container
     figure
     font_manager
     legend
+    lines
     markers
+    patches
     path
     projections
     pyplot
     text
     ticker
+    transform
 
 
 rcParams

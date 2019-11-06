@@ -6,3 +6,4 @@ _build_html
 venv/
 env/
 *.log
+t_*.py

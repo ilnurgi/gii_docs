@@ -1,5 +1,13 @@
-Модули
-======
+.. title:: js modules
+
+.. meta::
+    :description:
+        Описание модулей javascript
+    :keywords:
+        js modules
+
+Modules
+=======
 
 В Java Script нету модулей. Но нечто подобное можно реализовать
 
@@ -22,8 +30,6 @@
         var private_var = [];
         return {
             public_var: 1,
-            public_method: function(){
-                ...
-            },
+            public_method: function(){},
         }
     }());

@@ -1,9 +1,19 @@
-null - ссылка на несуществующий объект
-======================================
+.. title:: js null
 
-.. code-block:: js
+.. meta::
+    :description:
+        Описание javascript объекта null
+    :keywords:
+        js null
 
-    age = null;
 
+null
+====
 
 .. py:class:: null()
+
+    ссылка на несуществующий объект
+
+    .. code-block:: js
+
+        age = null;

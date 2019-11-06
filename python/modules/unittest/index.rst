@@ -1,3 +1,13 @@
+.. title:: python unittest
+
+.. meta::
+    :description:
+        Справочная информация по базовому модулю python, unittest.
+        unittest предназначен для разработки юнит тестов.
+
+    :keywords:
+        python unittest
+
 .. py:module:: unittest
 
 unittest

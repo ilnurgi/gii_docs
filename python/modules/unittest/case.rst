@@ -1,3 +1,12 @@
+.. title:: python unittest case
+
+.. meta::
+    :description:
+        Справочная информация по python модулю unittest.case
+
+    :keywords:
+        python unittest case
+
 .. py:module:: case
 
 case

@@ -1,8 +1,10 @@
-.. title:: js.Response
+.. title:: js response
 
 .. meta::
-    :description: js.Response
-    :keywords: js.Response
+    :description:
+        Описание javascript объекта response
+    :keywords:
+        js response
 
 Response
 ========
@@ -10,13 +12,13 @@ Response
 .. js:class:: Response()
 
     .. js:attribute:: body
-    
+
 
     .. js:attribute:: bodyUsed
 
 
     .. js:attribute:: headers
-    
+
 
     .. js:attribute:: ok
 
@@ -30,13 +32,13 @@ Response
 
             response.status
             // 200
-    
+
 
     .. js:attribute:: statusText
-    
+
 
     .. js:attribute:: type
-    
+
 
     .. js:attribute:: url
 

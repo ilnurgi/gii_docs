@@ -1,11 +1,12 @@
 .. title:: python django core management migrations
 
 .. meta::
-    :description: 
-        Справочная информация по консольным утилитам для работы с миграциями библиотеке django, 
+    :description:
+        Справочная информация по консольным утилитам для работы с миграциями библиотеке django,
         написанный на языке программирования python,
-        для разработки веб приложений.        
-    :keywords: python, django, python django, python django management migrations, python django migrations
+        для разработки веб приложений.
+    :keywords:
+        python django management migrations
 
 .. py:currentmodule:: django.core.management
 
@@ -75,10 +76,10 @@ sqlmigrate
 
 * :py:meth:`django.db.migrations.AlterField`
 * :py:meth:`django.db.migrations.RunPython`
-* :py:meth:`django.db.migrations.RunSql`
+* :py:meth:`django.db.migrations.RunSQL`
 
 .. code-block:: py
-    
+
     from django.db import migrations, models
 
 
@@ -117,7 +118,7 @@ sqlmigrate
         ]
 
 .. code-block:: py
-    
+
     from django.db import migrations, models
 
 

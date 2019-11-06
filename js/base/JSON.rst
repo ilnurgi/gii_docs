@@ -1,3 +1,11 @@
+.. title:: js json
+
+.. meta::
+    :description:
+        Описание javascript объекта JSON
+    :keywords:
+        js json
+
 JSON
 ====
 
@@ -32,7 +40,7 @@ JSON
             // Простая сериализация
             JSON.stringify(data);
             // "{"name":"ilnur","age":25}"
-            
+
             // Указать точно, какие поля подлежат сериализации
             JSON.stringify(address, ["name"]);
             // {"name":"ilnur"}
@@ -42,7 +50,7 @@ JSON
                 if (value.constructor === RegExp) return value.toString();
                 return value;
             });
-            
+
             // Того же эффекта можно добиться иначе:
             RegExp.prototype.toJSON = function() {
                 return this.toString();

@@ -17,6 +17,9 @@ parcel
     $ parcel index.html
     Server running at http://localhost:1234
 
+    $ parcel index.html -3000 --open
+    Server running at http://localhost:3000
+
     # сборка проекта
     $ parcel build index.js
 

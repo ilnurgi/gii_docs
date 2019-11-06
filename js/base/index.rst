@@ -1,9 +1,17 @@
+.. title:: javascript
+
+.. meta::
+    :description:
+        Описание языка программирования javascript.
+    :keywords:
+        javascript
+
 JavaScript
 ==========
 
 .. code-block:: js
 
-    // объеявление переменной    
+    // объявление переменной
     var name = 'ilnurgi';
 
     // объявление переменной внутри области видимости блока
@@ -18,35 +26,26 @@ JavaScript
 .. toctree::
     :maxdepth: 1
 
-    String
     Array
-    Object
-    Map
-    Set
-
-    Function
-    class
-
-    Promise
-
-    Number
-    Infinity
-    NaN
-    String
     Boolean
-    null
-    undefined
-    modules
-    oper
-    ArrayBuffer
-    ArrayTyped
-    Map
+    class
     Date
-    JSON
-    Math
-    RegExp
-    Symbol
     Error
+    Function
+    Infinity
+    JSON
+    Map
+    Math
+    modules
+    null
+    Number
+    Object
+    oper
+    Promise
     Reflect
-    fetch
+    RegExp
     Response
+    Set
+    String
+    Symbol
+    undefined

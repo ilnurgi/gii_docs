@@ -1,11 +1,20 @@
-undefined - неопределнное значение
-==================================
+.. title:: js undefined
 
-.. code-block:: js
+.. meta::
+    :description:
+        Описание javascript объекта undefined
+    :keywords:
+        js undefined
 
-    var x;
-    x;
-    // undefined
+undefined
+=========
 
+неопределнное значение
 
 .. py:class:: undefined()
+
+    .. code-block:: js
+
+        var x;
+        x;
+        // undefined

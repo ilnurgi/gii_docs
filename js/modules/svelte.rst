@@ -9,6 +9,42 @@
 svelte
 ======
 
+https://svelte.dev/
+
+.. code-block:: html
+
+    <style>
+    </style>
+    <script>
+        let name = "ilnurgi";
+        let items = [];
+        const remove = item => {
+            items = items.filter(i => i !== item);
+        }
+        const addItem = () => {
+            items = [
+                ...items,
+                {}
+            ]
+        }
+    </script>
+
+    <form on:submit|preventDefault={addItem}>
+        <input bind:value={name}>
+    </form>
+    <h1>Hello {name}!</h1>
+    <ul>
+        {#each items as item}
+            <li class={item.done ? 'done' : ''}>
+                <input type="checkbox" bind:checked={item.done} />
+                {item.name}
+                <button on:click={() => remove(item)}>X</button>
+            </li>
+            // <li class:done={item.done}><{item.name}/li>
+            
+        {/each}
+    </ul>
+
 .. code-block:: html
 
     <style>

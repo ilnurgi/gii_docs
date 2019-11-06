@@ -1,11 +1,13 @@
-.. title:: js.fetch
+.. title:: js fetch
 
 .. meta::
-    :description: js.fetch
-    :keywords: js.fetch
+    :description:
+        Описание javascript обхекта fetch
+    :keywords:
+        js fetch
 
-fetch()
-=======
+fetch
+=====
 
 .. js:function:: fetch(url, options)
 

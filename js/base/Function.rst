@@ -1,10 +1,10 @@
-.. title:: js array
+.. title:: js function
 
 .. meta::
-    :description: 
-        Описание массивов, array, в языке программирования java script
-    :keywords: 
-        js array
+    :description:
+        Описание javascript объекта Function
+    :keywords:
+        js function
 
 Function
 ========
@@ -41,7 +41,7 @@ Function
     // анонимная функция
     (function(){})();
 
-    // стрелочная функция    
+    // стрелочная функция
     // this, внутри стрелочной функции, не является ссылкой на функцию
     let circleArea = (pi, r) => {};
     let circleArea2 = (pi, r) => pi * r * r;
@@ -133,7 +133,7 @@ Function
 
 
     .. js:attribute:: prototype
-    
+
         Ссылка функции на прототип
 
 
@@ -183,7 +183,7 @@ Function
 
 .. note:: EcmaScript6
 
-Функция возвращает несколько значений по одному. 
+Функция возвращает несколько значений по одному.
 
 .. code-block:: js
 
@@ -199,7 +199,7 @@ Function
     // 2
 
 .. code-block:: js
-    
+
     // генератор с передачей параметра в yield
     function* generator_function(){
         var a = yield 12;
@@ -212,7 +212,7 @@ Function
     // 6
 
 .. code-block:: js
-    
+
     // досрочное завершение генератора
     function* generator_function(){
         var a = yield 12;
@@ -225,7 +225,7 @@ Function
     // 5
 
 .. code-block:: js
-    
+
     // вызов исключении в генераторе
     function* generator_function(){
         try {
@@ -242,3 +242,22 @@ Function
     var generator = generator_function()
     generator.next().value
     generator.throw("exception string").value
+
+
+Стандартные функции
+-------------------
+
+.. py:function:: isFinite()
+
+    Возвращает true  только тогда, когда n  — обычное число, а не одно из NaN , Infinity  и ‐Infinit
+
+    .. code-block:: js
+
+        isFinite(1);
+        // true
+
+        isFinite(Infinity);
+        // false
+
+        isFinite(NaN);
+        // false
