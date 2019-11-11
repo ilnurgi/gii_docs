@@ -1,5 +1,18 @@
-Flask
+.. title:: python flask
+
+.. meta::
+    :description:
+        Справочная информация python модулю flask.
+    :keywords:
+        python flask
+
+flask
 =====
+
+.. code-block:: sh
+
+    pip install flask
+
 
 .. code-block:: py
 

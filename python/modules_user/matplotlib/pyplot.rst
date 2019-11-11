@@ -485,6 +485,12 @@ errorbar()
         errorbar(x, y, yerr=[e1, e2])
 
 
+eventplot()
+-----------
+
+.. py:function:: eventplot()
+
+
 figtext()
 ---------
 

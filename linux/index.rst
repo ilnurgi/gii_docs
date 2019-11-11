@@ -13,12 +13,13 @@ linux
 .. toctree::
     :maxdepth: 1
 
+    cat
     cd
     chgrp
     chmod
     chown
     cp
-    cat
+    curl
     dd
     df
     dirs
