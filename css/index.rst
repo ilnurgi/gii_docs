@@ -1,9 +1,9 @@
 .. title:: css
 
 .. meta::
-    :description: 
+    :description:
         Описание каскадных стилей описания веб документов.
-    :keywords: 
+    :keywords:
         css
 
 CSS
@@ -22,7 +22,7 @@ CSS
     </style>
 
 .. code-block:: text
-    
+
     :root {
         /* глобальная переменная */
         --color-red: red;
@@ -44,6 +44,7 @@ CSS
     boxsizing
     clippath
     columncount
+    filter
     font
     list
     marking
@@ -285,32 +286,4 @@ widows
 
     elem {
         widows: 5;
-    }
-
-filter
-------
-
-* blur()
-* brightness()
-* contrast()
-* drop-shadow()
-* grayscale()
-* hue-rotate()
-* invert()
-* opacity()
-* saturate()
-* sepia()
-
-.. code-block:: css
-
-    .colorize-pink {
-      filter: brightness(0.5) sepia(1) hue-rotate(-70deg) saturate(5);
-    }
-
-    .colorize-navy {
-      filter: brightness(0.2) sepia(1) hue-rotate(180deg) saturate(5);
-    }
-
-    .colorize-blue {
-      filter: brightness(0.5) sepia(1) hue-rotate(140deg) saturate(6);
     }
