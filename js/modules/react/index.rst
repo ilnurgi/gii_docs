@@ -1,3 +1,11 @@
+.. title:: javascript react.js
+
+.. meta::
+    :description:
+        Описание javascript библиотеки react.
+    :keywords:
+        javascript react
+
 React
 =====
 
@@ -44,7 +52,7 @@ JavaScript библиотека для создания веб страниц
                     },
 
                     componentWillUnmount: function(){
-                        document.getElementById(PLAYER_ID).removeEventListener('ended', this.onEnded);  
+                        document.getElementById(PLAYER_ID).removeEventListener('ended', this.onEnded);
                     },
 
                     onEnded: function(){
@@ -94,8 +102,8 @@ JavaScript библиотека для создания веб страниц
         render: function(){
             return (
                 <div>
-                    Hello 
-                    <b>{this.props.name}</b>, 
+                    Hello
+                    <b>{this.props.name}</b>,
                     <b>{this.state.count}</b>!
                     <button type="button" onClick="{this.increment}">
                         Increment
