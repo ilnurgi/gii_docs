@@ -13,9 +13,14 @@ https://svelte.dev/
 
 .. code-block:: html
 
+    <!-- App.selte -->
+
     <style>
     </style>
     <script>
+        import Form from './Form.svelte';
+        import {scale} from 'svelte/transition';
+
         let name = "ilnurgi";
         let items = [];
         const remove = item => {
@@ -27,10 +32,68 @@ https://svelte.dev/
                 {}
             ]
         }
+        // если tasks изменился, message тоже изменится
+        $: countTaskMessage = `${tasks.length}`;
+        $: console.log(tasks.length);
+        function addTask(e){
+            tasks = [...tasks, e.detail]
+        }
+    </script>
+
+    <Form 
+        bind:task="{task}"
+        on:add="{addTask}"
+    >Slot title</Form>
+
+    <!-- короткая форма -->
+    <!-- <Form bind:task></Form>-->
+
+    <!-- будет использоваться значение по умолчанию -->
+    <!-- <Form></Form>-->
+
+    <!-- quote - Promis -->
+    {#await quote}
+        loading...
+    {:then value}
+        {@html value}
+    {:catch}
+        Error
+    {/await}
+    <!-- <Form></Form>-->
+
+    <!-- quote - Promis -->
+    <!-- краткая форма -->
+    {#await quote then value}
+        {@html value}
+    {/await}
+
+    <button on:click="{() => isVisible = !isVisible }">Toggle</button>
+    <div transition:scale="{{duration: 500}}">
+        <Quote></Quote>
+    </div>
+    <button on:click="{() => isVisible = !isVisible }">Toggle</button>
+    <div in:scale="{{duration: 500}}" out:fly="{{duration:500, y: 50}}">
+        <Quote></Quote>
+    </div>
+
+.. code-block:: html
+
+    <!-- Form.selte -->
+    <script>
+        import {createEventDispatcher} from 'selte';
+
+        export let task = 'Test';
+        let dispatch = createEventDispatcher();
+
+        function addTask(){
+            dispatch('add', task);
+        }
+
     </script>
 
     <form on:submit|preventDefault={addItem}>
         <input bind:value={name}>
+        <button on:click="{addTask}">+</button>
     </form>
     <h1>Hello {name}!</h1>
     <ul>
@@ -41,9 +104,11 @@ https://svelte.dev/
                 <button on:click={() => remove(item)}>X</button>
             </li>
             // <li class:done={item.done}><{item.name}/li>
-            
+            {:else}
+            <li>empty list</li>            
         {/each}
     </ul>
+    <slot>Default slot title</slot>
 
 .. code-block:: html
 
