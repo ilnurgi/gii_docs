@@ -1,9 +1,9 @@
 .. title:: css
 
 .. meta::
-    :description: 
+    :description:
         Описание каскадных стилей описания веб документов.
-    :keywords: 
+    :keywords:
         css
 
 CSS
@@ -21,20 +21,6 @@ CSS
         }
     </style>
 
-.. code-block:: text
-    
-    :root {
-        /* глобальная переменная */
-        --color-red: red;
-    }
-
-    .wrapper {
-        /* переменная элемента */
-        --color-red: red;
-        color: var(--color-red, blue);
-    }
-
-
 .. toctree::
     :maxdepth: 1
 
@@ -44,6 +30,7 @@ CSS
     boxsizing
     clippath
     columncount
+    filter
     font
     list
     marking
@@ -57,6 +44,33 @@ CSS
     modules/index
     media
     writingmode
+
+Трансформация и анимация объектов
+---------------------------------
+
+
+.. toctree::
+    :maxdepth: 1
+
+    transform
+    transformorigin
+    transition
+
+Переменные
+----------
+
+.. code-block:: text
+
+    :root {
+        /* глобальная переменная */
+        --color-red: red;
+    }
+
+    .wrapper {
+        /* переменная элемента */
+        --color-red: red;
+        color: var(--color-red, blue);
+    }
 
 
 Цвета
@@ -287,30 +301,74 @@ widows
         widows: 5;
     }
 
-filter
-------
-
-* blur()
-* brightness()
-* contrast()
-* drop-shadow()
-* grayscale()
-* hue-rotate()
-* invert()
-* opacity()
-* saturate()
-* sepia()
+Слайдшоу на css
+---------------
 
 .. code-block:: css
 
-    .colorize-pink {
-      filter: brightness(0.5) sepia(1) hue-rotate(-70deg) saturate(5);
+    #slider {
+        width: 100%;
+        height: 100vh;
+        background-position: center center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        backface-visibility: hidden;
+        animation: slide 8s linear infinity 0s;
+        animation-timing-function: easy-in-out;
+        background-image: url('../img/1.jpg');
     }
 
-    .colorize-navy {
-      filter: brightness(0.2) sepia(1) hue-rotate(180deg) saturate(5);
+    @keyframes slide{
+        0% {
+            background-image: url('../img/1.jpg');
+        }
+        50% {
+            background-image: url('../img/2.jpg');
+        }
     }
 
-    .colorize-blue {
-      filter: brightness(0.5) sepia(1) hue-rotate(140deg) saturate(6);
-    }
+
+Стили, изменение которых приведет к изменению расположения других элементов:
+
+* border
+* border-width
+* bottom
+* display
+* clear
+* float
+* font-family
+* font-size
+* font-weight
+* height
+* left
+* line-height
+* margin
+* min-height
+* overflow
+* overflow-y
+* padding
+* position
+* right
+* text-align
+* top
+* vertical-align
+* white-space
+* width
+
+Стили, изменение которых приведет к перерисовке других элементов:
+
+* background
+* background-image
+* background-position
+* background-repeat
+* background-size
+* border-radius
+* border-style
+* box-shadow
+* color
+* outline
+* outline-color
+* outline-style
+* outline-width
+* text-decoration
+* visibility

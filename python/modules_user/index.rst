@@ -21,6 +21,8 @@
     django/index
     docx
     flask/index
+    flask-marshmallow/index
+    flask-sqlalchemy/index
     fuel/index
     jinja2
     line_profiler
