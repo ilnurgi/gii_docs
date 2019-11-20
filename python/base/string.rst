@@ -16,6 +16,10 @@ str
     f'{user=} {db=}'
     # user=ilnurgi db=datetime.date(1987, 1, 28)
 
+    x = 42
+    f'{x:5}+{x:15f}'
+    # '   42+      42.000000'
+
 str
 ---
 

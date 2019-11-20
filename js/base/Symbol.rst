@@ -102,6 +102,8 @@ Symbol
 
     .. js:attribute:: match
 
+    .. js:attribute:: prototype
+    
     .. js:attribute:: replace
 
     .. js:attribute:: search
