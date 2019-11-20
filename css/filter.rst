@@ -36,6 +36,10 @@ blur()
 
 .. code-block:: css
 
+    filter: blur(length);
+
+.. code-block:: css
+
     img {
         filter: blur(5px);
     }
@@ -56,6 +60,10 @@ brightness()
 ------------
 
 Яркость
+
+.. code-block:: css
+
+    filter: brightness([ number | percentage ]);
 
 .. code-block:: css
 
@@ -84,6 +92,10 @@ contrast()
 
 .. code-block:: css
 
+    filter: contrast([ number | percentage ]);
+
+.. code-block:: css
+
     img {
         filter: contrast(1.5);
     }
@@ -103,6 +115,10 @@ drop-shadow()
 -------------
 
 Тень
+
+.. code-block:: css
+
+    filter: drop-shadow(length{2,3} color?)
 
 .. code-block:: css
 
@@ -126,6 +142,10 @@ grayscale()
 -----------
 
 Оттенки серого
+
+.. code-block:: css
+
+    filter: grayscale([ number | percentage ]);
 
 .. code-block:: css
 
@@ -153,6 +173,10 @@ hue-rotate()
 
 .. code-block:: css
 
+    filter: grayscale(angle);
+
+.. code-block:: css
+
     img {
         filter: hue-rotate(200deg);
     }
@@ -173,6 +197,10 @@ invert()
 --------
 
 Инверсия
+
+.. code-block:: css
+
+    filter: invert([ number | percentage ]);
 
 .. code-block:: css
 
@@ -200,6 +228,10 @@ opacity()
 
 .. code-block:: css
 
+    filter: opacity([ number | percentage ]);
+
+.. code-block:: css
+
     img {
         filter: opacity(70%);
         filter: opacity(0.7);
@@ -221,6 +253,10 @@ saturate()
 ----------
 
 Насыщенность
+
+.. code-block:: css
+
+    filter: saturate([ number | percentage ])
 
 .. code-block:: css
 
@@ -248,6 +284,10 @@ sepia()
 
 .. code-block:: css
 
+    filter: sepia([ number | percentage ])
+
+.. code-block:: css
+
     img {
         filter: sepia(70%);
         filter: sepia(0.7);
@@ -263,3 +303,15 @@ sepia()
 
 .. figure:: images/image.png
     :figclass: img-sepia
+
+url()
+-----
+
+.. code-block:: css
+
+    #svg-filter {
+        display: none;
+    }
+    img {
+        filter: url(#svg-blur);
+    }
