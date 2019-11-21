@@ -1,8 +1,10 @@
 .. title:: postgres
 
 .. meta::
-    :description: postgres
-    :keywords: postgres
+    :description: 
+        Справочная информация по субд postgres
+    :keywords: 
+        postgres
 
 Postgres
 ========
@@ -12,7 +14,7 @@ Postgres
 
     datatypes/index
     operations
-    functions
+    functions/index
     psql
 
 в постгрес форейгн кей не создает автоматом индекс
