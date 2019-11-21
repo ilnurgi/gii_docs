@@ -1,3 +1,11 @@
+.. title:: css flex
+
+.. meta::
+    :description:
+        Описание css стиля flex.
+    :keywords:
+        css flex
+
 flex
 ====
 
@@ -15,12 +23,32 @@ flex
     .flex-container {
         /* флекс контейнер, а его потомки - флекс-элементы */
         display: flex;
+        background-color: #aff1b6;
     }
 
     .flex-item {
         /* flex: flex-grow flex-shrink flex-basis; */
         flex: 0 1 auto;
+        background-color: #ffcca5;
+        padding: 10px;
+        margin: 5px;
     }
+
+    .flex-item::nth-child(3) {
+        /* толкаем 3 элемент вправо */
+        margin-left: auto;
+
+        /* центрируем элемент */
+        margin: auto;
+    }
+
+.. raw:: html
+
+    <div style="display: flex;background-color: #aff1b6;">
+        <div style="flex: 0 1 auto;background-color: #ffcca5;padding: 10px;margin: 5px;">1</div>
+        <div style="flex: 0 1 auto;background-color: #ffcca5;padding: 10px;margin: 5px;">2</div>
+        <div style="flex: 0 1 auto;background-color: #ffcca5;padding: 10px;margin: 5px;margin-left: auto;">3</div>
+    </div>
 
 
 align-content
@@ -46,21 +74,70 @@ align-items
 
 Выравнивание дочерних элементов по второстепенной оси
 
-* baseline
-
-* flex-start - выравнивание по верхнему краю
-
-* flex-end - выравнивание по нижнему краю
-
-* center - по центру
-
-* stretch - по максимальному, по умолчанию
-
 .. code-block:: css
 
     .flex-container {
-        align-items: stretch;
+        display: flex;
+        align-item: stretch;
+        background-color: #aff1b6;
+        height: 70px;
     }
+
+    .flex-item {
+        background-color: #ffcca5;
+        padding: 10px;
+        margin: 5px;
+    }
+
+* **baseline**
+
+.. raw:: html
+
+    <div style="display: flex;background-color: #aff1b6;flex-direction: row;height: 80px;align-items: baseline;">
+        <div style="background-color: #ffcca5;padding: 10px;margin: 5px;">1</div>
+        <div style="background-color: #ffcca5;padding: 10px;margin: 5px;">2</div>
+        <div style="background-color: #ffcca5;padding: 10px;margin: 5px;">3</div>
+    </div>
+
+* **flex-start** - выравнивание по верхнему краю
+
+.. raw:: html
+
+    <div style="display: flex;background-color: #aff1b6;flex-direction: row;height: 80px;align-items: flex-start;">
+        <div style="background-color: #ffcca5;padding: 10px;margin: 5px;">1</div>
+        <div style="background-color: #ffcca5;padding: 10px;margin: 5px;">2</div>
+        <div style="background-color: #ffcca5;padding: 10px;margin: 5px;">3</div>
+    </div>
+
+* **flex-end** - выравнивание по нижнему краю
+
+.. raw:: html
+
+    <div style="display: flex;background-color: #aff1b6;flex-direction: row;height: 80px;align-items: flex-end;">
+        <div style="background-color: #ffcca5;padding: 10px;margin: 5px;">1</div>
+        <div style="background-color: #ffcca5;padding: 10px;margin: 5px;">2</div>
+        <div style="background-color: #ffcca5;padding: 10px;margin: 5px;">3</div>
+    </div>
+
+* **center** - по центру
+
+.. raw:: html
+
+    <div style="display: flex;background-color: #aff1b6;flex-direction: row;height: 80px;align-items: center;">
+        <div style="background-color: #ffcca5;padding: 10px;margin: 5px;">1</div>
+        <div style="background-color: #ffcca5;padding: 10px;margin: 5px;">2</div>
+        <div style="background-color: #ffcca5;padding: 10px;margin: 5px;">3</div>
+    </div>
+
+* **stretch** - по максимальному, по умолчанию
+
+.. raw:: html
+
+    <div style="display: flex;background-color: #aff1b6;flex-direction: row;height: 80px;align-items: stretch;">
+        <div style="background-color: #ffcca5;padding: 10px;margin: 5px;">1</div>
+        <div style="background-color: #ffcca5;padding: 10px;margin: 5px;">2</div>
+        <div style="background-color: #ffcca5;padding: 10px;margin: 5px;">3</div>
+    </div>
 
 
 align-self
@@ -113,19 +190,94 @@ flex-direction
 
 Направление основной оси
 
-* column - сверху вних
+.. code-block:: css
 
-* column-reverse - снизу вверх
+    .flex-container {
+        display: flex;
+        flex-direction: row;
+        background-color: #aff1b6;
+        height: 70px;
+    }
 
-* row - по умолчанию, слева направо
+    .flex-item {
+        background-color: #ffcca5;
+        padding: 10px;
+        width: 30px;
+        height: 30px;
+        margin: 5px;
+    }
 
-* row-reverse - справа налево
+* **column** - сверху вних
+
+.. raw:: html
+
+    <div style="display: flex;background-color: #aff1b6;flex-direction: column;height: 200px;">
+        <div style="background-color: #ffcca5;padding: 10px;margin: 5px;height: 30px;width: 30px;">1</div>
+        <div style="background-color: #ffcca5;padding: 10px;margin: 5px;height: 30px;width: 30px;">2</div>
+        <div style="background-color: #ffcca5;padding: 10px;margin: 5px;height: 30px;width: 30px;">3</div>
+    </div>
+
+* **column-reverse** - снизу вверх
+
+.. raw:: html
+
+    <div style="display: flex;background-color: #aff1b6;flex-direction: column-reverse;height: 200px;">
+        <div style="background-color: #ffcca5;padding: 10px;margin: 5px;height: 30px;width: 30px;">1</div>
+        <div style="background-color: #ffcca5;padding: 10px;margin: 5px;height: 30px;width: 30px;">2</div>
+        <div style="background-color: #ffcca5;padding: 10px;margin: 5px;height: 30px;width: 30px;">3</div>
+    </div>
+
+* **row** - по умолчанию, слева направо
+
+.. raw:: html
+
+    <div style="display: flex;background-color: #aff1b6;flex-direction: row;height: 70px;">
+        <div style="background-color: #ffcca5;padding: 10px;margin: 5px;height: 30px;width: 30px;">1</div>
+        <div style="background-color: #ffcca5;padding: 10px;margin: 5px;height: 30px;width: 30px;">2</div>
+        <div style="background-color: #ffcca5;padding: 10px;margin: 5px;height: 30px;width: 30px;">3</div>
+    </div>
+
+* **row-reverse** - справа налево
+
+.. raw:: html
+
+    <div style="display: flex;background-color: #aff1b6;flex-direction: row-reverse;height: 70px;">
+        <div style="background-color: #ffcca5;padding: 10px;margin: 5px;height: 30px;width: 30px;">1</div>
+        <div style="background-color: #ffcca5;padding: 10px;margin: 5px;height: 30px;width: 30px;">2</div>
+        <div style="background-color: #ffcca5;padding: 10px;margin: 5px;height: 30px;width: 30px;">3</div>
+    </div>
+
+
+flex-flow
+---------
 
 .. code-block:: css
 
     .flex-container {
-        flex-direction: row;
+        display: flex;
+        flex-flow: column;
+        background-color: #aff1b6;
+        height: 70px;
+
     }
+
+    .flex-item {
+        background-color: #ffcca5;
+        padding: 10px;
+        width: 30px;
+        height: 30px;
+        margin: 5px;
+    }
+
+* **column**
+
+.. raw:: html
+
+    <div style="display: flex;background-color: #aff1b6;flex-flow: column;height: 200px;">
+        <div style="background-color: #ffcca5;padding: 10px;margin: 5px;height: 30px;width: 30px;">1</div>
+        <div style="background-color: #ffcca5;padding: 10px;margin: 5px;height: 30px;width: 30px;">2</div>
+        <div style="background-color: #ffcca5;padding: 10px;margin: 5px;height: 30px;width: 30px;">3</div>
+    </div>
 
 
 flex-grow
@@ -143,6 +295,14 @@ flex-grow
     .flex-item {
         flex-grow: 0;
     }
+
+.. raw:: html
+
+    <div style="display: flex;background-color: #aff1b6;flex-direction: row;height: 80px;">
+        <div style="background-color: #ffcca5;padding: 10px;margin: 5px;height: 30px;flex-grow: 1;">1</div>
+        <div style="background-color: #ffcca5;padding: 10px;margin: 5px;height: 30px;flex-grow: 2;">2</div>
+        <div style="background-color: #ffcca5;padding: 10px;margin: 5px;height: 30px;flex-grow: 1;">1</div>
+    </div>
 
 flex-shrink
 -----------
@@ -183,21 +343,72 @@ justify-content
 
 Заполнение оси
 
-* flex-end - относительно конца
-
-* flex-start - относительно начала
-
-* center - от центра
-
-* space-around - растягивает по оси, оставляя равные промежутки между элементами
-
-* space-between - растягивает по оси, оставляя равные промежутки между элементами
-
 .. code-block:: css
 
-    .some-class {
-        justify-content: flex-start;
+    .flex-container {
+        flex-direction: row;
+        background-color: #aff1b6;
+        height: 70px;
+        justify-content: flex-end;
     }
+
+    .flex-item {
+        background-color: #ffcca5;
+        padding: 10px;
+        width: 30px;
+        height: 30px;
+        margin: 5px;
+    }
+
+* **flex-end** - относительно конца
+
+.. raw:: html
+
+    <div style="display: flex;background-color: #aff1b6;flex-direction: row;height: 70px;justify-content: flex-end;">
+        <div style="background-color: #ffcca5;padding: 10px;margin: 5px;height: 30px;width: 30px;">1</div>
+        <div style="background-color: #ffcca5;padding: 10px;margin: 5px;height: 30px;width: 30px;">2</div>
+        <div style="background-color: #ffcca5;padding: 10px;margin: 5px;height: 30px;width: 30px;">3</div>
+    </div>
+
+* **flex-start** - относительно начала
+
+.. raw:: html
+
+    <div style="display: flex;background-color: #aff1b6;flex-direction: row;height: 70px;justify-content: flex-start;">
+        <div style="background-color: #ffcca5;padding: 10px;margin: 5px;height: 30px;width: 30px;">1</div>
+        <div style="background-color: #ffcca5;padding: 10px;margin: 5px;height: 30px;width: 30px;">2</div>
+        <div style="background-color: #ffcca5;padding: 10px;margin: 5px;height: 30px;width: 30px;">3</div>
+    </div>
+
+* **center** - от центра
+
+.. raw:: html
+
+    <div style="display: flex;background-color: #aff1b6;flex-direction: row;height: 70px;justify-content: center;">
+        <div style="background-color: #ffcca5;padding: 10px;margin: 5px;height: 30px;width: 30px;">1</div>
+        <div style="background-color: #ffcca5;padding: 10px;margin: 5px;height: 30px;width: 30px;">2</div>
+        <div style="background-color: #ffcca5;padding: 10px;margin: 5px;height: 30px;width: 30px;">3</div>
+    </div>
+
+* **space-around** - растягивает по оси, оставляя равные промежутки между элементами
+
+.. raw:: html
+
+    <div style="display: flex;background-color: #aff1b6;flex-direction: row;height: 70px;justify-content: space-around;">
+        <div style="background-color: #ffcca5;padding: 10px;margin: 5px;height: 30px;width: 30px;">1</div>
+        <div style="background-color: #ffcca5;padding: 10px;margin: 5px;height: 30px;width: 30px;">2</div>
+        <div style="background-color: #ffcca5;padding: 10px;margin: 5px;height: 30px;width: 30px;">3</div>
+    </div>
+
+* **space-between** - растягивает по оси, оставляя равные промежутки между элементами
+
+.. raw:: html
+
+    <div style="display: flex;background-color: #aff1b6;flex-direction: row;height: 70px;justify-content: space-between;">
+        <div style="background-color: #ffcca5;padding: 10px;margin: 5px;height: 30px;width: 30px;">1</div>
+        <div style="background-color: #ffcca5;padding: 10px;margin: 5px;height: 30px;width: 30px;">2</div>
+        <div style="background-color: #ffcca5;padding: 10px;margin: 5px;height: 30px;width: 30px;">3</div>
+    </div>
 
 
 order

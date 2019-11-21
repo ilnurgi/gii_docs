@@ -1,12 +1,12 @@
 .. title:: python
 
 .. meta::
-    :description: 
+    :description:
         Справочная информация по python, 
         законспектированная во время изучения python.
         Описание синтаксиса языка, 
         встроенных модулей и сторонних модулей/библиотек.
-    :keywords: 
+    :keywords:
         python
 
 python
