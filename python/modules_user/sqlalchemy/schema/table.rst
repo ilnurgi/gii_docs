@@ -105,6 +105,15 @@ Table
 
     .. py:method:: join()
 
+        .. code-block:: py
+
+            user_table.join(
+                address_table,
+                user_table.c.id == address_table.c.user_id
+            )
+            # "user" join address on "user".id = address.user_id
+            
+
     .. py:method:: insert()
 
         .. code-block:: py
