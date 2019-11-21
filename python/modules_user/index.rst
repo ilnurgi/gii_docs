@@ -13,6 +13,8 @@
 .. toctree::
     :maxdepth: 1
 
+    aiohttp/index
+    asyncpg/index
     autopep8
     bs4/index
     bottle
