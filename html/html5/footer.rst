@@ -1,8 +1,10 @@
 .. title:: html footer
 
 .. meta::
-    :description: html footer
-    :keywords: html footer
+    :description:
+        html footer
+    :keywords:
+        html footer
 
 .. _footer:
 
@@ -13,6 +15,4 @@ footer
 
 .. code-block:: html
 
-    <footer>
-        ...
-    </footer>
+    <footer></footer>

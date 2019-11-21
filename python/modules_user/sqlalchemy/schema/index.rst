@@ -19,4 +19,5 @@ schema
     foreignkeyconstraint
     indexx
     metadata
+    sequence
     table

@@ -1,10 +1,17 @@
-android.widget.RadioGroup
-=========================
+.. title:: android.widget.RadioGroup
+
+.. meta::
+    :description:
+        Справочная информация по android классу android.widget.RadioGroup.
+    :keywords:
+        android widget RadioGroup
+
+.. py:currentmodule:: android.widget
+
+RadioGroup()
+============
 
 Контейнер для радио-кнопок
-
-XML
----
 
 .. code-block:: xml
 
@@ -18,10 +25,7 @@ XML
 
     </RadioGroup>
 
-RadioGroup
-----------
-
-.. py:class: android.widget.RadioGroup()
+.. py:class: RadioGroup()
 
     Наследник :py:class:`android.widget.LinearLayout`
 

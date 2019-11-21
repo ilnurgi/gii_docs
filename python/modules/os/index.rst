@@ -1,9 +1,9 @@
 .. title:: python os
 
 .. meta::
-    :description: 
-        Справочная информация по python модулю os.    
-    :keywords: 
+    :description:
+        Справочная информация по python модулю os.
+    :keywords:
         python os
 
 .. py:module:: os
@@ -18,6 +18,10 @@ os
 поэтому необходимо использовать функции для перекодирования строк -
 методы decode и encode.
 
+.. toctree::
+    :maxdepth: 1
+
+    path
 
 name
 ----
@@ -28,7 +32,7 @@ name
 
     .. code-block:: py
 
-        os.name    
+        os.name
         # 'nt' - windows xp
 
 
@@ -54,7 +58,7 @@ access()
 
 .. py:method:: access(<путь>, <режим>)
 
-    проверка прав доступа к файлу или папке. 
+    проверка прав доступа к файлу или папке.
 
     В параметре режим могут быть указаны следующие константы:
 
@@ -67,18 +71,18 @@ access()
 chdir()
 -------
 
-.. py:method:: chdir(path) 
+.. py:method:: chdir(path)
 
     :param str path: путь к каталогу
 
-    Изменяет текущий рабочий каталог приложения на указанный 
+    Изменяет текущий рабочий каталог приложения на указанный
 
 
 chmod()
 -------
 
 .. py:method:: chmod(path, mode)
-    
+
     Изменяет права доступа файла.
 
     .. code-block:: py
@@ -106,8 +110,8 @@ chown()
 getcwd()
 --------
 
-.. py:method:: getcwd() 
-    
+.. py:method:: getcwd()
+
     Возвращает рабочий путь приложения
 
     .. code-block:: py
@@ -120,7 +124,7 @@ getenv()
 --------
 
 .. py:method:: getenv(env_param_name)
-    
+
     Возвращает значение переменной окружения
 
     .. code-block:: py
@@ -142,7 +146,7 @@ link()
 
 
 listdir()
---------
+---------
 
 .. py:method:: listdir(path)
 
@@ -160,24 +164,25 @@ mkdir()
 .. py:method:: mkdir(path[, access=0o777])
 
     * path - путь к каталогу
-    * access - права доступа 
-    
+    * access - права доступа
+
     Создает папку по указанному пути
 
 
 makedirs()
 ----------
 
-.. py:method:: makedirs(path) 
+.. py:method:: makedirs(path)
 
-    Аналогичен функции .. py:method::'mkdir', но автоматический создает промежуточные папки 
+    Аналогичен функции .. py:method::'mkdir',
+    но автоматический создает промежуточные папки
 
 
 remove()
 --------
 
-.. py:method:: remove(path) 
-    
+.. py:method:: remove(path)
+
     Удаляет файл
 
     Возбуждает исключение :py:class:`WindowsError`, если файл удалить нельзя
@@ -190,8 +195,8 @@ remove()
 rmdir()
 -------
 
-.. py:method:: rmdir(path) 
-    
+.. py:method:: rmdir(path)
+
     :param str path: путь к каталогу
 
     Удаляет папку по указанному пути
@@ -200,9 +205,9 @@ rmdir()
 removedirs()
 ------------
 
-.. py:method:: removedirs(path) 
-    
-    Аналогичен функции rmdir, но автоматический удаляет все родительские пустые папки 
+.. py:method:: removedirs(path)
+
+    Аналогичен функции rmdir, но автоматический удаляет все родительские пустые папки
 
 
 rename()
@@ -238,7 +243,7 @@ symlink()
 stat()
 ------
 
-.. py:method:: stat(path) 
+.. py:method:: stat(path)
 
     Возвращает состояние о файле, объект stat_result, который в зависимости от типа операционной системы содержит разные атрибуты.
 
@@ -246,8 +251,8 @@ stat()
 tempname()
 ----------
 
-.. py:method:: tempname([path, [prefix]]) 
-    
+.. py:method:: tempname([path, [prefix]])
+
     Возвращает уникальный путь для создания временных файлов.
 
 
@@ -278,12 +283,12 @@ utime()
 walk()
 ------
 
-.. py:method:: walk(path[, topdown=True][, onerror=None][, followlinks=False]) 
-    
+.. py:method:: walk(path[, topdown=True][, onerror=None][, followlinks=False])
+
     :param str path: путь к начальному каталогу
     :param bool topdown: задает последовательность обхода каталогов
 
-    Возвращает итератор, на каждой итерации возвращает кортеж (текущий каталог, список каталогов и список файлов) 
+    Возвращает итератор, на каждой итерации возвращает кортеж (текущий каталог, список каталогов и список файлов)
 
 
 close()
@@ -309,7 +314,7 @@ fdopen()
 
     возвращает файловый объект по указанному дескриптору
 
-    
+
 lseek()
 -------
 
@@ -334,7 +339,7 @@ open()
     В параметре <режим> в операционной системе windows
     могут быть указаны следующие флаги (или их комбинации через символ \|):
 
-    * os.O_RDONLY - чтение 
+    * os.O_RDONLY - чтение
     * os.O_WRONLY - запись
     * os.O_RDWR - чтение и запись
     * os.O_APPEND - добавление в конец файла
@@ -358,4 +363,3 @@ write()
 .. py:method:: write(<дескриптор>, <последовательность байтов>)
 
     записывает последовательность байтов в файл
-    

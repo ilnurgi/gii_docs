@@ -1,8 +1,15 @@
-android.widget.TextView
-=======================
+.. title:: android.widget.TextView
 
-XML
----
+.. meta::
+    :description:
+        Справочная информация по android классу android.widget.TextView.
+    :keywords:
+        android widget TextView
+
+.. py:currentmodule:: android.widget
+
+TextView()
+==========
 
 .. code-block:: xml
 
@@ -38,9 +45,6 @@ XML
 
     * 26sp
 
-Свойства, которыми могут обладать дочерние элементы
-+++++++++++++++++++++++++++++++++++++++++++++++++++
-
 * layout_height - высота элемента
 
     * match_parent - заполнить родителя
@@ -53,10 +57,7 @@ XML
 
     * wrap_content - по содержимому
 
-TextView
---------
-
-.. py:class:: android.widget.TextView([context[, attrs, [defStyle]]])
+.. py:class:: TextView([context[, attrs, [defStyle]]])
 
     Поддерживает многострочное отображение,
     форматирование и автоматический перенос слов и символов.
@@ -75,7 +76,7 @@ TextView
 
 
     .. py:method:: getText()
-    
+
         Возвращает текст виджета
 
 

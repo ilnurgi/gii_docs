@@ -1,8 +1,15 @@
-android.widget.Button
-=====================
+.. title:: android.widget.Button
 
-XML
----
+.. meta::
+    :description:
+        Справочная информация по android классу android.widget.Button.
+    :keywords:
+        android widget Button
+
+.. py:currentmodule:: android.widget
+
+Button()
+========
 
 .. code-block:: xml
 
@@ -24,26 +31,22 @@ XML
         android:text="@string/btn2"
         android:id="@+id/btn2" />
 
-* id - идентификатор элемента
+* **id** - идентификатор элемента
 
-* onClick - название метода активити, который обработает клик по элементу.
+* **onClick** - название метода активити, который обработает клик по элементу.
   Метод принимает один аргумент c типом :py:class:`android.view.View`
   и должен быть public void.
 
-* text - текст
+* **text** - текст
 
     * обычная строка, текст
     * ссылка на идентификатор из ресурса строк, :ref:`res_values_string`
 
-* textSize - размер шрифта текст
+* **textSize** - размер шрифта текст
 
     * 8pt
 
-
-Button
-------
-
-.. py:class:: android.widget.Button
+.. py:class:: Button()
 
     Наследник :py:class:`android.widget.TextView`
 
@@ -94,15 +97,13 @@ Button
 
         Устанавливает обработчик клика по элементу
 
-        * OnClickListener - :py:class:`android.view.View.OnClickListener`
+        * **OnClickListener** - :py:class:`android.view.View.OnClickListener`
 
         .. code-block:: java
 
             myBtn.setOnClickListener(new OnClickListener(){
 
                 @Override
-                public void onClick(View v){
-                    ...
-                }
+                public void onClick(View v){}
 
             });

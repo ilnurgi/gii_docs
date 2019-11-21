@@ -1,9 +1,9 @@
 .. title:: python os.path
 
 .. meta::
-    :description: 
+    :description:
         Справочная информация по python модулю os.path.
-    :keywords: 
+    :keywords:
         python os.path
 
 .. py:module:: os.path
@@ -11,7 +11,7 @@
 path
 ====
 
-Модуль встроен в модуль os и позволяет работать с путями к файлам и папкам 
+Модуль встроен в модуль os и позволяет работать с путями к файлам и папкам
 
 
 abspath()
@@ -30,7 +30,7 @@ abspath()
 basename()
 ----------
 
-.. py:method:: basename(path) 
+.. py:method:: basename(path)
 
     Возвращает строку, имя файла или папки.
 
@@ -43,8 +43,8 @@ basename()
 dirname()
 ---------
 
-.. py:method:: dirname(path) 
-    
+.. py:method:: dirname(path)
+
     Возвращает строку, путь к родительской папки файла
 
     .. code-block:: py
@@ -56,7 +56,7 @@ dirname()
 exists()
 --------
 
-.. py:method:: exists(path) 
+.. py:method:: exists(path)
 
     Возвращает булево, True|False, существует ли указанный путь в системе
 
@@ -69,10 +69,10 @@ exists()
 expanduser()
 ------------
 
-.. py:method:: expanduser(username) 
-    
+.. py:method:: expanduser(username)
+
     * username - :py:class:`str`, имя пользователя
-    
+
     Возвращает путь к пользовательской папке
 
     .. code-block:: py
@@ -84,8 +84,8 @@ expanduser()
 getatime()
 ----------
 
-.. py:method:: getatime(path) 
-    
+.. py:method:: getatime(path)
+
     Возвращает время последнего доступа к файлу или папке, в виде количесвта секунд, прошедших с начала эпохи.
 
 
@@ -100,26 +100,27 @@ getctime()
 getmtime()
 ----------
 
-.. py:method:: getmtime(path) 
-    
-    Возвращает время последнего внесения изменения в файл или папку, в виде количесвта секунд, прошедших с начала эпохи 
+.. py:method:: getmtime(path)
+
+    Возвращает время последнего внесения изменения в файл или папку,
+    в виде количесвта секунд, прошедших с начала эпохи
 
 
 getsize()
 ---------
 
-.. py:method:: getsize(path) 
-    
+.. py:method:: getsize(path)
+
     Возвращает размер файла или папки
 
 
 join()
 ------
 
-.. py:method:: join(path1, path3,...) 
-    
+.. py:method:: join(path1, path3,...)
+
     Объединяет пути.
-    
+
     .. code-block:: py
 
         os.path.join('c:\\', 'system\\apps\\Python\\', 'Python.app')
@@ -137,8 +138,8 @@ isabs()
 isdir()
 -------
 
-.. py:method:: isdir(path) 
-    
+.. py:method:: isdir(path)
+
     Возвращает булево, True|False, является ли указанный путь катологом
 
     .. code-block:: py
@@ -150,8 +151,8 @@ isdir()
 isfile()
 --------
 
-.. py:method:: isfile(path) 
-    
+.. py:method:: isfile(path)
+
     проверяет, указывает ли путь к файлу
 
 
@@ -179,8 +180,8 @@ normpath()
 
         р = os.path.join(r"C:\\", "book/folder/", "file.txt")
         os.path.normpath(p)
-        'C:\\book\\folder\\file.txt'
-    
+        # 'C:\\book\\folder\\file.txt'
+
 
 realpath()
 ----------
@@ -203,7 +204,7 @@ split()
 .. py:method:: split(path)
 
     Возвращает кортеж из пары строк - (путь к родителской папке, название файла).
-    
+
     .. code-block:: py
 
         os.path.split('c:\\system\\apps\\Python\\Python.app')
@@ -211,12 +212,12 @@ split()
 
 
 splitdrive()
-----------
+------------
 
-.. py:method:: splitdrive(path) 
-    
+.. py:method:: splitdrive(path)
+
     Возвращает кортеж из пары строк - (имя диска, остальная часть пути).
-    
+
     .. code-block:: py
 
         os.path.splitdrive ('c:\\system\\apps\\Python\\Python.app')
@@ -226,8 +227,8 @@ splitdrive()
 splitext()
 ----------
 
-.. py:method:: splitext(path) 
-    
+.. py:method:: splitext(path)
+
     Возвращает кортеж из пары строк - (путь к файлу без расширения, расширение файла)
 
     .. code-block:: py
@@ -239,10 +240,12 @@ splitext()
 walk()
 ------
 
-.. py:method:: walk(path, visit, arg) 
-    
+.. py:method:: walk(path, visit, arg)
+
     Вызывает функцию 'visit' передавая ей параметры
-    
+
+    .. note:: в 3 ветке перенесен в модуль :py:mod:`os`
+
     .. code-block:: py
 
         def listfiles(arg ,dirname , fnames):

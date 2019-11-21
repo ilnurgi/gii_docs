@@ -1,8 +1,17 @@
-android.view.View
-=================
+.. title:: android.view.View
 
+.. meta::
+    :description:
+        Справочная информация по android классу android.view.View().
+    :keywords:
+        android view View
 
-.. py:class:: android.view.View()
+.. py:currentmodule:: android.view
+
+View()
+======
+
+.. py:class:: View()
 
     Базовый класс для всех компонентов интерфейса
 
@@ -58,42 +67,33 @@ android.view.View
 
             });
 
+    .. py:class:: OnClickListener()
 
-OnClickListener
----------------
-
-.. py:class:: android.view.View.OnClickListener()
-
-    Интерфейс, обработчик нажатий элемента
+        Интерфейс, обработчик нажатий элемента
 
 
-    .. py:method:: onClick(view)
+        .. py:method:: onClick(view)
 
-        Обработчик элемента
+            Обработчик элемента
 
-        * view - :py:class:`android.view.View`
+            * view - :py:class:`android.view.View`
 
-        .. code-block:: java
+            .. code-block:: java
 
-            OnClickListener oclBtnOk = new OnClickListener() {
+                OnClickListener oclBtnOk = new OnClickListener() {
 
-                @Override
-                publick void onClick(View v){
-                    ...
+                    @Override
+                    publick void onClick(View v){};
                 };
-            };
 
 
-MeasureSpec
------------
-
-.. py:class:: android.view.View.MeasureSpec
+    .. py:class:: MeasureSpec()
 
 
-    .. py:attribute:: UNSPECIFIED
+        .. py:attribute:: UNSPECIFIED
 
 
-    .. py:method:: getMode(?)
+        .. py:method:: getMode(?)
 
 
-    .. py:method:: getSize(?)
+        .. py:method:: getSize(?)

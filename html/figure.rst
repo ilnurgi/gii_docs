@@ -1,8 +1,10 @@
 .. title:: html figure
 
 .. meta::
-    :description: html figure
-    :keywords: html figure
+    :description:
+        html figure
+    :keywords:
+        html figure
 
 .. _figure:
 

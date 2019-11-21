@@ -1,9 +1,9 @@
 .. title:: python importlib
 
 .. meta::
-    :description: 
+    :description:
         Справочная информация по модулю importlib.
-    :keywords: 
+    :keywords:
         python importlib
 
 .. py:module:: importlib

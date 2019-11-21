@@ -1,12 +1,12 @@
 .. title:: python asyncpg record
 
 .. meta::
-    :description: 
+    :description:
         Справочная информация по python библиотеке asyncpg, объект record.
-    :keywords: 
+    :keywords:
         python asynpg record
 
-.. py:module:: asyncpg
+.. py:currentmodule:: asyncpg
 
 Record
 ======

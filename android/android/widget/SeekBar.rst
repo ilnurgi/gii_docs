@@ -1,8 +1,15 @@
-android.widget.SeekBar
-======================
+.. title:: android.widget.SeekBar
 
-XML
----
+.. meta::
+    :description:
+        Справочная информация по android классу android.widget.SeekBar.
+    :keywords:
+        android widget SeekBar
+
+.. py:currentmodule:: android.widget
+
+SeekBar()
+=========
 
 .. code-block:: xml
 
@@ -21,11 +28,7 @@ XML
 
 * progress - текущее значение
 
-
-SeekBar
--------
-
-.. py:class:: android.widget.SeekBar
+.. py:class:: SeekBar()
 
     .. code-block:: java
 
@@ -47,25 +50,21 @@ SeekBar
 
         * listener - должен реализовывать интерфейс :py:class:`android.widget.SeekBar.OnSeekBarChangeListener`
 
+    .. py:class:: OnSeekBarChangeListener()
 
-OnSeekBarChangeListener
------------------------
-
-.. py:class:: android.widget.SeekBar.OnSeekBarChangeListener
-
-    Интерфейс, реализующий обработчик изменения
+        Интерфейс, реализующий обработчик изменения
 
 
-    .. py:method:: onProgressChanged(SeekBar seekBar, int progress, boolean fromUser)
+        .. py:method:: onProgressChanged(SeekBar seekBar, int progress, boolean fromUser)
 
-        * seekbar - :py:class:`android.widget.SeekBar`
-
-
-    .. py:method:: onStartTrackingTouch(SeekBar seekBar)
-
-        * seekbar - :py:class:`android.widget.SeekBar`
+            * seekbar - :py:class:`android.widget.SeekBar`
 
 
-    .. py:method:: onStopTrackingTouch(SeekBar seekBar)
+        .. py:method:: onStartTrackingTouch(SeekBar seekBar)
 
-        * seekbar - :py:class:`android.widget.SeekBar`
+            * seekbar - :py:class:`android.widget.SeekBar`
+
+
+        .. py:method:: onStopTrackingTouch(SeekBar seekBar)
+
+            * seekbar - :py:class:`android.widget.SeekBar`

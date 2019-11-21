@@ -1,10 +1,17 @@
-android.widget.LinerLayout
-==========================
+.. title:: android.widget.LinearLayout
+
+.. meta::
+    :description:
+        Справочная информация по android классу android.widget.LinearLayout.
+    :keywords:
+        android widget LinearLayout
+
+.. py:currentmodule:: android.widget
+
+LinerLayout()
+=============
 
 Контейнер, который распологает элементы внутри себя в линию по горизонтали или по вертикали.
-
-XML
----
 
 .. code-block:: xml
 
@@ -29,9 +36,6 @@ XML
 
     * vertical
     * horizontal
-
-Свойства, которыми могут обладать дочерние элементы
-+++++++++++++++++++++++++++++++++++++++++++++++++++
 
 * layout_gravity - выравнивание элемента в родителе
 
@@ -62,11 +66,7 @@ XML
     * wrap_content - по содержимому
     * 20 dp
 
-
-LinerLayout
------------
-
-.. py:class:: android.widget.LinerLayout
+.. py:class:: LinerLayout()
 
     Наследник :py:class:`android.view.ViewGroup`
 
@@ -106,22 +106,18 @@ LinerLayout
 
             linearLayout.setOrientation(LinearLayout.VERTICAL);
 
+    .. py:class:: LayoutParams()
 
-LinerLayout.LayoutParams
-------------------------
+        Настройки слоя
 
-.. py:class:: android.widget.LinerLayout.LayoutParams
+        Наследник :py:class:`android.view.ViewGroup.MarginLayoutParams`
 
-    Настройки слоя
+        .. code-block:: java
 
-    Наследник :py:class:`android.view.ViewGroup.MarginLayoutParams`
+            LinerLayout.LayoutParams linearLayout = new LinerLayout.LayoutParams(
+                ViewGroup.LayoutParams.WRAP_CONTENT,
+                ViewGroup.LayoutParams.WRAP_CONTENT);
+            linearLayout.leftMargin = 50;
 
-    .. code-block:: java
-
-        LinerLayout.LayoutParams linearLayout = new LinerLayout.LayoutParams(
-            ViewGroup.LayoutParams.WRAP_CONTENT,
-            ViewGroup.LayoutParams.WRAP_CONTENT);
-        linearLayout.leftMargin = 50;
-
-    .. py:attribute:: gravity
-    .. py:attribute:: weight
+        .. py:attribute:: gravity
+        .. py:attribute:: weight

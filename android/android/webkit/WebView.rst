@@ -1,8 +1,15 @@
-android.webkit.WebView
-======================
+.. title:: android.webkit.WebView
 
-XML
----
+.. meta::
+    :description:
+        Справочная информация по android классу android.webkit.WebView.
+    :keywords:
+        android webkit WebView
+
+.. py:currentmodule:: android.webkit
+
+WebView()
+=========
 
 .. code-block:: xml
 
@@ -13,11 +20,7 @@ XML
 
         android:id= "@+id/webView" />
 
-
-WebView
--------
-
-.. py:class:: android.webkit.WebView()
+.. py:class:: WebView()
 
     Элемент типа браузера
 
@@ -33,6 +36,3 @@ WebView
         .. code-block:: java
 
             webView.loadUrl("http://ilnurgi1.ru");
-
-
-

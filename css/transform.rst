@@ -91,5 +91,5 @@ translate3d()
 
     .class {
         transform: translateY(100px);
-        transform: translate(-2куьб 100%);
+        transform: translate(-2rem, 100%);
     }

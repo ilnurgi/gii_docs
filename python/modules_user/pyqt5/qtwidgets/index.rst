@@ -17,6 +17,7 @@ QtWidgets
     qapplication
     qdial
     qdialog
+    qdialogbuttonbox
     qformlayout
     qgridlayout
     qhboxlayout

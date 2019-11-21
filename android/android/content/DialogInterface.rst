@@ -1,31 +1,36 @@
-android.content.DialogInterface
-===============================
+.. title:: android.content.DialogInterface
 
+.. meta::
+    :description:
+        Справочная информация по android классу android.content.DialogInterface().
+    :keywords:
+        android content DialogInterface
 
-.. py:class:: android.content.DialogInterface()
+.. py:currentmodule:: android.content
 
+DialogInterface()
+=================
 
-OnClickListener
----------------
+.. py:class:: DialogInterface()
 
-.. py:class:: android.content.DialogInterface.OnClickListener()
+  .. py:class:: OnClickListener()
 
-    .. py:method:: onClick(DialogInterface dialog, int which)
+      .. py:method:: onClick(DialogInterface dialog, int which)
 
-        .. code-block:: java
+          .. code-block:: java
 
-            OnClickListener myClickListener = new OnClickListener() {
+              OnClickListener myClickListener = new OnClickListener() {
 
-                public void onClick(DialogInterface dialog, int which) {
-                  switch (which) {
-                  // положительная кнопка
-                  case Dialog.BUTTON_POSITIVE:
-                    break;
-                  // негаитвная кнопка
-                  case Dialog.BUTTON_NEGATIVE:
-                    break;
-                  // нейтральная кнопка
-                  case Dialog.BUTTON_NEUTRAL:
-                    break;
-                  }
-            }
+                  public void onClick(DialogInterface dialog, int which) {
+                    switch (which) {
+                    // положительная кнопка
+                    case Dialog.BUTTON_POSITIVE:
+                      break;
+                    // негаитвная кнопка
+                    case Dialog.BUTTON_NEGATIVE:
+                      break;
+                    // нейтральная кнопка
+                    case Dialog.BUTTON_NEUTRAL:
+                      break;
+                    }
+              }

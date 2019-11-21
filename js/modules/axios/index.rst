@@ -1,9 +1,9 @@
 .. title:: axios
 
 .. meta::
-    :description: 
+    :description:
         Описание библиотеки axios для осуществления http запросов.
-    :keywords: 
+    :keywords:
         axios
 
 axios
@@ -23,4 +23,3 @@ https://github.com/axios/axios
         log(response.data);
         // html data
     });
-    

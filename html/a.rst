@@ -1,3 +1,11 @@
+.. title:: html a
+
+.. meta::
+    :description:
+        Описание html элемента a
+    :keywords:
+        html a
+
 a
 =
 

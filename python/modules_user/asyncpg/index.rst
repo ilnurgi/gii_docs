@@ -1,9 +1,9 @@
 .. title:: python asyncpg
 
 .. meta::
-    :description: 
+    :description:
         Справочная информация по python библиотеке asyncpg.
-    :keywords: 
+    :keywords:
         python asynpg
 
 .. py:module:: asyncpg
@@ -17,6 +17,7 @@ asyncpg
     :maxdepth: 1
 
     connection/index
+    record
 
 connection()
 ------------

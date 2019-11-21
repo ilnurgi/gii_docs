@@ -321,7 +321,7 @@ box()
 boxplot()
 ---------
 
-.. py:fun:: boxplot()
+.. py:function:: boxplot()
 
 
 broken_barh()

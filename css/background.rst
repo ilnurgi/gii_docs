@@ -1,9 +1,9 @@
 .. title:: css background
 
 .. meta::
-    :description: 
+    :description:
         Описание стиля фона объектов
-    :keywords: 
+    :keywords:
         css background
 
 background
@@ -27,7 +27,7 @@ background
 
     <div style="width:100px;height:100px;background: linear-gradient(to top right, #FDB171, #FD987D);" />
 
-    
+
 background-attachment
 ---------------------
 

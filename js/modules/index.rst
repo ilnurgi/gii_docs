@@ -14,7 +14,7 @@
     :maxdepth: 1
 
     angular/index
-    axioa/index
+    axios/index
     chart_js
     cheerio/index
     droidscript/index

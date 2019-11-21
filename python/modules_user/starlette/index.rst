@@ -1,9 +1,9 @@
 .. title:: python starlette
 
 .. meta::
-    :description: 
+    :description:
         Справочная информация по python библиотеке starlette, асинхронный веб сервер.
-    :keywords: 
+    :keywords:
         python starlette
 
 starlette

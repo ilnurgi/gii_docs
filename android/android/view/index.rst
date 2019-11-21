@@ -1,5 +1,15 @@
-android.view
-============
+.. title:: android.view
+
+.. meta::
+    :description:
+        Справочная информация по android модулю android.view.
+    :keywords:
+        android view
+
+.. py:module:: android.view
+
+view
+====
 
 .. toctree::
     :maxdepth: 1

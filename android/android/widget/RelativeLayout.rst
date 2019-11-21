@@ -1,12 +1,18 @@
-android.widget.RelativeLayout
-=============================
+.. title:: android.widget.RelativeLayout
+
+.. meta::
+    :description:
+        Справочная информация по android классу android.widget.RelativeLayout.
+    :keywords:
+        android widget RelativeLayout
+
+.. py:currentmodule:: android.widget
+
+RelativeLayout()
+================
 
 Контейнер, позволяет задавать позицию каждого дочернего элемента
 относительного других элементов и границ экрана.
-
-
-XML
----
 
 .. code-block:: xml
 
@@ -26,9 +32,6 @@ XML
             android:id="@+id/label2" />
 
     </RelativeLayout>
-
-Свойства, которыми могут обладать дочерние элементы
-+++++++++++++++++++++++++++++++++++++++++++++++++++
 
 * layout_align... - выравнивание элемента относительно указанного
 
@@ -68,19 +71,12 @@ XML
     * wrap_content - по содержимому
 
 
-RelativeLayout
---------------
-
-.. py:class:: android.widget.RelativeLayout()
+.. py:class:: RelativeLayout()
 
     Наследник :py:class:`android.view.ViewGroup`
 
+    .. py:class:: LayoutParams()
 
-RelativeLayout.LayoutParams
----------------------------
+        Настройки слоя
 
-.. py:class:: android.widget.RelativeLayout.LayoutParams
-
-    Настройки слоя
-
-    Наследник :py:class:`android.view.ViewGroup.LayoutParams`
+        Наследник :py:class:`android.view.ViewGroup.LayoutParams`

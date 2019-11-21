@@ -1,12 +1,19 @@
-android.widget.TableLayout
-==========================
+.. title:: android.widget.TableLayout
+
+.. meta::
+    :description:
+        Справочная информация по android классу android.widget.TableLayout.
+    :keywords:
+        android widget TableLayout
+
+.. py:currentmodule:: android.widget
+
+TableLayout()
+=============
 
 Контейнер, распологает элементы с помощью сетки, таблицы, состоящей из строк и столбцов.
 
 При этом столбцы могут либо автоматически растягиваться, либо оставаться постоянной ширины.
-
-XML
----
 
 .. code-block:: xml
 
@@ -40,10 +47,6 @@ XML
 
 * stretchColumns
 
-
-Свойства, которыми могут обладать дочерние элементы
-+++++++++++++++++++++++++++++++++++++++++++++++++++
-
 * layout_height - высота элемента
 
     * match_parent - заполнить родителя
@@ -56,18 +59,11 @@ XML
     * wrap_content - по содержимому
     * 20 dp
 
-TableLayout
------------
+.. py:class:: TableLayout()
 
-.. py:class:: android.widget.TableLayout()
+    .. py:class:: LayoutParams()
 
+        Настройки слоя
 
-TableLayout.LayoutParams
-------------------------
-
-.. py:class:: android.widget.TableLayout.LayoutParams
-
-    Настройки слоя
-
-    Наследник :py:class:`android.view.ViewGroup.LayoutParams`
+        Наследник :py:class:`android.view.ViewGroup.LayoutParams`
 

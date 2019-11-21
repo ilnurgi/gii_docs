@@ -43,7 +43,7 @@
     heapq
     http/index
     imp
-    importlib
+    importlib/index
     inspect
     io
     ipaddress
@@ -88,6 +88,7 @@
     tkMessageBox
     traceback
     types
+    typing
     unittest/index
     urllib/index
     venv

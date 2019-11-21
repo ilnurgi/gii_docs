@@ -1,8 +1,15 @@
-android.widget.EditText
-=======================
+.. title:: android.widget.EditText
 
-XML
----
+.. meta::
+    :description:
+        Справочная информация по android классу android.widget.EditText.
+    :keywords:
+        android widget EditText
+
+.. py:currentmodule:: android.widget
+
+EditText()
+==========
 
 .. code-block:: xml
 
@@ -21,10 +28,7 @@ XML
 
     * numberDecimal - только цифры и запятая
 
-EditText
---------
-
-.. py:class:: android.widget.EditText
+.. py:class:: EditText()
 
     Редактируемое поле для ввода текста.
 

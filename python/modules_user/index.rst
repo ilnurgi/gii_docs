@@ -23,8 +23,9 @@
     django/index
     docx
     flask/index
-    flask-marshmallow/index
-    flask-sqlalchemy/index
+    flask_marshmallow/index
+    flask_restful/index
+    flask_sqlalchemy/index
     fuel/index
     jinja2
     line_profiler
@@ -50,6 +51,7 @@
     pyside2/index
     pytest
     pyqt/index
+    pyqt5/index
     redis
     requests/index
     serial

@@ -1,8 +1,10 @@
 .. title:: html nav
 
 .. meta::
-    :description: html nav
-    :keywords: html nav
+    :description:
+        html nav
+    :keywords:
+        html nav
 
 .. _nav:
 
@@ -13,6 +15,4 @@ nav
 
 .. code-block:: html
 
-    <nav>
-        ...
-    </nav>
+    <nav></nav>

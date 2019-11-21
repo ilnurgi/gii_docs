@@ -1,9 +1,9 @@
 .. title:: html
 
 .. meta::
-    :description: 
+    :description:
         Описание языка разметки веб страниц html
-    :keywords: 
+    :keywords:
         html
 
 HTML
@@ -40,7 +40,7 @@ HTML документ состоит из тегов.
 
 
 .. code-block:: html
-   
+
     <!DOCTYPE>
 
     <html>

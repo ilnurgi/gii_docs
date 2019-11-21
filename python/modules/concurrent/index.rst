@@ -1,16 +1,15 @@
 .. title:: python concurrent
 
 .. meta::
-    :description: 
+    :description:
         Справочная информация по python библиотеке concurrent.
-    :keywords: 
+    :keywords:
         python concurrent
 
 .. py:module:: concurrent
 
 concurrent
 ==========
-
 
 .. toctree::
     :maxdepth: 1

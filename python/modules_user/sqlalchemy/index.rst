@@ -93,6 +93,7 @@ sqlalchemy
 .. toctree::
     :maxdepth: 2
 
+    meta
     engine/index
     dialects/index
     inspection/index
@@ -109,7 +110,7 @@ create_engine()
     Возвращает объект :py:class:`sqlalchemy.engine.Engine()`, для работы с базой данных
 
     * **url** - строка, подключение к базе данных
-    * ***echo* - булево, включить логирование запросов
+    * **echo** - булево, включить логирование запросов
 
     .. code-block:: py
 

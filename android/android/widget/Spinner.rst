@@ -1,8 +1,15 @@
-android.widget.Spinner
-======================
+.. title:: android.widget.Spinner
 
-XML
----
+.. meta::
+    :description:
+        Справочная информация по android классу android.widget.Spinner.
+    :keywords:
+        android widget Spinner
+
+.. py:currentmodule:: android.widget
+
+Spinner()
+=========
 
 .. code-block:: xml
 
@@ -12,11 +19,7 @@ XML
         android:layout_height="wrap_content">
     </Spinner>
 
-
-Spinner
--------
-
-.. py:class:: android.widget.Spinner()
+.. py:class:: Spinner()
 
     Составной элемент, отображающий TextView
     в сочетании с соответствующим представлением ListView,

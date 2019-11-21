@@ -1,9 +1,9 @@
 .. title:: pyqt qtgui qpainter
 
 .. meta::
-    :description: 
-      Справочная информация по модулю PyQt.QtGui.QPainter.
-    :keywords: 
+    :description:
+      Справочная информация по python модулю PyQt.QtGui.QPainter.
+    :keywords:
       pyqt qtgui qpainter
 
 .. py:currentmodule:: PyQt.QtGui
@@ -13,7 +13,7 @@ QPainter
 
 .. py:class:: QPainter()
 
-    
+
     .. py:attribute:: device
 
 

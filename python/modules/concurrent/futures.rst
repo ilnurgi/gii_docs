@@ -1,9 +1,9 @@
 .. title:: python concurrent futures
 
 .. meta::
-    :description: 
+    :description:
         Справочная информация по python библиотеке concurrent.futures.
-    :keywords: 
+    :keywords:
         python concurrent futures
 
 .. py:module:: concurrent.futures

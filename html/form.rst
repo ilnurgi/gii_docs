@@ -1,9 +1,9 @@
 .. title:: html form
 
 .. meta::
-    :description: 
+    :description:
         Описание html элемента form
-    :keywords: 
+    :keywords:
         html form
 
 form
@@ -12,7 +12,7 @@ form
 Интерактивная форма
 
 .. code-block:: html
-    
+
     <form></form>
 
 
@@ -73,7 +73,6 @@ target
 * _top
 * _parent
 * _self
-    
 
 
 button
@@ -97,7 +96,7 @@ button
 
 * formaction
 
-    .. note:: HTML5    
+    .. note:: HTML5
 
     Ссылка обработчик кнопки
 

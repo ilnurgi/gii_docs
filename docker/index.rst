@@ -40,7 +40,7 @@ build
 
     $ docker build ./
 
-    $ docker build ./ -t "name:tag"    
+    $ docker build ./ -t "name:tag"
 
 
 exec
@@ -58,7 +58,7 @@ exec
     ...
 
     $ docker exec -it 123123123 bash
-    root@123123123:/# 
+    root@123123123:/#
 
 
 images
@@ -110,7 +110,7 @@ logs
 
     $ docker logs -f 123123123
     127...
-    127... 
+    127...
 
 
 pause/unpause
@@ -189,7 +189,7 @@ run
     # запустить контейнер nginx
     # зпустить bash внутри контейнера
     $ docker run -it nginx bash
-    root@:/# 
+    root@:/#
 
 .. code-block:: sh
 
@@ -207,11 +207,11 @@ run
     asdasdaskjdasjdasd
 
     $ docker run -p 8080:80  -p 443:443 -d nginx
-    
+
     $ docker run -v ~/project:/app nginx
 
     $ docker run -e "HOME=/app" nginx
-    
+
     $ docker run --env-file=.env nginx
 
 .. code-block:: sh
