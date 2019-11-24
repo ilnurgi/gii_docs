@@ -19,17 +19,13 @@
                 justify-content: space-around;
             }
             .items {
-                display: flex;
-                flex-wrap: wrap;
-                justify-content: space-around;
-                align-items: center;
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
             }
             .item {
-                flex: 1 1 160px;
                 border-radius: 10%;
-
                 margin: 10px;
-                
+
                 display: flex;
                 flex-direction: column;
                 align-items: center;
