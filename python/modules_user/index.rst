@@ -20,6 +20,7 @@
     bottle
     celery
     coverage
+    cx_freeze/index
     django/index
     docx
     flask/index
