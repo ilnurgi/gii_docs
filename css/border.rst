@@ -1,9 +1,9 @@
 .. title:: css border
 
 .. meta::
-    :description: 
+    :description:
         Описание стиля границ объектов
-    :keywords: 
+    :keywords:
         css border
 
 border
@@ -150,11 +150,22 @@ border-radius
 
 .. code-block:: text
 
-    border-radius: 
-        border-top-right-radius 
+    border-radius:
+        border-top-right-radius
         border-bottom-right-radius
         border-bottom-left-radius
         border-top-left-radius
+
+    border-radius:
+        top-left-up
+        top-right-up
+        bottom-right-down
+        bottom left-down
+        /
+        top-left-left
+        top-right-right
+        bottom-right-right
+        bottom-left-left
 
 .. code-block:: css
 
@@ -162,7 +173,7 @@ border-radius
     border-radius: 15px 10px 25px 5px;
 
 .. raw:: html
-    
+
     <div style="width:100px;height:100px;border:1px solid red;border-radius: 15px 10px 25px 5px;"></div>
 
 .. code-block:: css
@@ -171,7 +182,7 @@ border-radius
     border-radius: 30%;
 
 .. raw:: html
-    
+
     <div style="width:100px;height:100px;border:1px solid red;border-radius: 30%;"></div>
 
 .. code-block:: css

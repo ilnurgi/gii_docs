@@ -79,6 +79,7 @@ HTML документ состоит из тегов.
     article
     aside
     blockquote
+    details
     div
     em
     figure
