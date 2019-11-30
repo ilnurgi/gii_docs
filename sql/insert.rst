@@ -3,7 +3,7 @@ INSERT
 
 Оператор добавления записи в таблицу 
 
-.. code-block:: c
+.. code-block:: text
 	
 	INSERT 
 		[OR <алгоритм>]
@@ -31,28 +31,38 @@ INSERT
 	* `ROLLBACK` - при ошибке, транзакция завершается с откатом всех изменений, дальнейшее выполнение прерывается и выводится сообщение об ошибке. Если активной транзакций нет, то используется алгоритм `ABORT`
 
 
-.. code-block:: c
+.. code-block:: sql
 		
-	INSERT INTO table VALUES (1, 'hi', 'hello')
+	INSERT INTO 
+	  table 
+	VALUES 
+	  (1, 'hi', 'hello');
 
-	# вствка значений в определенные столбцы
-	INSERT INTO table(id, name) VALUES (1, 'hi')
+	-- вствка значений в определенные столбцы
+	INSERT INTO 
+	  table(id, name) 
+	VALUES 
+	  (1, 'hi');
 
-	# вставка значение из выборки
-	INSERT INTO table 
-		SELECT 
-			* 
-		FROM table2
+	-- вставка значение из выборки
+	INSERT INTO 
+	  table 
+    SELECT 
+	  * 
+	FROM 
+	  table2;
 
- 
+
 REPLACE INTO
 ------------
 
-.. code-block:: c
+.. code-block:: text
 
 	REPLACE INTO 
 		[<название БД>.]<название табюлицы>
 		[(<поле1>, <поле2>, ...)]
 		VALUES (<значение1>, <значение2>, ...)
+
+.. code-block:: sql
 
 	REPLACE INTO table VALUES(3, 'text')

@@ -1,7 +1,7 @@
-.. py:module:: java.lang.io
+.. py:module:: java.lang
 
-java.lang.io - составляет основу для всех других классов.
-=========================================================
+java.lang
+=========
 
 Данный пакет неявным образом импортируется везде.
 
@@ -13,7 +13,7 @@ java.lang.io - составляет основу для всех других к
    Boolean
    Byte   
    Character
-   class
+   Class
    ClassLoader
    Compiler
    Double
@@ -22,17 +22,17 @@ java.lang.io - составляет основу для всех других к
    Long
    Math
    Number
-   object
+   Object
    Process
    Runtime
    Short
    SecurityManager
-   string
-   stringbuffer
+   String
+   Stringbuffer
    System
-   thread
-   threadgroup
-   throwable
+   Thread
+   Threadgroup
+   Throwable
    reflect/Constructor
    reflect/Field
    reflect/Method
@@ -42,8 +42,10 @@ java.lang.io - составляет основу для всех других к
 .. toctree::
    :maxdepth: 2
 
+   CharSequence
    Cloneable
    Comparable
    Runnable
-
+   StringBuilder
+   Void
    

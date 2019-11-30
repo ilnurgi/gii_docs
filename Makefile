@@ -91,9 +91,9 @@ devhelp:
 	@echo "# devhelp"
 
 epub:
-	$(SPHINXBUILD) -b epub $(ALLSPHINXOPTS) $(BUILDDIR)/epub
+	$(SPHINXBUILD) -b epub $(ALLSPHINXOPTS) $(BUILDDIR)/html
 	@echo
-	@echo "Build finished. The epub file is in $(BUILDDIR)/epub."
+	@echo "Build finished. The epub file is in $(BUILDDIR)/html."
 
 latex:
 	$(SPHINXBUILD) -b latex $(ALLSPHINXOPTS) $(BUILDDIR)/latex

@@ -1,19 +1,21 @@
-.. py:module:: java.io
+.. py:currentmodule:: java.io
 
-ByteArrayOutputStream - поток, записывающий данные в массив байт
-===============================================
+ByteArrayOutputStream
+=====================
+
+поток, записывающий данные в массив байт
 
 
 .. py:class:: ByteArrayOutputStream()
 
-    Наследник :py:class::`java.io.OutputStream`
+    Наследник :py:class:`java.io.OutputStream`
 
 
     .. py:method:: toByteArray()
 
         Возвращает записанные в массив данные
 
-    ::
+    .. code-block:: java
 
         ByteArrayOutputStream out = new ByteArrayOutputStream();
         out.write(10);

@@ -1,8 +1,20 @@
+.. title:: javascript dom
+
+.. meta::
+    :description: 
+        Описание bom, объектной модели браузера веб страницы.
+    :keywords: 
+        javascript bom
+
 BOM
 ===
 
-BOM - объектная модель раузера, browser object model.
+Browser Object Model - объектная модель браузера
 
 .. toctree::
-    :maxdepth: 2
+    :maxdepth: 1
+
+    fetch
+    Navigator
+    ServiceWorkerContainer
 

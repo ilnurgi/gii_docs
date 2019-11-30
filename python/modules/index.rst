@@ -1,19 +1,30 @@
-Основные модули
-===============
+.. title:: python modules base
 
-Содержание:
+.. meta::
+    :description:
+        Справочная информация по базовым модулям python.
+    :keywords:
+        python,
+        python packages
+
+Базовые модули
+==============
 
 .. toctree::
     :maxdepth: 1
 
     abs
+    aiohttp
+    argparse
     array
+    asyncio
     atexit
     binascii
     bisect
     calendar
     cmath
     collections
+    concurrent/index
     configparser
     contextlib
     copy
@@ -32,18 +43,20 @@
     heapq
     http/index
     imp
+    importlib/index
     inspect
     io
     ipaddress
     itertools
     json
+    keyword
     locale
+    logging/index
     marshal
     math
     multiprocessing
     numbers
-    os
-    ospath
+    os/index
     pathlib
     pdb
     pickle
@@ -54,7 +67,9 @@
     setuptools
     shelve
     shutil
+    signal
     simplehttpserver
+    smtplib
     socket
     socketserver
     sqlite3
@@ -73,9 +88,12 @@
     tkMessageBox
     traceback
     types
+    typing
     unittest/index
     urllib/index
+    venv
     warnings
     weakref
+    webbrowser
     xml_sax_saxutils
     zipfile

@@ -1,7 +1,13 @@
-.. py:module:: QtCore
+.. title:: PyQt4.QtCore.QPointF
 
-QPointF - объект, точка (для работы с вещественными числами)
-============================================================
+.. meta::
+    :description: PyQt4.QtCore.QPointF
+    :keywords: PyQt4.QtCore.QPointF
+
+.. py:currentmodule:: PyQt4.QtCore
+
+QPointF
+=======
 
 .. py:class:: QPointF(x, y)
 

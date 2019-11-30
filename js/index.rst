@@ -1,3 +1,11 @@
+.. title:: javascript
+
+.. meta::
+    :description:
+        Описание языка программирования javascript и его дополнительных модулей.
+    :keywords:
+        javascript
+
 JavaScript
 ==========
 
@@ -29,10 +37,11 @@ JavaScript - язык программирования сценариев (scrip
 
 
 .. toctree::
-    :maxdepth: 2
+    :maxdepth: 1
 
     base/index
     dom/index
     bom/index
-    frameworks/index
+    modules/index
+    ts
    

@@ -1,9 +1,9 @@
-.. py:module:: java.util
+.. py:currentmodule:: java.util
 
 AbstratctList
-====
+=============
 
-Этот класс расширяет :py:class::`java.util.AbstractCollection` и реализует интерфейс List.
+Этот класс расширяет :py:class:`java.util.AbstractCollection` и реализует интерфейс List.
 
 Для реализации создания не модифицируемого списка необходимо имплементировать
 методы `public Object get(int index)` и `public int size()`. 
@@ -15,7 +15,7 @@ AbstratctList
 
 .. py:class:: AbstratctList()
 
-    Наследник :py:class::`java.util.AbstratctCollection`
+    Наследник :py:class:`java.util.AbstratctCollection`
 
     .. py:method:: get()
     .. py:method:: set()

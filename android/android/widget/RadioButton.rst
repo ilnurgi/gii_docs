@@ -1,13 +1,20 @@
-android.widget.RadioButton
-==========================
+.. title:: android.widget.RadioButton
+
+.. meta::
+    :description:
+        Справочная информация по android классу android.widget.RadioButton.
+    :keywords:
+        android widget RadioButton
+
+.. py:currentmodule:: android.widget
+
+RadioButton()
+=============
 
 Переключатель, поддерживающий два состояния и группировку.
 
 Группы таких переключателей пользователь видит как набор двоичных вариантов,
 из которых в определенный момент времени может быть выбран только один.
-
-XML
----
 
 .. code-block:: xml
 
@@ -30,11 +37,7 @@ XML
 
     </RadioGroup>
 
-
-RadioButton
------------
-
-.. py:class:: android.widget.RadioButton
+.. py:class:: RadioButton()
 
     Наследник :py:class:`android.view.View`
 

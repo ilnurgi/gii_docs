@@ -1,7 +1,13 @@
-.. py:module:: QtCore
+.. title:: PyQt4.QtCore.QObject
 
-QObject - базовый класс для всех объектов модуля
-================================================
+.. meta::
+    :description: PyQt4.QtCore.QObject
+    :keywords: PyQt4.QtCore.QObject
+
+.. py:currentmodule:: PyQt4.QtCore
+
+QObject
+=======
 
 
 .. py:class:: QObject()

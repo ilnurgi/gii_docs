@@ -1,38 +1,28 @@
-Конспекты
-=========
+.. title:: Конспекты по технологиям
+
+.. meta::
+    :description: it notes
+    :keywords: it notes
+
+Технологии
+==========
 
 .. toctree::
     :maxdepth: 1
 
     android/index
-    angular/index
     arduino/index
-    bootstrap/index
     css/index
-    django/index
-    droidscript/index
-    flask/index
-    fuel/index
+    docker/index
     git/index
     html/index
     java/index
-    jquery/index
     js/index
     kotlin/index
-    less/index
     linux/index
-    nodejs/index
     nginx/index
-    openstack/index
-    p4a/index
-    postgres/index
     puppet/index
-    pys60/index
     python/index
     re/index
-    react/index
-    saas/index
-    smart_grid/index
     sql/index
-    styles/index
     svg/index

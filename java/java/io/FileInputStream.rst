@@ -1,16 +1,17 @@
-.. py:module:: java.io
+.. py:currentmodule:: java.io
 
-FileInputStream - поток, считывающий данные из файла
-===============================================
+FileInputStream
+===============
 
+поток, считывающий данные из файла
 
 .. py:class:: FileInputStream()
 
-    Наследник :py:class::`java.io.InputStream`
+    Наследник :py:class:`java.io.InputStream`
 
-    Возбуждает исключение :py:class::`java.io.FileNotFoundException`
+    Возбуждает исключение :py:class:`java.io.FileNotFoundException`
 
-    ::
+    .. code-block:: java
 
         byte[] bytesToWrite = {1, 2, 3};
         byte[] bytesReaded = new byte[10];

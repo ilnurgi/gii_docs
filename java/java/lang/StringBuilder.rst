@@ -1,4 +1,15 @@
-.. py:module:: java.lang
+.. title:: java.lang.StringBuilder
+
+.. meta::
+    :description lang=ru: java.lang.StringBuilder
+    :description lang=en: java.lang.StringBuilder
+    :keywords lang=ru: java.lang.StringBuilder
+    :keywords lang=en: java.lang.StringBuilder
+
+.. py:currentmodule:: java.lang
+
+StringBulder
+============
 
 .. py:class:: StringBulder
 

@@ -6,7 +6,7 @@ ALTER TABLE
 
 изменяет структуру таблицы
 
-.. code-block:: c
+.. code-block:: text
 
 	ALTER TABLE 
 		[<название БД>.]<таблица> 
@@ -16,7 +16,7 @@ ALTER TABLE
 	
 	* `RENAME TO <новое имя>` - переименовывает таблицу
 
-		.. code-block:: c
+		.. code-block:: sql
 
 			ALTER TABLE table RENAME TO table1
 

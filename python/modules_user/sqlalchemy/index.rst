@@ -1,3 +1,11 @@
+.. title:: python sqlalchemy
+
+.. meta::
+    :description:
+        Справочная информация по python модулю sqlalchemy.
+    :keywords:
+        python sqlalchemy
+
 .. py:module:: sqlalchemy
 
 sqlalchemy
@@ -81,3 +89,31 @@ sqlalchemy
     # ['id', 'user_id', 'title', 'text', 'is_publised']
     post = session.query(Post).first() # select from posts
     print(post.user.username) # select from users
+
+.. toctree::
+    :maxdepth: 2
+
+    meta
+    engine/index
+    dialects/index
+    inspection/index
+    schema/index
+    sql/index
+    types/index
+
+
+create_engine()
+---------------
+
+.. py:function:: create_engine(url, **kwargs)
+
+    Возвращает объект :py:class:`sqlalchemy.engine.Engine()`, для работы с базой данных
+
+    * **url** - строка, подключение к базе данных
+    * **echo** - булево, включить логирование запросов
+
+    .. code-block:: py
+
+        engine = create_engine('sqlite:///:memory:', echo=True)
+        engine = create_engine('sqlite:///some.db')
+

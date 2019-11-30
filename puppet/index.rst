@@ -41,11 +41,11 @@ Puppet
 .. code-block:: puppet
 
    if condition {
-      ...
+      a=0
    } elsif condition {
-      ...
+      a=0
    } else {
-      ...
+      a=0
    }
 
 

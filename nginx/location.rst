@@ -3,7 +3,7 @@
 location
 ========
 
-.. code-block:: json
+.. code-block:: nginx
 
     http {
         server {
@@ -49,7 +49,7 @@ expires
 
 Время кеша ресурса в браузере
 
-.. code-block:: js
+.. code-block:: nginx
     
     # 1 месяц
     expires 1M;
@@ -61,7 +61,7 @@ expires
 rewrite
 -------
 
-.. code-block:: js
+.. code-block:: nginx
 
     rewrite ^ /index.html;
 
@@ -69,7 +69,7 @@ rewrite
 root
 ----
 
-.. code-block::js
+.. code-block:: nginx
 
     root /var/ww/ilnurgi/;
 
@@ -77,6 +77,6 @@ root
 try_files 
 ---------
 
-.. code-block:: js
+.. code-block:: nginx
 
     try_files $uri =404;

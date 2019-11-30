@@ -1,3 +1,11 @@
+.. title:: python redis
+
+.. meta::
+    :description: 
+        Справочная информация по python модулю redis
+    :keywords: 
+        python redis
+
 .. py:module:: redis
 
 redis
@@ -15,6 +23,14 @@ redis
     import redis
 
     conn = redis.Redis()
+
+.. code-block:: py
+
+    redis_db = redis.StrictRedis(host=host, port=port, db=0)
+
+    # список ключей в базе
+    redis_db.keys()
+
 
 .. code-block:: py
 
@@ -60,7 +76,6 @@ redis
     conn.expireat("key1", 1233354354)
 
 
-
 .. code-block:: py
 
     conn.set('key3', 0)
@@ -88,6 +103,7 @@ redis
 
     conn.incrbyfloat('key4', -0.5)
     # 102.5
+
 
 .. code-block:: py
 

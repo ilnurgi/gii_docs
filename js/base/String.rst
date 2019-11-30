@@ -1,8 +1,16 @@
-String - строки
-===============
+.. title:: js string
+
+.. meta::
+    :description:
+        Описание javascript объекта string
+    :keywords:
+        js string
+
+String
+======
 
 .. js:class:: String()
-    
+
     Строки
 
     Наследник :js:class:`Object`
@@ -40,7 +48,7 @@ String - строки
         .. code-block:: js
 
             'ilnurgi'.length;
-            // 7        
+            // 7
 
 
     .. js:function:: charAt(index)
@@ -345,6 +353,28 @@ String - строки
     .. js:function:: trim()
 
         Возвращает копию строки, с удаленными пробелами вначале и в конце
+
+        .. code-block:: js
+
+            '   ilnurgi   '.trim() === 'ilnurgi'
+
+
+    .. js:function:: trimEnd()
+
+        Возвращает копию строки, с удаленными пробелами в конце
+
+        .. code-block:: js
+
+            '   ilnurgi   '.trimEnd() === '   ilnurgi'
+
+
+    .. js:function:: trimStart()
+
+        Возвращает копию строки, с удаленными пробелами в начале
+
+        .. code-block:: js
+
+            '   ilnurgi   '.trimStart() === 'ilnurgi   '
 
 
 Интерполяция

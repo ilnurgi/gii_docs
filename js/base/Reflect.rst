@@ -1,9 +1,20 @@
-Reflect - исследование и обаботка свойств объектов
-==================================================
+.. title:: js reflect
+
+.. meta::
+    :description:
+        Описание javascript объекта reflect
+    :keywords:
+        js ref
+
+
+Reflect
+=======
 
 .. note:: EcmaScript6
 
 .. py:class:: Reflect()
+
+    исследование и обаботка свойств объектов
 
     .. py:function:: apply(function, this, args)
 
@@ -153,7 +164,7 @@ Reflect - исследование и обаботка свойств объек
         .. code-block:: js
 
             Reflect.ownKeys(obj);
-            
+
 
     .. py:function:: preventExtensions(object)
 

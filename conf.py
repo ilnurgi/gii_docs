@@ -11,9 +11,9 @@
 # All configuration values have a default; values that are commented out
 # serve to show the default.
 
-import datetime
-import os
-import sys
+from datetime import date
+
+from htmlmin import minify
 
 # If extensions (or modules to document with autodoc) are in another directory,
 # add these directories to sys.path here. If the directory is relative to the
@@ -27,7 +27,9 @@ import sys
 
 # Add any Sphinx extension module names here, as strings. They can be extensions
 # coming with Sphinx (named 'sphinx.ext.*') or your custom ones.
-extensions = []
+extensions = [
+    'sphinx.ext.autosectionlabel',
+]
 
 # Add any paths that contain templates here, relative to this directory.
 templates_path = ['_templates']
@@ -50,7 +52,7 @@ copyright = 'ilnurgi'
 # built documents.
 #
 # The short X.Y version.
-version = u'{0.year}.{0.month:02}.{0.day:02}'.format(datetime.datetime.now())
+version = date.today().strftime('%Y.%m')
 # The full version, including alpha/beta/rc tags.
 release = version
 
@@ -66,7 +68,7 @@ release = version
 
 # List of patterns, relative to source directory, that match files and
 # directories to ignore when looking for source files.
-exclude_patterns = ['_build']
+exclude_patterns = ['_build', '.vscode', 'venv', '_static', '_templates', 'test']
 
 # The reST default role (used for this markup: `text`) to use for all documents.
 #default_role = None
@@ -108,7 +110,7 @@ html_theme_options = {
 
 # The name for this set of Sphinx documents.  If None, it defaults to
 # "<project> v<release> documentation".
-html_title = u'{0} от {1}'.format(project, release)
+html_title = '{0} ({1})'.format(project, release)
 
 # A shorter title for the navigation bar.  Default is the same as html_title.
 #html_short_title = None
@@ -245,3 +247,52 @@ texinfo_documents = [
 
 # How to display URL addresses: 'footnote', 'no', or 'inline'.
 #texinfo_show_urls = 'footnote'
+
+
+def setup(app):
+    """
+    :type app: sphinx.application.Sphinx
+    """
+
+    from typing import Dict, Any
+
+    from sphinx.builders.html import StandaloneHTMLBuilder
+    from sphinx.builders.epub3 import Epub3Builder
+
+
+    class GiiHtmlBuilder(StandaloneHTMLBuilder):
+        """"""
+
+        copysource = False
+
+        def create_template_bridge(self):
+            from sphinx.jinja2glue import BuiltinTemplateLoader
+
+            class MinifyBuiltinTemplateLoader(BuiltinTemplateLoader):
+
+                def render(self, template, context):
+                    output = self.environment.get_template(template).render(context)
+                    return minify(output)
+
+            self.templates = MinifyBuiltinTemplateLoader()
+
+        def update_page_context(
+                self, pagename: str, templatename: str, ctx: Dict, event_arg: Any
+        ):
+            super().update_page_context(pagename, templatename, ctx, event_arg)
+
+            ctx['current_date'] = date.today().strftime('%d.%m.%Y')
+
+
+    class GiiEpub3Builder(Epub3Builder):
+        """"""
+
+        def update_page_context(
+                self, pagename: str, templatename: str, ctx: Dict, event_arg: Any
+        ):
+            super().update_page_context(pagename, templatename, ctx, event_arg)
+
+            ctx['current_date'] = date.today().strftime('%d.%m.%Y')
+
+    app.add_builder(GiiHtmlBuilder, StandaloneHTMLBuilder.name)
+    app.add_builder(GiiEpub3Builder, Epub3Builder.name)

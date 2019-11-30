@@ -1,3 +1,13 @@
+.. title:: html blockquote
+
+.. meta::
+    :description:
+        html blockquote
+    :keywords:
+        html blockquote
+
+.. _blockquote:
+
 blockquote
 ==========
 
@@ -7,6 +17,4 @@ blockquote
 
 .. code-block:: html
 
-    <blockquote cite="http://ilnurgi1.ru">
-        ...
-    </blockquote>
+    <blockquote cite="http://ilnurgi1.ru"></blockquote>

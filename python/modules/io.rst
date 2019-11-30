@@ -1,11 +1,23 @@
+.. title:: python module io
+
+.. meta::
+    :description: 
+        Справочная информация по модулю io, python.    
+    :keywords: 
+        python,
+        python io
+
 .. py:module:: io
 
 io
 ==
 
+StringIO()
+---------
+
 .. py:class:: StringIO([<начальное значение>][, newline=None])
 
-	данный класс позволяет раьотать со строкой как с файловым объектом
+	Файлоподбный объект
 
 
 	.. py:method:: close()
@@ -68,6 +80,9 @@ io
 
 		записывате последовательность в файл
 
+
+BytesIO()
+---------
 
 .. py:class:: BytesIO([<начальное значение>])
 

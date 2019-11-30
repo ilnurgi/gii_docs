@@ -1,7 +1,7 @@
-.. py:module:: java.util
+.. py:currentmodule:: java.util
 
 AbstratctMap
-====
+============
 
 Этот класс расширяет реализует основную функциональность определенную в интерфейсе Map 
 

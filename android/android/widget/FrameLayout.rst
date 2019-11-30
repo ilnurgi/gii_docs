@@ -1,12 +1,19 @@
-android.widget.FrameLayout
-==========================
+.. title:: android.widget.FrameLayout
+
+.. meta::
+    :description:
+        Справочная информация по android классу android.widget.FrameLayout.
+    :keywords:
+        android widget FrameLayout
+
+.. py:currentmodule:: android.widget
+
+FrameLayout()
+=============
 
 Контейнер, прикрепляет каждый элемент к верхнему левому углу экрана.
 
 Каждый новый элемент накладывается на предыдущий, заслоняя его.
-
-XML
----
 
 .. code-block:: xml
 
@@ -28,9 +35,6 @@ XML
 
     </FrameLayout>
 
-Свойства, которыми могут обладать дочерние элементы
-+++++++++++++++++++++++++++++++++++++++++++++++++++
-
 * layout_height - высота элемента
 
     * match_parent - заполнить родителя
@@ -43,19 +47,12 @@ XML
 
     * wrap_content - по содержимому
 
-FrameLayout
------------
-
-.. py:class:: android.widget.FrameLayout
+.. py:class:: FrameLayout()
 
     Наследник :py:class:`android.view.ViewGroup`
 
+    .. py:class:: LayoutParams()
 
-FrameLayout.LayoutParams
-------------------------
+        Настройки слоя
 
-.. py:class:: android.widget.FrameLayout.LayoutParams
-
-    Настройки слоя
-
-    Наследник :py:class:`android.view.ViewGroup.LayoutParams`
+        Наследник :py:class:`android.view.ViewGroup.LayoutParams`

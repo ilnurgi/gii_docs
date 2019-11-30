@@ -1,7 +1,8 @@
-.. py:module:: java.io
+.. py:currentmodule:: java.io
 
-DataInput - интерфейс 
-================================================
+DataInput
+=========
 
+.. py:class:: DataInput()
 
-.. py:class:: DataInputStream()
+    интерфейс

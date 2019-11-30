@@ -1,4 +1,10 @@
-.. py:module:: pygame
+.. title:: pygame Screen
+
+.. meta::
+    :description: python Screen
+    :keywords: python Screen
+
+.. py:currentmodule:: pygame
 
 Screen
 ======
@@ -10,7 +16,7 @@ Screen
         screen = pygame.Screen((400, 400)
 
 
-    .. py:module:: blit(surface, rect)
+    .. py:method:: blit(surface, rect)
 
         Выводит изображение на экран
 
@@ -19,7 +25,7 @@ Screen
             screen.blit(image_surface, image_rect)
 
 
-    .. py:module:: get_rect()
+    .. py:method:: get_rect()
 
         Возвращает :py:class:`Rect`
 

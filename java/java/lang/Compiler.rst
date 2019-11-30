@@ -1,6 +1,8 @@
-.. py:module:: java.lang
+.. py:currentmodule:: java.lang
 
-Compiler - используется для поддержки Just-in-Time компиляторов
-============================================================
+Compiler
+========
+
+используется для поддержки Just-in-Time компиляторов
 
 .. py:class:: Compiler()

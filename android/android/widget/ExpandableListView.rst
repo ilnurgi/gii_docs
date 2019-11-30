@@ -1,9 +1,15 @@
-android.widget.ExpandableListView
-=================================
+.. title:: android.widget.ExpandableListView
 
+.. meta::
+    :description:
+        Справочная информация по android классу android.widget.ExpandableListView.
+    :keywords:
+        android widget ExpandableListView
 
-XML
----
+.. py:currentmodule:: android.widget
+
+ExpandableListView()
+====================
 
 .. code-block:: xml
 
@@ -15,10 +21,7 @@ XML
         android:id= "@+id/elvMain" />
 
 
-ExpandableListView
-------------------
-
-.. py:class:: android.widget.ExpandableListView()
+.. py:class:: ExpandableListView()
 
     .. code-block:: java
 
@@ -88,53 +91,37 @@ ExpandableListView
 
             expListView.setOnGroupExpandListener(new OnGroupExpandListener(){})
 
+    .. py:class:: OnChildClickListener()
 
-OnChildClickListener
---------------------
-
-.. py:class:: android.widget.ExpandableListView.OnChildClickListener()
-
-    Интерфейс слушателя события клика элемента
+        Интерфейс слушателя события клика элемента
 
 
-    .. py:method:: onChildClick(ExpandableListView parent, View view, int groupPosition, int childPosition, long id)
+        .. py:method:: onChildClick(ExpandableListView parent, View view, int groupPosition, int childPosition, long id)
 
-        Обработчик
+            Обработчик
 
+    .. py:class:: OnGroupClickListener()
 
-OnGroupClickListener
---------------------
-
-.. py:class:: android.widget.ExpandableListView.OnGroupClickListener()
-
-    Интерфейс слушателя события клика группы
+        Интерфейс слушателя события клика группы
 
 
-    .. py:method:: onGroupClick(ExpandableListView parent, View view, int groupPosition, long id)
+        .. py:method:: onGroupClick(ExpandableListView parent, View view, int groupPosition, long id)
 
-        Обработчик
-
-
-OnGroupCollapseListener
------------------------
-
-.. py:class:: android.widget.ExpandableListView.OnGroupCollapseListener()
-
-    Интерфейс слушателя события сворачивания группы
-
-    .. py:method:: onGroupCollapse(int groupPosition)
-
-        Обработчик
+            Обработчик
 
 
-OnGroupExpandListener
----------------------
+    .. py:class:: OnGroupCollapseListener()
 
-.. py:class:: android.widget.ExpandableListView.OnGroupExpandListener()
+        Интерфейс слушателя события сворачивания группы
 
-    Интерфейс слушателя события пазворачивания группы
+        .. py:method:: onGroupCollapse(int groupPosition)
 
-    .. py:method:: onGroupExpand(int groupPosition)
+            Обработчик
 
-        Обработчик
+    .. py:class:: OnGroupExpandListener()
 
+        Интерфейс слушателя события пазворачивания группы
+
+        .. py:method:: onGroupExpand(int groupPosition)
+
+            Обработчик

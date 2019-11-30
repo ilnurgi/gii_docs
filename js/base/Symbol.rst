@@ -1,5 +1,13 @@
-Symbol - символ
-===============
+.. title:: js symbol
+
+.. meta::
+    :description:
+        Описание javascript объекта symbol
+    :keywords:
+        js symbol
+
+Symbol
+======
 
 .. note:: ECMAScript6
 
@@ -26,7 +34,6 @@ Symbol - символ
 
     Symbol.for('1') == Symbol.for('1')
     // true
-
 
 
 .. js:class:: Symbol()
@@ -91,10 +98,12 @@ Symbol - символ
 
             [...users]
             // [...]
-            
+
 
     .. js:attribute:: match
 
+    .. js:attribute:: prototype
+    
     .. js:attribute:: replace
 
     .. js:attribute:: search
@@ -134,7 +143,7 @@ Symbol - символ
     .. js:attribute:: toPrimitive
 
     .. js:attribute:: toStringTag
-    
+
     .. js:attribute:: unscopables
 
     .. py:function:: for(string)

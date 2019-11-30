@@ -1,0 +1,59 @@
+html {
+    /*страница по выстое экрана*/
+    height: 100%;
+}
+body {
+    display: flex;
+    flex-direction: column;
+    /*страница по высоте монитора*/
+    min-height: 100%;
+}
+div.gsidebar {
+    float: initial;
+    width: initial;
+    position: initial;
+    bottom: initial;
+}
+div.gsidebar > ul > li > a {
+    visibility: hidden;
+}
+div.gsidebar > ul > li {
+    margin-top: -15px;
+}
+div.gsidebar ul ul {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    max-height: 100px;
+    align-content: flex-start;
+}
+div.gsidebar ul ul li{
+    margin-right: 20px;
+}
+div.gdocument {
+    flex: 1;
+    background-color: #ffffff;
+}
+div.body {
+    max-width: initial;
+    min-width: initial;
+    padding: 0;
+}
+div.body > h1, div.body > h2 {
+    margin: 0;
+}
+div.body-search p, div.body-search form{
+    padding: 0 10px;
+}
+div#search-results {
+    margin: 0 20px;
+}
+div.section > h1 {
+    margin: -10px -10px 0 -10px;
+}
+div.section > h2 {
+    margin: 0 -20px 0 -20px;
+}
+div.section {
+    padding: 10px;
+}

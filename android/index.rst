@@ -1,3 +1,11 @@
+.. title:: android
+
+.. meta::
+    :description:
+        Справочная информация по android.
+    :keywords:
+        android
+
 Android
 =======
 

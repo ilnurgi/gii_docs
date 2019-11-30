@@ -6,7 +6,7 @@ CREATE TABLE
 
 Оператор создает таблицу
 
-.. code-block:: c
+.. code-block:: text
 
     CREATE 
         [TEMP | TEMPORARY] TABLE [IF NOT EXISTS] 
@@ -67,34 +67,35 @@ CREATE TABLE
 * `ROLLBACK` - при ошибке, транзакция завершается с откатом всех изменений, дальнейшее выполнение прерывается и выводится сообщение об ошибке. Если активной транзакций нет, то используется алгоритм `ABORT`
 
 
-.. code-block:: c
+.. code-block:: sql
     
     CREATE TABLE table (
-        snum int, 
-        sname char(10),        
-        sname char(10) DEFAULT='123',
-        snum1 integer UNIQUE,
-        snum2 integer NOT NULL,
-        snum3 integer PRIMARY KEY,
-        snum4 integer REFERENCES table1,
-        comm decimal CHECK(comm<1),
-        comm1 decimal CHECK(comm in (1,2,3,4)),
+        snum int
+        , sname char(10)
+        , sname char(10) DEFAULT='123'
+        , snum1 integer UNIQUE
+        , snum2 integer NOT NULL
+        , snum3 integer PRIMARY KEY
+        , snum4 integer REFERENCES table1
+        , comm decimal CHECK(comm<1)
+        , comm1 decimal CHECK(comm in (1,2,3,4))
         
-        # вариант определения уникальных полей, уникальность смотрится по комбинации по полям
+        -- вариант определения уникальных полей, уникальность смотрится по комбинации по полям
         UNIQUE(snum2, snum3),
         
-        # аналогично unique
+        -- аналогично unique
         PRIMARY KEY(snum2, snum3) 
         
-        # аналогично unique
+        -- аналогично unique
         FOREIGN KEY (snum) REFERENCES Salespeople
     )
+
 
 CREATE INDEX
 ------------
 
 Оператор создает таблицу индексов
     
-.. code-block:: c
+.. code-block:: text
 
     CREATE [UNIQUE] INDEX <таблицаИндексов> ON <таблица>(<столбец>)

@@ -1,7 +1,13 @@
-.. py:module:: QtCore
+.. title:: PyQt4.QtCore.QPoint
 
-QPoint - объект, точка
-======================
+.. meta::
+    :description: PyQt4.QtCore.QPoint
+    :keywords: PyQt4.QtCore.QPoint
+
+.. py:currentmodule:: PyQt4.QtCore
+
+QPoint
+======
 
 .. py:class:: QPoint(x=0, y=0)
 .. py:class:: QPoint(qpoint)

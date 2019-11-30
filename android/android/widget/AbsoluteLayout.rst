@@ -1,10 +1,17 @@
-android.widget.AbsoluteLayout
-=============================
+.. title:: android.widget.AbsoluteLayout
+
+.. meta::
+    :description:
+        Справочная информация по android классу android.widget.AbsoluteLayout.
+    :keywords:
+        android widget AbsoluteLayout
+
+.. py:currentmodule:: android.widget
+
+AbsoluteLayout()
+================
 
 Контейнер, который распологает элементы по абсолютным значениям
-
-XML
----
 
 .. code-block:: xml
 
@@ -26,38 +33,28 @@ XML
 
     </AbsoluteLayout>
 
-Свойства, которыми могут обладать дочерние элементы
-+++++++++++++++++++++++++++++++++++++++++++++++++++
+* **layout_height** - высота элемента
 
-* layout_height - высота элемента
+    * **match_parent** - заполнить родителя
 
-    * match_parent - заполнить родителя
+    * **wrap_content** - по содержимому
 
-    * wrap_content - по содержимому
+* **layout_width** - ширина элемента
 
-* layout_width - ширина элемента
+    * **match_parent** - заполнить родителя
 
-    * match_parent - заполнить родителя
+    * **wrap_content** - по содержимому
 
-    * wrap_content - по содержимому
+* **layout_x** - абсолютная координата расположения элемента
 
-* layout_x - абсолютная координата расположения элемента
+* **layout_y** - абсолютная координата расположения элемента
 
-* layout_y - абсолютная координата расположения элемента
-
-AbsoluteLayout
---------------
-
-.. py:class:: android.widget.AbsoluteLayout
+.. py:class:: AbsoluteLayout()
 
     Наследник :py:class:`android.view.ViewGroup`
 
+    .. py:class:: android.widget.AbsoluteLayout.LayoutParams
 
-AbsoluteLayout.LayoutParams
----------------------------
+        Настройки слоя
 
-.. py:class:: android.widget.AbsoluteLayout.LayoutParams
-
-    Настройки слоя
-
-    Наследник :py:class:`android.view.ViewGroup.LayoutParams`
+        Наследник :py:class:`android.view.ViewGroup.LayoutParams`

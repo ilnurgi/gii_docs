@@ -1,5 +1,15 @@
-android.widget
-==============
+.. title:: android.widget
+
+.. meta::
+    :description:
+        Справочная информация по android модулю android.widget.
+    :keywords:
+        android widget
+
+.. py:module:: android.widget
+
+widget
+======
 
 .. toctree::
     :maxdepth: 1

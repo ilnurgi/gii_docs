@@ -1,5 +1,9 @@
 _build
+_build_epub
+_build_html
 .idea/
 .vscode/
 venv/
 env/
+*.log
+t_*.py

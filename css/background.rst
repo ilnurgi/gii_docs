@@ -1,5 +1,13 @@
-Фон
-===
+.. title:: css background
+
+.. meta::
+    :description:
+        Описание стиля фона объектов
+    :keywords:
+        css background
+
+background
+==========
 
 background
 ----------
@@ -8,14 +16,18 @@ background
 
 .. code-block:: css
 
-    body {
-        background: #333 url(images/logo.gif) no-repeat fixed left top;
-    }
+    background: #333 url(images/logo.gif) no-repeat fixed left top;
+    background: url(images/logo.gif) no-repeat center cover;
 
-    body {
-        background: url(images/logo.gif) no-repeat center cover;
-    }
-    
+.. code-block:: css
+
+    background: linear-gradient(to top right, #FDB171, #FD987D);
+
+.. raw:: html
+
+    <div style="width:100px;height:100px;background: linear-gradient(to top right, #FDB171, #FD987D);" />
+
+
 background-attachment
 ---------------------
 
@@ -79,6 +91,14 @@ URL изображения
 
     div {
         background-image: url(images/photo.jpg);
+    }
+
+    /* image-set плохая поддержка браузеров */
+    div {
+        background-image: image-set(
+            url(images/ilnurgi.png) 1x,
+            url(images/ilnurgi-2x.png) 2x
+        );
     }
 
 
@@ -153,5 +173,6 @@ background-size
 
     div {
         background-size: 200px 400px;
+        background-size: cover;
     }
     

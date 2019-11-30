@@ -1,14 +1,18 @@
-Python
+.. title:: python
+
+.. meta::
+    :description:
+        Справочная информация по python.
+    :keywords:
+        python
+
+python
 ======
 
-Мои конспекты по python.
-
-Описание базовых модулей и сторонних.
-
-Содержание:
+Описание синтаксиа языка, базовых и сторонних модулей.
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 1
 
    base/index
    modules/index

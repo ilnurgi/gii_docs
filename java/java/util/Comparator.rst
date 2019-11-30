@@ -1,8 +1,7 @@
-.. py:module:: java.util
+.. py:currentmodule:: java.util
 
-Comparator - интерфейс
-===
-
+Comparator
+==========
 
 .. py:class:: Comparator()
 

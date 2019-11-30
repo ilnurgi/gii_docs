@@ -1,5 +1,24 @@
-Строки
-======
+.. title:: python str
+
+.. meta::
+    :description:
+        Справочная информация по строкам языка программирования python.
+    :keywords:
+        python str
+
+str
+===
+
+.. code-block:: py
+
+    user = 'ilnurgi'
+    db = date(1987, 1, 28)
+    f'{user=} {db=}'
+    # user=ilnurgi db=datetime.date(1987, 1, 28)
+
+    x = 42
+    f'{x:5}+{x:15f}'
+    # '   42+      42.000000'
 
 str
 ---
@@ -132,9 +151,9 @@ str
 
 
     .. py:method:: capitalize()
-    
+
         Возвращает новую строку, :py:class:`str`, у которой первая буква заменена на прописную
-        
+
         .. code-block:: py
 
             'ilnur'.capitalize()
@@ -154,9 +173,9 @@ str
 
 
     .. py:method:: count(sub [, start [, end]])
-        
+
         Возвращает :py:class:`int`, количество вхождений искомой строки в исходной строке.
-        
+
         .. code-block:: py
 
             'Help me! Help!'.count('Help')
@@ -164,10 +183,10 @@ str
 
 
     .. py:method:: decode([coding, errors])
-        
+
         Возвращает новую юникодную строку, :py:class:`unicode`,
         раскодированная из указанной кодировки в юникод.
-            
+
         .. code-block:: py
 
             '\xd0\xb8\xd0\xbb\xd1\x8c\xd0\xbd\xd1\x83\xd1\x80'.decode('utf-8')
@@ -175,10 +194,10 @@ str
 
 
     .. py:method:: encode([coding, errors])
-        
+
         Возвращает новую строку, :py:class:`str`,
         закодированную из юникода в указанную кодировку.
-        
+
         .. code-block:: py
 
             u'Ильнур'.encode('cp1251')
@@ -186,7 +205,7 @@ str
 
 
     .. py:method:: endswith(sub[, start [, end]])
-        
+
         Возвращает :py:class:`bool`, строка заканчивается c искомой строки
 
         .. code-block:: py
@@ -199,10 +218,10 @@ str
 
 
     .. py:method:: expandtabs([tabsize=8])
-        
+
         Возвращает новую строку, :py:class:`str`,
         символы табуляции заменены указанным количеством пробелов.
-        
+
         .. code-block:: py
 
             u'\tИльнур'.expandtabs()
@@ -210,10 +229,10 @@ str
 
 
     .. py:method:: find(sub[, start [, end]])
-        
+
         Возвращает :py:class:`int`, позиция, в котором встречается искомая строка,
         если ничего не найдено возвращает -1, поиск ведется слева.
-        
+
         .. code-block:: py
 
             'ilnur'.find('nur')
@@ -224,10 +243,10 @@ str
 
 
     .. py:method:: format(*args, **kwargs)
-        
+
         Возвращает новую строку, :py:class:`str`,
         форматированную в соответствии с переданными параметрами
-        
+
         Синтаксис: `{[Поле][!Функция][:Формат]}`
 
         Синтаксис формата: `[[Заполнитель] Выравнивание] [Знак] [#] [0] [Ширна] [,] [.Точность] [Преобразование]`
@@ -247,7 +266,7 @@ str
                 * '=' - знак числа по левому краю, число по правому
 
                 .. code-block:: py
-                
+
                     '{0:<10.2f}\n{0:^10.2f}\n{0:>10.2f}'.format(pi)
                     """
                     '3.14      '
@@ -301,7 +320,7 @@ str
                 * `d` - десятичное значение
                 * `n` - аналогично `d`, но с учетом локали
                 * `o` - восьмиричное значение
-                * `x`, 'X' - шестнадцатиричное значение 
+                * `x`, 'X' - шестнадцатиричное значение
                 * `f`, `F` - вещественное число в десятичном представлении
                 * `e`, `E` - вещественное число в экспоненциальной форме
                 * `g`, `G` - эквивалентно `f`, `e` или `E` (выбирается более короткая запись числа)
@@ -318,7 +337,7 @@ str
 
                     '{:g}'.format(42)
                     # '42'
-                    
+
                     '{:#g}'.format(42)
                     # '42.0000'
 
@@ -352,15 +371,15 @@ str
             # '      3.14, 0000003.14'
 
             'one million is {0:,}'.format(1000000)
-            # '1,000,000'  
+            # '1,000,000'
 
 
     .. py:method:: index(sub [, start [, end]])
-        
+
         Возвращает :py:class:`int`, позиция, в котором встречается искомая строка,
         если ничего не найдено вызовет исключение :py:class:`ValueError`,
         поиск ведется слева.
-        
+
         .. code-block:: py
 
             'ilnur'.index('nur')
@@ -375,9 +394,9 @@ str
 
 
     .. py:method:: isalpha()
-        
+
         Возвращает :py:class:`bool`, строка содержит только буквы
-        
+
         .. code-block:: py
 
             '123'.isalpha()
@@ -388,14 +407,14 @@ str
 
 
     .. py:method:: isalnum()
-        
+
         Возвращает :py:class:`bool`, строка содержит только буквы и цифры
-        
+
 
     .. py:method:: isdigit()
-        
+
         Возвращает :py:class:`bool`, строка содержит только цифры
-        
+
         .. code-block:: py
 
             '123'.isdigit()
@@ -403,20 +422,20 @@ str
 
             'ilnur'.isdigit()
             # False
-        
+
 
     .. py:method:: isdecimal()
-        
+
         Возвращает :py:class:`bool`, строка содержит только десятичные символы
-        
+
 
     .. py:method:: islower()
 
         Возвращает :py:class:`bool`, строка содержит только строчные буквы
-        
+
 
     .. py:method:: isnumeric()
-        
+
         Возвращает :py:class:`bool`, строка содержит только числовые символы
 
         .. code-block:: py
@@ -432,7 +451,7 @@ str
 
 
     .. py:method:: isspace()
-        
+
         Возвращает :py:class:`bool`, строка содержит только пробельные символы
 
         .. code-block:: py
@@ -475,9 +494,9 @@ str
 
 
     .. py:method:: lower()
-        
+
         Возвращает новую строку :py:class:`str`, в нижнем регистре
-        
+
         .. code-block:: py
 
             'iLnur'.lower()
@@ -485,7 +504,7 @@ str
 
 
     .. py:method:: lstrip([chrs=" "])
-        
+
         Возвращает новую строку :py:class:`str`, с удаленными пробелами слева
 
         .. code-block:: py
@@ -512,7 +531,7 @@ str
 
             "wordl word2 wordЗ".partition(" ")
             # ('wordl', ' ', 'word2 word3')
-        
+
             "wordl word2 wordЗ".partition("\n")
             # ('wordl word2 wordЗ', '', '')
 
@@ -586,10 +605,10 @@ str
 
 
     .. py:method:: rstrip([chrs=" "])
-        
+
         Возвращает новую строку :py:class:`str`,
         с удаленными пробелами справа
-       
+
         .. code-block:: py
 
             ' ilnur privet '.rstrip()
@@ -607,7 +626,7 @@ str
 
 
     .. py:method:: splitlines([keepends=1])
-        
+
         Возвращает :py:class:`list`, аналогично :py:meth:`split`,
         но использующий в качестве разделителя переход на новую строку.
 
@@ -620,8 +639,8 @@ str
             # ['Hello World!', 'Hello!']
 
 
-    .. py:method:: startswith(sub[, start [, end]])
-        
+    .. py:method:: startswith(iterable_sub[, start [, end]])
+
         Возвращает :py:class:`bool`, если строка начинается c искомой строки
 
         .. code-block:: py
@@ -630,6 +649,12 @@ str
             # True
 
             'ilnur'.startswith('nur')
+            # False
+
+            'ilnur'.startswith(('i', 'a', 'b'))
+            # True
+
+            'ilnur'.startswith(('a', 'b'))
             # False
 
 
@@ -645,7 +670,7 @@ str
 
 
     .. py:method:: swapcase()
-        
+
         Возвращает новую строку :py:class:`str`,
         в которой регистр букв изменен с верхнего на нижний и наоборот.
 
@@ -656,7 +681,7 @@ str
 
 
     .. py:method:: title()
-        
+
         Возвращает новую строку :py:class:`str`,
         в которой регистр букв соответствует заголовку.
 
@@ -681,7 +706,7 @@ str
             # s = 'РимеР'
 
     .. py:method:: upper()
-        
+
         Возвращает новую строку :py:class:`str`, в верхнем регистре
 
         .. code-block:: py
@@ -691,7 +716,7 @@ str
 
 
     .. py:method:: zfill(width)
-        
+
         Возвращает новую строку :py:class:`str`,
         заданной длины, пустое пространство слева заполнится нулями
 

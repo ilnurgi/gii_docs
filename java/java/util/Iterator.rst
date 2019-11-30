@@ -1,7 +1,7 @@
-.. py:module:: java.util
+.. py:currentmodule:: java.util
 
 Iterator
-====
+========
 
 
 .. py:class:: Iterator()

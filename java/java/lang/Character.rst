@@ -1,4 +1,4 @@
-.. py:module:: java.lang
+.. py:currentmodule:: java.lang
 
 Character - класс обертка над char
 ==================================

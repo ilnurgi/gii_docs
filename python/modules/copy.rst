@@ -1,3 +1,9 @@
+.. title:: python copy
+
+.. meta::
+    :description: python copy
+    :keywords: python copy
+
 .. py:module:: copy
 
 copy

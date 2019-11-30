@@ -1,10 +1,11 @@
-.. py:module:: java.io
+.. py:currentmodule:: java.io
 
-DataInputStream - поток для работы с примитивами
-================================================
-
+DataInputStream
+===============
 
 .. py:class:: DataInputStream()
+
+    поток для работы с примитивами
 
     Наследник :py:class::`java.io.InputStream`
 

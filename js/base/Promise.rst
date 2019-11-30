@@ -1,5 +1,13 @@
-Promise - асинхронная операция
-==============================
+.. title:: js promise
+
+.. meta::
+    :description:
+        Описание javascript объекта promise
+    :keywords:
+        js promise
+
+Promise
+=======
 
 .. note:: EcmaScript6
 
@@ -66,7 +74,7 @@ Promise - асинхронная операция
 
         Возвращает объект Promise сразу, как только один из объектов будет выполнен или отклонен
 
-        
+
     .. js:function:: reject(value)
 
         Преобразует значение в отклоненный объект Promise.

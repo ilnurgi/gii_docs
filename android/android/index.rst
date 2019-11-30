@@ -1,8 +1,18 @@
+.. title:: android
+
+.. meta::
+    :description:
+        Справочная информация по android модулю android.
+    :keywords:
+        android
+
+.. py:module:: android
+
 android
 =======
 
 .. toctree::
-    :maxdepth: 2
+    :maxdepth: 1
 
     app/index
     content/index

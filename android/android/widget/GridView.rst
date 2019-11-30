@@ -1,8 +1,15 @@
-android.widget.GridView
-=======================
+.. title:: android.widget.GridView
 
-XML
----
+.. meta::
+    :description:
+        Справочная информация по android классу android.widget.GridView.
+    :keywords:
+        android widget GridView
+
+.. py:currentmodule:: android.widget
+
+GridView()
+==========
 
 .. code-block:: xml
 
@@ -12,10 +19,6 @@ XML
         android:layout_height="wrap_content"
 
         android:id="@+id/greedView" />
-
-
-GridView
---------
 
 .. py:class:: android.widget.GridView()
 

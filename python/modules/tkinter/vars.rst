@@ -1,4 +1,10 @@
-.. py:module:: tkinter
+.. title:: tkinter vars
+
+.. meta::
+    :description: tkinter vars
+    :keywords: tkinter vars
+
+.. py:currentmodule:: tkinter
 
 Переменные
 ==========

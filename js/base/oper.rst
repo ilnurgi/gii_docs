@@ -1,33 +1,33 @@
-Операторы
+.. title:: js operators
+
+.. meta::
+    :description:
+        Описание операторов javascript
+    :keywords:
+        js operators
+
+
+Operators
 =========
 
 
 Логические
 ----------
 
-======== ========
-оператор описание
-======== ========
-||       или
-&&       И
-!        не
-======== ========
+.. code-block:: js
+
+    // или
+    ||
+
+    // и
+    &&
+
+    // не
+    !
 
 
-Битовые 
+Битовые
 -------
-
-======== ========
-Оператор Описание
-======== ========
-&        И (AND)
-\|        ИЛИ (OR)
-^        XOR
-~        НЕ (NOT)
-<<       Shift Left
->>       Shift Right
-\>>>     Shift Right
-======== ========
 
 .. code-block:: js
 
@@ -90,13 +90,9 @@
 
 .. code-block:: js
 
-    if (){
-        ...
-    } else if () {
-        ...
-    } else () {
-
-    }
+    if (){}
+    else if () {}
+    else () {}
 
 .. code-block:: js
 
@@ -121,19 +117,13 @@
 
 .. code-block:: js
 
-    for (var i=0, max = myarray.length; i < max; i++){
-        console.log(i);
-    }
+    for (var i=0, max = myarray.length; i < max; i++){}
 
     // итерация по ключам объекта
-    for (attr in {}) {
-        console.log(attr);
-    }
+    for (attr in {}) {}
 
     // итерация по значениям списка
-    for (let prop of [12, 13, 14]){
-        console.log(prop);
-    }
+    for (let prop of [12, 13, 14]){}
 
 .. code-block:: js
 
@@ -145,9 +135,7 @@
 
 .. code-block:: js
 
-    do {
-        ...
-    } while (...)
+    do {} while (...)
 
 .. note:: EcmaScript6
 
@@ -155,12 +143,10 @@
 
         // обход значений итерируемого объекта
         function* gf(){
-            yield 1; 
-            yield 2; 
+            yield 1;
+            yield 2;
         }
-        for (let value of gf()){
-            ...
-        }
+        for (let value of gf()){}
 
     .. code-block:: js
 
@@ -307,13 +293,13 @@ let
 Объявление переменных с областью видимости в пределах блока и возможностью инициализации их значений
 
 Отличие от :ref:`var`:
-    
+
     * переменная доступна только внутри блока
 
     * переменную повторно нельзя объявить в той области видимости
 
 .. code-block:: js
-    
+
     function some() {
         if (true){
             // переменная доступная только в условии
@@ -363,7 +349,7 @@ use strict
 
 .. _var:
 
-var 
+var
 ---
 
 Объявляет переменную, доступную внутри области видимости функции

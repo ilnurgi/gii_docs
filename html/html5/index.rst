@@ -1,3 +1,9 @@
+.. title:: html5
+
+.. meta::
+    :description: html5
+    :keywords: html5
+
 HTML5
 =====
 
@@ -5,20 +11,11 @@ HTML5
     :maxdepth: 1
 
     globals_attr
-    article
-    aside
     audio
     canvas
-    datalist
-    details
-    figure
     footer
-    header
     hgroup
-    input
-    main
+    mark
     meter
-    nav
     progress
-    time
     video

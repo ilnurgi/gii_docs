@@ -1,5 +1,19 @@
-svg
+.. title:: svg
+
+.. meta::
+    :description:
+        Описание svg
+    :keywords:
+        svg
+
+SVG
 ===
+
+.. toctree::
+    :maxdepth: 1
+
+    circle
+    ellipse
 
 * class -
 * height -
@@ -37,37 +51,10 @@ svg
     </svg>
 
 
-circle
-------
-
-.. code-block:: xml
-
-    <circle
-        cx="100"
-        cy="100"
-        r="50"
-        style="stroke: #286D85; stroke-width: 3; fill: #3F8528;"
-        />
-
-
 defs
 ----
 
 Элемент не отображается на холсте, но будет отображаться если на неё сослаться через xlink:href.
-
-ellipse
--------
-
-.. code-block:: xml
-
-    <ellipse
-        cx="150"
-        cy="100"
-        rx="100"
-        ry="50"
-        style="stroke: #286D85; stroke-width: 3; fill: #3F8528; fill-rule: nonzero;"
-        />
-
 
 g
 -

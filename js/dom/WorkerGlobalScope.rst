@@ -63,4 +63,4 @@ WorkerGlobalScope
 
     .. py:function:: setTimeout(any handler, [any timeout], any args...)
 
-        В точ­но­сти со­от­вет­ст­ву­ет од­но­имен­но­му ме­то­ду объ­ек­та Window.
+        В точ­но­сти со­от­вет­ст­ву­ет од­но­имен­но­му ме­то­ду объ­ек­та Window, :js:func:`setTimeout()`

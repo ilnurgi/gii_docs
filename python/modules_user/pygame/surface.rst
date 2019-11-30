@@ -1,4 +1,10 @@
-.. py:module:: pygame
+.. title:: python Surface
+
+.. meta::
+    :description: python Surface
+    :keywords: python Surface
+
+.. py:currentmodule:: pygame
 
 Surface
 =======

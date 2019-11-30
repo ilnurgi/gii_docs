@@ -1,15 +1,33 @@
-Array - массив
-==============
+.. title:: js array
 
+.. meta::
+    :description:
+        Описание javascript объекта Array.
+    :keywords:
+        js array
+
+Array
+=====
+
+Array()
+-------
 
 .. js:class:: Array()
-.. js:class:: Array(размер)
-.. js:class:: Array(элемент0, элемент1, ...)
 
-    Массив 
+    Массив
 
     Наследник :js:class:`Object`
-    
+
+    .. code-block:: js
+
+        var arr = new Array();
+
+        var arr = new Array('hey', 'you');
+
+        var arr = new Array(3);
+
+        var arr = [];
+
     .. code-block:: js
 
         var array = [];
@@ -24,9 +42,9 @@ Array - массив
         cities[3] = 'abakan';
         cities.length;
         // 4
-        
+
         cities;
-        //['moscow', 'kazan', '', 'abakan']
+        // ['moscow', 'kazan', '', 'abakan']
 
         cities.length = 2;
         cities;
@@ -38,50 +56,43 @@ Array - массив
 
     .. code-block:: js
 
-        var a = new Array();
-
-        var b = new Array('hey', 'you');
-
-        var c = new Array(3);
-
         var a = [];
         a[5] = 5;
-        for (var x in a){ 
+        for (var x in a){
             // выведет только 5
-            ...
         }
         for (var i=0; i<a.length; i++){
             // выведет все 5 элементов
-            ...
         }
 
-    .. note:: EcmsScript6
+    .. code-block:: js
 
-        .. code-block:: js
+        let [a, b, c] = [1, 2, 3];
 
-            let [a, b, c] = [1, 2, 3];
+        let [a, , b] = [1, 2, 3];
+        console.log(a, b);
+        // 1, 3
 
-            let [a, , b] = [1, 2, 3];
-            console.log(a, b);
-            // 1, 3
+        let [a, ...b] = [1, 2, 3, 4];
+        console.log(b);
+        // [2, 3, 4]
 
-            let [a, ...b] = [1, 2, 3, 4];
-            console.log(b);
-            // [2, 3, 4]
+        let [a, , , ...b] = [1, 2, 3, 4, 5, 6];
+        console.log(b);
+        // [4, 5, 6]
 
-            let [a, , , ...b] = [1, 2, 3, 4, 5, 6];
-            console.log(b);
-            // [4, 5, 6]
+        let newArray = [...oldArray, newValue];
+        let uniqFruits = [...new Set(fruitsList)];
 
 
     .. py:attribute:: length
 
         Возвращает число, количество элементов в массиве
-        
+
         .. code-block:: js
 
-            ['moscow', 'kazan'].length; 
-            // 2  
+            ['moscow', 'kazan'].length;
+            // 2
 
 
     .. py:method:: concat(item...)
@@ -95,8 +106,8 @@ Array - массив
 
             var a = [1, 2, 3];
 
-            a.concat([4, 5], 'end'); 
-            // [1, 2, 3, 4, 5, 'end']  
+            a.concat([4, 5], 'end');
+            // [1, 2, 3, 4, 5, 'end']
 
             a.concat([4, 5]);
             // [1, 2, 3, 4, 5]
@@ -229,7 +240,35 @@ Array - массив
             }, 12);
             // 1
 
-        
+
+    ..py:method:: flat(dim)
+
+        .. versionadded:: ES2019
+
+        Преобразует многомерный массив в одномерный на заданную максимальную глубину
+
+        .. code-block:: py
+
+            [
+                [1, 2, 3],
+                [4, 5, 6],
+                [7, [8, 9]],
+            ].flat(2) === [1, 2, 3, 4, 5, 6, 7, 8, 9]
+
+
+    ..py:method:: flatMap()
+
+        .. versionadded:: ES2019
+
+        .. code-block:: py
+
+            const texts = ["Hello,", "today I", "will", "use FlatMap"];
+
+            texts.map(text => text.split(' ')) === ['Hello', ['today', 'I'], 'will', ['use', 'FlatMap']];
+
+            texts.flatMap(text => text.split(' ')) === ['Hello', 'today', 'I', 'will', 'use', 'FlatMap'];
+
+
     .. py:method:: forEach(callback[, this])
 
         Вызывает функцию-обработчик для каждого элемента массива
@@ -240,7 +279,7 @@ Array - массив
 
             [1, 2, 3].forEach(function(item, index, array){
                 ...
-            }); 
+            });
 
 
     .. py:method:: from(iterable, function, this)
@@ -269,48 +308,44 @@ Array - массив
         объединенные через разделитель
 
         .. versionadded:: ECMAScript5
-        
+
         .. code-block:: js
 
             [1,2,3].join('');
             // '123'
 
 
-    .. js:method:: includes(value)
+    .. py:method:: includes(value, fromIndex=0)
 
         Возвращает булево, есть ли объект в массиве
 
         .. code-block:: js
 
-            var array1 = [1, 2, 3];
-
-            array1.includes(2);
+            [1, 2, 3].includes(2);
             // true
 
-            var pets = ['cat', 'dog', 'bat'];
-
-            pets.includes('cat');
+            ['cat', 'dog', 'bat'].includes('cat');
             // true
 
-            pets.includes('at');
+            ['cat', 'dog', 'bat'].includes('at');
             // false
 
 
-    .. py:method:: indexOf(значение[, int pos=0])
+    .. py:method:: indexOf(value, pos=0)
 
-        Возвращает число, позиция элемента в массиве
+        Возвращает число, индекс элемента в массиве
 
         .. versionadded:: ECMAScript5
 
         .. code-block:: js
 
-            ['a','b','c'].indexOf('b');   
+            ['a','b','c'].indexOf('b');
             // 1
-            
-            ['a','b','c'].indexOf('d');   
+
+            ['a','b','c'].indexOf('d');
             // -1
 
-            ['a','b','c'].indexOf('a', 1); 
+            ['a','b','c'].indexOf('a', 1);
             // -1
 
 
@@ -338,10 +373,10 @@ Array - массив
 
             [1, 2, 3].map(function(item, index, array) {
                 return item * item;
-            }); 
+            });
             // [1, 4, 9]
 
-            
+
     .. py:method:: of(values...)
 
         Создает массив из 1 значения
@@ -372,7 +407,7 @@ Array - массив
             c;
             // [1,2]
 
-            
+
     .. py:method:: push(item...)
 
          Добавляет объект в конец массива и возвращает количесвто элементов в массиве
@@ -520,7 +555,7 @@ Array - массив
         .. code-block:: js
 
             var c = [1, 2, 3, 4, 5];
-            
+
             c.splice(1,2);
             // [2, 3]
 
@@ -566,3 +601,161 @@ Array - массив
     let mIterator = mArray[Symbol.iterator]();
     mIterator.next();
     // {value: 10, done: false}
+
+
+ArrayBuffer()
+-------------
+
+.. py:class:: ArrayBuffer(size)
+
+
+    .. versionadded:: EcmaScript6
+
+    Буферный массив - это коллекция 8 битовых блоков в памяти.
+
+    Размер определяется при его создании и не может увеличиваться динамический.
+
+    Буферные массивы могут хранить только числа.
+
+    В момент создания буферного массива все его блоки инициализируются нулями.
+
+    Для чтения и записи данных в буфер используют :py:class:`DataView`
+
+    .. code-block:: js
+
+        let buffer = new ArrayBuffer(80);
+
+
+    .. py:attribute:: byteLength
+
+        Длина в байтах последовательности
+
+
+ArrayTyped()
+------------
+
+.. py:class:: ArrayTyped(size)
+
+    .. note:: EcmaScript6
+
+    .. code-block:: js
+
+        let buffer = new ArrayBuffer(80);
+        let view = new DataView(buffer);
+        view.setInt32(8, 22, false);
+        view.getInt32(8, false);
+        // 22
+
+    .. py:method:: setInt8(offset, value, be)
+    .. py:method:: setInt16(offset, value, be)
+    .. py:method:: setInt32(offset, value, be)
+
+        Использует 8/16/32 бит для хранения числа, принимает целое число со знаком
+
+        * `offset` - количесвто байтов, которое следует отступить от начала массива перед чтением/записью числа.
+        * `value` - записываемое число
+        * `be` - порядок записи байтов байтов числа, false - старшие байты будут записаны первыми.
+
+
+    .. py:method:: setUint8(offset, value, be)
+    .. py:method:: setUint16(offset, value, be)
+    .. py:method:: setUint32(offset, value, be)
+
+        Использует 8/16/32 бит для хранения числа, принимает целое число без знака
+
+
+    .. py:method:: setFloat32(offset, value, be)
+    .. py:method:: setFloat64(offset, value, be)
+
+        Использует 32/64 бит для хранения числа, принимает вещественное число со знаком
+
+
+    .. py:method:: getInt8(offset, be)
+    .. py:method:: getInt16(offset, be)
+    .. py:method:: getInt32(offset, be)
+
+        Читает 8/16/32 бит и возвращает целое число со знаком
+
+
+    .. py:method:: getUint8(offset, be)
+    .. py:method:: getUint16(offset, be)
+    .. py:method:: getUint32(offset, be)
+
+        Читает 8/16/32 бит и возвращает целое число без знака
+
+    .. py:method:: getFloat32(offset, be)
+    .. py:method:: getFloat64(offset, be)
+
+        Читает 32/64 бит и возвращает вещественное число со знаком
+
+
+Float32Array(), Float64Array()
+------------------------------
+
+.. py:class:: Float32Array(buffer)
+
+    .. note:: EcmaScript6
+
+.. py:class:: Float64Array(buffer)
+
+    .. note:: EcmaScript6
+
+    Буферный массив 64-битных вещественных чисел
+
+    .. code-block:: js
+
+        // создаем буферный массив на 640 бит, 80 * 8
+        let buffer = new ArrayBuffer(80);
+
+        // создаем типизированный буфер 64 битных чисел
+        // в буфере можно хранить не более 10 числе, 640/64
+        let typed_array = new Float64Array(buffer);
+        typed_array[4] = 11;
+
+        typed_array.length;
+        // 10
+
+        typed_array[4];
+        // 11
+
+
+Int8Array(), Int16Array(), Int32Array()
+---------------------------------------
+
+Буферный массив для 8/16/32 битных чисел со знаком
+
+.. py:class:: Int8Array(buffer)
+
+    .. note:: EcmaScript6
+
+
+.. py:class:: Int16Array(buffer)
+
+    .. note:: EcmaScript6
+
+
+.. py:class:: Int32Array(buffer)
+
+    .. note:: EcmaScript6
+
+
+Uint8Array(), Uint16Array(), Uint32Array()
+------------------------------------------
+
+Буферный массив для 8/16/32 битных чисел без знака
+
+.. py:class:: Uint8Array(buffer)
+
+    .. note:: EcmaScript6
+
+
+.. py:class:: Uint16Array(buffer)
+
+    .. note:: EcmaScript6
+
+
+.. py:class:: Uint32Array(buffer)
+
+    .. note:: EcmaScript6
+
+

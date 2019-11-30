@@ -1,7 +1,7 @@
-.. py:module:: java.util
+.. py:currentmodule:: java.util
 
 SortedSet
-====
+=========
 
 
 .. py:class:: SortedSet()

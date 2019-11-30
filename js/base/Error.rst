@@ -1,4 +1,12 @@
-Исключения
+.. title:: js exceptions
+
+.. meta::
+    :description:
+        Описание javascript exceptions.
+    :keywords:
+        js exceptions
+
+Exceptions
 ==========
 
 Error

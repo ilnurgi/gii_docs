@@ -1,5 +1,13 @@
-Границы, отступы и поля
-=======================
+.. title:: css border
+
+.. meta::
+    :description:
+        Описание стиля границ объектов
+    :keywords:
+        css border
+
+border
+======
 
 box-shadow
 ----------
@@ -20,9 +28,11 @@ border
 
 .. code-block:: css
 
-    div {
-        border 1px solid red;
-    }
+    border: 1px solid red;
+
+.. raw:: html
+
+    <div style="width:100px;height:100px;border:1px solid red;"></div>
 
 
 border-bottom
@@ -38,7 +48,7 @@ border-bottom
 
 
 border-bottom-color
-+++++++++++++++++++
+-------------------
 
 Задает цвет нижней границы элемента
 
@@ -50,7 +60,7 @@ border-bottom-color
 
 
 border-bottom-style
-+++++++++++++++++++
+-------------------
 
 Задает стиль нижней границы элемента, значения из :ref:`border_style`
 
@@ -62,7 +72,7 @@ border-bottom-style
 
 
 border-bottom-width
-+++++++++++++++++++
+-------------------
 
 Задает ширину нижней границы, значения из :ref:`border_width`
 
@@ -98,7 +108,7 @@ border-left
 
 
 border-left-color
-+++++++++++++++++
+-----------------
 
 Задает цвет левой границы элемента
 
@@ -110,7 +120,7 @@ border-left-color
 
 
 border-left-style
-+++++++++++++++++
+-----------------
 
 Задает стиль левой границы элемента, значения из :ref:`border_style`
 
@@ -122,7 +132,7 @@ border-left-style
 
 
 border-left-width
-+++++++++++++++++
+-----------------
 
 Задает ширину левой границы, значения из :ref:`border_width`
 
@@ -138,23 +148,62 @@ border-radius
 
 Скругляет углы границ элемента
 
+.. code-block:: text
+
+    border-radius:
+        border-top-right-radius
+        border-bottom-right-radius
+        border-bottom-left-radius
+        border-top-left-radius
+
+    border-radius:
+        top-left-up
+        top-right-up
+        bottom-right-down
+        bottom left-down
+        /
+        top-left-left
+        top-right-right
+        bottom-right-right
+        bottom-left-left
+
 .. code-block:: css
 
-    div {
-        border-radius: 15px 10px 25px 5px;
-    }
+    /* задаем радиусы 4х углов*/
+    border-radius: 15px 10px 25px 5px;
 
-border-top-right-radius
-+++++++++++++++++++++++
+.. raw:: html
 
-border-bottom-right-radius
-++++++++++++++++++++++++++
+    <div style="width:100px;height:100px;border:1px solid red;border-radius: 15px 10px 25px 5px;"></div>
 
-border-bottom-left-radius
-+++++++++++++++++++++++++
+.. code-block:: css
 
-border-top-left-radius
-++++++++++++++++++++++
+    /* задаем радиус сразу для 4х углов */
+    border-radius: 30%;
+
+.. raw:: html
+
+    <div style="width:100px;height:100px;border:1px solid red;border-radius: 30%;"></div>
+
+.. code-block:: css
+
+    /* левый верх (правый низ) и правый верх (левый низ) */
+    border-radius: 4em 8em;
+
+.. raw:: html
+
+    <div style="width:100px;height:100px;border:1px solid red;border-radius: 4em 8em;"></div>
+
+.. code-block:: css
+
+    /* радиус для 4х углов */
+    /* 4em - по горизонтали, 8em - по вертикали */
+    border-radius: 4em/8em;
+    border-radius: 70% 30% 30% 70% / 60% 40% 60% 40%;
+
+.. raw:: html
+
+    <div style="width:100px;height:100px;border:1px solid red;border-radius: 4em/8em;"></div>
 
 
 border-right
@@ -170,7 +219,7 @@ border-right
 
 
 border-right-color
-++++++++++++++++++
+------------------
 
 Задает цвет правой границы элемента
 
@@ -182,7 +231,7 @@ border-right-color
 
 
 border-right-style
-++++++++++++++++++
+------------------
 
 Задает стиль правой границы элемента, значения из :ref:`border_style`
 
@@ -194,7 +243,7 @@ border-right-style
 
 
 border-right-width
-++++++++++++++++++
+------------------
 
 Задает ширину правой границы, значения из :ref:`border_width`
 
@@ -270,7 +319,7 @@ border-top
 
 
 border-top-color
-++++++++++++++++
+----------------
 
 Задает цвет верхней границы элемента
 
@@ -282,7 +331,7 @@ border-top-color
 
 
 border-top-style
-++++++++++++++++
+----------------
 
 Задает стиль верхней границы элемента, значения из :ref:`border_style`
 
@@ -294,7 +343,7 @@ border-top-style
 
 
 border-top-width
-++++++++++++++++
+----------------
 
 Задает ширину верхней границы, значения из :ref:`border_width`
 
@@ -327,24 +376,6 @@ border-width
     }
 
 
-box-sizing
-----------
-
-Порядок измерения высоты и ширины элемента
-
-* context-box - обычный порядок
-
-* padding-box - включить в расчет значение padding
-
-* border-box - включить в расчет значение border
-
-.. code-block:: css
-
-    div {
-        box-sizing: border-box;
-    }
-
-
 margin
 ------
 
@@ -358,7 +389,7 @@ margin
 
 
 margin-bottom
-+++++++++++++
+-------------
 
 Внешний отступ от нижней границы
 
@@ -370,7 +401,7 @@ margin-bottom
 
 
 margin-left
-+++++++++++
+-----------
 
 Внешний отступ от левой границы
 
@@ -382,7 +413,7 @@ margin-left
 
 
 margin-right
-++++++++++++
+------------
 
 Внешний отступ от правой границы
 
@@ -394,7 +425,7 @@ margin-right
 
 
 margin-top
-++++++++++
+----------
 
 Внешний отступ от верхней границы
 
@@ -419,7 +450,7 @@ outline
 
 
 outline-color
-+++++++++++++
+-------------
 
 Цвет контура
 
@@ -431,7 +462,7 @@ outline-color
 
 
 outline-style
-+++++++++++++
+-------------
 
 Тип контура
 
@@ -443,7 +474,7 @@ outline-style
 
 
 outline-width
-+++++++++++++
+-------------
 
 Толщина контура
 
@@ -473,7 +504,7 @@ padding
     
 
 padding-bottom
-++++++++++++++
+--------------
 
 Внутренний отступ от нижней границы
 
@@ -485,7 +516,7 @@ padding-bottom
 
 
 padding-left
-++++++++++++
+------------
 
 Внутренний отступ от левой границы
 
@@ -497,7 +528,7 @@ padding-left
 
 
 padding-right
-+++++++++++++
+-------------
 
 Внутренний отступ от правой границы
 
@@ -509,7 +540,7 @@ padding-right
 
 
 padding-top
-+++++++++++
+-----------
 
 Внутренний отступ от верхней границы
 

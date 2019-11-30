@@ -1,8 +1,15 @@
-android.widget.ListView
-=======================
+.. title:: android.widget.ListView
 
-XML
----
+.. meta::
+    :description:
+        Справочная информация по android классу android.widget.ListView.
+    :keywords:
+        android widget ListView
+
+.. py:currentmodule:: android.widget
+
+ListView()
+==========
 
 .. code-block:: xml
 
@@ -14,10 +21,7 @@ XML
         android:id="@+id/lvMain" />
 
 
-ListView
---------
-
-.. py:class:: android.widget.ListView()
+.. py:class:: ListView()
 
     Список
 

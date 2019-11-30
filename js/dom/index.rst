@@ -1,16 +1,23 @@
-DOM - дерево html документа
-===========================
+.. title:: javascript dom
 
-DOM - объектная модель документа, document object model.
+.. meta::
+    :description:
+        Описание dom, объектной модели документа веб страницы.
+    :keywords:
+        javascript dom
+
+DOM
+===
+
+Document Object Model - объетная модель документа
 
 Каждому тегу на странице, в соответсвие ставится свой объект.
 
 Свойства объекта являются атрибутами тега.
 
 .. toctree::
-    :maxdepth: 2
+    :maxdepth: 1
 
-    Navigator
     Screen
     Location
 
@@ -30,6 +37,7 @@ DOM - объектная модель документа, document object model.
     ArrayBufferView
     Attr
     Audio
+    AudioContext
     BeforeUnloadEvent
     Blob
     BlobBuilder
@@ -121,15 +129,16 @@ DOM - объектная модель документа, document object model.
     WorkerLocation
     WorkerNavigator
     XMLHttpRequest
-    XMLHttpRequestProgressEvent    
+    XMLHttpRequestProgressEvent
     XMLHttpRequestUpload
+    webcomponent
 
 Таблица
 -------
 
 .. toctree::
     :maxdepth: 2
-    
+
     HTMLTableElement
     HTMLTableSectionElement
     HTMLTableRowElement

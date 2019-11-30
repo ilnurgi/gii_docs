@@ -1,16 +1,25 @@
+.. title:: python unittest mock
+
+.. meta::
+    :description:
+        Справочная информация по python модулю unittest.mock
+
+    :keywords:
+        python unittest mock
+
 .. py:module:: mock
 
 mock
 ====
 
-Mock
-----
+Mock()
+------
 
-.. py:class:: Mock([return_value])
+.. py:class:: Mock(**kwargs)
 
     Простой мок класс
 
-    * return_value - возвращаемое значение
+    * **return_value** - возвращаемое значение
 
     .. code-block:: py
 
@@ -46,6 +55,25 @@ Mock
 
     .. code-block:: py
 
+        def side_effect(arg):
+            return {
+                'a': 1,
+                'b': 2,
+            }
+        mock.side_effect = side_effect
+
+        mock('a'), mock('b')
+        # (1, 2)
+
+    .. code-block:: py
+
+        mock.side_effect = [5, 4, 3]
+
+        mock(), mock()
+        # (5, 4)
+
+    .. code-block:: py
+
         # патчим input
         __builtins__.input = Mock(return_value=100)
         input()
@@ -75,33 +103,71 @@ Mock
         Атрибут хранит значение, которое вернет мок объект при уго вызове
 
 
-MagicMock
----------
+MagicMock()
+-----------
 
 .. py:class:: MagicMock()
 
     Наследник :py:class:`Mock`,
     расширенный реализацией магических методово питона
 
+    .. code-block:: py
 
-patch
------
+        thing = Thing()
+        thing.method = MagicMock(return_value=3)
 
-.. py:method:: patch(target, new=MagicMock)
+        thin.method2 = MagicMock(side_effect=KeyError('foo')
 
-    Возвращает новый патченный объект
+    .. py:method:: assert_called_with()
+
+        .. code-block:: py
+
+            thing.method(3, 4, 5, key='value')
+            # 3
+
+            thing.assert_called_with(3, 4, 5, key='value')
+
+
+
+
+patch()
+-------
+
+.. py:method:: patch(**kwargs)
+
+    * target
+    * new = DEFAULT
+    * spec = None
+    * create = False
+    * spec_set = None
+    * autospec = None
+    * new_callable = None
+
+    Возвращает новый патченный объект :py:class:`unittest.mock.MagicMock()`
 
     .. code-block:: py
 
         with patch('__main__.A.get_x', new=Mock(return_value=500)):
-            a = A()
-            a.compute()
-            # 600
+            pass
+
 
         with patch('__main__.A.get_x') as mock_A_get_x:
             mock_A_get_x.return_value = 400
 
-            a = A()
-            a.compute()
-            # 600
 
+        @patch('myapp.settings.SOME_VALUE', 99)
+        def test():
+            pass
+
+
+        @patch('myapp.settings.some_method2')
+        @patch('myapp.settings.some_method')
+        def test(mock_some_method, mock_some_method2):
+            mock_some_method.return_value = '123'
+            mock_some_method.assert_called()
+            mock_some_method.assert_called_once_with('foo')
+
+
+        @patch('myapp.settings.Class.property', new_callable=PropertyMock)
+        def test(mock_property):
+            mock_property.return_value = '123'

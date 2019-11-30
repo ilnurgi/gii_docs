@@ -1,4 +1,4 @@
-.. py:module:: java.io
+.. py:currentmodule:: java.io
 
 PushBackInputStream - поток с буфером
 ===============================================

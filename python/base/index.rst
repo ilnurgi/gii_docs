@@ -1,7 +1,14 @@
-Основные объекты
-----------------
+.. title:: python base
 
-Содержание:
+.. meta::
+    :description: 
+        Справочная информация по python, 
+        законспектированная во время изучения python.
+    :keywords: 
+        python
+
+Синтаксиса языка и основные объекты
+===================================
 
 .. toctree::
     :maxdepth: 1
@@ -28,3 +35,4 @@
     errors
     files
     functions
+    builtin_functions

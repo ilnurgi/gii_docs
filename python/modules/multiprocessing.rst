@@ -7,11 +7,15 @@ multiprocessing
 Pool
 ----
 
-.. py:class:: Pool(worker_count)
+.. py:class:: Pool(processes=cpu_count())
 
     .. code-block:: py
 
         pool = Pool(2)
+
+        with Pool() as pool:
+
+            pool.map(func, args)
 
 
     .. py:class:: ApplyResult()
@@ -58,9 +62,28 @@ Pool
             pool.map(some_func, [1,2,3])
 
 
+    .. py:method:: starmap()
+
+        .. code-block:: py
+
+            pool.starmap(sum, [(1, 6), (2, 7)])
+
+
     .. py:method:: starmap_async()
 
 
+
+cpu_count()
+-----------
+
+.. py:method:: cpu_count()
+
+    Возвращает количество ядер процессора
+
+    .. code-block:: py
+
+        cpu_count()
+        # 4
 
 
 current_process

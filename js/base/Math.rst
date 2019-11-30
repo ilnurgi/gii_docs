@@ -1,9 +1,17 @@
-Math - математические операции
-==============================
+.. title:: js math
+
+.. meta::
+    :description:
+        Описание javascript объекта Math
+    :keywords:
+        js math
+
+Math
+====
 
 .. py:class:: Math()
 
-    
+
     .. py:attribute:: E
 
         Основание натуральных логарифмов
@@ -17,7 +25,7 @@ Math - математические операции
     .. py:attribute:: LN2
 
         Натуральный логарифм числа 2
-    
+
 
     .. py:attribute:: LOG10E
 
@@ -124,16 +132,16 @@ Math - математические операции
 
         .. code-block:: js
 
-            Math.ceil(1.99);
+            Math.floor(1.99);
             // 1.0
 
-            Math.ceil(1.01);
+            Math.floor(1.01);
             // 1.0
 
-            Math.ceil(1.0);
+            Math.floor(1.0);
             // 1.0
 
-            Math.ceil(-1.99);
+            Math.floor(-1.99);
             // -2.0
 
 
@@ -147,7 +155,7 @@ Math - математические операции
 
             Math.fround(0);
             // 0
-            
+
             Math.fround(1);
             // 1
 
@@ -156,7 +164,7 @@ Math - математические операции
 
             Math.fround(1.5);
             // 1.5
-            
+
 
     .. py:function:: imul(int1, int2)
 
@@ -168,7 +176,7 @@ Math - математические операции
 
             Math.imul(590, 5000000);
             // -1344967296
-            
+
             590 * 5000000;
             // 2950000000
 
@@ -256,7 +264,24 @@ Math - математические операции
 
     .. py:function:: round(var)
 
-        Нормальное округление
+        Нормальное округление, относительно 0.5
+
+        .. code-block:: js
+
+            Math.round(0.4)
+            // 0
+
+            Math.round(0.7)
+            // 1
+
+            Math.round(-0.4)
+            // 0
+
+            Math.round(-0.7)
+            // -1
+
+            Math.round(-2.5)
+            // -2
 
 
     .. py:function:: sign(number)
@@ -289,7 +314,7 @@ Math - математические операции
 
     .. py:function:: trunc(number)
 
-        Возвращает целую часть числа
+        Возвращает целую часть числа, отбрасывая дробную
 
         .. note:: EcmaScript6
 

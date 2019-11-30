@@ -1,7 +1,13 @@
-.. py:module:: QtCore
+.. title:: PyQt4.QtCore.QEvent
 
-QEvent - информация о событии
-=============================
+.. meta::
+    :description: PyQt4.QtCore.QEvent
+    :keywords: PyQt4.QtCore.QEvent
+
+.. py:currentmodule:: PyQt4.QtCore
+
+QEvent
+======
 
 .. py:class:: QEvent()
 

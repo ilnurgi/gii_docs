@@ -5,32 +5,51 @@ numbers
 
 Классы в этом модуле не предназначены для создания экземпляров. Их основная цель – обеспечить возможность проверки типов различных значений.
 
->>> if isinstance(x, numbers.Number) 
+.. code-block:: py
+
+    if isinstance(x, numbers.Number) 
         # объект x является числом любого типа инструкции
->>>> if isinstance(x, numbers.Integral) 
+        pass
+    
+    if isinstance(x, numbers.Integral) 
         # объект x является целым числом
+        pass
 
+Number()
+--------
 
-.. py:class:: Number
+.. py:class:: Number()
     
     Класс, находящийся на вершине иерархии числовых классов.
 
 
-.. py:class:: Complex
+Complex()
+---------
+
+.. py:class:: Complex()
 
     Класс, представляющий комплексные числа. Числа этого вида состоят из действительной и мнимой частей и имеют атрибуты real и imag. Является производным от класса Number.
 
 
-.. py:class:: Real
+Real()
+------
+
+.. py:class:: Real()
     
     Класс, представляющий вещественные числа. Является производным от класса Complex.
 
 
-.. py:class:: Rational
+Rational()
+----------
+
+.. py:class:: Rational()
 
     Класс, представляющий рациональные дроби. Числа этого вида состоят из числителя и знаменателя и имеют атрибуты numerator и denominator. Является производным от класса Real.
 
 
-.. py:class:: Integral
+Integral()
+----------
+
+.. py:class:: Integral()
 
     Класс, представляющий целые числа. Является производным от класса Rational.

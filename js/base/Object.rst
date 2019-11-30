@@ -1,5 +1,15 @@
-Object - объект, ассоциативный массив
-=====================================
+.. title:: js object
+
+.. meta::
+    :description:
+        Описание объектов, object, в языке программирования java script
+    :keywords:
+        js object
+
+Object
+======
+
+Объект, ассоциативный массив
 
 
 .. js:class:: Object()
@@ -27,41 +37,42 @@ Object - объект, ассоциативный массив
         // создание дочерних объектов
         var Megaperson = Object.create(person);
 
-    .. note:: EcmaScript6
+    .. code-block:: js
 
-        .. code-block:: js
+        let object = {
+            name: 'ilnurgi',
+            age: 23,
+            ["first"+"Name"]: 'gii'
+        }
+        let {name, age} = object;
+        let {name: x, age: y} = object;
+        let {["na" + "me": x, age: y} = object;
 
-            let object = {
-                name: 'ilnurgi',
-                age: 23,
-                ["first"+"Name"]: 'gii'
-            }
-            let {name, age} = object;
-            let {name: x, age: y} = object;
-            let {["na" + "me": x, age: y} = object;
+        let x = 1, y = 2;
+        let object = { x, y };
 
-            let x = 1, y = 2;
-            let object = { x, y };
+        let object = {
+            myFunction() {...};
+        };
+        object.myFunction();
 
-            let object = {
-                myFunction() {...};
-            };
-            object.myFunction();
+        let a = {a: 12, __proto__: {b: 13}}
 
-            let a = {a: 12, __proto__: {b: 13}}
+    .. code-block:: js
 
-        .. code-block:: js
+        let obj1 = {
+            f1: 'v1',
+            f2: 'v2',
+        }
 
-            let obj1 = {
-                f1: 'v1',
-                f2: 'v2',
-            }
+        let obj2 = {
+            ...obj1,
+            f1: 'v11',
+            fN: 'vN'
+        }
 
-            let obj2 = {
-                ...obj1,
-                f1: 'v11',
-                fN: 'vN'
-            }
+        let copyObj = { ...oldObj };
+        let mergedObj = { ...obj1, ...obj2}
 
 
     .. js:attribute:: constructor
@@ -70,7 +81,7 @@ Object - объект, ассоциативный массив
 
         .. code-block:: js
 
-            a = new Array(1,2,3);  
+            a = new Array(1,2,3);
             a.constructor == Array;
             // true
 
@@ -176,13 +187,13 @@ Object - объект, ассоциативный массив
 
 .. js:function:: assign(targetObj, sourceObj, ...)
 
-    Копирует значения свойств объектов в целевой.
+    Поверхностное копирование значений свойств объектов в целевой.
 
     * вызывает методы чтения источников и методы записи приемника
 
     * просто присваивает значения свойств источника новым или существующим свойствам приемникам
 
-    * не копирет свойства `prototype` источников
+    * не копирет свойства prototype источников
 
     * имена свойств JS могут быть строками или символами
 
@@ -211,16 +222,16 @@ Object - объект, ассоциативный массив
 
         // Создать объект, который имеет собственные свойства x и y и наследует свойство z
         var p = Object.create({z:0}, {
-            x: { 
-                value: 1, 
-                writable: false, 
-                enumerable:true, 
+            x: {
+                value: 1,
+                writable: false,
+                enumerable:true,
                 configurable: true
             },
-            y: { 
-                value: 2, 
-                writable: false, 
-                enumerable:true, 
+            y: {
+                value: 2,
+                writable: false,
+                enumerable:true,
                 configurable: true
             },
         });
@@ -236,16 +247,16 @@ Object - объект, ассоциативный массив
 
         // До­ба­вить в но­вый объ­ект свой­ст­ва
         var p = Object.defineProperties({},
-            x: { 
-                value: 0, 
-                writable: false, 
-                enumerable:true, 
+            x: {
+                value: 0,
+                writable: false,
+                enumerable:true,
                 configurable: true
             },
-            y: { 
-                value: 1, 
-                writable: false, 
-                enumerable:true, 
+            y: {
+                value: 1,
+                writable: false,
+                enumerable:true,
                 configurable: true
             },
         });
@@ -259,10 +270,10 @@ Object - объект, ассоциативный массив
 
     .. code-block:: js
 
-        Object.defineProperty({}, 'n', { 
-            value: v, 
+        Object.defineProperty({}, 'n', {
+            value: v,
             writable: false,
-            enumerable: true, 
+            enumerable: true,
             configurable:false
         });
 
@@ -303,10 +314,10 @@ Object - объект, ассоциативный массив
 
         immutableObject = {};
         // error
-        
+
         immutableObject.foo = 456;
         // not alllowed
-        
+
         immutableObject.bebebe = 'abc';
         // not allowed
 
@@ -329,7 +340,7 @@ Object - объект, ассоциативный массив
 
     .. versionadded:: ECMAScript5
 
-    
+
 .. js:function:: getPrototypeOf(obj)
 
     Воз­вра­ща­ет про­то­тип ука­зан­но­го объ­ек­та.
@@ -410,7 +421,7 @@ Object - объект, ассоциативный массив
         Object.keys({x:1, y:2})
         // ["x", "y"]
 
-    
+
 .. js:function:: preventExtensions(obj)
 
     Пре­дот­вра­ща­ет воз­мож­ность до­бав­ле­ния но­вых свойств в ука­зан­ный объ­ект.
@@ -461,12 +472,13 @@ Object - объект, ассоциативный массив
 
 Дескрипторы свойств
 -------------------
-Де­ск­рип­тор свой­ст­ва – это обыч­ный Ja­va­Script-объ­ект, опи­сы­ваю­щий ат­ри­бу­ты (и ино­гда зна­че­ние) свой­ст­ва. 
 
-В язы­ке Ja­va­Script су­ще­ст­ву­ет два ти­па свойств. 
+Де­ск­рип­тор свой­ст­ва – это обыч­ный Ja­va­Script-объ­ект, опи­сы­ваю­щий ат­ри­бу­ты (и ино­гда зна­че­ние) свой­ст­ва.
+
+В язы­ке Ja­va­Script су­ще­ст­ву­ет два ти­па свойств.
 
 Свой­ст­ва-дан­ные, имею­щие зна­че­ние и три ат­ри­бу­та: enumerable, writable и  configurable.
-        
+
     .. code-block:: js
 
         {
@@ -505,7 +517,7 @@ Object - объект, ассоциативный массив
         array: [1, 2, 3, 4, 5].
         nextIndex: 0,
         next: function(){
-            return this.nextIndex < this.array.length ? 
+            return this.nextIndex < this.array.length ?
                 {value: this.array[this.nextIndex++], done: false} :
                 {done: true}
         }
@@ -521,7 +533,7 @@ Object - объект, ассоциативный массив
                 array: this.array,
                 nextIndex: this.nextIndex,
                 next: function(){
-                    return this.nextIndex < this.array.length ? 
+                    return this.nextIndex < this.array.length ?
                         {value: this.array[this.nextIndex++], done: false} :
                         {done: true}
                 }

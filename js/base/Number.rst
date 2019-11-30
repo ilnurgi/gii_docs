@@ -1,8 +1,16 @@
-Числа (Number)
-==============
+.. title:: javascript number
+
+.. meta::
+    :description:
+        Описание javascript объекта Number.
+    :keywords:
+        javascript number
+
+Number
+======
 
 .. code-block:: js
-    
+
     a = 1;
     a = 1.23;
     a = 1E6;
@@ -42,15 +50,20 @@
 
         // двоичное число
         let a = 0b00001111;
+        const binaryZero = 0b0;
+        const binaryOne  = 0b1;
+        const binary255  = 0b11111111;
+        const binaryLong = 0b111101011101101;
 
         // восьмиричное
         let b = 0o17;
+        0x767 === 503
 
 Number
 ------
 
 .. py:class:: Number()
- 
+
     Число, с типом float64
 
     Наследник :py:class:`Object`
@@ -59,7 +72,7 @@ Number
 
         Number(10);
         // 10
-        
+
         Number("42.23");
         // 42.23
 
@@ -71,7 +84,7 @@ Number
 
         Расчетная погрешность при сравнений чисел с плавающей запятой
 
-        
+
     .. py:attribute:: NaN
 
         Нечисло
@@ -136,13 +149,13 @@ Number
 
         .. code-block:: js
 
-            Number.isInteger(42);     
+            Number.isInteger(42);
             // true
-            
-            Number.isInteger(42.000); 
+
+            Number.isInteger(42.000);
             // true
-            
-            Number.isInteger(42.3);   
+
+            Number.isInteger(42.3);
             // false
 
         .. code-block:: js
@@ -151,8 +164,7 @@ Number
             if (!Number.isInteger){
                 Number.isInteger = function(num){
                     return (
-                        typeof num === 'number' && 
-                        num % 1 == 0
+                        typeof num === 'number' && num % 1 == 0
                     );
                 }
             }
@@ -162,19 +174,16 @@ Number
 
         Переменная Nan
 
-        .. note:: ECMAScript6
+        .. versionadded:: ECMAScript6
 
         .. code-block:: js
 
-            // полифил
-            if (!Number.isNan){
-                Number.isNan = function(num){
-                    return (
-                        typeof num === 'number' &&
-                        window.isNan(num)
-                    );
-                }
-            }
+            Number.isNaN(NaN) === true
+            Number.isNaN(null) === false
+            Number.isNaN(undefined) === false
+            Number.isNaN({}) === false
+            Number.isNaN(0/0) === false
+            Number.isNaN('hello') === false
 
 
     .. py:method:: isSafeInteger(number)
@@ -193,8 +202,7 @@ Number
             if (!Number.isSafeInteger){
                 Number.isSafeInteger = function(num){
                     return (
-                        Number.isInteger(num) && 
-                        Math.abs(num) <= Number.MAX_SAFE_INTEGER
+                        Number.isInteger(num) && Math.abs(num) <= Number.MAX_SAFE_INTEGER
                     );
                 }
             }
@@ -230,16 +238,16 @@ Number
         .. code-block:: js
 
             var y = 43.81327;
-            
+
             y.toFixed();
             // '44'
 
             y.toFixed(1);
             // '43.8'
-            
+
             y.toFixed(2);
             // '43.81'
-            
+
             y.toFixed(3);
             // '43.813'
 
@@ -277,20 +285,16 @@ Number
             n.toString(2);
             // '1110100001000'
 
-Стандартные функции
--------------------
 
-.. py:function:: isFinite()
+NaN
+---
 
-    Возвращает true  только тогда, когда n  — обычное число, а не одно из NaN , Infinity  и ‐Infinit
+.. py:class:: Nan()
 
     .. code-block:: js
 
-        isFinite(1);
-        // true
+        'bra' / 2;
+        // NaN
 
-        isFinite(Infinity);
-        // false
-
-        isFinite(NaN);
+        NaN == NaN;
         // false

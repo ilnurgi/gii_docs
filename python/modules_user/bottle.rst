@@ -42,7 +42,7 @@ http://bottlepy.org/docs/dev
     def index():
         return "hello world"
 
-.. code-block:: conf
+.. code-block:: ini
 
     # пример конфига апача
     <VirtualHost *:80>

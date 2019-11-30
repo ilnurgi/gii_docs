@@ -1,3 +1,11 @@
+.. title:: python math
+
+.. meta::
+    :description: 
+        Справочная информация по python модулю math.
+    :keywords: 
+        python math
+
 .. py:module:: math
 
 math
@@ -5,206 +13,376 @@ math
 
 Модуль для работы с арифметическими функциями 
 
-Атрибуты модуля
----------------
+pi
+--
 
 .. py:attribute:: pi
     
     Возвращает значение  `pi`
+  
+    .. code-block:: py  
     
-    >>> math.pi
-    >>> 3.141592653589793
+        math.pi
+        # 3.141592653589793
 
+e
+-
 
 .. py:attribute:: e
 
     Возвращает число `e`
 
-    >>> math.e
-    2.718281828459045
+    .. code-block:: py
+    
+        math.e
+        # 2.718281828459045
 
-Методы модуля
--------------
+acos()
+------
 
-.. py:method:: acos(x) 
+.. py:function:: acos(x) 
     
     Возвращает арккосинус угла в радианах, заданного градуса
 
 
-.. py:method:: acosh(x) 
+acosh()
+-------
+
+.. py:function:: acosh(x) 
     
     Возвращает гиперболический арккосинус числа Х 
 
 
-.. py:method:: asin(x) 
+asin()
+------
+
+.. py:function:: asin(x) 
 
     Возвращает арксинус угла в радианах, заданного градуса
 
 
-.. py:method:: asinh(x) 
+asinh()
+-------
+
+.. py:function:: asinh(x) 
 
     Возвращает гиперболический арксинус числа Х 
 
 
-.. py:method:: atan(x) 
+atan()
+------
+
+.. py:function:: atan(x) 
     
     Возвращает арктангенс угла в радианах, заданного градуса
 
 
-.. py:method:: atan2(x, y) 
+atan2()
+-------
+
+.. py:function:: atan2(x, y) 
     
     Возвращает арктангенс выражения (x/y). Эквивалентно atan(x/y). Аргумент y может быть равен нулю - в этом случае возвращается pi/2. 
 
+atanh()
+-------
 
-.. py:method:: atanh(x) 
+.. py:function:: atanh(x) 
     
     Возвращает гиперболический арктангенс числа Х 
 
+ceil()
+------
 
-.. py:method:: ceil() 
+.. py:function:: ceil() 
 
     Возвращает округленно до наибольшего целого значения числа.
     
-    >>> math.ceil(3.14)
-    4
+    .. code-block:: py
+        
+        math.ceil(3.14)
+        # 4
 
+copysign()
+----------
 
-.. py:method:: copysign(x, y) 
+.. py:function:: copysign(x, y) 
 
     Возвращает х с тем же знаком что и у.
 
+cos()
+-------
 
-.. py:method:: cos(x) 
+.. py:function:: cos(x) 
 
     Возвращает косинус числа, заданного в радианах
 
+cosh()
+------
 
-.. py:method:: cosh(x) 
+.. py:function:: cosh(x) 
 
     Возвращает гиперболический косинус числа
 
+degrees()
+---------
 
-.. py:method:: degrees(x) 
+.. py:function:: degrees(x) 
 
     Преобразует радианы в значение угла
 
 
-.. py:method:: radians(x) 
+dist()
+------
 
-    Преобразует значение в радианы
+.. py:function:: dist()
+
+    .. versionadded:: 3.8
+
+    Возвращает расстояние между точками
+
+    .. code-block:: py
+
+        math.dist((16, 25, 20), (8, 15, 14))
+        # 14.142
 
 
-.. py:method:: exp(x) 
+exp()
+-----
+
+.. py:function:: exp(x) 
 
     Возвращает e ** x
 
 
-.. py:method:: fabs(x) 
+fabs()
+------
+
+.. py:function:: fabs(x) 
     
     Возвращает абсолютное значение числа x 
 
 
-.. py:method:: factorial(x) 
+factorial()
+-----------
+
+.. py:function:: factorial(x) 
     
     Возвращает факториал числа x 
 
 
-.. py:method:: floor() 
+floor()
+-------
+
+.. py:function:: floor() 
     
     Возвращает округленное до наименьшего целого значение числа
     
-    >>> math.floor(3.14)
-    3
+    .. code-block:: py
+
+        math.floor(3.14)
+        # 3
 
 
-.. py:method:: fmod(x, y) 
+fmod()
+------
+
+.. py:function:: fmod(x, y) 
     
     Возвращает остаток от деления x на y и эквивалентно x%y 
 
 
-.. py:method:: frexp(x) 
+frexp()
+-------
+
+.. py:function:: frexp(x) 
     
     Возвращает пару чисел в виде кортежа (m, e), где m - мантисса (вещественное число), а e - экспоненциальная часть (целое число). Для чисел m и e всегда выполняется условие x=m*2**e. Если аргумент x равен нулю, возвращает (0.0, 0). В противном случае всегда выполняется 0.5<=abs<1 
 
 
-.. py:method:: fsum(iter) 
+fsum()
+------
+
+.. py:function:: fsum(iter) 
     
     Возвращает сумму значений с плавающей точкой в итерируемой последовательности.
 
 
-.. py:method:: hypot(x, y) 
+hypot()
+-------
+
+.. py:function:: hypot(x, y) 
 
     Возвращает длину гипотенузы прямоугольника со сторонами длиной x и y и эквивалентно sqrt(x*x+y*y) 
 
+    .. code-block:: py
 
-.. py:method:: isin(x) 
+        math.hypot(16, 25, 20)
+        # длина вектора
+        # 35.791
+
+        math.hypot(8, 15, 14)
+        # длина вектора
+        # 22.028
+
+
+isin()
+------
+
+.. py:function:: isin(x) 
 
     Возвращает True, если значение бесконечность
 
 
-.. py:method:: isnan(x) 
+isnan()
+-------
+
+.. py:function:: isnan(x) 
 
     Возвращает True, если значение NaN
 
 
-.. py:method:: ldexp(m, e) 
+isqrt()
+-------
+
+.. py:function:: isqrt()
+
+    .. versionadded:: 3.8
+
+    Возвращает целую часть корня
+
+    .. code-block:: py
+
+        math.sqrt(15)
+        # 3.872
+
+        math.isqrt(15)
+        # 3
+
+
+ldexp()
+-------
+
+.. py:function:: ldexp(m, e) 
     
-    Функция обратная .. py:method:: 'frexp' и возвращает m*(2**e) 
+    Функция обратная .. py:function:: 'frexp' и возвращает m*(2**e) 
 
 
-.. py:method:: log(x [, base]) 
+log()
+-----
+
+.. py:function:: log(x [, base]) 
     
     Возвращает натуральный логарифм числа x
 
 
-.. py:method:: log10(x) 
+log10()
+-------
+
+.. py:function:: log10(x) 
     
     Возвращает десятичный логарифм числа x 
 
 
-.. py:method:: log1p(x) 
+log1p()
+-------
+
+.. py:function:: log1p(x) 
     
     Возвращает натуральный логарифм выражения x + 1
 
 
-.. py:method:: modf(x) 
+modf()
+------
+
+.. py:function:: modf(x) 
     
     Возвращает дробную и целую части числа x в виде кортежа. Оба значения имеют тот же знак, что и число x.
 
 
-.. py:method:: pow(x, y) 
+pow()
+-----
+
+.. py:function:: pow(x, y) 
     
    Возвращает x ** y
 
 
-.. py:method:: sin(x) 
+prod()
+------
+
+.. py:function::  prod(iterable)
+
+    .. versionadded:: 3.8
+
+    Возвращаем перемноженное значение
+
+    .. code-block:: py
+
+        2 * 8 * 7 * 7 == math.prod((2, 8, 7, 7))
+        # True
+
+radians()
+---------
+
+.. py:function:: radians(x) 
+
+    Преобразует значение в радианы
+
+
+sin()
+-----
+
+.. py:function:: sin(x) 
 
     Возвращает синус угла, заданного в радианах
 
 
-.. py:method:: sinh(x) 
+sinh()
+------
+
+.. py:function:: sinh(x) 
 
     Возвращает гиперболический синус числа x 
 
 
-.. py:method:: sqrt() 
+sqrt()
+------
+
+.. py:function:: sqrt() 
     
     Возвращает корень из числа.
 
-    >>> math.sqrt(9)
-    3.0
+    :py:func:`math.isqrt` 
+
+    .. code-block:: py
+        
+        math.sqrt(9)
+        # 3.0
+
+        math.sqrt(15)
+        # 3.873
 
 
-.. py:method:: tan(x) 
+tan()
+-----
+
+.. py:function:: tan(x) 
     
     Возвращает тангенс угла, заданного в радианах
 
 
-.. py:method:: tanh(x) 
+tanh()
+------
+
+.. py:function:: tanh(x) 
     
     Возвращает гиперболический тангенс числа x.
 
 
-.. py:method:: trunc(x)
+trunc()
+-------
+
+.. py:function:: trunc(x)
 
     Усекает дробную часть числа.

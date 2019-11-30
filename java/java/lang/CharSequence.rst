@@ -1,3 +1,8 @@
+.. py:currentmodule:: java.lang
+
+CharSequense
+============
+
 .. py:class:: CharSequense
 
     интерфейс работы со строками

@@ -1,29 +1,34 @@
-.. py:module:: QtCore
+.. title:: PyQt4.QtCore
 
-QtCore - модуль содержит классы, не связанные с реализацией графического интерфейса.
-====================================================================================
+.. meta::
+    :description: PyQt4.QtCore
+    :keywords: PyQt4.QtCore
+
+.. py:module:: PyQt4.QtCore
+
+QtCore
+======
+
+Модуль содержит классы, не связанные с реализацией графического интерфейса
 
 Список классов модуля
 ---------------------
 
 .. toctree::
-   :maxdepth: 1
+    :maxdepth: 1
 
-   qt
-   qevent
-   qmutex
-   qobject
-   qpoint
-   qpointf
-   qrect
-   qrectf
-   qsize
-   qsizef
-   qthread
-   qtimer
-
-Базовые типы данных фреймворка
-------------------------------
+    qt
+    qevent
+    qmutex
+    qobject
+    qpoint
+    qpointf
+    qrect
+    qrectf
+    qsize
+    qsizef
+    qthread
+    qtimer
 
 QString
 -------

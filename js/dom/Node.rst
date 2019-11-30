@@ -1,5 +1,16 @@
-Node - узел дом дерева документа
-================================
+.. title:: js dom node
+
+.. meta::
+    :description: 
+        Описание объекта Node web страницы
+    :keywords: 
+        node
+
+
+Node
+====
+
+Узел дом дерева документа
 
 .. py:class:: Node()
 
@@ -192,7 +203,6 @@ Node - узел дом дерева документа
 
             document.body.querySelector('.logo');
             // <img ...>
-
 
 
     .. py:method:: querySelectorAll(string selectors)
