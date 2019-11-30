@@ -3,6 +3,12 @@
 display
 =======
 
+.. code-block:: py
+
+	from pygame import display
+
+flip()
+------
 
 .. py:function:: flip()
 
@@ -13,6 +19,9 @@ display
         display.flip()
 
 
+set_mode()
+----------
+
 .. py:function:: set_mode((higth, width))
 
     Возвращает экран/поверхность указанных размеров, :py:class:`pygame.Surface`
@@ -20,7 +29,11 @@ display
     .. code-block:: py
 
         window = display.set_mode((400, 400))
+        window = display.set_mode((400, 400), 0, 32)
 
+
+set_caption()
+-------------
 
 .. py:function:: set_caption(caption)
 
@@ -28,4 +41,16 @@ display
 
     .. code-block:: py
 
-        display.set_caption(u'Hello PyGame')
+        display.set_caption('Hello PyGame')
+
+update()
+--------
+
+.. py:function:: update()
+
+	Обновление экрана
+
+	.. code-block:: py
+
+		display.update()
+		
