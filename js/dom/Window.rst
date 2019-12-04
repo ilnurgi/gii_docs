@@ -1,8 +1,10 @@
 .. title:: js.dom.Window
 
 .. meta::
-    :description: js.dom.Window
-    :keywords: js.dom.Window
+    :description:
+        js.dom.Window
+    :keywords:
+        js.dom.Window
 
 Window
 ======
@@ -15,11 +17,11 @@ Window
 
 
 .. js:class:: Window()
-    
+
     Наследник :js:class:`EventTarget`
 
     .. code-block:: js
-        
+
         function test(){
             alert(x);
         }
@@ -115,7 +117,18 @@ Window
 
     .. py:attribute:: onbeforeunload
 
-        Пе­ред тем как бро­узер по­ки­нет те­ку­щ ую стра­ни­цу. Ес­ли воз­вра­ща­ет стро­ку или при­сваи­ва­ет стро­ку свой­ст­ву returnValue объ­ек­та со­бы­тия, эта стро­ка бу­дет вы­ве­де­на в диа­ло­ге под­твер­жде­ния. См. BeforeUnloadEvent.
+        Пе­ред тем как бро­узер по­ки­нет те­ку­щую стра­ни­цу.
+
+        Ес­ли воз­вра­ща­ет стро­ку или при­сваи­ва­ет стро­ку свой­ст­ву returnValue объ­ек­та со­бы­тия,
+        эта стро­ка бу­дет вы­ве­де­на в диа­ло­ге под­твер­жде­ния.
+
+        .. code-block:: js
+
+            window.addEventListener('beforeunload', () => {
+                event.preventDefault();
+                event.returnValue = '';
+
+            });
 
 
     .. py:attribute:: onblur
@@ -278,7 +291,21 @@ Window
 
     .. py:function:: alert(String text)
 
-        Вывод информационное окно
+        Выводит информационное окно
+
+        .. code-block:: js
+
+            window.alert('Hello, ilnurgi');
+
+        .. raw:: html
+
+            <script>
+                function alertTest() {
+                    window.alert('Hello, ilnurgi');
+                }
+            </script>
+            <button onclick="alertTest();">Alert</button>
+
 
 
     .. py:function:: atob(string atob)
@@ -313,7 +340,36 @@ Window
 
     .. py:function:: confirm(message)
 
-        Вы­во­дит со­об­ще­ние message в диа­ло­го­вом ок­не, со­дер­жа­щем кноп­ки OK и Cancel (От­ме­на), с по­мо­щью ко­то­рых поль­зо­ва­тель дол­жен от­ве­тить на во­прос. Ес­ли поль­зо­ва­тель щелк­нет на кноп­ке OK, ме­тод confirm() вер­нет true. Ес­ли поль­зо­ва­тель щелк­нет на кноп­ке Cancel, ме­тод confirm() вер­нет false.
+        Вы­во­дит со­об­ще­ние message в диа­ло­го­вом ок­не,
+        со­дер­жа­щем кноп­ки OK и Cancel (От­ме­на),
+        с по­мо­щью ко­то­рых поль­зо­ва­тель дол­жен от­ве­тить на во­прос.
+
+        Ес­ли поль­зо­ва­тель щелк­нет на кноп­ке OK, ме­тод confirm() вер­нет true.
+
+        Ес­ли поль­зо­ва­тель щелк­нет на кноп­ке Cancel, ме­тод confirm() вер­нет false.
+
+        .. code-block:: js
+
+            let answer = window.confirm('Нравятся котики?');
+            if (answer) {
+                window.alert('Тебе нравятся котики');
+            } else {
+                window.alert('Тебе НЕ нравятся котики');
+            }
+
+        .. raw:: html
+
+            <script>
+                function confirmTest() {
+                    let answer = window.confirm('Нравятся котики?');
+                    if (answer) {
+                        window.alert('Тебе нравятся котики');
+                    } else {
+                        window.alert('Тебе НЕ нравятся котики');
+                    }
+                }
+            </script>
+            <button onclick="confirmTest();">Confirm</button>
 
 
     .. py:function:: decodeURI(str)
@@ -483,7 +539,7 @@ Window
 
     .. py:function:: prompt(message, default_value)
 
-        Выводит сообщение `message` в  диалоговом окне,
+        Выводит сообщение message в  диалоговом окне,
         содержащем поле ввода и  кнопки `OK` и  `Cancel`,
         и  блокирует работу сценария, пока пользователь не щелкнет на одной из кнопок.
 
@@ -496,7 +552,22 @@ Window
 
         .. code-block:: js
 
-            var userName = prompt("What is your name?")
+            let userName = window.prompt("Как вас зовут?");
+            if (userName) {
+                window.alert(`Здравствуй, ${userName}`);
+            }
+
+        .. raw:: html
+
+            <script>
+                function promtTest() {
+                    let userName = window.prompt("Как вас зовут?");
+                    if (userName) {
+                        window.alert(`Здравствуй, ${userName}`);
+                    }
+                }
+            </script>
+            <button onclick="promtTest();">Promt</button>
 
 
     .. py:function:: scroll(long x, long y)
