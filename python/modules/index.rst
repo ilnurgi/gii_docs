@@ -76,6 +76,7 @@
     string
     struct
     sys
+    subprocess
     tempfile
     textwrap
     time

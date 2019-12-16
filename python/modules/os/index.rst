@@ -240,6 +240,25 @@ symlink()
         os.symlink("path1/1.txt", "path2/1.txt")
 
 
+system()
+--------
+
+.. py:method:: system(command)
+
+    Выполняет команду в терминале
+
+    .. code-block:: py
+
+        os.system('echo ilnurgi')
+        # ilnurgi
+
+        exit_code = os.system('cd ~')
+        # 0
+
+        exit_code = os.system('cd blablalba')
+        # 256
+
+
 stat()
 ------
 
