@@ -3,6 +3,10 @@
 event
 =====
 
+.. code-block:: py
+
+    from pygame import event 
+
 get
 ---
 
@@ -31,6 +35,7 @@ Event
         * K_RIGHT - стрелка вправо
         * K_SPACE - пробел
         * K_q - q
+        * K_ESCAPE
 
         .. code-block:: py
 

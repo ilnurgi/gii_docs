@@ -44,14 +44,7 @@ Rect
             # 50
 
 
-    .. py:function:: collidepoint(point1, point2)
-
-        Возвращет булево, пересекается ли область с точкой
-
-        .. code-block:: py
-
-            play_button.rect.collidepoint(mouse_x, mouse_y)
-
+    .. py:attribute:: height
 
     .. py:attribute:: left
 
@@ -81,3 +74,30 @@ Rect
 
             screen_size.top
             # 0
+
+
+    .. py:attribute:: topleft
+
+        Возвращает кортеж left, top
+
+
+    .. py:attribute:: topright
+
+        Возвращает кортеж right, top
+
+        
+    .. py:attribute:: size
+
+        Возвращает кортеж width, height
+
+
+    .. py:attribute:: width
+
+
+    .. py:function:: collidepoint(point1, point2)
+
+        Возвращет булево, пересекается ли область с точкой
+
+        .. code-block:: py
+
+            play_button.rect.collidepoint(mouse_x, mouse_y)

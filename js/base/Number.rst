@@ -2,7 +2,7 @@
 
 .. meta::
     :description:
-        Описание javascript объекта Number.
+        Описание javascript объекта Number. Числа в java script.
     :keywords:
         javascript number
 

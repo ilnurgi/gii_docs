@@ -3,7 +3,11 @@
 font
 ====
 
+.. code-block:: py
 
+	from pygame import font
+
+	
 SysFont
 -------
 

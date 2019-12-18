@@ -76,6 +76,7 @@
     string
     struct
     sys
+    subprocess
     tempfile
     textwrap
     time
@@ -89,6 +90,7 @@
     traceback
     types
     typing
+    turtle/index
     unittest/index
     urllib/index
     venv

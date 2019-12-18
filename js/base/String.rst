@@ -2,7 +2,7 @@
 
 .. meta::
     :description:
-        Описание javascript объекта string
+        Описание javascript объекта string. Объект для работы со строками.
     :keywords:
         js string
 
@@ -242,17 +242,22 @@ String
 
     .. js:function:: replace(searchValue, replaceValue)
 
-        Возвращает новую строку, заменяя в исходной указанные значения
+        Возвращает новую строку, заменяя в исходной первое найденное указанное значение
 
         .. code-block:: js
 
             "mother_in_low".replace("_", "-");
-            // "mother-in-low"
+            // "mother-in_low"
 
             "mother_in_low".replace("_", function(c){});
 
             "(777)888-2323".replace(/\((\d{3})\)/g, "$1-");
             // "111-888-2323"
+
+            "potato potato".replace(/pot/, "tom")
+            // "tomato potato"
+            "potato potato".replace(/pot/g, "tom")
+            // "tomato tomato"
 
 
     .. js:function:: search(regexp)

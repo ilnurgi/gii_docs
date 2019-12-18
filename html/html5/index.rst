@@ -13,7 +13,6 @@ HTML5
     globals_attr
     audio
     canvas
-    details
     footer
     hgroup
     mark

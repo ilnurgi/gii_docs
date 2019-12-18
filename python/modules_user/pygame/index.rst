@@ -7,6 +7,7 @@ pygame
     :maxdepth: 1
 
     display
+    draw
     event
     font
     image
@@ -17,18 +18,8 @@ pygame
     surface
 
 
-draw
-----
-
-.. py:function:: draw(screen, color, rect)
-
-    .. code-block:: py
-
-        draw.rect()
-
-
-init
-----
+init()
+------
 
 .. py:function:: init()
 
@@ -36,7 +27,31 @@ init
 
     .. code-block:: py
 
-        init()
+        pygame.init()
+
+
+quit()
+------
+
+.. py:function:: quit()
+
+    Завершение работы
+
+    .. code-block:: py
+
+        pygame.quit()
+
+PixelArray()
+------------
+
+.. py:function:: PixelArray(surface)
+
+    Возвращает двумерный список пикселей поверхности
+
+    .. code-block:: py
+
+        pixel_array = pygame.PixelArray(window_surface)
+        pixel_array[480][380] = (0, 0, 0)
 
 
 .. code-block:: py

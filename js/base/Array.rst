@@ -84,6 +84,13 @@ Array()
         let newArray = [...oldArray, newValue];
         let uniqFruits = [...new Set(fruitsList)];
 
+    .. code-block:: js
+
+        // перемешать массив
+        [1, 2, 3, 4, 5, 6, 7, 8, 9].sort(function() {
+            return Math.random() - 0.5;
+        });
+        // [8, 2, 9, 1, 3, 6, 5 ,7, 2]
 
     .. py:attribute:: length
 
@@ -114,6 +121,9 @@ Array()
 
             a.concat([4, 5], [6, 7]);
             // [1, 2, 3, 4, 5, 6, 7]
+
+            [].concat(...[1, [2, 5], [6, 7], 9])
+            // [1, 2, 5, 6, 7, 9]
 
 
     .. py:method:: copyWithin(targetIndex, startIndex, endIndex)
