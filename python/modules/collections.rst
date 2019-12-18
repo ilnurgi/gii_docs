@@ -177,8 +177,6 @@ deque()
 
         dq = deque(range(10))
 
-    Экземпляры имеют следующие методы
-
     .. py:method:: append(x)
 
         Добавляет объект x с правой стороны очереди.
@@ -231,6 +229,12 @@ deque()
 
         Удаляет первое вхождение элемента item.
         Возбуждает исключение ValueError, если указанное значение не будет найдено.
+
+
+    .. py:method:: reverse()
+
+        Разворачивает очередь
+        
 
     .. py:method:: rotate(n)
 
@@ -330,6 +334,15 @@ ChainMap()
         # [2, 1, 3, 4]
 
         chain_map.new_child({'e': 5, 'f': 6})
+
+    .. py:method:: keys()
+
+        Возвращает ключи словарей
+
+
+    .. py:method:: values()
+
+        Возвращает значения словарей
 
 
 Container()
@@ -534,6 +547,35 @@ OrderedDict()
             ('key1', 'value1'),
             ('key2', 'value2'),
         ])
+
+
+    .. py:method:: fromkeys(iter)
+
+        Создает объект по итерабельному объекту
+
+        .. code-block:: py
+
+            ordered_dict = OrderedDict.fromkeys('qw')
+            # OrderedDict([('q', None), ('w', None)])
+
+
+    .. py:method:: move_to_end(key, last=True)
+
+        Переносит ключ в конец или в начало
+
+
+    .. py:method:: popitem(last=True)
+
+        Возвращает и удаляет первый или последний элемент
+
+        .. code-block:: py
+
+            OrderedDict.fromkeys('qw').popitem()
+            # ('w', None)
+
+
+
+
 
 
 Sequence()

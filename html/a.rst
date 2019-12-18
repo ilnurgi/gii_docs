@@ -2,7 +2,7 @@
 
 .. meta::
     :description:
-        Описание html элемента a
+        Конспекты по html. Описание элемента a, ссылка в html документе.
     :keywords:
         html a
 
@@ -41,6 +41,9 @@ download
 
     <a href="img.png" download>Картинка</a>
 
+    <!-- cat - имя сохраняемого файла -->
+    <a href="img.png" download="cat">Картинка</a>
+
 
 href
 ----
@@ -51,6 +54,7 @@ href
 
     <a href="http://ilnurgi1.ru">ilnurgi1.ru</a>
     <a href="mailto: mail@mail.rur">Почта</a>
+    <a href="slack://open?team"></a>
     <a href="tel: +7..">Телефон</a>
 
 .. code-block:: html
@@ -67,7 +71,26 @@ hreflang
 
 .. code-block:: html
 
-    <a hreflang='ru'>...</a>
+    <a hreflang="ru"></a>
+
+ping
+----
+
+.. code-block:: html
+
+    <ahref="doc.pdf" ping="/ping"></a>
+
+
+referrerpolicy
+--------------
+
+Управляет доступом к заголовку Referer
+
+* **no-referrer**
+
+.. code-block:: html
+
+    <a href="" referrerpolicy="no-referrer"></a>
 
 
 rel
@@ -75,18 +98,20 @@ rel
 
 Связь между исодным и связанными документами
 
-* alternate
-* author
-* bookmark
-* help
-* license
-* next
-* nofollow
-* noreferrer
-* prefetch
-* prev
-* search
-* tag
+* **alternate** 
+* **author**
+* **bookmark**
+* **external**
+* **help**
+* **license**
+* **next**
+* **nofollow**
+* **noopener**
+* **noreferrer**
+* **prefetch**
+* **prev**
+* **search**
+* **tag**
 
 
 target
@@ -94,9 +119,17 @@ target
 
 Имя окна или области iframe, где будет открываться документ
 
+* **_blank** - открыть в новой вкладке
+* **_self** - открыть в текущем контексте
+* **_parent** - открыть в родительском контексте
+* **_top** - открыть в верхнем контексте
+* **iframe-name** - открыть в контексте name="iframe-name"
+
+* ****
 .. code-block:: html
 
     <a href="http://ilnurgi1.ru" target="_blank">ilnurgi1.ru</a>
+    <a href="http://ilnurgi1.ru" target="_self"></a>
 
 
 title
@@ -113,3 +146,10 @@ type
 ----
 
 Тип контента для связанного контента
+
+* **application/pdf**
+* **text/html**
+
+.. code-block:: html
+
+    <a href="doc.pdf" type="application/pdf"></a>
