@@ -1,3 +1,12 @@
+.. title:: python beautifulsoup
+
+.. meta::
+    :description:
+        Справочная информация по python модулю beautifulsoup.
+        Модуль для обработки html структуры.
+    :keywords:
+        python beautifulsoup
+
 .. py:module:: beautifulsoup
 
 beautifulsoup
@@ -15,7 +24,7 @@ https://www.crummy.com/software/BeautifulSoup/bs4/doc/
     pip install beautifulsoup4
 
 .. code-block:: py
-    
+
     from bs4 import BeautifulSoup
 
     soup = BeautifulSoup(html_text)
@@ -38,20 +47,42 @@ BeautifulSoup()
         soup = BeautifulSoup(some_html_string, 'html5lib')
 
 
-    .. py:attribute:: body -> :py:class:`beautifulsoup.element.Tag`
+    .. py:attribute:: body
 
-    .. py:attribute:: head -> :py:class:`beautifulsoup.element.Tag`
+        Возвращает :py:class:`beautifulsoup.element.Tag`
 
-    .. py:attribute:: title -> :py:class:`beautifulsoup.element.Tag`
 
-    .. py:method:: get_test() -> str
+    .. py:attribute:: head
+
+        Возвращает :py:class:`beautifulsoup.element.Tag`
+
+
+    .. py:attribute:: title
+
+        Возвращает :py:class:`beautifulsoup.element.Tag`
+
+
+    .. py:method:: get_test()
 
         Возвращает строку, весь текст, без html страницы
 
 
     .. py:method:: find(name=None, attributes={}, recursive=True, text=None, *kwargs)
 
-        Возвращает первый найденный элемент
+        * **name** = None
+        * **attributes** = {}
+        * **recursive** = True
+        * **text** = None
+        * **id**
+        * **string**
+
+        Возвращает первый найденный элемент, :py:class:`beautifulsoup.element.Tag`
+
+        .. code-block:: py
+
+            elem = soup.find(id='myId')
+            elem = soup.find('h2', string='Python')
+            elem = soup.find('h2', string=lambda text: 'Python' in text)
 
 
     .. py:method:: findAll(name=None, attributes={}, recursive=True, text=None, limit=None, *kwargs) -> :py:class:`beautifulsoup.element.ResultSet`

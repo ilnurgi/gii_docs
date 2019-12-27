@@ -1,36 +1,80 @@
+.. title:: python socket
+
+.. meta::
+    :description:
+        Справочная информация по python модулю socket.
+        Модуль для работы с сокетом.
+    :keywords:
+        python sockets
+
+.. py:module:: socket
+
 socket
 ======
 
-Работа с сокетом
+
+AF_INET
+-------
 
 .. py:attribute:: AF_INET
 
     IPv4 протокол
 
+AF_UNIX
+-------
+
 .. py:attribute:: AF_UNIX
 
     Юниксовый сокет
+
+AF_INET6
+--------
 
 .. py:attribute:: AF_INET6
 
     IPv6 протокол
 
+
+SOCK_DGRAM
+----------
+
 .. py:attribute:: SOCK_DGRAM
 
     UDP протокол
+
+
+SOCK_STREAM
+-----------
 
 .. py:attribute:: SOCK_STREAM
 
     TCP протокол
 
+
+SOL_SOCKET
+----------
+
 .. py:attribute:: SOL_SOCKET
+
+
+SO_DROADCAST
+------------
+
 .. py:attribute:: SO_DROADCAST
+
+
+SO_REUSEADDR
+------------
+
 .. py:attribute:: SO_REUSEADDR
 
 
-.. py:function:: socket()
+socket()
+--------
 
-    Возвращает объект соединения :py:class:`socket`
+.. py:class:: socket()
+
+    Сокет соединение
 
     .. code-block:: py
 
@@ -47,9 +91,9 @@ socket
             while True:
                 sock.bind()
 
-.. py:class:: socket()
+        # ipv4 tcp
+        client_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 
-    Соединени
 
     .. py:method:: accept()
 
@@ -78,9 +122,10 @@ socket
 
             sock.close()
 
+
     .. py:method:: connect()
 
-        Аодсоединяется к серверу
+        Подсоединяется к серверу
 
         .. code-block:: py
 
@@ -104,6 +149,14 @@ socket
             result = sock.recv(1024)
             # b'message'
 
+
+    .. py:method:: sendall(bytes)
+
+        .. code-block:: py
+
+            socket.sendall(b'GET / HTTP/1.0\r\nHost: www.ilnurgi.ru\r\n\r\n')
+
+
     .. py:method:: sendTo(message, host)
 
         Отправляет сообщение по хосту
@@ -126,7 +179,7 @@ socket
         .. code-block:: py
 
             sock.setsockopt(SOL_SOCKET, SO_DROADCAST, 1)
-            
+
             sock.setsockopt(SOL_SOCKET, SO_REUSEADDR, 1)
 
     .. py:method:: settimeout(timeout)
@@ -181,7 +234,7 @@ socket
         client_connection, client_address = server_socket.accept()
         request = client_connection.recv(1024)
         print(request)
-        
+
         client_connection.sendall(b"HTTP/1.1 200 OK\n\nHello!")
         client_connection.close()
 
@@ -197,4 +250,3 @@ socket
     response = application(request)
     client_connection.sendall(response)
     client_connection.close()
-    

@@ -1,9 +1,9 @@
 .. title:: python redis
 
 .. meta::
-    :description: 
+    :description:
         Справочная информация по python модулю redis
-    :keywords: 
+    :keywords:
         python redis
 
 .. py:module:: redis
@@ -24,12 +24,144 @@ redis
 
     conn = redis.Redis()
 
+    conn.set("key1", "value1")
+    # True
+
 .. code-block:: py
 
     redis_db = redis.StrictRedis(host=host, port=port, db=0)
 
     # список ключей в базе
     redis_db.keys()
+
+
+Redis()
+-------
+
+.. py:class:: Redis(**kwargs)
+
+    * **host** = localhost
+    * **port** = 6397
+    * **db** = 0
+    * **password** = None
+    * **socket_timeout** = None
+
+    Объект для работы с базой данных
+
+    .. py:method:: get(key)
+    .. py:method:: set(key, value)
+    .. py:method:: setex(key, expire_s, value)
+    .. py:method:: psetex(key, expire_ms, value)
+
+        Одиночное получение/установка данных
+
+        .. code-block:: py
+
+            conn.set('k1', 'v1')
+            # True
+
+            conn.get('k1')
+            # b'v1'
+
+            conn.setex('k2', timedelta(minutes=1), 'v2')
+            # True
+            # установка ключа со сроком годности
+
+
+    .. py:method:: exists(key)
+
+        Проверка на существование ключа
+
+        .. code-block:: py
+
+            con.exists('k3')
+            # 0
+
+
+    .. py:method:: expire(key, expire_s)
+    .. py:method:: pexpire(key, expire_ms)
+
+        Установка нового срока годности данных
+
+        .. code-block:: py
+
+            conn.expire('k1', timedelta(days=1))
+
+
+    .. py:method:: hgetall(key)
+    .. py:method:: hincrby(key, )
+
+    .. py:method:: keys()
+
+        Возвращает список всех ключей базы
+
+        .. code-block:: py
+
+            conn.keys()
+            # [b'k1', b'k2']
+
+
+    .. py:method:: mget(keys)
+    .. py:method:: mset(data)
+
+        Множественное получение/установка данных
+
+        .. code-block:: py
+
+            conn.mset({'k1': 'v1', 'k2': 'v2'})
+            # True
+
+            conn.mget(('k1', 'k2'))
+            # [b'v1', b'v2']
+
+
+    .. py:method:: persist(key)
+
+        Удаляет срок годности данных
+
+        .. code-block:: py
+
+            con.persist('k1')
+
+
+    .. py:method:: pipeline()
+
+        Создает поток, для работы с данными.
+
+        Т.е. обработать все данные за один запрос
+
+        .. code-block:: py
+
+            with conn.pipeline() as pipe:
+                pipe.set('k1', 'v1')
+                pipe.set('k2', 'v2')
+                pipe.execute()
+
+
+    .. py:method:: sadd(k, *values)
+    .. py:method:: smembers(k)
+
+        .. code-block:: py
+
+            conn.sadd('k1', 'v1', 'v2')
+            # 3
+
+            conn.smembers('k1')
+            # {b'v1', b'v2'}
+
+
+    .. py:method:: ttl(key)
+    .. py:method:: pttl(key)
+
+        Возвращает срок годности данных по ключам в секндах/миллисекундах
+
+        .. code-block:: py
+
+            conn.ttl('k1')
+            # 58
+
+            conn.pttl('k1')
+            # 57456
 
 
 .. code-block:: py

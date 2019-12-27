@@ -4,7 +4,6 @@
     :description:
         Справочная информация по внешним модулям python.
     :keywords:
-        python,
         python packages
 
 Сторонние модули
@@ -33,6 +32,7 @@
     markdown
     matplotlib/index
     memcache
+    memory_profiler
     numpy/index
     openpyxl
     openstack/index
@@ -59,7 +59,7 @@
     sphinx
     starlette/index
     sqlalchemy/index
+    urllib3
     xlrd
     xlwt
     xlutils
-    memory_profiler

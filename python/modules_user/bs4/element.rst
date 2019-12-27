@@ -1,3 +1,12 @@
+.. title:: python beautifulsoup element
+
+.. meta::
+    :description:
+        Справочная информация по python модулю beautifulsoup.
+        Модуль для обработки html структуры.
+    :keywords:
+        python beautifulsoup element
+
 .. py:module:: beautifulsoup.element
 
 element
@@ -33,7 +42,7 @@ Tag()
                 print(child.get_text())
 
 
-    .. py:attribute:: contents -> list
+    .. py:attribute:: contents
 
     .. py:attribute:: descendants
 
@@ -47,12 +56,12 @@ Tag()
 
     .. py:attribute:: name
 
-    	Строка, название тега
+        Строка, название тега
 
-		.. code-block:: py
+        .. code-block:: py
 
-			tag.name
-			# 'a'
+            tag.name
+            # 'a'
 
 
     .. py:attribute:: next_sibling
@@ -84,12 +93,17 @@ Tag()
                 print(sibling)
 
 
-    .. py:attribute:: string -> :py:class:`beautifulsoup.element.NavigableString`
+    .. py:attribute:: string
 
-        Текстовое содержимое тега
+        Текстовое содержимое тега, :py:class:`beautifulsoup.element.NavigableString`
 
 
-    .. py:method:: get_text() -> str
+    .. py:method:: text
+
+        Текстовое содержимое
+
+
+    .. py:method:: get_text()
 
         Возвращает только текст содержимого
 
@@ -97,6 +111,22 @@ Tag()
 
             span_elem.get_text()
             # some text
+
+
+    .. py:method:: find_all()
+
+        Возвращает список всех найденных элементов
+
+
+    .. py:method:: prettify()
+
+        Возвращает текстовое содержимое
+
+        .. code-block:: py
+
+            span_elem.prettify()
+            # <span>hello world</span>
+
 
 
 NavigableString()

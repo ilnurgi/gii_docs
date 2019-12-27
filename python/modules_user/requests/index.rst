@@ -1,9 +1,10 @@
-.. title:: python module requests
+.. title:: python requests
 
 .. meta::
-    :description: 
+    :description:
         Справочная информация по python библиотеке requests.
-    :keywords: 
+        Библиотке для работы с сетевыми запросами.
+    :keywords:
         python requests
 
 .. py:module:: requests

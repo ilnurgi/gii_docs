@@ -1,7 +1,7 @@
 .. title:: python celery
 
 .. meta::
-    :description: 
+    :description:
         Справочная информация по python модулю celery.
     :keywords:
         python celery
