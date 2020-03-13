@@ -38,6 +38,7 @@
     functools
     gc
     getpass
+    gettext
     glob
     hashlib
     heapq

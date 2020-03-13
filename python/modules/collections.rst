@@ -234,7 +234,7 @@ deque()
     .. py:method:: reverse()
 
         Разворачивает очередь
-        
+
 
     .. py:method:: rotate(n)
 
@@ -306,7 +306,7 @@ Callable()
 ----------
 
 .. py:class:: Callable()
-    
+
     Базовый класс объектов, поддерживающих возможность вызова, как функции.
 
     Определяет абстрактный метод __call__().
@@ -318,9 +318,9 @@ ChainMap()
 .. py:class:: ChainMap()
 
     .. code-block:: py
-    
+
         chain_map = ChainMap({'a': 1, 'b': 2}, {'c': 3, 'd': 4})
-        
+
         chain_map.maps
         # [{'b': 2, 'a': 1}, {'c': 3, 'b': 4}]
 

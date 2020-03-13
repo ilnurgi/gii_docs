@@ -1,9 +1,9 @@
 .. title:: postgres
 
 .. meta::
-    :description: 
+    :description:
         Справочная информация по субд postgres
-    :keywords: 
+    :keywords:
         postgres
 
 Postgres
@@ -16,6 +16,7 @@ Postgres
     operations
     functions/index
     psql
+    service_tables
 
 в постгрес форейгн кей не создает автоматом индекс
 
@@ -34,7 +35,7 @@ Postgres
         [WHERE предикат]
 
     CREATE INDEX test_index ON test_table (col varchar_pattern_ops);
-        
+
     -- класс_операторов
     -- -text_pattern_ops
     -- -varchar_pattern_ops
@@ -76,11 +77,11 @@ btree индекс
     );
 
     CREATE INDEX idx_people_name
-        ON 
+        ON
             people USING btree
                 (lst_name, first_name, date_of_birth;
 
-hash - индекс 
+hash - индекс
 
 данный индекс необходимо использовать только для временных таблиц
 
@@ -99,7 +100,7 @@ hash - индекс
     );
 
     CREATE INDEX idx_testhash_fname
-        ON 
+        ON
             testhash USING hash
                 (fname);
 
@@ -152,7 +153,7 @@ gin индекс, инвертированный индекс
 кластерный индекс
 
 .. code-block::
-    
+
     CREATE TABLE movies (
         id SERIAL PRIMARY KEY
         , title TEXT NOT NULL
