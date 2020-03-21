@@ -100,34 +100,62 @@ lambda функции
 Декораторы
 ----------
 
-Это функция, в качестве аргумента принимает функцию или класс
+Это функция, в качестве аргумента принимает функцию или класс и
+возвращает другую функцию,
+которая будет выполняться интерпретатором при вызове декорируемой функции.
 
 .. code-block:: py
 
     def prepare(func):
-        def wrapp():
-            print 1
-            func()
-            print 3
+        """
+        декоратор
+        """
+
+        def wrapp(*args, **kwargs):            
+            print(1)
+            result = func(*args, **kwargs)
+            print(3)
+            return result
+
         return wrapp
 
     @prepare
     def func():
-        print 2
+        """
+        декорируемая функция
+        """
+        print(2)
 
     func()
     # 1
     # 2
     # 3
 
-    def deco(C):
-        print("Bнyтpи декоратора")
-        return C
 
-    @deco
-    class MyClass:
-        def init (self, value):
-            self.v = value
+.. code-block:: py
+
+    def prepare_with_parameters(params):
+        print(0)
+        def decorator(func):
+            def wrapp():
+                print(1)
+                result = func()
+                print(3)
+                return result
+            return wrapp
+        return decorator
+
+    @prepare_with_parameters(0)
+    def func():
+        print(2)
+
+    func()
+    # 0
+    # 1
+    # 2
+    # 3
+
+    
 
 Генераторы
 ----------

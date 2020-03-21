@@ -1,9 +1,18 @@
+.. title:: python http.client
+
+.. meta::
+    :description:
+        Справочная информация по python модулю http.client.
+        Модуль позволяет получить информацию из интернета по протоколу HTTP и HTTPS.
+    :keywords:
+        python http.client
+
 .. py:module:: http.client
 
 http.client
 ===========
 
-Модуль позволяет получить информацию из интернета по протоколу HTTP и HTTPS. 
+Модуль позволяет получить информацию из интернета по протоколу HTTP и HTTPS.
 
 
 HTTPConnection()
@@ -13,8 +22,8 @@ HTTPConnection()
 
     объект соединение
 
-    * domen - домен, указывается без протокола
-    * port - порт
+    * **domen** - домен, указывается без протокола
+    * **port** - порт
 
     .. code-block:: py
 
@@ -70,10 +79,19 @@ HTTPConnection()
 
         отправляет параметры запроса
 
-        :param str method: метод запроса
-        :param str path: путь от корня, для GET запроса данные также передаются тут
-        :param str body: тело запроса для POST запроса
-        :param dict headers: заголовки 
+        * **method** - метод запроса
+        * **path** - путь от корня, для GET запроса данные также передаются тут
+        * **body** - тело запроса для POST запроса
+        * **headers** - заголовки
+
+        .. code-block:: py
+
+            conn.request(
+                method='POST',
+                path='',
+                body=urllib.parse.urlencode({}),
+                headers={}
+            )
 
 
 HTTPResponse()

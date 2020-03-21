@@ -1,3 +1,11 @@
+.. title:: python urllib.parse
+
+.. meta::
+    :description:
+        Справочная информация по python модулю urllib.parse.
+    :keywords:
+        python urllib parse
+
 .. py:module:: parse
 
 parse
@@ -7,6 +15,9 @@ parse
 
     данный модуль доступен на третьей ветки питона
 
+
+parse_qs()
+----------
 
 .. py:method:: parse_qs(<строка запроса>, [, keep_blankvalues=False][, strict_parsing=False][, encoding='utf-8'][, errors='replace'])
 
@@ -80,14 +91,14 @@ urlencode()
 
     преобразовывает отдельные составляющие в строку запроса
 
-    :param объект: словарь или список кортежей (кортеж из 2х элементов)
-    :param bool doseq: если истина, то можно указать последовательность из нескольких значений во втором параметре кортежа
+    * **query** - dict, list[tuple]
+    * **doseq** - bool - если истина, то можно указать последовательность из нескольких значений во втором параметре кортежа
 
     .. code-block:: py
-    
+
         urlencode({'str': 'Строка 2', 'var': 20}, encoding='cpl251)
         # 'var=20&str='Шl%F2•;FO%EE%EA%E0+2'
-        
+
         urlencode([('str', 'Строка 2'), ('var', 20)], encodiпg='cp1251')
         # 'str=%D1%F2%FO%EE%EA%E0+2&var=20' 
 

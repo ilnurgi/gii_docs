@@ -1,4 +1,12 @@
-Nginx
+.. title:: nginx
+
+.. meta::
+    :description:
+        Справочная информация по nginx.
+    :keywords:
+        nginx
+
+nginx
 =====
 
 `wiki.nginx.org <http://wiki.nginx.org/>`_
@@ -15,7 +23,9 @@ Nginx
 .. toctree::
     :maxdepth: 1
 
+    brotli
     events
+    gzip
     http
     location
     logging
@@ -28,7 +38,7 @@ Nginx
     # worker_process auto;
 
     events {}
-    
+
     access_log off;
 
     http {
@@ -49,71 +59,10 @@ Nginx
     }
 
 
-gzip
-----
-
-.. code-block:: nginx
-
-    http {
-        gzip on;
-
-        server {
-            location / {
-                gzip off;
-            }
-        }
-    }
-
-
-gzip_comp_level
----------------
-
-Уровень сжатия, как вариант использовать от 2 до 4.
-
-.. code-block:: nginx
-
-    gzip_comp_level 3;
-
-
-gzip_disable
-------------
-
-Выключает сжатие для указанного юзер агента
-
-.. code-block:: nginx
-
-    gzip_disable "msie6";
-
-
-gzip_min_length
----------------
-
-Минимальный размер для сжатия, все что меньше, пропускаем
-
-.. code-block:: nginx
-
-    http {
-        gzip on;
-
-        # минимальный размер для сжатия
-        gzip_min_length 100;
-    }
-
-gzip_types
-----------
-
-Типы файлов, которые необходимо сжимать
-
-.. code-block:: nginx
-
-    gzip_types text/plain text/css;
-    gzip_types text/javascript;
-
-
 limit_con_zone
 --------------
 
-Лимит относительно чего 
+Лимит относительно чего
 
 .. code-block:: nginx
 

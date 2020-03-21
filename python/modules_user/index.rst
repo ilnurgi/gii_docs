@@ -39,6 +39,7 @@
     pandas/index
     p4a/index
     pep8
+    pip
     pyaudio
     psutil
     psycopg2/index

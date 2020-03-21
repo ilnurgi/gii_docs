@@ -1,3 +1,11 @@
+.. title:: python urllib
+
+.. meta::
+    :description:
+        Справочная информация по python модулю urllib.
+    :keywords:
+        python urllib
+
 .. py:module:: urllib
 
 urllib
@@ -6,17 +14,21 @@ urllib
 .. toctree::
     :maxdepth: 1
 
+    error
     parse
     request
+    robotparser
 
 
 .. code-block:: py
 
-    urllib_request_upload_files.py
+    # urllib_request_upload_files.py
+
     import io
     import mimetypes
-    from urllib import request
     import uuid
+
+    from urllib import request
 
 
     class MultiPartForm:
@@ -28,7 +40,6 @@ urllib
             # Use a large random byte string to separate
             # parts of the MIME data.
             self.boundary = uuid.uuid4().hex.encode('utf-8')
-            return
 
         def get_content_type(self):
             return 'multipart/form-data; boundary={}'.format(
@@ -38,8 +49,7 @@ urllib
             """Add a simple field to the form data."""
             self.form_fields.append((name, value))
 
-        def add_file(self, fieldname, filename, fileHandle,
-                     mimetype=None):
+        def add_file(self, fieldname, filename, fileHandle, mimetype=None):
             """Add a file to be uploaded."""
             body = fileHandle.read()
             if mimetype is None:
@@ -48,7 +58,6 @@ urllib
                     'application/octet-stream'
                 )
             self.files.append((fieldname, filename, mimetype, body))
-            return
 
         @staticmethod
         def _form_data(name):
@@ -108,10 +117,8 @@ urllib
         # for the data to be posted.
         data = bytes(form)
         r = request.Request('http://localhost:8080/', data=data)
-        r.add_header(
-            'User-agent',
-            'PyMOTW (https://pymotw.com/)',
-        )
+
+        r.add_header('User-agent', 'User-Agent')
         r.add_header('Content-type', form.get_content_type())
         r.add_header('Content-length', len(data))
 

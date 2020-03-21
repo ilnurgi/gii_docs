@@ -1,3 +1,11 @@
+.. title:: git
+
+.. meta::
+    :description:
+        Справочная информация по системе контроля версии, git.
+    :keywords:
+        git
+
 Git
 ===
 
