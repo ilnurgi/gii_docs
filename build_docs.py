@@ -157,3 +157,9 @@ if __name__ == '__main__':
     current_time = int(time())
     with open(os.path.join(BASE_DIR, '{current_time}.log'.format(current_time)), 'w') as f:
         f.write('\n'.join(jobs_result_list))
+
+    with open(os.path.join(BUILD_DIR_HTML, 'index.html'), 'w') as f:
+        f.write(
+            minify(
+                open(os.path.join(BASE_DIR, 'index.html')).read()
+            ))
