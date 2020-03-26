@@ -1,3 +1,6 @@
+"""многопроцессный конвертер
+"""
+
 import os
 import shutil
 import sys
