@@ -10,6 +10,8 @@ from io import StringIO
 from time import time
 from multiprocessing import Pool
 
+from htmlmin import minify
+
 from sphinx.cmd import build
 
 BASE_DIR = os.path.abspath(os.path.dirname(__file__))
