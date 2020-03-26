@@ -1,10 +1,10 @@
-.. title:: python operators
+.. title:: python function
 
 .. meta::
     :description: 
-        Справочная информация по операторам языка программирования python.
+        Справочная информация по python, функции.
     :keywords: 
-        python operators
+        python function
 
 function
 ========

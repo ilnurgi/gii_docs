@@ -2,12 +2,160 @@
 
 .. meta::
     :description: 
-        Справочная информация по встроенным функциям в языке программирования python.
+        Справочная информация по python, встроенные функции.
     :keywords: 
         python builtin functions
 
-builtin functions
-=================
+Встроенные функции
+==================
+
+abs
+---
+
+.. py:method:: abs(x)
+    
+    Возвращает :py:class:`int`, абсолютное значение
+
+    .. code-block:: py
+
+        abs(-3)
+        # 3
+
+
+bin
+---
+
+.. py:method:: bin(x)
+
+    Возвращает :py:class:`str`, бинарное число из десятичного
+
+    .. code-block:: py
+
+        bin(255)
+        # '0b11111111'
+
+        bin(1)
+        # '0b1'
+
+        bin(-45)
+        # '-0b101101'
+
+
+cmp
+---
+
+.. py:method:: cmp(x, y)
+    
+    Возвращает :py:class:`int`, результат сравнения
+
+        * -1 если X < Y
+        * 0 если X = Y
+        * 1 если X > Y
+    
+    .. code-block:: py
+
+        cmp(2, 1)
+        # 1
+
+
+chr
+---
+
+.. py:method:: chr(x)
+
+    Возвращает :py:class:`str`, строковое представление числа
+
+    .. code-block:: py
+
+        chr(65)
+        # 'a'
+
+
+divmod
+------
+
+.. py:method:: divmod(x, y)
+    
+    Возвращает :py:class:`tuple`, целое и остаток от деления Х на У
+    
+    .. code-block:: py
+
+        divmod(10, 3)
+        # (3, 1)
+
+
+hex
+---
+
+.. py:method:: hex(x)
+
+    Возвращает :py:class:`str`, шестнадцатиричное представление десятичного числа
+    
+    .. code-block:: py
+
+        hex(16)
+        # '0х10'
+
+
+oct
+---
+
+.. py:method:: oct(x)
+    
+    Возвращает строку :py:class:`str`, восьмеричное представление аргумента
+
+    .. code-block:: py
+
+        oct(16)
+        # '0o20'
+
+
+ord
+---
+
+.. py:method:: ord(char)
+
+    Возвращает :py:class:`int`, преобразованное из символа
+
+
+pow
+---
+
+.. py:method:: pow(x, y [, z])
+
+    Возвращает число, возведенное в степень
+
+    .. code-block:: py
+
+        pow(2, 3)
+        # 8
+
+        pow(10, 2, 2)
+        # (10 ** 2)%2 = 0
+
+
+round
+-----
+
+.. py:method:: round(x [, y=0])
+
+    Возвращает :py:class:`float`, полученное в результате округления аргумента
+
+    .. code-block:: py
+
+        round(2, 2)
+        # 2.0
+
+        round(0.49)
+        # 0
+
+
+unichr
+------
+
+.. py:method:: unichr(x)
+
+    Преобразует число в юникод символ
 
 any()
 -----

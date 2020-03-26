@@ -1,17 +1,35 @@
-try/except - перехват исключений
-================================
+.. title:: python exceptions
 
->>> try:
+.. meta::
+    :description: 
+        Справочная информация по python, exceptions.
+    :keywords: 
+        python exceptions
+
+exceptions
+==========
+
+.. code-block:: py
+    try:
         5/0
     except ZeroDivisionError as err:
         print err
 
->>> raise RuntimeError(u'Ошибка какая то')
+.. code-block:: py
 
->>> class MyException(Exception): pass
+    raise RuntimeError(u'Ошибка какая то')
 
->>> assert False, u'Данная строка возбудит исключение AssertionError'
+.. code-block:: py
 
+    class MyException(Exception): pass
+
+.. code-block:: py
+
+    assert False, u'Данная строка возбудит исключение AssertionError'
+
+
+AttributeError()
+----------------
 
 .. py:class:: AttributeError
 
@@ -20,12 +38,18 @@ try/except - перехват исключений
     Наследник :py:class:`StandardError`
 
 
+ArithmeticError()
+-----------------
+
 .. py:class:: ArithmeticError
 
     Базовый класс исключений, возбуждаемых арифметическими операциями
 
     Наследник :py:class:`StandardError`
 
+
+AssertionError()
+----------------
 
 .. py:class:: AssertionError
 
@@ -34,10 +58,16 @@ try/except - перехват исключений
     Наследник :py:class:`StandardError`
 
 
+BaseException()
+---------------
+
 .. py:class:: BaseException
 
     Базовый класс всех исключений
 
+
+EnvironmentError()
+------------------
 
 .. py:class:: EnvironmentError
 
@@ -46,12 +76,18 @@ try/except - перехват исключений
     Наследник :py:class:`StandardError`
 
 
+EOFError()
+----------
+
 .. py:class:: EOFError
 
     Возбуждается по достижении конца файла
 
     Наследник :py:class:`StandardError`
 
+
+Exception()
+-----------
 
 .. py:class:: Exception
 
@@ -60,12 +96,18 @@ try/except - перехват исключений
     Наследник :py:class:`BaseException`
 
 
+FloatingPointError()
+--------------------
+
 .. py:class:: FloatingPointError
 
     Ошибка в инструкции import
 
     Наследник :py:class:`ArithmeticError`
 
+
+GeneratorExit()
+---------------
 
 .. py:class:: GeneratorExit
 
@@ -74,12 +116,18 @@ try/except - перехват исключений
     Наследник :py:class:`BaseException`
 
 
+ImportError()
+-------------
+
 .. py:class:: ImportError
 
     Ошибка в инструкции import
 
     Наследник :py:class:`SyntaxError`
 
+
+IndentationError()
+------------------
 
 .. py:class:: IndentationError
 
@@ -88,12 +136,18 @@ try/except - перехват исключений
     Наследник :py:class:`SyntaxError`
 
 
+IndexError()
+------------
+
 .. py:class:: IndexError
 
     Ошибка обращения по индексу за пределами последовательности.
 
     Наследник :py:class:`LookupError`
 
+
+IOError()
+---------
 
 .. py:class:: IOError
 
@@ -102,12 +156,18 @@ try/except - перехват исключений
     Наследник :py:class:`EnvironmentError`
 
 
+KeyError()
+----------
+
 .. py:class:: KeyError
 
     Ошибка обращения к несуществующему ключу словаря
 
     Наследник :py:class:`LookupError`
 
+
+KeyboardInterrupt()
+-------------------
 
 .. py:class:: KeyboardInterrupt
 
@@ -116,12 +176,18 @@ try/except - перехват исключений
     Наследник :py:class:`BaseException`
 
 
+LookupError()
+-------------
+
 .. py:class:: LookupError
 
     Ошибка обращения по индексу или ключу
 
     Наследник :py:class:`Exception`
 
+
+MemoryError()
+-------------
 
 .. py:class:: MemoryError
 
@@ -130,12 +196,18 @@ try/except - перехват исключений
     Наследник :py:class:`Exception`
 
 
+NameError()
+-----------
+
 .. py:class:: NameError
 
     Не удалось отыскать локальное или глобальное имя
 
     Наследник :py:class:`Exception`
 
+
+NotImplementedError()
+---------------------
 
 .. py:class:: NotImplementedError
 
@@ -144,12 +216,18 @@ try/except - перехват исключений
     Наследник :py:class:`Exception`
 
 
+OSError()
+---------
+
 .. py:class:: OSError
 
     Ошибка операционной системы
 
     Наследник :py:class:`EnvironmentError`
 
+
+ReferenceError()
+----------------
 
 .. py:class:: ReferenceError
 
@@ -158,12 +236,18 @@ try/except - перехват исключений
     Наследник :py:class:`Exception`
 
 
+RuntimeError()
+--------------
+
 .. py:class:: RuntimeError
 
     Универсальное исключение
 
     Наследник :py:class:`Exception`
 
+
+StandardError()
+---------------
 
 .. py:class:: StandardError
 
@@ -174,12 +258,18 @@ try/except - перехват исключений
     Наследник :py:class:`Exception`
 
 
+StopIteration()
+---------------
+
 .. py:class:: StopIteration
 
     Возбуждается для прекращения итераций
 
     Наследник :py:class:`Exception`
 
+
+SyntaxError()
+-------------
 
 .. py:class:: SyntaxError
 
@@ -188,12 +278,18 @@ try/except - перехват исключений
     Наследник :py:class:`Exception`
 
 
+SystemError()
+-------------
+
 .. py:class:: SystemError
 
     Нефатальная системная ошибка в интерпретаторе
 
     Наследник :py:class:`Exception`
 
+
+SystemExit()
+------------
 
 .. py:class:: SystemExit
 
@@ -202,12 +298,18 @@ try/except - перехват исключений
     Наследник :py:class:`BaseException`
 
 
+TabError()
+----------
+
 .. py:class:: TabError
 
     Непоследовательное использование символа табуляции (генерируется при запуске интерпретатора с ключом –tt)
 
     Наследник :py:class:`IndentationError`
 
+
+TypeError()
+-----------
 
 .. py:class:: TypeError
 
@@ -216,12 +318,18 @@ try/except - перехват исключений
     Наследник :py:class:`Exception`
 
 
+UnboundLocalError()
+-------------------
+
 .. py:class:: UnboundLocalError
 
     Ошибка обращения к локальной переменной, которой еще не было присвоено значение
 
     Наследник :py:class:`Exception`
 
+
+UnicodeError()
+--------------
 
 .. py:class:: UnicodeError
 
@@ -230,12 +338,18 @@ try/except - перехват исключений
     Наследник :py:class:`ValueError`
 
 
+UnicodeDecodeError()
+--------------------
+
 .. py:class:: UnicodeDecodeError
 
     Ошибка декодирования символов Юникода
 
     Наследник :py:class:`ValueError`
 
+
+UnicodeEncodeError()
+--------------------
 
 .. py:class:: UnicodeEncodeError
 
@@ -244,6 +358,9 @@ try/except - перехват исключений
     Наследник :py:class:`ValueError`
 
 
+UnicodeTranslateError()
+-----------------------
+
 .. py:class:: UnicodeTranslateError
 
     Ошибка трансляции символов Юникода
@@ -251,12 +368,18 @@ try/except - перехват исключений
     Наследник :py:class:`ValueError`
 
 
+ValueError()
+------------
+
 .. py:class:: ValueError
 
     Недопустимый тип
 
     Наследник :py:class:`Exception`
 
+
+ZeroDivisionError()
+-------------------
 
 .. py:class:: ZeroDivisionError
 

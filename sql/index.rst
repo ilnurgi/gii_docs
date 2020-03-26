@@ -1,3 +1,11 @@
+.. title:: sql
+
+.. meta::
+    :description:
+        Справочная информация по sql.
+    :keywords:
+        sql
+
 SQL
 ===
 
@@ -12,10 +20,10 @@ SQL - язык программирования для манипулирова�
    * `DCL` - подтверждение прав пользователей
 
 .. toctree::
-   :maxdepth: 1
+   :maxdepth: 2
 
    create
-   alter
+   alter/index
    insert
    update
    delete

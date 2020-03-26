@@ -1,3 +1,11 @@
+.. title:: python bytes
+
+.. meta::
+    :description: 
+        Справочная информация по python, bytes.
+    :keywords: 
+        python bytes
+
 bytes
 =====
 

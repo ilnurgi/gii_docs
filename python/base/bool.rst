@@ -1,3 +1,11 @@
+.. title:: python bool
+
+.. meta::
+    :description: 
+        Справочная информация по python, bool.
+    :keywords: 
+        python bool
+
 bool
 ====
 

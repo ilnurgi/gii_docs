@@ -1,5 +1,7 @@
-complex - комnлексные числа
-===========================
+Комnлексные числа
+=================
 
-    >>> type (2+2j)
-    <class 'cornplex'>
+.. code-block:: py
+
+    type (2+2j)
+    '<class 'complex'>'

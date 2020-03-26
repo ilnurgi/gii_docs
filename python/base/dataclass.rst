@@ -1,3 +1,11 @@
+.. title:: python dataclass
+
+.. meta::
+    :description: 
+        Справочная информация по python, dataclass.
+    :keywords: 
+        python dataclass
+
 dataclass
 =========
 

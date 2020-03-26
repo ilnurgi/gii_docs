@@ -11,6 +11,9 @@
 migrations
 ==========
 
+* :ref:`cli_makemigrations`
+* :ref:`cli_migrate`
+
 RunSQL()
 --------
 

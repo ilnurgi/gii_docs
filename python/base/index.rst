@@ -13,26 +13,28 @@
 .. toctree::
     :maxdepth: 1
 
+    builtin_functions
     comments
+    complex
     modules
     opers
+
     none
-    string
-    int
-    float
-    bool
-    tuple
-    list
-    set
-    frozenset
-    dicts
-    bytearray
+
     bytes
+    bytearray
+    bool
     class
     dataclass
-    complex
+    dict
     elipsis
     errors
     files
+    float
+    frozenset
     functions
-    builtin_functions
+    int
+    list
+    set
+    string
+    tuple

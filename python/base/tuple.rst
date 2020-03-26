@@ -1,3 +1,11 @@
+.. title:: python tuple
+
+.. meta::
+    :description: 
+        Справочная информация по python, tuple.
+    :keywords: 
+        python tuple
+
 tuple
 =====
 

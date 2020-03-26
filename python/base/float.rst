@@ -1,3 +1,11 @@
+.. title:: python float
+
+.. meta::
+    :description: 
+        Справочная информация по python, float.
+    :keywords: 
+        python float
+
 float
 =====
 

@@ -1,6 +1,13 @@
+.. title:: python class
+
+.. meta::
+    :description: 
+        Справочная информация по python, class.
+    :keywords: 
+        python class
+
 class
 =====
-
 
 .. code-block:: py
 

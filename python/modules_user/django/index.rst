@@ -2,12 +2,8 @@
 
 .. meta::
     :description: 
-        Справочная информация по библиотеке django, 
-        написанный на языке программирования python,
-        для разработки веб приложений.        
-    :keywords: 
-        python, 
-        django, 
+        Справочная информация по python библиотеке django.        
+    :keywords:
         python django
 
 .. py:module:: django

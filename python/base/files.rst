@@ -1,3 +1,11 @@
+.. title:: python files
+
+.. meta::
+    :description: 
+        Справочная информация по python, files.
+    :keywords: 
+        python files
+
 file
 ====
 

@@ -1,9 +1,20 @@
+.. title:: python none
+
+.. meta::
+    :description: 
+        Справочная информация по python, none.
+    :keywords: 
+        python none
+
 None
 ====
 
-объект со значением None (обозначает отсутствие значения)
-    
-    >>> type (None)
+Объект со значением None (обозначает отсутствие значения)
+
+.. code-block:: py
+
+    type (None)
     <class 'NoneType'>
-    >>> bool(None)
+    
+    bool(None)
     False

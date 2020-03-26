@@ -1,8 +1,13 @@
-dict
-====
+.. title:: python dicst
+
+.. meta::
+    :description: 
+        Справочная информация по python, dicst.
+    :keywords: 
+        python dicst
 
 dict
-----
+====
 
 .. py:class:: dict()
 

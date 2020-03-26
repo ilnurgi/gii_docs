@@ -1,6 +1,18 @@
+.. title:: python django cli
+
+.. meta::
+    :description: 
+        Справочная информация по python библиотеке django, консольные команды.
+    :keywords:
+        python django cli
+
+.. py:currentmodule:: django
+
 Консольные команды
 ==================
 
+
+.. _cli_compilemessages:
 
 compilemessages
 ---------------
@@ -11,6 +23,10 @@ compilemessages
 
     python manage.py compilemessages
 
+* :ref:`cli_makemessages`
+
+
+.. _cli_createsuperuser:
 
 createsuperuser
 ---------------
@@ -22,6 +38,8 @@ createsuperuser
     python manage.py createsuperuser
 
 
+.. _cli_makemessages:
+
 makemessages
 ------------
 
@@ -31,6 +49,10 @@ makemessages
 
     python manage.py makemessages
 
+:ref:`cli_compilemessages`
+
+
+.. _cli_makemigrations:
 
 makemigrations
 --------------
@@ -45,6 +67,14 @@ makemigrations
 
     python manage.py makemigrations shop --name "add_translation_model"
 
+    # datamigration
+    python manage.py makemigrations shop --empty
+
+* :ref:`cli_migrate`
+* :ref:`cli_sqlmigrate`
+
+
+.. _cli_migrate:
 
 migrate
 -------
@@ -55,11 +85,16 @@ migrate
 
     python manage.py migrate
 
+* :ref:`cli_makemigrations`
+* :ref:`cli_sqlmigrate`
+
+
+.. _cli_runserver:
 
 runserver
 ---------
 
-Запуск сервера разработки
+Запуск сервера разработки, по умолчанию на 127.0.0.1:8000
 
 * settings - моудль файла настроек
 
@@ -67,17 +102,33 @@ runserver
 
     python manage.py runserver
 
+    python manage.py runserver 0.0.0.0:80
+
     python manage.py runserver --settings mysite.settings
 
 
-sqlmigration
-------------
+.. _cli_shell:
+
+shell
+-----
+
+Запустить проект в терминале, в python
+
+.. code-block:: sh
+
+    python manage.py shell
+
+
+.. _cli_sqlmigrate:
+
+sqlmigrate
+----------
 
 Выводит sql запросы миграции
 
 .. code-block:: sh
 
-    python manage.py sqlmigration app_name 0001
+    python manage.py sqlmigrate app_name 0001
     """
     BEGIN;
     CREATE TABLE "blog_post" (
@@ -95,6 +146,11 @@ sqlmigration
     COMMIT;
     """
 
+* :ref:`cli_makemigrations`
+* :ref:`cli_migrate`
+
+
+.. _cli_startapp:
 
 startapp
 --------
@@ -105,12 +161,32 @@ startapp
 
     django-admin startapp blog
 
+* :ref:`cli_startproject`
+
+.. _cli_startproject:
 
 startproject
 ------------
 
-Создать проект
+Создать проект, генерирует структуру.
 
 .. code-block:: sh
 
     django-admin startproject mysite
+
+* :ref:`cli_startapp`
+
+
+.. _cli_test:
+
+test
+----
+
+Прогнать тесты проекта
+
+.. code-block:: sh
+
+    python manage.py test
+
+    # детализированный вывод информации, 0..2
+    python manage.py test --verbosity=2

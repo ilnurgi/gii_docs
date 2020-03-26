@@ -1,3 +1,11 @@
+.. title:: python bytearray
+
+.. meta::
+    :description: 
+        Справочная информация по python, bytearray.
+    :keywords: 
+        python bytearray
+
 bytearray
 =========
 

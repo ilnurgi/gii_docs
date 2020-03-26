@@ -1,3 +1,11 @@
+.. title:: python set
+
+.. meta::
+    :description: 
+        Справочная информация по python, set.
+    :keywords: 
+        python set
+
 set
 ===
 

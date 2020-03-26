@@ -1,3 +1,11 @@
+.. title:: python frozenset
+
+.. meta::
+    :description: 
+        Справочная информация по python, frozenset.
+    :keywords: 
+        python frozenset
+
 frozenset
 =========
 

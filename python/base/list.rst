@@ -1,8 +1,13 @@
-list
-====
+.. title:: python list
+
+.. meta::
+    :description: 
+        Справочная информация по python, list.
+    :keywords: 
+        python list
 
 list
-----
+====
 
 .. py:class:: list(iter_object)
 

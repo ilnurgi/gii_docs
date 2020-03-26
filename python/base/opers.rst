@@ -2,7 +2,7 @@
 
 .. meta::
     :description: 
-        Справочная информация по операторам языка программирования python.
+        Справочная информация по python, операторы.
     :keywords: 
         python operators
 
