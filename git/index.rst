@@ -107,3 +107,9 @@ Git
     $ git checkout -b new_branch
 
     $ git merge new_branch -m "merge commit"
+
+
+.. code-block:: sh
+
+    # после переименования репозитория на гитхабе
+    git remote set-url origin http://github.com/ilnurgi/gii_docs.git
