@@ -154,8 +154,7 @@ if __name__ == '__main__':
 
                 jobs_result_list.append(line)
 
-    current_time = int(time())
-    with open(os.path.join(BASE_DIR, '{current_time}.log'.format(current_time)), 'w') as f:
+    with open(os.path.join(BASE_DIR, '{current_time}.log'.format(current_time=int(time()))), 'w') as f:
         f.write('\n'.join(jobs_result_list))
 
     with open(os.path.join(BUILD_DIR_HTML, 'index.html'), 'w') as f:
