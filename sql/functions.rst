@@ -1,53 +1,52 @@
-Вспомогательные функции
-=======================
+.. title:: sql functions
 
-.. _function_aggregate: Агрегатные функции
+.. meta::
+    :description:
+        Справочная информация по sql, functions
+    :keywords:
+        sql functions
 
-Агрегатные функции
-------------------
+Функции
+=======
 
+any()
+-----
 
-.. py:method:: AVG(<поле>)  
+.. code-block:: sql
 
-    среднее значение в указанном поле
+    select 
+      * 
+    from (
+        values
+          (1, 'ilnurgi1')
+          , (2, 'ilnurgi2')
+      ) t(p_id, p_name)
+    where 
+      p_id = any('{1,3}'::int[]);
 
-    .. code-block:: c
-
-        SELECT AVG(age) from table
-
-
-.. py:method:: COUNT(<поле> | *)
-    
-    количество записей в указанном поле
-
-    .. code-block:: c
-
-        SELECT COUNT(*) from table
-
-
-.. py:method:: MAX(<поле>)  
-
-    максимальное значение в указанном поле
-
-    .. code-block:: c
-
-        SELECT MAX(age) from table
+    /*
+    p_id | p_name
+    -----+-------
+    1    | ilnurgi1
+    */
 
 
-.. py:method:: MIN(<поле>)
-    
-    минимальное значение в указанном поле
+unnest()
+--------
 
-    .. code-block:: c
+Разворачивает массив
 
-        SELECT MIN(age) from table
+.. code-block:: sql
 
+    select
+      *
+    from 
+      unnest('{1,2,3}::int[]')
 
-.. py:method:: SUM(<поле>)   
-
-    сумма значение в указанном поле
-
-    .. code-block:: c
-
-        SELECT SUM(age) from table
-
+    /*
+    unnest
+    ------
+    1
+    2
+    3
+    */

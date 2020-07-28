@@ -19,8 +19,6 @@ TABLE
         <преобразование>
 
 
-
-
 ADD COLUMN
 ----------
 
@@ -35,6 +33,15 @@ ADD COLUMN
     ADD COLUMN group_id INT NOT NULL
 
 
+ADD CONSTRAINT
+--------------
+
+.. code-block:: text
+
+    ALTER TABLE table_name
+    ADD CONSTRAINT constraint_name constraint_definition
+
+
 ADD FOREIGN KEY
 ---------------
 
@@ -42,14 +49,22 @@ ADD FOREIGN KEY
 
 .. code-block:: sql
 
-	ALTER TABLE table
-	ADD FOREIGN KEY (group_id) REFERENCES table_groups (ID)
+	ALTER TABLE table_name
+	ADD FOREIGN KEY (column_name) REFERENCES reference_table_name (reference_column_id)
 
 
 ALTER COLUMN
 ------------
 
 Изменяет солбец
+
+.. code-block:: text
+
+    ALTER TABLE table
+    ALTER COLUMN column [SET DEFAULT value | DROP DEFAULT];
+
+    ALTER TABLE table
+    ALTER COLUMN column [SET NOT NULL | DROP NOT NULL];
 
 .. code-block:: sql
 
@@ -77,6 +92,17 @@ DROP COLUMN
 
 
 
+RENAME COLUMN
+-------------
+
+Переименовывание столбца
+
+.. code-block:: sql
+
+    ALTER TABLE table_name
+    RENAME COLUMN column_name TO new_column_name
+
+
 RENAME TO
 ---------
 
@@ -91,10 +117,3 @@ RENAME TO
 
     ALTER TABLE table 
     RENAME TO table1
-
-
-4. ADD
-    
-    ограничения на таблицу
-
-5. DROP CONSTRANT <столбец> RESTRICT | CASSCADE

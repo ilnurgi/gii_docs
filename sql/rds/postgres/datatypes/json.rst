@@ -7,6 +7,15 @@
 json
 ====
 
+.. code-block:: psql
+
+  select
+    info ->> 'customer' customer
+    , info -> 'items' ->> 'product' product
+  from
+    orders
+
+
 json_object
 -----------
 

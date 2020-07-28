@@ -1,3 +1,11 @@
+.. title:: sql insert
+
+.. meta::
+    :description:
+        Справочная информация по sql, оператор insert.
+    :keywords:
+        sql insert
+
 INSERT
 ======
 
@@ -42,7 +50,7 @@ INSERT
 	INSERT INTO 
 	  table(id, name) 
 	VALUES 
-	  (1, 'hi');
+	  (1, 'hi'), (2, 'hi hi');
 
 	-- вставка значение из выборки
 	INSERT INTO 

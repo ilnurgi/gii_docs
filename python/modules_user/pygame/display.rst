@@ -1,3 +1,11 @@
+.. title:: python pygame.display
+
+.. meta::
+    :description:
+        Справочная информация по python библиотеке pygame, модуль display.
+    :keywords:
+        python pygame display
+
 .. py:module:: pygame.display
 
 display
@@ -5,7 +13,7 @@ display
 
 .. code-block:: py
 
-	from pygame import display
+    from pygame import display
 
 flip()
 ------
@@ -17,6 +25,31 @@ flip()
     .. code-block:::: py
 
         display.flip()
+
+
+set_caption()
+-------------
+
+.. py:function:: set_caption(caption)
+
+    Устанавливает заголовок окна
+
+    .. code-block:: py
+
+        display.set_caption('Hello PyGame')
+
+
+set_icon()
+----------
+
+.. py:function:: set_icon(surface)
+
+    Устанавливает иконку приложения
+
+    .. code-block:: py
+
+        icon = pygame.image.load('image.png')
+        pygame.display.set_icon(img)
 
 
 set_mode()
@@ -32,25 +65,13 @@ set_mode()
         window = display.set_mode((400, 400), 0, 32)
 
 
-set_caption()
--------------
-
-.. py:function:: set_caption(caption)
-
-    Устанавливает заголовок окна
-
-    .. code-block:: py
-
-        display.set_caption('Hello PyGame')
-
 update()
 --------
 
 .. py:function:: update()
 
-	Обновление экрана
+    Обновление экрана
 
-	.. code-block:: py
+    .. code-block:: py
 
-		display.update()
-		
+        display.update()

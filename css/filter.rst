@@ -32,7 +32,7 @@ filter
 blur()
 ------
 
-Рамзытие
+Размытие
 
 .. code-block:: css
 
@@ -110,6 +110,7 @@ contrast()
 
 .. figure:: images/image.png
     :figclass: img-contrast
+
 
 drop-shadow()
 -------------
@@ -280,7 +281,7 @@ saturate()
 sepia()
 -------
 
-Сепия
+Сепия, раскрашивает картинку в красно-коричневых тонах.
 
 .. code-block:: css
 

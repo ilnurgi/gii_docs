@@ -11,8 +11,10 @@
     :maxdepth: 1
 
     boolean
+    date
     null
     int
     float
     string
     json
+    re

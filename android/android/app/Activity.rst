@@ -123,11 +123,16 @@ android.app.Activity
 
         Обработчик контекстного меню, вызывается каждый раз перед показом
 
-        * menu - :py:class:`android.view.ContextMenu`
+        * **menu** - :py:class:`android.view.ContextMenu`
+        * **view** - :py:class:`android.view.View`
+        * **menuInfo** - :py:class:`android.view.ContextMenu.ContextMenuInfo`
 
-        * view - :py:class:`android.view.View`
+        .. code-block:: java
 
-        * menuInfo - :py:class:`android.view.ContextMenu.ContextMenuInfo`
+            @Override
+            public void onCreateContextMenu(ContextMenu menu, View view, ContextMenuInfo menuInfo) {
+                super.onCreateContextMenu(menu, view, menuInfo);
+            }
 
 
     .. py:method:: onCreateDialog(int id)
@@ -148,6 +153,7 @@ android.app.Activity
 
         .. code-block:: java
 
+            @Override
             public boolean onCreateOptionsMenu(Menu menu) {
 
                 menu.add("Item1");
@@ -157,6 +163,7 @@ android.app.Activity
 
         .. code-block:: java
 
+            @Override
             public boolean onCreateOptionsMenu(Menu menu) {
 
                 getMenuInflater().inflate(R.menu.myMenu, menu);
@@ -309,6 +316,13 @@ android.app.Activity
         Добавляет для вью обработчик контекста
 
         * view - :py:class:`android.view.View`
+
+        .. code-block:: java
+
+            @Override
+            protected void onCreate(Bundle savedInstanceState) {
+                registerForContextMenu(findViewById(R.id.context_menu));
+            }
 
 
     .. py:method:: setContentView(R.layout.id)

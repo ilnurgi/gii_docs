@@ -1,3 +1,11 @@
+.. title:: python pygame
+
+.. meta::
+    :description:
+        Справочная информация по python библиотеке pygame.
+    :keywords:
+        python pygame
+
 .. py:module:: pygame
 
 pygame
@@ -53,6 +61,16 @@ PixelArray()
         pixel_array = pygame.PixelArray(window_surface)
         pixel_array[480][380] = (0, 0, 0)
 
+
+.. py:attribute:: K_LEFT
+.. py:attribute:: K_RIGHT
+.. py:attribute:: K_SPACE
+.. py:attribute:: K_q
+.. py:attribute:: K_ESCAPE
+.. py:attribute:: KEYDOWN
+.. py:attribute:: KEYUP
+.. py:attribute:: MOUSEBUTTONDOWN
+.. py:attribute:: QUIT
 
 .. code-block:: py
 

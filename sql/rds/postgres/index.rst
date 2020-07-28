@@ -17,6 +17,7 @@ Postgres
     functions/index
     psql
     service_tables
+    cte
 
 в постгрес форейгн кей не создает автоматом индекс
 

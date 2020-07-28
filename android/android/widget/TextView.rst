@@ -21,41 +21,99 @@ TextView()
         android:text="some_text"
         android:id="@+id/textView1" />
 
-* clickable
+clickable
+---------
 
-    * true
 
-* id - идентификатор элемента
+id
+--
 
-* gravity - как будет расположен текст внутри элемента
+Идентификатор элемента
 
-    * center_horizontal
+.. code-block:: xml
 
-* minHeight
+    <TextView android:id="@+id/textView" />
 
-* onClick - обработчик клика
 
-* text - текст
+gravity
+-------
 
-    * обычная строка, текст
+Положение содержимого внутри элемента
 
-    * ссылка на идентификатор из ресурса строк, :ref:`res_values_string`
+.. code-block:: xml
 
-* textSize - размер текста
+    <TextView android:gravity="center" />
+    <TextView android:gravity="center_horizontal" />
+    <TextView android:layout_gravity="top|bottom|left|right|center" />
+    
 
-    * 26sp
+layout_height
+-------------
 
-* layout_height - высота элемента
+Высота элемента
 
-    * match_parent - заполнить родителя
+.. code-block:: xml
+    
+    <!-- заполнить родителя -->
+    <TextView android:layout_height="match_parent" />
 
-    * wrap_content - по содержимому
+    <!-- по содержимому -->
+    <TextView android:layout_height="wrap_content" />
 
-* layout_width - ширина элемента
+    <TextView android:layout_height="200dp" />
 
-    * match_parent - заполнить родителя
 
-    * wrap_content - по содержимому
+layout_width
+------------
+
+Ширина элемента
+
+.. code-block:: xml
+
+    <!-- заполнить родителя -->
+    <TextView android:layout_width="match_parent" />
+
+    <!-- по содержимому -->
+    <TextView android:layout_width="wrap_content" />
+    
+    <TextView android:layout_width="200dp" />
+
+
+minHeight
+---------
+
+
+onClick
+-------
+
+Обработчик клика
+
+
+text
+----
+
+Текст внутри элемента
+
+.. code-block:: xml
+
+    <TextView android:text="text" />
+    <TextView android:text="@string/tv" />
+
+
+textSize
+--------
+
+Hазмер шрифта текст
+
+.. code-block:: xml
+
+    <TextView android:textSize="8pt"/>
+    <TextView android:textSize="8dp"/>
+    <TextView android:textSize="8sp"/>
+
+
+TextView()
+----------
 
 .. py:class:: TextView([context[, attrs, [defStyle]]])
 

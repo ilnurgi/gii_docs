@@ -1,3 +1,11 @@
+.. title:: sql update
+
+.. meta::
+    :description:
+        Справочная информация по sql, оператор update.
+    :keywords:
+        sql update
+
 UPDTAE
 ======
 

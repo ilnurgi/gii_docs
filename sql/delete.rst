@@ -1,3 +1,11 @@
+.. title:: sql delete
+
+.. meta::
+    :description:
+        Справочная информация по sql, оператор delete.
+    :keywords:
+        sql delete
+
 DELETE
 ======
 

@@ -1,3 +1,11 @@
+.. title:: python pygame.image
+
+.. meta::
+    :description:
+        Справочная информация по python библиотеке pygame, модуль image.
+    :keywords:
+        python pygame image
+
 .. py:module:: pygame.image
 
 image

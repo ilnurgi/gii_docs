@@ -1,10 +1,10 @@
-.. title:: android
+.. title:: android.content
 
 .. meta::
     :description:
-        Справочная информация по android модулю android.content.
+        Справочная информация по android, пакет android.content.
     :keywords:
-        android content
+        android.content
 
 .. py:module:: android.content
 
@@ -14,7 +14,7 @@ content
 .. toctree::
     :maxdepth: 1
 
-    res
+    res/index
     ContentValues
     Context
     DialogInterface

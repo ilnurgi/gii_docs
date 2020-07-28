@@ -13,10 +13,11 @@ https://svelte.dev/
 
 .. code-block:: html
 
-    <!-- App.selte -->
+    <!-- App.svelte -->
 
     <style>
     </style>
+
     <script>
         import Form from './Form.svelte';
         import {scale} from 'svelte/transition';
@@ -232,3 +233,21 @@ https://svelte.dev/
     <ul style="--columns:{cols}">
         <slot />
     </ul>
+
+    {#if time < 10}
+        <p>Good morning</p>
+    {:else if time < 20}
+        <p>Good day</p>
+    {:else}
+        <p>Good evening</p>
+    {/if}
+
+.. code-block:: js
+
+    <script>
+        import {onMount} from 'svelte'
+
+        onMount(() => {})
+    </script>
+
+    // onMount, beforeUpdate, afterUpdate, onDestroy, tick

@@ -22,6 +22,7 @@
     cx_freeze/index
     django/index
     docx
+    fast_api/index
     flask/index
     flask_marshmallow/index
     flask_restful/index
@@ -33,19 +34,22 @@
     matplotlib/index
     memcache
     memory_profiler
+    minecraft/index
     numpy/index
     openpyxl
     openstack/index
     pandas/index
     p4a/index
     pep8
+    pil/index
     pip
-    pyaudio
+    progressbar/index
     psutil
     psycopg2/index
-    pylint
+    pyaudio
     pygame/index
     pygal/index
+    pylint
     pymongo/index
     pypdf2
     pyppeteer
@@ -56,6 +60,7 @@
     pyqt5/index
     redis
     requests/index
+    sanic/index
     serial
     sphinx
     starlette/index

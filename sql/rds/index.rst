@@ -12,4 +12,5 @@ SQL СУБД (RDS)
 .. toctree::
    :maxdepth: 1
 
+   mysql/index
    postgres/index

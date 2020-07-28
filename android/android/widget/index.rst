@@ -19,6 +19,7 @@ widget
     EditText
     ExpandableListView
     GridView
+    ImageView
     ListView
     QuickContactBadge
     RadioButton

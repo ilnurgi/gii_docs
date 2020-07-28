@@ -1,3 +1,11 @@
+.. title:: python pygame.event
+
+.. meta::
+    :description:
+        Справочная информация по python библиотеке pygame, модуль event.
+    :keywords:
+        python pygame event
+
 .. py:module:: pygame.event
 
 event
@@ -7,8 +15,8 @@ event
 
     from pygame import event 
 
-get
----
+get()
+-----
 
 .. py:function:: get()
 
@@ -19,8 +27,8 @@ get
         events = event.get()
 
 
-Event
------
+Event()
+-------
 
 .. py:class:: Event()
 
@@ -31,11 +39,11 @@ Event
 
         Тип события
 
-        * K_LEFT - стрелка влево
-        * K_RIGHT - стрелка вправо
-        * K_SPACE - пробел
-        * K_q - q
-        * K_ESCAPE
+        * :py:attr:`pygame.K_LEFT` - стрелка влево
+        * :py:attr:`K_RIGHT` - стрелка вправо
+        * :py:attr:`K_SPACE` - пробел
+        * :py:attr:`K_q` - q
+        * :py:attr:`K_ESCAPE`
 
         .. code-block:: py
 
@@ -47,10 +55,10 @@ Event
 
         Тип события
 
-        * KEYDOWN - кнопка нажата
-        * KEYUP - кнопка отпущена
-        * MOUSEBUTTONDOWN
-        * QUIT
+        * :py:attr:`KEYDOWN` - кнопка нажата
+        * :py:attr:`KEYUP` - кнопка отпущена
+        * :py:attr:`MOUSEBUTTONDOWN`
+        * :py:attr:`QUIT`
 
         .. code-block:: py
 

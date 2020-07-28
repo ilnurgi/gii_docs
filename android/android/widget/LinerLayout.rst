@@ -24,47 +24,98 @@ LinerLayout()
         android:orientation="vertical"
         android:id="@+id/layout"/>
 
-* background - фон
+background
+----------
 
-    * @drawable/rect
+Фон
 
-* id - идентификатор элемента
 
-    * @+id/identifier
+id
+--
 
-* orientation - порядок заполнения виджетами контейнера
+Идентификатор элемента
 
-    * vertical
-    * horizontal
+.. code-block:: xml
 
-* layout_gravity - выравнивание элемента в родителе
+    <LinerLayout android:id="@+id/liner_layout" />
 
-    * top
-    * bottom
-    * left
-    * right
-    * center
 
-* layout_height - высота элемента
+orientation
+-------------
 
-    * match_parent - заполнить родителя
-    * wrap_content - по содержимому
-    * 10dp
+Порядок заполнения виджетами контейнера
 
-* layout_margin... - внешние отступы элемента
+.. code-block:: xml
 
-    * layout_marginLeft
-    * layout_marginRight
-    * layout_marginBottom
-    * layout_marginTop
+    <LinerLayout android:orientation="vertical" />
+    <LinerLayout android:orientation="horizontal" />
 
-* layout_weight - вес элемента, для заполнения родителя
 
-* layout_width - ширина элемента
+layout_gravity
+--------------
 
-    * match_parent - заполнить родителя
-    * wrap_content - по содержимому
-    * 20 dp
+Выравнивание элемента в родителе
+
+.. code-block:: xml
+    
+    <LinerLayout android:layout_gravity="top|left" />
+    <LinerLayout android:layout_gravity="top|bottom|left|right|center" />
+    <LinerLayout android:gravity="center_horizontal" />
+
+
+layout_height
+-------------
+
+Высота элемента
+
+.. code-block:: xml
+    
+    <!-- заполнить родителя -->
+    <LinerLayout android:layout_height="match_parent" />
+
+    <!-- по содержимому -->
+    <LinerLayout android:layout_height="wrap_content" />
+
+    <LinerLayout android:layout_height="200dp" />
+
+
+layout_margin
+-------------
+
+Внешние отступы элемента
+
+.. code-block:: xml
+
+    <LayoutParams android:layout_margin="layout_marginLeft" />
+    <LayoutParams android:layout_margin="layout_marginRight" />
+    <LayoutParams android:layout_margin="layout_marginBottom" />
+    <LayoutParams android:layout_margin="layout_marginTop" />
+
+
+layout_width
+------------
+
+Ширина элемента
+
+.. code-block:: xml
+
+    <!-- заполнить родителя -->
+    <LinerLayout android:layout_width="match_parent" />
+
+    <!-- по содержимому -->
+    <LinerLayout android:layout_width="wrap_content" />
+
+    <LinerLayout android:layout_width="200dp" />
+
+
+layout_weight
+-------------
+
+Вес элемента, для заполнения родителя
+
+
+LinerLayout()
+-------------
 
 .. py:class:: LinerLayout()
 

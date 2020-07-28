@@ -1,3 +1,11 @@
+.. title:: sql select
+
+.. meta::
+    :description: 
+        Справочная информация по sql, оператор select.
+    :keywords: 
+        sql select
+
 SELECT
 ======
 
@@ -14,22 +22,211 @@ SELECT
         [ORDER BY <название поля> [COLLATE BINARY | NOCASE] [ASC | DESC][, ...]]
         [LIMIT <ограничение>]
 
-    SELECT * FROM table
+.. code-block:: sql
 
-    SELECT table1.name, table2.name 
-        FROM table1, table2 
-        WHERE table1.num = table2.num
+    SELECT * FROM table;
 
-* `ALL` - в результат попадут все значения
-* `DISTINCT` - в результат попадут уникальные значения
-* `GROUP BY` - позволяет сгруппировать несколько записей, полезна при использовании `function_aggregate`
-* `HAVING` - фильтрует уже сгруппированные данные по условию
-* `ORDER BY` - сортировка выбранных значений
+.. code-block:: sql
 
-    * `ASC` - по возрастанию
-    * `DESC` - по убыванию
+    SELECT 
+      table1.name
+      , table2.name 
+    FROM 
+      table1, table2 
+    WHERE 
+      table1.num = table2.num
 
-* `LIMIT` - огрничивает количество записей в выборке
+.. code-block:: sql
+
+    SELECT
+      *
+    FROM (
+      VALUES
+        (1, 'ilnurgi1')
+        , (2, 'ilnurgi2')
+    ) t(p_id, p_name)
+
+    /*
+    p_id | p_name
+    -----+-------
+    1    | ilnurgi1
+    2    | ilnurgi2
+    */
+
+
+
+ALL, DISTINCT
+-------------
+
+ALL - в результат попадут все значения, DISTINCT - в результат попадут уникальные значения
+
+.. code-block:: sql
+
+    SELECT distinct 
+      table1.name
+    FROM 
+      table1, table2 
+    WHERE 
+      table1.num = table2.num
+
+
+FROM
+----
+
+Откуда достать данные, таблица, подзапрос, CTE
+
+.. code-block:: sql
+
+    SELECT distinct 
+      table1.name
+    FROM 
+      table1, table2 
+    WHERE 
+      table1.num = table2.num
+
+
+INNER JOIN
+----------
+
+Соединение двух таблиц, в выборку попадут только те записи из обоих таблиц, 
+которые удовлетворяют условию соединения.
+
+.. code-block:: sql
+
+    SELECT 
+      table1.name
+      , table2.name
+    FROM 
+      table1
+
+      INNER JOIN
+        table2 
+         ON
+            table1.name = table2.name
+
+
+LEFT JOIN
+---------
+
+Соединение двух таблиц, в выборку попадут все записи из основной таблицы, 
+из присоединямой таблицы попадут только те записи которые удовлетворяют условию соединения.
+
+.. code-block:: sql
+
+    SELECT 
+      table1.name
+      , table2.name
+    FROM 
+      table1
+
+      LEFT JOIN
+        table2 
+         ON
+            table1.name = table2.name
+
+
+RIGHT JOIN
+----------
+
+Соединение двух таблиц, в выборку попадут все записи из присоединяемой таблицы, 
+из основной таблицы попадут только те записи которые удовлетворяют условию соединения.
+
+.. code-block:: sql
+
+    SELECT 
+      table1.name
+      , table2.name
+    FROM 
+      table1
+
+      RIGHT JOIN
+        table2 
+         ON
+            table1.name = table2.name
+
+
+OUTER JOIN
+----------
+
+Соединение двух таблиц, в выборку попадут все записи из таблиц.
+
+.. code-block:: sql
+
+    SELECT 
+      table1.name
+      , table2.name
+    FROM 
+      table1
+
+      OUTER JOIN
+        table2 
+         ON
+            table1.name = table2.name
+
+
+WHERE
+-----
+
+Оператор условия, накладывает фильтр на данные
+
+.. code-block:: sql
+
+    SELECT distinct 
+      table1.name
+    FROM 
+      table1, table2 
+    WHERE 
+      table1.num = table2.num
+
+
+GROUP BY
+--------
+
+Позволяет сгруппировать несколько записей, полезна при использовании `function_aggregate`
+
+
+HAVING
+------
+
+Фильтрует уже сгруппированные данные по условию
+
+.. code-block:: sql
+
+    select
+      user_id
+      , avg(rating) avg_rating
+    from
+      ratings
+    group by
+      user_id
+    having 
+      avg(rating) < 4.5
+      -- в случае с перименовыванием поля, можно обратиться к алиасу поля
+      -- avg_rating < 4.5
+
+
+ORDER BY
+--------
+
+Cортировка выбранных значений
+
+* **ASC** - по возрастанию
+* **DESC** - по убыванию
+
+.. code-block:: sql
+
+  select
+    *
+  from
+    table
+  order by
+    id asc
+
+
+LIMIT
+-----
+
+ограничивает количество записей в выборке
 
     * `LIMIT <количесвто записей>`
     * `LIMIT <начальная позиция>, <количесвто записей>`
@@ -40,18 +237,6 @@ SELECT
     SELECT 10=10, 5=10;
     # 1 | 0
 
-ANY
----
-
-.. code-block:: sql
-
-    SELECT 
-        * 
-    FROM table1
-    WHERE id = ANY(    
-        SELECT 
-            id
-        FROM table2)
 
 CASE
 ----

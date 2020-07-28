@@ -13,38 +13,107 @@ Button()
 
 .. code-block:: xml
 
-    <Button
+    <Button />
 
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="top|left"
 
-        android:text="@string/btn1"
-        android:textSize="8pt"
-        android:id="@+id/btn1" />
+gravity
+-------
 
-    <Button
+Положение содержимого внутри элемента
 
-        android:layout_width="100dp"
-        android:layout_height="200dp"
+.. code-block:: xml
 
-        android:text="@string/btn2"
-        android:id="@+id/btn2" />
+    <Button android:gravity="center" />
+    <Button android:gravity="center_horizontal" />
 
-* **id** - идентификатор элемента
 
-* **onClick** - название метода активити, который обработает клик по элементу.
-  Метод принимает один аргумент c типом :py:class:`android.view.View`
-  и должен быть public void.
+id
+--
 
-* **text** - текст
+Идентификатор элемента
 
-    * обычная строка, текст
-    * ссылка на идентификатор из ресурса строк, :ref:`res_values_string`
+.. code-block:: xml
 
-* **textSize** - размер шрифта текст
+    <Button android:id="@+id/button" />
 
-    * 8pt
+
+layout_gravity
+--------------
+
+Положение элемента внутри родителя
+
+.. code-block:: xml
+    
+    <Button android:layout_gravity="top|left" />
+    <Button android:layout_gravity="top|bottom|left|right|center" />
+    <Button android:gravity="center_horizontal" />
+
+
+layout_height
+-------------
+
+Высота элемента
+
+.. code-block:: xml
+    
+    <!-- заполнить родителя -->
+    <Button android:layout_height="match_parent" />
+
+    <!-- по содержимому -->
+    <Button android:layout_height="wrap_content" />
+
+    <Button android:layout_height="200dp" />
+
+
+layout_width
+------------
+
+Ширина элемента
+
+.. code-block:: xml
+
+    <!-- заполнить родителя -->
+    <Button android:layout_width="match_parent" />
+
+    <!-- по содержимому -->
+    <Button android:layout_width="wrap_content" />
+
+    <Button android:layout_width="200dp" />
+
+
+onClick
+-------
+
+Название метода активити, который обработает клик по элементу.
+
+Метод принимает один аргумент c типом :py:class:`android.view.View` и должен быть public void.
+
+
+text
+----
+
+Текст внутри элемента
+
+.. code-block:: xml
+
+    <Button android:text="button text" />
+    <Button android:text="@string/btn2" />
+
+
+textSize
+--------
+
+Hазмер шрифта текст
+
+.. code-block:: xml
+
+    <Button android:textSize="8pt"/>
+    <Button android:textSize="8dp"/>
+    <Button android:textSize="8sp"/>
+
+
+Button()
+--------
 
 .. py:class:: Button()
 
@@ -52,7 +121,7 @@ Button()
 
     .. code-block:: java
 
-        Button myBtn = (Button)findViewById(R.id.myBtn);
+        Button myBtn = (Button) findViewById(R.id.myBtn);
 
 
     .. py:method:: getLayoutParams()

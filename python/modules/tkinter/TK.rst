@@ -42,6 +42,16 @@ Tk - базовый класс приложения
             window.bind('<Configure>', configure)
 
 
+    .. py:method:: configure()
+
+        Конфигурирует виджет
+
+        .. code-block:: py
+
+            menu_bar = Menu(parent)
+            window.configure(menu=menu_bar)
+
+
     .. py:method:: destroy()
 
         Закрывает приложение
@@ -98,7 +108,7 @@ Tk - базовый класс приложения
 
         .. code-block:: py
 
-            window.title(u'key.ico')
+            window.title('key.ico')
 
 
     .. py:method:: mainloop()
@@ -130,6 +140,14 @@ Tk - базовый класс приложения
             # (100, 100)
 
             window.minsize(200, 200)
+
+    .. py:method:: title(title)
+
+        Устанавливает заголовок окна
+
+        .. code-block:: py
+
+            window.title('My window')
 
 
     .. py:method:: winfo_height()

@@ -1,3 +1,11 @@
+.. title:: sql create index
+
+.. meta::
+    :description: 
+        Справочная информация по sql, create index.
+    :keywords: 
+        sql create index
+        
 Числа
 =====
 
