@@ -56,7 +56,7 @@
     pys60/index
     pyside2/index
     python_telegram_bot/index
-    pytest
+    pytest/index
     pyqt/index
     pyqt5/index
     redis

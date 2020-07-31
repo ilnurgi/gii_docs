@@ -11,6 +11,11 @@
 pytest
 ======
 
+.. code-blcok:: sh
+
+    pip install pytest
+
+
 .. code-block:: py
 
     # test.py
@@ -18,7 +23,6 @@ pytest
     def test():
         f = FizzBuzz()
         assert f.say(3) == 'Fizz'
-
 
 .. code-block:: py
 
