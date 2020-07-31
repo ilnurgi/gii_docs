@@ -75,7 +75,16 @@ all
     .. code-block:: py
 
         # все записи таблицы
-        Good.objects.all()
+        Post.objects.all()
+        """
+        SELECT
+            "blog_post"."id",
+            "blog_post"."title",
+            "blog_post"."content",
+            "blog_post"."blog_id"
+        FROM
+            "blog_post"
+        """
 
         # только 5 элементов
         Good.objects.all()[:5]
@@ -211,6 +220,19 @@ first
 
         Good.objects.filter(name='Pencil').first()
 
+        Post.objects.first()
+        """
+        SELECT
+            "blog_post"."id",
+            "blog_post"."title",
+            "blog_post"."content",
+            "blog_post"."blog_id"
+        FROM
+            "blog_post"
+        LIMIT
+            1
+        """
+
 
 get
 ---
@@ -233,6 +255,19 @@ get
             pass
         except Goods.MultipleObjectsReturned:
             pass
+
+        Post.objects.get(id=1)
+        """
+        SELECT
+            "blog_post"."id",
+            "blog_post"."title",
+            "blog_post"."content",
+            "blog_post"."blog_id"
+        FROM
+            "blog_post
+        WHERE
+            "blog_post"."id" = 1
+        """
 
 
 last
@@ -273,8 +308,28 @@ order_by
         Good.objects.order_by('category__name', '-created')
 
 
-reverse
--------
+prefetch_related()
+------------------
+
+.. py:method:: prefetch_related()
+
+    Получить связанные ManyToMany данные
+
+    .. code-block:: py
+
+        posts = Post.objects.prefetch_related("authors").all()
+
+        authors = Author.objects.prefetch_related(
+            Prefetch(
+                "posts",
+                queryset=Post.objects.filter(published=True),
+                to_attr="published_posts",
+            )
+        )
+
+
+reverse()
+---------
 
 .. py:method:: reverse()
 
@@ -289,6 +344,35 @@ reverse
         Good.objects.order_by('name', '-created').reverse()
 
         Good.objects.order_by('category__name', '-created').reverse()
+
+
+select_related()
+----------------
+
+.. py:method:: select_related()
+
+    Получить связанные данные
+
+    .. code-block:: py
+
+        Post.objects.select_related('blog').get(id=1)
+        """
+        SELECT 
+            "blog_post"."id",
+            "blog_post"."title",
+            "blog_post"."content",
+            "blog_post"."blog_id",
+            "blog_blog"."id",
+            "blog_blog"."name",
+            "blog_blog"."url"
+        FROM 
+            "blog_post"
+        INNER JOIN 
+            "blog_blog"
+            ON ("blog_post"."blog_id" = "blog_blog"."id")
+        WHERE 
+            "blog_post"."id" = 1
+        """
 
 
 Модификаторы запроса

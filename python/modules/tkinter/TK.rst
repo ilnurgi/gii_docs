@@ -141,6 +141,16 @@ Tk - базовый класс приложения
 
             window.minsize(200, 200)
 
+
+    .. py:method:: resizable()
+
+        Устаналивает возможность изменения геометрии окна
+
+        .. code-block:: py
+
+            window.resizable(True, False)
+
+
     .. py:method:: title(title)
 
         Устанавливает заголовок окна

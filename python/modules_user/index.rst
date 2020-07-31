@@ -55,12 +55,14 @@
     pyppeteer
     pys60/index
     pyside2/index
+    python_telegram_bot/index
     pytest
     pyqt/index
     pyqt5/index
     redis
     requests/index
     sanic/index
+    selenium/index
     serial
     sphinx
     starlette/index
