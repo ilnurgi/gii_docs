@@ -127,11 +127,11 @@ if __name__ == '__main__':
         if 'all' in app_args.process_dirs or dir_name in app_args.process_dirs
     ]
     # затем epub
-    jobs_args.extend(        
-        ('epub', dir_name, BUILD_DIR_EPUB) 
-        for dir_name in DIR_NAMES
-        if 'all' in app_args.process_dirs or dir_name in app_args.process_dirs
-    )
+    # jobs_args.extend(
+    #     ('epub', dir_name, BUILD_DIR_EPUB)
+    #     for dir_name in DIR_NAMES
+    #     if 'all' in app_args.process_dirs or dir_name in app_args.process_dirs
+    # )
 
     # создаем пулл и запускаем обработку всех параметров задач
     # jobs_result - сохраним все что вернут процессы обработки

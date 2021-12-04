@@ -29,6 +29,7 @@
     flask_sqlalchemy/index
     fuel/index
     jinja2
+    kivy/index
     line_profiler
     markdown
     matplotlib/index
