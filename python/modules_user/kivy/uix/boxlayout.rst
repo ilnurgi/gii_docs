@@ -27,6 +27,20 @@ BoxLayout
             Label:
                 text: 'label'
 
+
+    .. py:attribute:: height
+
+        Высота виджета
+
+        .. code-block:: py
+
+            BoxLayout(
+                height=100,
+                # иначе высота не применится
+                size_hint_y=None,
+            )
+
+
     .. py:attribute:: minimum_height
     .. py:attribute:: minimum_size
     .. py:attribute:: minimum_width
@@ -37,9 +51,23 @@ BoxLayout
 
         :py:class:`str`
 
+        .. code-block:: py
+
+            BoxLayout(
+                orientation='vertical'
+            )
+
     .. py:attribute:: padding
 
         :py:class:`int`
+
+        Внутренний отступ
+
+        .. code-block:: py
+
+            BoxLayout(
+                padding=10,
+            )
 
     .. py:attribute:: spacing
 

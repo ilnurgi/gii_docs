@@ -6,7 +6,7 @@ kivy
 https://kivy.org/
 
 .. toctree::
-    :maxdepth: 2
+    :maxdepth: 1
 
     app
     builder
@@ -16,8 +16,22 @@ https://kivy.org/
     input/index
     properties/index
     uix/index
+    utils
 
 .. toctree::
     :maxdepth: 1
 
     kv
+
+
+.. code-block:: py
+
+    from kivy.app import App
+    from kivy.uix.label import Label
+
+    class MyApp(App):
+
+        def build(self):
+            return Label(text='Hello World!')
+
+    MyApp().run()

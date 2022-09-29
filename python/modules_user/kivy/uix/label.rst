@@ -61,12 +61,22 @@ Label
                 size: 400, 200
                 size: '400dp', '200dp'
 
+
     .. py:attribute:: text
 
+        Текст виджета
+
+        .. code-block:: py
+
+            Label(
+                text='',
+            )
+            
         .. code-block:: text
 
             Label:
                 text: 'Hello World'
+
 
     .. py:attribute:: text_size
 
