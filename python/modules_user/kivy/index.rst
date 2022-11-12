@@ -5,6 +5,9 @@ kivy
 
 https://kivy.org/
 
+
+.. py::atribute:: __version__
+
 .. toctree::
     :maxdepth: 1
 
@@ -57,3 +60,26 @@ https://kivy.org/
     $ buildozer init
     $ buildozer android debug
 
+
+buildozer
+---------
+
+Инструемент для сборки апк файлов.
+
+.. code-block:: sh
+
+    # сборка 
+    $ buildozer android debug
+
+    # деплой 
+    $ buildozer android deploy 
+
+    # запуск
+    $ buildozer android run
+
+    $ buildozer android debug deploy run
+
+    # запустить локальный сервр, на 8000 порту для дотсупа по сети
+    $ buildozer android serve
+
+    $ buildozer android logcat > my_log.txt

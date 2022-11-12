@@ -57,7 +57,7 @@ TextInput
 
     .. py:attribute:: readonly
 
-        :py:class:`bool`
+        :py:class:`bool`, возможность редактирования текста
 
     .. py:attribute:: text
 

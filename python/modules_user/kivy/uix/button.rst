@@ -100,6 +100,17 @@ Button
 
         :py:class:`int`
 
+    .. py:attribute:: height
+
+        :py:class:`int`
+
+        .. code-block:: py
+
+            Button(
+                height=100,
+                size_hint_y=None,
+            )
+
     .. py:attribute:: on_press
 
     .. py:atrribute:: on_release

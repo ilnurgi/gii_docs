@@ -1,7 +1,7 @@
 .. py:module:: android.permissions
 
-persmissions
-============
+permissions
+===========
 
 .. py:class:: Permission
 
